@@ -26,7 +26,7 @@ for recipe in recipes:
     assert all(isinstance(step, str) and len(step.strip()) >= 80 for step in instructions), f"Recipe {recipe['id']} contains an instruction step shorter than 80 characters"
     average_length = sum(len(step.strip()) for step in instructions) / len(instructions)
     assert average_length >= 100, f"Recipe {recipe['id']} instructions are too terse; average step length must be at least 100 characters"
-    video = recipe.get("video") or videos.get(recipe["id"])
+    video = {**videos.get(recipe["id"], {}), **(recipe.get("video") or {})}
     assert video, f"Published recipe {recipe['id']} must have an English YouTube video"
     for field in ("youtubeId", "title", "channel", "channelUrl", "url", "language"):
         assert video.get(field), f"Video field {field} missing in {recipe['id']}"
