@@ -13,6 +13,8 @@ for recipe in recipes:
     assert recipe["id"] not in ids, f"Duplicate recipe id: {recipe['id']}"
     ids.add(recipe["id"])
     assert re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", recipe["slug"]), f"Invalid slug: {recipe['slug']}"
+    assert isinstance(recipe["instructions"], list) and len(recipe["instructions"]) >= 6, f"Recipe {recipe['id']} needs at least 6 detailed instruction steps"
+    assert all(isinstance(step, str) and len(step.strip()) >= 45 for step in recipe["instructions"]), f"Recipe {recipe['id']} contains an instruction step that is too short; write clear beginner-friendly directions"
 
 sitemap = ET.parse(root / "sitemap.xml").getroot()
 urls = [e.text for e in sitemap.iter() if e.tag.endswith("}loc") and e.text]
@@ -24,4 +26,4 @@ required = ["index.html", "recipes.html", "recipe.html", "category.html", "favor
 for path in required:
     assert (root / path).is_file(), f"Missing required file: {path}"
 
-print(f"OK: {len(recipes)} recipes, {len(urls)} sitemap URLs, {len(required)} required files.")
+print(f"OK: {len(recipes)} recipes, {len(urls)} sitemap URLs, {len(required)} required files. Detailed instruction policy: PASS.")
