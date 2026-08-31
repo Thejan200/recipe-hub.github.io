@@ -7,7 +7,9 @@ from urllib.parse import urlparse
 
 root = pathlib.Path(__file__).resolve().parents[1]
 recipes = json.loads((root / "data/recipes.json").read_text(encoding="utf-8"))
+videos = json.loads((root / "data/videos.json").read_text(encoding="utf-8"))
 assert isinstance(recipes, list) and recipes, "recipes.json must contain recipes"
+assert isinstance(videos, dict), "videos.json must contain a recipe-to-video object"
 ids = set(); slugs = set(); iso = re.compile(r"^PT(?:(\d+)H)?(?:(\d+)M)?$")
 for recipe in recipes:
     for field in ("id", "slug", "title", "category", "description", "ingredients", "instructions", "image"):
@@ -24,12 +26,18 @@ for recipe in recipes:
     assert all(isinstance(step, str) and len(step.strip()) >= 80 for step in instructions), f"Recipe {recipe['id']} contains an instruction step shorter than 80 characters"
     average_length = sum(len(step.strip()) for step in instructions) / len(instructions)
     assert average_length >= 100, f"Recipe {recipe['id']} instructions are too terse; average step length must be at least 100 characters"
-    if recipe.get("video"):
-        video = recipe["video"]
-        for field in ("youtubeId", "title", "channel", "channelUrl", "url"):
-            assert video.get(field), f"Video attribution field {field} missing in {recipe['id']}"
-        assert "youtube.com" in video["channelUrl"], f"Invalid YouTube channel URL in {recipe['id']}"
-        assert "youtube.com/watch" in video["url"] or "youtu.be/" in video["url"], f"Invalid YouTube video URL in {recipe['id']}"
+    video = recipe.get("video") or videos.get(recipe["id"])
+    assert video, f"Published recipe {recipe['id']} must have an English YouTube video"
+    for field in ("youtubeId", "title", "channel", "channelUrl", "url", "language"):
+        assert video.get(field), f"Video field {field} missing in {recipe['id']}"
+    assert video["language"].lower() == "en", f"Video for {recipe['id']} must be English-only"
+    assert re.fullmatch(r"[A-Za-z0-9_-]{11}", video["youtubeId"]), f"Invalid YouTube video ID in {recipe['id']}"
+    assert re.match(r"^https://(www\.)?youtube\.com/", video["channelUrl"]), f"Invalid YouTube channel URL in {recipe['id']}"
+    assert "youtube.com/watch?v=" in video["url"] or "youtu.be/" in video["url"], f"Invalid YouTube video URL in {recipe['id']}"
+
+assert set(videos).issubset(ids), "videos.json contains a recipe ID that does not exist in recipes.json"
+for recipe_id, video in videos.items():
+    assert video.get("language", "").lower() == "en", f"Video catalog entry {recipe_id} must be English-only"
 
 sitemap_root = ET.parse(root / "sitemap.xml").getroot()
 urls = [e.text for e in sitemap_root.iter() if e.tag.endswith("}loc") and e.text]
@@ -40,7 +48,7 @@ for recipe in recipes:
     if recipe.get("status") != "draft":
         assert base + "recipe.html?id=" + recipe["id"] in urls, f"Published recipe missing from sitemap: {recipe['id']}"
 
-required = ["index.html", "recipes.html", "recipe.html", "category.html", "favorites.html", "about.html", "contact.html", "privacy.html", "terms.html", "disclaimer.html", "cookie-policy.html", "404.html", "robots.txt", "sitemap.xml", "site.webmanifest", "favicon.svg", "data/recipes.json", "assets/css/style.css", "assets/js/app.js", "assets/js/site.js", "assets/js/seo.js"]
+required = ["index.html", "recipes.html", "recipe.html", "category.html", "favorites.html", "about.html", "contact.html", "privacy.html", "terms.html", "disclaimer.html", "cookie-policy.html", "404.html", "robots.txt", "sitemap.xml", "site.webmanifest", "favicon.svg", "data/recipes.json", "data/videos.json", "assets/css/style.css", "assets/js/app.js", "assets/js/site.js", "assets/js/seo.js", "assets/js/video-loader.js"]
 for path in required:
     assert (root / path).is_file(), f"Missing required file: {path}"
 
@@ -59,4 +67,4 @@ for html in html_files:
         target=(html.parent / urlparse(ref).path).resolve()
         assert (target.exists() and root in target.parents) or target == root, f"Broken or escaping local reference in {html.relative_to(root)}: {ref}"
 
-print(f"OK: {len(recipes)} recipes, {len(urls)} sitemap URLs, {len(required)} required files, local HTML references checked. Rich beginner instructions, video attribution, sitemap coverage, and asset checks: PASS.")
+print(f"OK: {len(recipes)} recipes, {len(videos)} English YouTube videos, {len(urls)} sitemap URLs, {len(required)} required files, local HTML references checked. Rich instructions, video attribution, English-only video policy, sitemap coverage, and asset checks: PASS.")
