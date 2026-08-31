@@ -22,36 +22,38 @@ for recipe in recipes:
     assert isinstance(recipe["instructions"], list) and len(recipe["instructions"]) >= 6, f"Recipe {recipe['id']} needs at least 6 detailed instruction steps"
     assert all(isinstance(step, str) and len(step.strip()) >= 45 for step in recipe["instructions"]), f"Recipe {recipe['id']} contains an instruction step that is too short"
     if recipe.get("video"):
-        video=recipe["video"]
+        video = recipe["video"]
         for field in ("youtubeId", "title", "channel", "channelUrl", "url"):
             assert video.get(field), f"Video attribution field {field} missing in {recipe['id']}"
         assert "youtube.com" in video["channelUrl"], f"Invalid YouTube channel URL in {recipe['id']}"
         assert "youtube.com/watch" in video["url"] or "youtu.be/" in video["url"], f"Invalid YouTube video URL in {recipe['id']}"
 
-sitemap_root=ET.parse(root/"sitemap.xml").getroot()
-urls=[e.text for e in sitemap_root.iter() if e.tag.endswith("}loc") and e.text]
-assert urls and len(urls)==len(set(urls)), "sitemap.xml contains missing or duplicate URLs"
-base="https://thejan200.github.io/recipe-hub.github.io/"
+sitemap_root = ET.parse(root / "sitemap.xml").getroot()
+urls = [e.text for e in sitemap_root.iter() if e.tag.endswith("}loc") and e.text]
+assert urls and len(urls) == len(set(urls)), "sitemap.xml contains missing or duplicate URLs"
+base = "https://thejan200.github.io/recipe-hub.github.io/"
 assert all(u.startswith(base) for u in urls), "Sitemap contains an unexpected URL"
 for recipe in recipes:
-    if recipe.get("status")!="draft": assert base+"recipe.html?id="+recipe["id"] in urls, f"Published recipe missing from sitemap: {recipe['id']}"
+    if recipe.get("status") != "draft":
+        assert base + "recipe.html?id=" + recipe["id"] in urls, f"Published recipe missing from sitemap: {recipe['id']}"
 
-required=["index.html","recipes.html","recipe.html","category.html","favorites.html","about.html","contact.html","privacy.html","terms.html","disclaimer.html","cookie-policy.html","404.html","robots.txt","sitemap.xml","site.webmanifest","data/recipes.json","assets/css/style.css","assets/js/app.js","assets/js/site.js","assets/js/seo.js"]
-for path in required: assert (root/path).is_file(), f"Missing required file: {path}"
+required = ["index.html", "recipes.html", "recipe.html", "category.html", "favorites.html", "about.html", "contact.html", "privacy.html", "terms.html", "disclaimer.html", "cookie-policy.html", "404.html", "robots.txt", "sitemap.xml", "site.webmanifest", "favicon.svg", "data/recipes.json", "assets/css/style.css", "assets/js/app.js", "assets/js/site.js", "assets/js/seo.js"]
+for path in required:
+    assert (root / path).is_file(), f"Missing required file: {path}"
 
 class RefParser(HTMLParser):
     def __init__(self): super().__init__(); self.refs=[]
-    def handle_starttag(self,tag,attrs):
+    def handle_starttag(self, tag, attrs):
         attrs=dict(attrs)
-        for key in ("href","src"):
+        for key in ("href", "src"):
             if attrs.get(key): self.refs.append(attrs[key])
 
-html_files=list(root.glob("*.html"))+list((root/"admin").glob("*.html"))
+html_files = list(root.glob("*.html")) + list((root / "admin").glob("*.html"))
 for html in html_files:
     parser=RefParser(); parser.feed(html.read_text(encoding="utf-8"))
     for ref in parser.refs:
-        if ref.startswith(("http://","https://","//","#","mailto:","tel:","data:")): continue
-        target=(html.parent/urlparse(ref).path).resolve()
-        assert target.exists() and root in target.parents or target==root, f"Broken or escaping local reference in {html.relative_to(root)}: {ref}"
+        if ref.startswith(("http://", "https://", "//", "#", "mailto:", "tel:", "data:")): continue
+        target=(html.parent / urlparse(ref).path).resolve()
+        assert (target.exists() and root in target.parents) or target == root, f"Broken or escaping local reference in {html.relative_to(root)}: {ref}"
 
-print(f"OK: {len(recipes)} recipes, {len(urls)} sitemap URLs, {len(required)} required files, local HTML references checked. Detailed instructions, video attribution, and sitemap coverage: PASS.")
+print(f"OK: {len(recipes)} recipes, {len(urls)} sitemap URLs, {len(required)} required files, local HTML references checked. Detailed instructions, video attribution, sitemap coverage, and asset checks: PASS.")
