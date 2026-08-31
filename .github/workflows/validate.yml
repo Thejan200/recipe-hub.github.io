@@ -1,0 +1,30 @@
+name: Validate Recipe Hub
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate recipe JSON
+        run: python - <<'PY'
+import json
+with open('data/recipes.json', encoding='utf-8') as f:
+    data=json.load(f)
+assert isinstance(data,list) and data, 'recipes.json must contain a non-empty array'
+for r in data:
+    for key in ('id','slug','title','category','description','ingredients','instructions'):
+        assert r.get(key), f'Missing {key} in {r.get("id")}'
+print(f'Validated {len(data)} recipe(s).')
+PY
+      - name: Validate sitemap
+        run: python - <<'PY'
+import xml.etree.ElementTree as ET
+ET.parse('sitemap.xml')
+print('sitemap.xml is valid XML')
+PY
+      - name: Check required pages
+        run: test -f index.html && test -f recipes.html && test -f recipe.html && test -f about.html && test -f contact.html && test -f privacy.html && test -f 404.html
