@@ -12,19 +12,40 @@ jobs:
       - name: Validate recipe JSON
         run: python - <<'PY'
 import json
-with open('data/recipes.json', encoding='utf-8') as f:
-    data=json.load(f)
-assert isinstance(data,list) and data, 'recipes.json must contain a non-empty array'
+with open('data/recipes.json', encoding='utf-8') as f: data=json.load(f)
+assert isinstance(data,list) and data
+ids=set()
 for r in data:
-    for key in ('id','slug','title','category','description','ingredients','instructions'):
-        assert r.get(key), f'Missing {key} in {r.get("id")}'
+    for key in ('id','slug','title','category','description','ingredients','instructions'): assert r.get(key), f'Missing {key} in {r.get("id")}'
+    assert r['id'] not in ids, f'Duplicate recipe id: {r["id"]}'
+    ids.add(r['id'])
+    assert r['slug'].strip()==r['slug'] and ' ' not in r['slug'], f'Invalid slug: {r["slug"]}'
 print(f'Validated {len(data)} recipe(s).')
 PY
-      - name: Validate sitemap
+      - name: Validate sitemap XML
         run: python - <<'PY'
 import xml.etree.ElementTree as ET
-ET.parse('sitemap.xml')
-print('sitemap.xml is valid XML')
+root=ET.parse('sitemap.xml').getroot()
+urls=[x.text for x in root if x.text]
+assert urls and all(u.startswith('https://thejan200.github.io/recipe-hub.github.io/') for u in urls)
+print(f'Validated {len(urls)} sitemap URL(s).')
 PY
-      - name: Check required pages
-        run: test -f index.html && test -f recipes.html && test -f recipe.html && test -f about.html && test -f contact.html && test -f privacy.html && test -f 404.html
+      - name: Check required pages and assets
+        run: |
+          test -f index.html
+          test -f recipes.html
+          test -f recipe.html
+          test -f category.html
+          test -f favorites.html
+          test -f about.html
+          test -f contact.html
+          test -f privacy.html
+          test -f 404.html
+          test -f robots.txt
+          test -f sitemap.xml
+          test -f data/recipes.json
+          test -f assets/css/style.css
+          test -f assets/js/app.js
+      - name: Check no obvious secret material
+        run: |
+          ! grep -RniE '(ghp_[A-Za-z0-9_]+|github_pat_[A-Za-z0-9_]+|AIza[0-9A-Za-z_-]{20,}|BEGIN (RSA|OPENSSH|EC|PRIVATE) KEY)' --exclude-dir=.git .
