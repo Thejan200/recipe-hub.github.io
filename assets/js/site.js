@@ -1,0 +1,9 @@
+(function(){
+  const year=document.getElementById('year');
+  if(year)year.textContent=new Date().getFullYear();
+  const button=document.querySelector('.menu-toggle'),nav=document.querySelector('.main-nav');
+  if(button&&nav){button.setAttribute('aria-expanded','false');button.addEventListener('click',()=>{const open=nav.classList.toggle('menu-open');button.setAttribute('aria-expanded',String(open));if(open){nav.style.display='flex';nav.style.position='absolute';nav.style.top='68px';nav.style.left='0';nav.style.right='0';nav.style.padding='20px';nav.style.background='#fff';nav.style.flexDirection='column';nav.style.borderBottom='1px solid var(--line)'}else nav.style.display='none'})}
+  let choice='';try{choice=localStorage.getItem('rh-cookie-choice')||''}catch{}
+  if(choice)return;
+  const b=document.createElement('div');b.id='cookie-banner';b.setAttribute('role','dialog');b.setAttribute('aria-label','Cookie and privacy notice');b.innerHTML='<div><strong>Cookies & privacy</strong><p>Recipe Hub uses essential browser storage for saved recipes. Analytics and advertising will only be added with an appropriate consent setup.</p></div><div><button class="btn btn-outline" id="cookie-decline" type="button">Decline</button><button class="btn btn-dark" id="cookie-accept" type="button">Accept</button></div>';b.style='position:fixed;bottom:16px;left:16px;right:16px;z-index:50;background:#fff;border:1px solid #e8e3dc;border-radius:14px;padding:16px 18px;box-shadow:0 18px 50px rgba(35,30,22,.16);display:flex;justify-content:space-between;align-items:center;gap:18px;font-size:12px';document.body.appendChild(b);const choose=v=>{try{localStorage.setItem('rh-cookie-choice',v)}catch{}b.remove()};document.getElementById('cookie-accept').onclick=()=>choose('accepted');document.getElementById('cookie-decline').onclick=()=>choose('declined');
+})();
