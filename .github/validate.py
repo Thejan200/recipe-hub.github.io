@@ -15,7 +15,7 @@ for recipe in recipes:
     assert re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", recipe["slug"]), f"Invalid slug: {recipe['slug']}"
 
 sitemap = ET.parse(root / "sitemap.xml").getroot()
-urls = [e.text for e in sitemap if e.text]
+urls = [e.text for e in sitemap.iter() if e.tag.endswith("}loc") and e.text]
 assert urls, "sitemap.xml contains no URLs"
 base = "https://thejan200.github.io/recipe-hub.github.io/"
 assert all(u.startswith(base) for u in urls), "Sitemap contains an unexpected URL"
