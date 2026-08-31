@@ -19,8 +19,11 @@ for recipe in recipes:
     for field in ("prepTime", "cookTime", "totalTime"):
         assert iso.fullmatch(str(recipe.get(field, ""))), f"Invalid {field} in {recipe['id']}"
     assert isinstance(recipe["ingredients"], list) and recipe["ingredients"], f"Recipe {recipe['id']} needs ingredients"
-    assert isinstance(recipe["instructions"], list) and len(recipe["instructions"]) >= 6, f"Recipe {recipe['id']} needs at least 6 detailed instruction steps"
-    assert all(isinstance(step, str) and len(step.strip()) >= 45 for step in recipe["instructions"]), f"Recipe {recipe['id']} contains an instruction step that is too short"
+    instructions = recipe["instructions"]
+    assert isinstance(instructions, list) and len(instructions) >= 8, f"Recipe {recipe['id']} needs at least 8 detailed instruction steps"
+    assert all(isinstance(step, str) and len(step.strip()) >= 80 for step in instructions), f"Recipe {recipe['id']} contains an instruction step shorter than 80 characters"
+    average_length = sum(len(step.strip()) for step in instructions) / len(instructions)
+    assert average_length >= 100, f"Recipe {recipe['id']} instructions are too terse; average step length must be at least 100 characters"
     if recipe.get("video"):
         video = recipe["video"]
         for field in ("youtubeId", "title", "channel", "channelUrl", "url"):
@@ -56,4 +59,4 @@ for html in html_files:
         target=(html.parent / urlparse(ref).path).resolve()
         assert (target.exists() and root in target.parents) or target == root, f"Broken or escaping local reference in {html.relative_to(root)}: {ref}"
 
-print(f"OK: {len(recipes)} recipes, {len(urls)} sitemap URLs, {len(required)} required files, local HTML references checked. Detailed instructions, video attribution, sitemap coverage, and asset checks: PASS.")
+print(f"OK: {len(recipes)} recipes, {len(urls)} sitemap URLs, {len(required)} required files, local HTML references checked. Rich beginner instructions, video attribution, sitemap coverage, and asset checks: PASS.")
