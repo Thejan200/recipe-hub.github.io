@@ -13,22 +13,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Validate recipe JSON
-        shell: bash
-        run: |
-          python -c 'import json; d=json.load(open("data/recipes.json",encoding="utf-8")); assert isinstance(d,list) and d; ids=set(); [(assertion := (r.get("id") and r.get("slug") and r.get("title") and r.get("category") and r.get("description") and r.get("ingredients") and r.get("instructions"))) or (_ for _ in ()).throw(AssertionError("Missing required recipe field")) for r in d]; [(_ for _ in ()).throw(AssertionError("Duplicate recipe id")) if r["id"] in ids else ids.add(r["id"]) for r in d]; [(_ for _ in ()).throw(AssertionError("Invalid slug")) if (r["slug"] != r["slug"].strip() or " " in r["slug"]) else None for r in d]; print(f"Validated {len(d)} recipe(s).")'
-
-      - name: Validate sitemap XML
-        shell: bash
-        run: |
-          python -c 'import xml.etree.ElementTree as ET; root=ET.parse("sitemap.xml").getroot(); urls=[e.text for e in root if e.text]; assert urls; assert all(u.startswith("https://thejan200.github.io/recipe-hub.github.io/") for u in urls); print(f"Validated {len(urls)} sitemap URL(s).")'
-
-      - name: Check required files
-        shell: bash
-        run: |
-          for f in index.html recipes.html recipe.html category.html favorites.html about.html contact.html privacy.html 404.html robots.txt sitemap.xml data/recipes.json assets/css/style.css assets/js/app.js; do test -f "$f" || exit 1; done
-
+      - name: Validate site structure and recipe data
+        run: python .github/validate.py
       - name: Check for obvious secrets
         shell: bash
         run: |
