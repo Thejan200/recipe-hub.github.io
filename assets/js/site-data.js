@@ -1,0 +1,1 @@
+window.RecipeHub={pageSize:9,paginate(items,page=1,size=9){const start=(page-1)*size;return {items:items.slice(start,start+size),page,pages:Math.max(1,Math.ceil(items.length/size)),total:items.length}}};
