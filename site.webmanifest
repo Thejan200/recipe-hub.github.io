@@ -1,1 +1,1 @@
-{"name":"Recipe Hub","short_name":"Recipe Hub","start_url":"./","display":"standalone","background_color":"#fffaf4","theme_color":"#e85d25","description":"Practical, delicious recipes for everyday cooking."}
+{"name":"Recipe Hub","short_name":"Recipe Hub","start_url":"./","display":"standalone","background_color":"#fffaf4","theme_color":"#e85d25","description":"Practical, delicious recipes for everyday cooking.","icons":[{"src":"favicon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}
