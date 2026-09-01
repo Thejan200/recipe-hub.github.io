@@ -64,10 +64,7 @@
         .pdf-export-document h1, .pdf-export-document h2, .pdf-export-document h3 { color:#111 !important; }
         .pdf-export-document .pdf-keep-together,
         .pdf-export-document .recipe-box,
-        .pdf-export-document .editorial-card,
-        .pdf-export-document .ingredients,
-        .pdf-export-document .instructions { break-inside:avoid !important; page-break-inside:avoid !important; }
-        .pdf-export-document .pdf-page-section { break-before:auto; page-break-before:auto; }
+        .pdf-export-document .editorial-card { break-inside:avoid !important; page-break-inside:avoid !important; }
         .pdf-export-document .pdf-recipe-image { display:block !important; width:100% !important; height:auto !important; max-width:100% !important; max-height:none !important; object-fit:contain !important; object-position:center !important; margin:0 0 18px !important; }
         .pdf-export-document .editorial-card { width:100% !important; display:block !important; overflow:visible !important; }
         .pdf-export-document .editorial-card h3 { break-after:avoid !important; page-break-after:avoid !important; }
@@ -97,8 +94,7 @@
       recipeClone.querySelectorAll('button,iframe,video,.recipe-video,.related,.print-recipe-image').forEach(el => el.remove());
       recipeClone.querySelectorAll('.recipe-layout').forEach(el => { el.style.cssText = 'display:block;width:100%;margin:0;padding:0;'; });
       recipeClone.querySelectorAll('.recipe-box').forEach(el => { el.classList.add('pdf-keep-together'); el.style.cssText = 'display:block;position:static;width:100%;box-sizing:border-box;margin:20px 0 0;padding:16px;background:#f7f7f7;color:#111;border:1px solid #bbb;border-radius:0;'; });
-      recipeClone.querySelectorAll('.ingredients,.instructions').forEach(el => el.classList.add('pdf-keep-together'));
-      recipeClone.querySelectorAll('h2').forEach(el => { el.style.cssText += 'font-family:Georgia,serif;font-size:20px;margin:20px 0 10px;color:#111;'; });
+      recipeClone.querySelectorAll('h2').forEach(el => { el.style.cssText += 'font-family:Georgia,serif;font-size:20px;margin:20px 0 10px;color:#111;break-after:avoid;page-break-after:avoid;'; });
       recipeClone.querySelectorAll('li').forEach(el => { el.style.cssText += 'break-inside:avoid;page-break-inside:avoid;line-height:1.55;margin-bottom:7px;color:#111;'; });
       wrapper.appendChild(recipeClone);
 
@@ -143,7 +139,7 @@
         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait', compress: true },
         pagebreak: {
           mode: ['css', 'legacy'],
-          avoid: ['.pdf-keep-together', '.recipe-box', '.editorial-card', '.ingredients', '.instructions']
+          avoid: ['.pdf-keep-together', '.recipe-box', '.editorial-card']
         }
       }).from(wrapper).save();
     } catch (error) {
