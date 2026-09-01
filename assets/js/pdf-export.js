@@ -1,13 +1,13 @@
 (() => {
-  const LIBRARY_URL = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
+  const JSPDF_URL = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
   let libraryPromise;
 
-  function loadLibrary() {
-    if (window.html2pdf) return Promise.resolve();
+  function loadJsPDF() {
+    if (window.jspdf?.jsPDF) return Promise.resolve();
     if (libraryPromise) return libraryPromise;
     libraryPromise = new Promise((resolve, reject) => {
       const script = document.createElement('script');
-      script.src = LIBRARY_URL;
+      script.src = JSPDF_URL;
       script.async = true;
       script.onload = resolve;
       script.onerror = () => reject(new Error('PDF library could not be loaded.'));
@@ -20,17 +20,238 @@
     return String(value || 'recipe').toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'recipe';
   }
 
-  function waitForImage(img) {
+  function cleanText(value) {
+    return String(value || '').replace(/\s+/g, ' ').trim();
+  }
+
+  function loadImage(src) {
     return new Promise(resolve => {
-      if (img.complete && img.naturalWidth > 0) return resolve(true);
-      let finished = false;
-      const finish = ok => { if (finished) return; finished = true; img.removeEventListener('load', onload); img.removeEventListener('error', onerror); resolve(ok); };
-      const onload = () => finish(true);
-      const onerror = () => finish(false);
-      img.addEventListener('load', onload, { once: true });
-      img.addEventListener('error', onerror, { once: true });
-      setTimeout(() => finish(img.naturalWidth > 0), 8000);
+      if (!src) return resolve(null);
+      const img = new Image();
+      img.crossOrigin = 'anonymous';
+      img.onload = () => resolve(img);
+      img.onerror = () => resolve(null);
+      img.src = src;
     });
+  }
+
+  function imageData(img) {
+    if (!img) return null;
+    try {
+      const canvas = document.createElement('canvas');
+      const max = 1800;
+      const scale = Math.min(1, max / Math.max(img.naturalWidth || img.width, img.naturalHeight || img.height));
+      canvas.width = Math.max(1, Math.round((img.naturalWidth || img.width) * scale));
+      canvas.height = Math.max(1, Math.round((img.naturalHeight || img.height) * scale));
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      return { data: canvas.toDataURL('image/jpeg', 0.92), ratio: canvas.width / canvas.height };
+    } catch (e) {
+      console.warn('Recipe image could not be embedded in PDF:', e);
+      return null;
+    }
+  }
+
+  function createPdf(doc, source, detail, title, imageInfo) {
+    const pageW = doc.internal.pageSize.getWidth();
+    const pageH = doc.internal.pageSize.getHeight();
+    const margin = 14;
+    const contentW = pageW - margin * 2;
+    const bottom = pageH - margin;
+    let y = margin;
+
+    const colors = {
+      ink: [25, 25, 25],
+      muted: [80, 80, 80],
+      line: [205, 205, 205],
+      soft: [247, 247, 247]
+    };
+
+    function pageBreak(required = 18) {
+      if (y + required <= bottom) return false;
+      doc.addPage();
+      y = margin;
+      return true;
+    }
+
+    function setBody() {
+      doc.setFont('helvetica', 'normal');
+      doc.setFontSize(10.5);
+      doc.setTextColor(...colors.ink);
+    }
+
+    function wrapped(text, x, maxW, lineH = 5.2) {
+      const lines = doc.splitTextToSize(cleanText(text), maxW);
+      for (const line of lines) {
+        pageBreak(lineH);
+        doc.text(line, x, y);
+        y += lineH;
+      }
+      return lines.length * lineH;
+    }
+
+    function heading(text, size = 17) {
+      pageBreak(size * 0.45 + 9);
+      doc.setFont('times', 'bold');
+      doc.setFontSize(size);
+      doc.setTextColor(...colors.ink);
+      doc.text(text, margin, y);
+      y += size * 0.48 + 5;
+      doc.setDrawColor(...colors.line);
+      doc.setLineWidth(0.25);
+      doc.line(margin, y, pageW - margin, y);
+      y += 6;
+      setBody();
+    }
+
+    function sectionLabel(text) {
+      pageBreak(12);
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(12.5);
+      doc.setTextColor(...colors.ink);
+      doc.text(text, margin, y);
+      y += 7;
+      setBody();
+    }
+
+    function bullet(text, indent = 4) {
+      const x = margin + indent;
+      const textX = x + 4.5;
+      const maxW = contentW - indent - 4.5;
+      const lines = doc.splitTextToSize(cleanText(text), maxW);
+      const h = Math.max(5.2, lines.length * 5.2);
+      pageBreak(h + 2);
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(10.5);
+      doc.text('•', x, y);
+      setBody();
+      doc.text(lines, textX, y, { lineHeightFactor: 1 });
+      y += h + 2.5;
+    }
+
+    function numbered(index, text) {
+      const x = margin + 1;
+      const textX = margin + 9;
+      const maxW = contentW - 9;
+      const lines = doc.splitTextToSize(cleanText(text), maxW);
+      const h = Math.max(5.2, lines.length * 5.2);
+      pageBreak(Math.min(h + 2, 18));
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(10.5);
+      doc.setTextColor(235, 78, 31);
+      doc.text(`${index}.`, x, y);
+      setBody();
+      doc.text(lines, textX, y, { lineHeightFactor: 1 });
+      y += h + 3.5;
+    }
+
+    function card(titleText, bodyTexts) {
+      const lineH = 4.8;
+      const innerW = contentW - 12;
+      let estimated = 12 + 7;
+      const wrappedBodies = bodyTexts.map(t => {
+        const lines = doc.splitTextToSize(cleanText(t), innerW);
+        estimated += lines.length * lineH + 3;
+        return lines;
+      });
+      estimated += 7;
+      if (estimated <= contentW * 0 + (bottom - margin)) pageBreak(estimated);
+      if (y + estimated > bottom) {
+        doc.addPage();
+        y = margin;
+      }
+      const top = y - 2;
+      doc.setFillColor(...colors.soft);
+      doc.setDrawColor(...colors.line);
+      doc.setLineWidth(0.25);
+      doc.roundedRect(margin, top, contentW, estimated, 1.5, 1.5, 'FD');
+      y += 4;
+      doc.setFont('times', 'bold');
+      doc.setFontSize(13);
+      doc.setTextColor(...colors.ink);
+      doc.text(titleText, margin + 6, y);
+      y += 7;
+      setBody();
+      wrappedBodies.forEach(lines => {
+        doc.text('•', margin + 6, y);
+        doc.text(lines, margin + 10, y, { lineHeightFactor: 1 });
+        y += lines.length * lineH + 3;
+      });
+      y = top + estimated + 5;
+    }
+
+    // Title — vector text, so it remains crisp instead of being rasterized.
+    doc.setFont('times', 'bold');
+    doc.setFontSize(25);
+    doc.setTextColor(...colors.ink);
+    const titleLines = doc.splitTextToSize(title, contentW);
+    doc.text(titleLines, margin, y, { lineHeightFactor: 1.12 });
+    y += titleLines.length * 8.5 + 3;
+    doc.setDrawColor(...colors.ink);
+    doc.setLineWidth(0.45);
+    doc.line(margin, y, pageW - margin, y);
+    y += 7;
+
+    // Image: preserve the original aspect ratio; never stretch or crop.
+    if (imageInfo?.data && imageInfo.ratio > 0) {
+      const maxW = contentW;
+      const maxH = 82;
+      let w = maxW;
+      let h = w / imageInfo.ratio;
+      if (h > maxH) { h = maxH; w = h * imageInfo.ratio; }
+      pageBreak(h + 7);
+      const x = margin + (contentW - w) / 2;
+      doc.addImage(imageInfo.data, 'JPEG', x, y, w, h, undefined, 'MEDIUM');
+      y += h + 8;
+    }
+
+    // Ingredients.
+    const ingredients = [...source.querySelectorAll('.ingredients li')].map(li => cleanText(li.textContent)).filter(Boolean);
+    if (ingredients.length) {
+      sectionLabel('Ingredients');
+      ingredients.forEach(text => bullet(text));
+    }
+
+    // Instructions.
+    const instructions = [...source.querySelectorAll('.instructions li')].map(li => {
+      const clone = li.cloneNode(true);
+      clone.querySelector('strong')?.remove();
+      return cleanText(clone.textContent);
+    }).filter(Boolean);
+    if (instructions.length) {
+      heading('Instructions', 17);
+      instructions.forEach((text, i) => numbered(i + 1, text));
+    }
+
+    // Recipe card details, flattened into a compact printable block.
+    const recipeBox = source.querySelector('.recipe-box');
+    if (recipeBox) {
+      const details = [];
+      recipeBox.querySelectorAll('.stats span').forEach(span => {
+        const label = cleanText(span.querySelector('b')?.textContent || '');
+        const value = cleanText(span.textContent.replace(span.querySelector('b')?.textContent || '', ''));
+        if (label && value) details.push(`${label}: ${value}`);
+      });
+      recipeBox.querySelectorAll('h3').forEach(h3 => {
+        const next = h3.nextElementSibling;
+        if (next) details.push(`${cleanText(h3.textContent)}: ${cleanText(next.textContent)}`);
+      });
+      if (details.length) {
+        heading('Recipe Details', 15);
+        details.forEach(text => bullet(text));
+      }
+    }
+
+    // Tips / mistakes / substitutions / storage: each complete card stays together.
+    const editorialCards = [...detail.querySelectorAll('.recipe-editorial .editorial-card')];
+    editorialCards.forEach(el => {
+      const h = cleanText(el.querySelector('h3')?.textContent || 'Recipe Notes');
+      const items = [...el.querySelectorAll('li')].map(li => cleanText(li.textContent)).filter(Boolean);
+      if (items.length) card(h, items);
+    });
+
+    // Small footer on every generated PDF page is deliberately omitted; the document remains recipe-focused.
+    return doc;
   }
 
   async function downloadRecipePDF() {
@@ -40,113 +261,23 @@
 
     const title = source.getAttribute('data-print-title') || document.title.replace(/\s*\|.*$/, '') || 'Recipe';
     const image = detail.querySelector('.detail-image');
-    const editorial = detail.querySelector('.recipe-editorial');
     const button = document.activeElement;
     const oldText = button && button.matches('button') ? button.textContent : '';
-    let wrapper;
 
     if (button && button.matches('button')) { button.disabled = true; button.textContent = 'Creating PDF…'; }
 
     try {
-      await loadLibrary();
-
-      wrapper = document.createElement('div');
-      wrapper.className = 'pdf-export-document';
-      wrapper.style.cssText = [
-        'position:absolute','left:0','top:0','width:180mm','box-sizing:border-box',
-        'background:#fff','color:#111','padding:0','margin:0','z-index:2147483647',
-        'pointer-events:none','font-family:Arial,sans-serif'
-      ].join(';');
-
-      const style = document.createElement('style');
-      style.textContent = `
-        .pdf-export-document, .pdf-export-document * { box-sizing:border-box !important; }
-        .pdf-export-document h1, .pdf-export-document h2, .pdf-export-document h3 { color:#111 !important; }
-        .pdf-export-document .pdf-keep-together,
-        .pdf-export-document .recipe-box,
-        .pdf-export-document .editorial-card { break-inside:avoid !important; page-break-inside:avoid !important; }
-        .pdf-export-document .pdf-recipe-image { display:block !important; width:100% !important; height:auto !important; max-width:100% !important; max-height:none !important; object-fit:contain !important; object-position:center !important; margin:0 0 18px !important; }
-        .pdf-export-document .editorial-card { width:100% !important; display:block !important; overflow:visible !important; }
-        .pdf-export-document .editorial-card h3 { break-after:avoid !important; page-break-after:avoid !important; }
-        .pdf-export-document li { break-inside:avoid !important; page-break-inside:avoid !important; }
-      `;
-      wrapper.appendChild(style);
-
-      const heading = document.createElement('h1');
-      heading.textContent = title;
-      heading.style.cssText = 'font-family:Georgia,serif;font-size:28px;line-height:1.15;margin:0 0 14px;padding-bottom:10px;border-bottom:1px solid #222;color:#111;';
-      wrapper.appendChild(heading);
-
-      if (image && image.currentSrc) {
-        const img = document.createElement('img');
-        img.className = 'pdf-recipe-image';
-        img.src = image.currentSrc;
-        img.alt = image.alt || title;
-        img.crossOrigin = 'anonymous';
-        wrapper.appendChild(img);
-        await waitForImage(img);
-      }
-
-      const recipeClone = source.cloneNode(true);
-      recipeClone.removeAttribute('id');
-      recipeClone.removeAttribute('data-print-title');
-      recipeClone.style.cssText = 'display:block;width:100%;max-width:none;margin:0;padding:0;background:#fff;color:#111;';
-      recipeClone.querySelectorAll('button,iframe,video,.recipe-video,.related,.print-recipe-image').forEach(el => el.remove());
-      recipeClone.querySelectorAll('.recipe-layout').forEach(el => { el.style.cssText = 'display:block;width:100%;margin:0;padding:0;'; });
-      recipeClone.querySelectorAll('.recipe-box').forEach(el => { el.classList.add('pdf-keep-together'); el.style.cssText = 'display:block;position:static;width:100%;box-sizing:border-box;margin:20px 0 0;padding:16px;background:#f7f7f7;color:#111;border:1px solid #bbb;border-radius:0;'; });
-      recipeClone.querySelectorAll('h2').forEach(el => { el.style.cssText += 'font-family:Georgia,serif;font-size:20px;margin:20px 0 10px;color:#111;break-after:avoid;page-break-after:avoid;'; });
-      recipeClone.querySelectorAll('li').forEach(el => { el.style.cssText += 'break-inside:avoid;page-break-inside:avoid;line-height:1.55;margin-bottom:7px;color:#111;'; });
-      wrapper.appendChild(recipeClone);
-
-      if (editorial) {
-        const editorialClone = editorial.cloneNode(true);
-        editorialClone.style.cssText = 'display:block;width:100%;margin:24px 0 0;padding:0;';
-        editorialClone.querySelector('.section-head')?.remove();
-        editorialClone.querySelectorAll('.editorial-grid').forEach(el => { el.style.cssText = 'display:block;width:100%;'; });
-        editorialClone.querySelectorAll('.editorial-card').forEach(el => {
-          el.classList.add('pdf-keep-together');
-          el.style.cssText = 'display:block;box-sizing:border-box;width:100%;padding:16px;margin:0 0 14px;background:#fff;color:#111;border:1px solid #bbb;border-radius:0;overflow:visible;break-inside:avoid;page-break-inside:avoid;';
-        });
-        editorialClone.querySelectorAll('h3').forEach(el => { el.style.cssText += 'font-family:Georgia,serif;font-size:17px;margin:0 0 8px;color:#111;break-after:avoid;page-break-after:avoid;'; });
-        editorialClone.querySelectorAll('li').forEach(el => { el.style.cssText += 'font-size:10.5pt;line-height:1.55;color:#111;padding:1.5mm 0;break-inside:avoid;page-break-inside:avoid;'; });
-        wrapper.appendChild(editorialClone);
-      }
-
-      document.body.appendChild(wrapper);
-      await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
-
-      const canvasWidth = wrapper.scrollWidth;
-      const canvasHeight = wrapper.scrollHeight;
-      if (canvasWidth < 20 || canvasHeight < 20) throw new Error('Printable recipe content did not render.');
-
-      await window.html2pdf().set({
-        margin: [10, 10, 10, 10],
-        filename: `${slugify(title)}.pdf`,
-        image: { type: 'jpeg', quality: 1 },
-        html2canvas: {
-          scale: 3,
-          useCORS: true,
-          allowTaint: false,
-          backgroundColor: '#ffffff',
-          logging: false,
-          scrollX: 0,
-          scrollY: 0,
-          width: canvasWidth,
-          height: canvasHeight,
-          windowWidth: Math.max(document.documentElement.clientWidth, canvasWidth),
-          windowHeight: Math.max(document.documentElement.clientHeight, canvasHeight)
-        },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait', compress: true },
-        pagebreak: {
-          mode: ['css', 'legacy'],
-          avoid: ['.pdf-keep-together', '.recipe-box', '.editorial-card']
-        }
-      }).from(wrapper).save();
+      await loadJsPDF();
+      const img = await loadImage(image?.currentSrc || image?.src || '');
+      const imageInfo = imageData(img);
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF({ unit: 'mm', format: 'a4', orientation: 'portrait', compress: true });
+      createPdf(doc, source, detail, title, imageInfo);
+      doc.save(`${slugify(title)}.pdf`);
     } catch (error) {
       console.error('Recipe PDF export failed:', error);
       alert('The recipe PDF could not be generated. Please try again.');
     } finally {
-      wrapper?.remove();
       if (button && button.matches('button')) { button.disabled = false; button.textContent = oldText || 'Print recipe'; }
     }
   }
