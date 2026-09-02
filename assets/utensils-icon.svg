@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Recipe Hub cooking icon</title>
+  <desc id="desc">A clean crossed fork and spoon above a simple plate.</desc>
+  <g fill="none" stroke="#1d2420" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 8v17M13 8v8c0 3.2 2.2 5 5 5s5-1.8 5-5V8M18 21v10"/>
+    <path d="M46 8v23M42 8c0 7 8 7 8 0M46 31l-15 17"/>
+    <path d="M18 31l15 17"/>
+    <path d="M9 54h46"/>
+    <path d="M15 58h34"/>
+    <path d="M32 17c-1.8-2.1-1.8-4.1 0-6.2M32 22c-1.2-1.4-1.2-2.7 0-4.1"/>
+  </g>
+</svg>
