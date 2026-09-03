@@ -1,8 +1,8 @@
 (() => {
   const nativeFetch = window.fetch.bind(window);
   const batches = {
-    '/data/recipes.json': 'data/recipes-batch-01.json',
-    '/data/videos.json': 'data/videos-batch-01.json'
+    '/data/recipes.json': ['data/recipes-batch-01.json', 'data/recipes-batch-02.json'],
+    '/data/videos.json': ['data/videos-batch-01.json', 'data/videos-batch-02.json']
   };
   const cache = new Map();
   const publishedBatchCategories = {
@@ -15,7 +15,11 @@
     'old-fashioned-beef-stew': 'Soup',
     'ground-beef-tacos': 'Dinner',
     'spaghetti-and-meatballs': 'Dinner',
-    'fluffy-buttermilk-pancakes': 'Breakfast'
+    'fluffy-buttermilk-pancakes': 'Breakfast',
+    'classic-banana-bread': 'Breakfast',
+    'easy-sugar-cookies': 'Dessert',
+    'awesome-slow-cooker-pot-roast': 'Dinner',
+    'classic-chicken-pot-pie': 'Dinner'
   };
   const categoryOverrides = {
     'Greek Yogurt Berry Parfait': 'Dessert'
@@ -38,12 +42,12 @@
     if (!cache.has(key)) {
       cache.set(key, Promise.all([
         nativeFetch(input, init).then(r => r.json()),
-        nativeFetch(batches[key]).then(r => r.ok ? r.json() : (key.includes('videos') ? {} : [])).catch(() => key.includes('videos') ? {} : [])
-      ]).then(([base, extra]) => {
-        if (key.includes('videos')) return { ...base, ...extra };
+        ...batches[key].map(path => nativeFetch(path).then(r => r.ok ? r.json() : (key.includes('videos') ? {} : [])).catch(() => key.includes('videos') ? {} : []))
+      ]).then(([base, ...extras]) => {
+        if (key.includes('videos')) return Object.assign({}, base, ...extras);
 
         const correctedBase = base.map(applyCategoryOverride);
-        const publishedExtra = extra.map(recipe => {
+        const publishedExtra = extras.flat().map(recipe => {
           const category = publishedBatchCategories[recipe.id];
           if (!category) return applyCategoryOverride(recipe);
           const image = batchImageOverrides[recipe.id] || recipe.image;
