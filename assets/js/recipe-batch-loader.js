@@ -17,9 +17,17 @@
     'spaghetti-and-meatballs': 'Dinner',
     'fluffy-buttermilk-pancakes': 'Breakfast'
   };
+  const categoryOverrides = {
+    'Greek Yogurt Berry Parfait': 'Dessert'
+  };
   const batchImageOverrides = {
     'easy-lasagna': 'https://images.unsplash.com/photo-1709429790175-b02bb1b19207?auto=format&fit=crop&w=1200&q=82',
     'spaghetti-and-meatballs': 'https://images.unsplash.com/photo-1714383611462-f730359f9145?auto=format&fit=crop&w=1200&q=82'
+  };
+
+  const applyCategoryOverride = recipe => {
+    const category = categoryOverrides[recipe.title];
+    return category ? { ...recipe, category } : recipe;
   };
 
   window.fetch = async (input, init) => {
@@ -34,13 +42,14 @@
       ]).then(([base, extra]) => {
         if (key.includes('videos')) return { ...base, ...extra };
 
+        const correctedBase = base.map(applyCategoryOverride);
         const publishedExtra = extra.map(recipe => {
           const category = publishedBatchCategories[recipe.id];
-          if (!category) return recipe;
+          if (!category) return applyCategoryOverride(recipe);
           const image = batchImageOverrides[recipe.id] || recipe.image;
           return { ...recipe, status: 'published', category, image };
         });
-        return [...base, ...publishedExtra];
+        return [...correctedBase, ...publishedExtra];
       }));
     }
 
