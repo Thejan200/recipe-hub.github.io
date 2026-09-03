@@ -1,8 +1,8 @@
 (() => {
   const nativeFetch = window.fetch.bind(window);
   const batches = {
-    '/data/recipes.json': ['data/recipes-batch-01.json', 'data/recipes-batch-02.json'],
-    '/data/videos.json': ['data/videos-batch-01.json', 'data/videos-batch-02.json']
+    '/data/recipes.json': ['data/recipes-batch-01.json', 'data/recipes-batch-02.json', 'data/recipes-batch-03.json'],
+    '/data/videos.json': ['data/videos-batch-01.json', 'data/videos-batch-02.json', 'data/videos-batch-03.json']
   };
   const cache = new Map();
   const publishedBatchCategories = {
@@ -19,7 +19,15 @@
     'classic-banana-bread': 'Breakfast',
     'easy-sugar-cookies': 'Dessert',
     'awesome-slow-cooker-pot-roast': 'Dinner',
-    'classic-chicken-pot-pie': 'Dinner'
+    'classic-chicken-pot-pie': 'Dinner',
+    'southern-fried-chicken': 'Chicken',
+    'buffalo-chicken-dip': 'Appetizer',
+    'chicken-alfredo': 'Pasta',
+    'chicken-parmesan': 'Chicken',
+    'chicken-enchiladas': 'Dinner',
+    'chicken-fajitas': 'Chicken',
+    'chicken-caesar-salad': 'Salad',
+    'chicken-noodle-soup': 'Soup'
   };
   const categoryOverrides = {
     'Greek Yogurt Berry Parfait': 'Dessert'
