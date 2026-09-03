@@ -12,7 +12,7 @@
     'easy-lasagna': 'Dinner',
     'air-fryer-chicken-wings': 'Chicken',
     'golden-baked-pork-chops': 'Dinner',
-    'old-fashioned-beef-stew': 'Soup',
+    'old-fashioned-beef-stew': 'Dinner',
     'ground-beef-tacos': 'Dinner',
     'spaghetti-and-meatballs': 'Dinner',
     'fluffy-buttermilk-pancakes': 'Breakfast',
