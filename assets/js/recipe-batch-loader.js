@@ -37,12 +37,41 @@
   const batchImageOverrides = {
     'easy-lasagna': 'https://images.unsplash.com/photo-1709429790175-b02bb1b19207?auto=format&fit=crop&w=1200&q=82',
     'spaghetti-and-meatballs': 'https://images.unsplash.com/photo-1714383611462-f730359f9145?auto=format&fit=crop&w=1200&q=82',
-    'awesome-slow-cooker-pot-roast': 'https://images.unsplash.com/photo-1603185730021-ddc0c8097059?auto=format&fit=crop&w=1200&q=82'
+    'awesome-slow-cooker-pot-roast': 'https://images.unsplash.com/photo-1603185730021-ddc0c8097059?auto=format&fit=crop&w=1200&q=82',
+    'classic-chicken-pot-pie': 'https://images.unsplash.com/photo-1650917331384-1fd06afa3230?auto=format&fit=crop&w=1200&q=82'
   };
 
   const applyCategoryOverride = recipe => {
     const category = categoryOverrides[recipe.title];
     return category ? { ...recipe, category } : recipe;
+  };
+
+  const normalizeTitle = value => String(value || '').trim().toLowerCase().replace(/[^a-z0-9]+/g, ' ');
+  const normalizeImage = value => String(value || '').trim().split(/[?#]/)[0].toLowerCase();
+
+  const enforcePublishedUniqueness = recipes => {
+    const ids = new Set();
+    const titles = new Set();
+    const images = new Set();
+
+    return recipes.map(recipe => {
+      if (recipe.status !== 'published') return recipe;
+
+      const id = String(recipe.id || '').trim().toLowerCase();
+      const title = normalizeTitle(recipe.title);
+      const image = normalizeImage(recipe.image);
+      const duplicate = (id && ids.has(id)) || (title && titles.has(title)) || (image && images.has(image));
+
+      if (duplicate) {
+        console.error('[Recipe Hub] Duplicate published recipe blocked:', recipe.id || recipe.title);
+        return { ...recipe, status: 'draft' };
+      }
+
+      if (id) ids.add(id);
+      if (title) titles.add(title);
+      if (image) images.add(image);
+      return recipe;
+    });
   };
 
   window.fetch = async (input, init) => {
@@ -64,7 +93,7 @@
           const image = batchImageOverrides[recipe.id] || recipe.image;
           return { ...recipe, status: 'published', category, image };
         });
-        return [...correctedBase, ...publishedExtra];
+        return enforcePublishedUniqueness([...correctedBase, ...publishedExtra]);
       }));
     }
 
