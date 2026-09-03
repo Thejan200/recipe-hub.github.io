@@ -39,6 +39,33 @@ assert set(videos).issubset(ids), "videos.json contains a recipe ID that does no
 for recipe_id, video in videos.items():
     assert video.get("language", "").lower() == "en", f"Video catalog entry {recipe_id} must be English-only"
 
+# Enforce uniqueness across the core catalog and every recipe batch.
+all_recipe_files = [root / "data/recipes.json"] + sorted(root.glob("data/recipes-batch-*.json"))
+all_catalog_recipes = []
+for path in all_recipe_files:
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    assert isinstance(payload, list), f"Recipe catalog file must contain a list: {path.relative_to(root)}"
+    all_catalog_recipes.extend(payload)
+
+catalog_ids = set(); catalog_slugs = set(); catalog_titles = set(); catalog_images = set()
+def normalize_title(value):
+    return re.sub(r"[^a-z0-9]+", " ", str(value or "").strip().lower()).strip()
+def normalize_image(value):
+    return str(value or "").strip().split("?", 1)[0].split("#", 1)[0].lower()
+
+for recipe in all_catalog_recipes:
+    source = recipe.get("id") or recipe.get("title") or "unknown"
+    assert recipe.get("id") and recipe.get("slug") and recipe.get("title") and recipe.get("image"), f"Missing uniqueness field in {source}"
+    recipe_id = str(recipe["id"]).strip().lower()
+    slug = str(recipe["slug"]).strip().lower()
+    title = normalize_title(recipe["title"])
+    image = normalize_image(recipe["image"])
+    assert recipe_id not in catalog_ids, f"Duplicate recipe id across catalog/batches: {recipe['id']}"
+    assert slug not in catalog_slugs, f"Duplicate recipe slug across catalog/batches: {recipe['slug']}"
+    assert title not in catalog_titles, f"Duplicate recipe title across catalog/batches: {recipe['title']}"
+    assert image not in catalog_images, f"Duplicate recipe image across catalog/batches: {recipe['title']}"
+    catalog_ids.add(recipe_id); catalog_slugs.add(slug); catalog_titles.add(title); catalog_images.add(image)
+
 sitemap_root = ET.parse(root / "sitemap.xml").getroot()
 urls = [e.text for e in sitemap_root.iter() if e.tag.endswith("}loc") and e.text]
 assert urls and len(urls) == len(set(urls)), "sitemap.xml contains missing or duplicate URLs"
@@ -67,4 +94,4 @@ for html in html_files:
         target=(html.parent / urlparse(ref).path).resolve()
         assert (target.exists() and root in target.parents) or target == root, f"Broken or escaping local reference in {html.relative_to(root)}: {ref}"
 
-print(f"OK: {len(recipes)} recipes, {len(videos)} English YouTube videos, {len(urls)} sitemap URLs, {len(required)} required files, local HTML references checked. Rich instructions, video attribution, English-only video policy, sitemap coverage, and asset checks: PASS.")
+print(f"OK: {len(recipes)} core recipes, {len(all_catalog_recipes)} total catalog/batch recipes, {len(videos)} English YouTube videos, {len(urls)} sitemap URLs, {len(required)} required files, local HTML references checked. Duplicate recipe IDs/slugs/titles/images, rich instructions, video attribution, English-only video policy, sitemap coverage, and asset checks: PASS.")
