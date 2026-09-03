@@ -47,6 +47,14 @@ for path in all_recipe_files:
     assert isinstance(payload, list), f"Recipe catalog file must contain a list: {path.relative_to(root)}"
     all_catalog_recipes.extend(payload)
 
+# These are the same intentional image overrides used by the runtime batch loader.
+effective_image_overrides = {
+    "easy-lasagna": "https://images.unsplash.com/photo-1709429790175-b02bb1b19207?auto=format&fit=crop&w=1200&q=82",
+    "spaghetti-and-meatballs": "https://images.unsplash.com/photo-1714383611462-f730359f9145?auto=format&fit=crop&w=1200&q=82",
+    "awesome-slow-cooker-pot-roast": "https://images.unsplash.com/photo-1603185730021-ddc0c8097059?auto=format&fit=crop&w=1200&q=82",
+    "classic-chicken-pot-pie": "https://images.unsplash.com/photo-1650917331384-1fd06afa3230?auto=format&fit=crop&w=1200&q=82"
+}
+
 catalog_ids = set(); catalog_slugs = set(); catalog_titles = set(); catalog_images = set()
 def normalize_title(value):
     return re.sub(r"[^a-z0-9]+", " ", str(value or "").strip().lower()).strip()
@@ -59,7 +67,7 @@ for recipe in all_catalog_recipes:
     recipe_id = str(recipe["id"]).strip().lower()
     slug = str(recipe["slug"]).strip().lower()
     title = normalize_title(recipe["title"])
-    image = normalize_image(recipe["image"])
+    image = normalize_image(effective_image_overrides.get(recipe_id, recipe["image"]))
     assert recipe_id not in catalog_ids, f"Duplicate recipe id across catalog/batches: {recipe['id']}"
     assert slug not in catalog_slugs, f"Duplicate recipe slug across catalog/batches: {recipe['slug']}"
     assert title not in catalog_titles, f"Duplicate recipe title across catalog/batches: {recipe['title']}"
@@ -94,4 +102,4 @@ for html in html_files:
         target=(html.parent / urlparse(ref).path).resolve()
         assert (target.exists() and root in target.parents) or target == root, f"Broken or escaping local reference in {html.relative_to(root)}: {ref}"
 
-print(f"OK: {len(recipes)} core recipes, {len(all_catalog_recipes)} total catalog/batch recipes, {len(videos)} English YouTube videos, {len(urls)} sitemap URLs, {len(required)} required files, local HTML references checked. Duplicate recipe IDs/slugs/titles/images, rich instructions, video attribution, English-only video policy, sitemap coverage, and asset checks: PASS.")
+print(f"OK: {len(recipes)} core recipes, {len(all_catalog_recipes)} total catalog/batch recipes, {len(videos)} English YouTube videos, {len(urls)} sitemap URLs, {len(required)} required files, local HTML references checked. Duplicate recipe IDs/slugs/titles/effective images, rich instructions, video attribution, English-only video policy, sitemap coverage, and asset checks: PASS.")
