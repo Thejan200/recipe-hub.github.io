@@ -1,56 +1,18 @@
 {
-  "lemon-chicken-pasta": {
-    "youtubeId": "YPgoUhZwfFA",
-    "title": "Creamy Lemon Chicken Pasta Recipe",
-    "channel": "Natashas Kitchen",
-    "channelUrl": "https://www.youtube.com/@NatashasKitchen",
-    "url": "https://www.youtube.com/watch?v=YPgoUhZwfFA",
-    "language": "en",
-    "description": "English cooking demonstration for creamy lemon chicken pasta published by Natashas Kitchen."
-  },
-  "avocado-toast": {
-    "youtubeId": "WyuAFUxJLjM",
-    "title": "Avocado Toast With Poached Eggs Recipe",
-    "channel": "Sorted Food",
-    "channelUrl": "https://www.youtube.com/@SortedFood",
-    "url": "https://www.youtube.com/watch?v=WyuAFUxJLjM",
-    "language": "en",
-    "description": "English avocado toast cooking demonstration published by Sorted Food."
-  },
-  "salmon-bowl": {
-    "youtubeId": "-3h4O4on_-4",
-    "title": "Meal Prep Honey Garlic Salmon Bowls | Episode 7",
-    "channel": "Chef Jack Ovens",
-    "channelUrl": "https://www.youtube.com/@ChefJackOvens",
-    "url": "https://www.youtube.com/watch?v=-3h4O4on_-4",
-    "language": "en",
-    "description": "English honey garlic salmon bowl cooking demonstration published by Chef Jack Ovens."
-  },
-  "berry-parfait": {
-    "youtubeId": "bstdhwk-LC4",
-    "title": "The Origin of Yogurt + Yogurt Berry Parfait Recipe",
-    "channel": "History of Food",
-    "channelUrl": "https://www.youtube.com/@HistoryofFood",
-    "url": "https://www.youtube.com/watch?v=bstdhwk-LC4",
-    "language": "en",
-    "description": "English yogurt berry parfait demonstration published by History of Food."
-  },
-  "chocolate-cake": {
-    "youtubeId": "ZqMqTB7RSjo",
-    "title": "Easy One Bowl Chocolate Cake Recipe | Allrecipes",
-    "channel": "Allrecipes",
-    "channelUrl": "https://www.youtube.com/@Allrecipes",
-    "url": "https://www.youtube.com/watch?v=ZqMqTB7RSjo",
-    "language": "en",
-    "description": "English one-bowl chocolate cake demonstration published by Allrecipes."
-  },
-  "veggie-soup": {
-    "youtubeId": "r0ifkoDKt44",
-    "title": "45 Minute Vegetable Soup",
-    "channel": "The Stay At Home Chef",
-    "channelUrl": "https://www.youtube.com/@thestayhomechef",
-    "url": "https://www.youtube.com/watch?v=r0ifkoDKt44",
-    "language": "en",
-    "description": "English vegetable soup cooking demonstration published by The Stay At Home Chef."
-  }
+  "lemon-chicken-pasta": {"youtubeId":"YPgoUhZwfFA","title":"Creamy Lemon Chicken Pasta Recipe","channel":"Natashas Kitchen","channelUrl":"https://www.youtube.com/@NatashasKitchen","url":"https://www.youtube.com/watch?v=YPgoUhZwfFA","language":"en","description":"English cooking demonstration for creamy lemon chicken pasta published by Natashas Kitchen."},
+  "avocado-toast": {"youtubeId":"WyuAFUxJLjM","title":"Avocado Toast With Poached Eggs Recipe","channel":"Sorted Food","channelUrl":"https://www.youtube.com/@SortedFood","url":"https://www.youtube.com/watch?v=WyuAFUxJLjM","language":"en","description":"English avocado toast cooking demonstration published by Sorted Food."},
+  "salmon-bowl": {"youtubeId":"-3h4O4on_-4","title":"Meal Prep Honey Garlic Salmon Bowls | Episode 7","channel":"Chef Jack Ovens","channelUrl":"https://www.youtube.com/@ChefJackOvens","url":"https://www.youtube.com/watch?v=-3h4O4on_-4","language":"en","description":"English honey garlic salmon bowl cooking demonstration published by Chef Jack Ovens."},
+  "berry-parfait": {"youtubeId":"bstdhwk-LC4","title":"The Origin of Yogurt + Yogurt Berry Parfait Recipe","channel":"History of Food","channelUrl":"https://www.youtube.com/@HistoryofFood","url":"https://www.youtube.com/watch?v=bstdhwk-LC4","language":"en","description":"English yogurt berry parfait demonstration published by History of Food."},
+  "chocolate-cake": {"youtubeId":"ZqMqTB7RSjo","title":"Easy One Bowl Chocolate Cake Recipe | Allrecipes","channel":"Allrecipes","channelUrl":"https://www.youtube.com/@Allrecipes","url":"https://www.youtube.com/watch?v=ZqMqTB7RSjo","language":"en","description":"English one-bowl chocolate cake demonstration published by Allrecipes."},
+  "veggie-soup": {"youtubeId":"r0ifkoDKt44","title":"45 Minute Vegetable Soup","channel":"The Stay At Home Chef","channelUrl":"https://www.youtube.com/@thestayhomechef","url":"https://www.youtube.com/watch?v=r0ifkoDKt44","language":"en","description":"English vegetable soup cooking demonstration published by The Stay At Home Chef."},
+  "honey-glazed-chicken-breast": {"youtubeId":"aItn-LdA01U","title":"15-Minute Honey Glazed Chicken (Better Than Takeout!)","channel":"Natashas Kitchen","channelUrl":"https://www.youtube.com/@NatashasKitchen","url":"https://www.youtube.com/watch?v=aItn-LdA01U","language":"en","description":"English honey-glazed chicken breast cooking demonstration published by Natashas Kitchen."},
+  "classic-family-meatloaf": {"youtubeId":"gruT_3vzfEg","title":"Classic Family Meatloaf Recipe","channel":"Certified Angus Beef","channelUrl":"https://www.youtube.com/@CertifiedAngusBeef","url":"https://www.youtube.com/watch?v=gruT_3vzfEg","language":"en","description":"English classic family meatloaf cooking demonstration published by Certified Angus Beef."},
+  "baked-mac-and-cheese": {"youtubeId":"RnQSfb8-0F4","title":"Baked Mac and Cheese Recipe","channel":"Preppy Kitchen","channelUrl":"https://www.youtube.com/@PreppyKitchen","url":"https://www.youtube.com/watch?v=RnQSfb8-0F4","language":"en","description":"English baked macaroni and cheese cooking demonstration published by Preppy Kitchen."},
+  "easy-lasagna": {"youtubeId":"QZloaLmvSP0","title":"Easy Lasagna Recipe","channel":"Preppy Kitchen","channelUrl":"https://www.youtube.com/@PreppyKitchen","url":"https://www.youtube.com/watch?v=QZloaLmvSP0","language":"en","description":"English homemade lasagna cooking demonstration published by Preppy Kitchen."},
+  "air-fryer-chicken-wings": {"youtubeId":"HmDqTjPLfCY","title":"How to Make Air Fryer Chicken Wings | Get Cookin' | Allrecipes.com","channel":"Allrecipes","channelUrl":"https://www.youtube.com/@Allrecipes","url":"https://www.youtube.com/watch?v=HmDqTjPLfCY","language":"en","description":"English air fryer chicken wings cooking demonstration published by Allrecipes."},
+  "golden-baked-pork-chops": {"youtubeId":"lfJeWyN4YmQ","title":"How to Make Pork Chops | Pork Recipes | Allrecipes.com","channel":"Allrecipes","channelUrl":"https://www.youtube.com/@Allrecipes","url":"https://www.youtube.com/watch?v=lfJeWyN4YmQ","language":"en","description":"English baked pork chops cooking demonstration published by Allrecipes."},
+  "old-fashioned-beef-stew": {"youtubeId":"ncB14ohIsDI","title":"Old Fashioned Beef Stew","channel":"The Stay At Home Chef","channelUrl":"https://www.youtube.com/@thestayhomechef","url":"https://www.youtube.com/watch?v=ncB14ohIsDI","language":"en","description":"English old-fashioned beef stew cooking demonstration published by The Stay At Home Chef."},
+  "ground-beef-tacos": {"youtubeId":"dwwqoU7nN-E","title":"5 Easy Beef Taco Recipes You'll Make Again and Again | Allrecipes","channel":"Allrecipes","channelUrl":"https://www.youtube.com/@Allrecipes","url":"https://www.youtube.com/watch?v=dwwqoU7nN-E","language":"en","description":"English beef taco cooking demonstration published by Allrecipes."},
+  "spaghetti-and-meatballs": {"youtubeId":"YyCRnAZ4eCc","title":"How To Make Spaghetti and Meatballs Recipe | Homemade Marinara Sauce","channel":"Natashas Kitchen","channelUrl":"https://www.youtube.com/@NatashasKitchen","url":"https://www.youtube.com/watch?v=YyCRnAZ4eCc","language":"en","description":"English spaghetti and meatballs cooking demonstration published by Natashas Kitchen."},
+  "fluffy-buttermilk-pancakes": {"youtubeId":"9zCVCL4V8JQ","title":"FLUFFY Pancakes Recipe","channel":"Preppy Kitchen","channelUrl":"https://www.youtube.com/@PreppyKitchen","url":"https://www.youtube.com/watch?v=9zCVCL4V8JQ","language":"en","description":"English fluffy pancake cooking demonstration published by Preppy Kitchen."}
 }
