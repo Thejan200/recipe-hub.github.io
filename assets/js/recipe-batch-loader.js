@@ -27,7 +27,8 @@
     'chicken-enchiladas': 'Dinner',
     'chicken-fajitas': 'Chicken',
     'chicken-caesar-salad': 'Salad',
-    'chicken-noodle-soup': 'Soup'
+    'chicken-noodle-soup': 'Soup',
+    'chicken-fried-rice': 'Dinner'
   };
   const categoryOverrides = {
     'Greek Yogurt Berry Parfait': 'Dessert'
