@@ -1,17 +1,21 @@
 (() => {
   const nativeFetch = window.fetch.bind(window);
-  const extraBatch = 'data/recipes-batch-01.json';
-  let mergedPromise;
+  const batches = {
+    '/data/recipes.json': 'data/recipes-batch-01.json',
+    '/data/videos.json': 'data/videos-batch-01.json'
+  };
+  const cache = new Map();
   window.fetch = async (input, init) => {
     const url = typeof input === 'string' ? input : input?.url || '';
-    if (!url.includes('/data/recipes.json')) return nativeFetch(input, init);
-    if (!mergedPromise) {
-      mergedPromise = Promise.all([
+    const key = Object.keys(batches).find(k => url.includes(k));
+    if (!key) return nativeFetch(input, init);
+    if (!cache.has(key)) {
+      cache.set(key, Promise.all([
         nativeFetch(input, init).then(r => r.json()),
-        nativeFetch(extraBatch).then(r => r.ok ? r.json() : []).catch(() => [])
-      ]).then(([base, extra]) => [...base, ...extra]);
+        nativeFetch(batches[key]).then(r => r.ok ? r.json() : (key.includes('videos') ? {} : [])).catch(() => key.includes('videos') ? {} : [])
+      ]).then(([base, extra]) => key.includes('videos') ? ({ ...base, ...extra }) : [...base, ...extra]));
     }
-    const data = await mergedPromise;
+    const data = await cache.get(key);
     return new Response(JSON.stringify(data), {
       status: 200,
       headers: { 'Content-Type': 'application/json' }
