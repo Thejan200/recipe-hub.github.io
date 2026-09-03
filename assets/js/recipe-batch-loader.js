@@ -17,6 +17,10 @@
     'spaghetti-and-meatballs': 'Dinner',
     'fluffy-buttermilk-pancakes': 'Breakfast'
   };
+  const batchImageOverrides = {
+    'easy-lasagna': 'https://images.unsplash.com/photo-1709429790175-b02bb1b19207?auto=format&fit=crop&w=1200&q=82',
+    'spaghetti-and-meatballs': 'https://images.unsplash.com/photo-1714383611462-f730359f9145?auto=format&fit=crop&w=1200&q=82'
+  };
 
   window.fetch = async (input, init) => {
     const url = typeof input === 'string' ? input : input?.url || '';
@@ -33,7 +37,8 @@
         const publishedExtra = extra.map(recipe => {
           const category = publishedBatchCategories[recipe.id];
           if (!category) return recipe;
-          return { ...recipe, status: 'published', category };
+          const image = batchImageOverrides[recipe.id] || recipe.image;
+          return { ...recipe, status: 'published', category, image };
         });
         return [...base, ...publishedExtra];
       }));
