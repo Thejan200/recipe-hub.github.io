@@ -1,4 +1,22 @@
 (() => {
+  // Recipe data loads asynchronously, so the author must be added after #recipe-card exists.
+  function ensureRecipeAuthor() {
+    const card = document.getElementById('recipe-card');
+    if (!card) return;
+    const title = card.querySelector('h1');
+    if (!title || card.querySelector('.recipe-author')) return;
+    const author = document.createElement('p');
+    author.className = 'recipe-author';
+    author.textContent = 'Author: Thejan Mahakumbura';
+    title.insertAdjacentElement('afterend', author);
+  }
+
+  const recipeDetail = document.getElementById('recipe-detail');
+  if (recipeDetail) {
+    ensureRecipeAuthor();
+    new MutationObserver(ensureRecipeAuthor).observe(recipeDetail, { childList: true, subtree: true });
+  }
+
   const JSPDF_URL = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
   let libraryPromise;
 
