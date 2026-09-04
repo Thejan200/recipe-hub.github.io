@@ -11,7 +11,7 @@
       recipesLink.href='recipes.html';
       if(!nav.querySelector('[data-nav-categories]')){
         const categories=document.createElement('a');
-        categories.href='category.html?category=All%20Recipes';
+        categories.href='category.html';
         categories.textContent='Categories';
         categories.setAttribute('data-nav-categories','');
         recipesLink.insertAdjacentElement('afterend',categories);
