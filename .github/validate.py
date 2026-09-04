@@ -74,6 +74,34 @@ for recipe in all_catalog_recipes:
     assert image not in catalog_images, f"Duplicate recipe image across catalog/batches: {recipe['title']}"
     catalog_ids.add(recipe_id); catalog_slugs.add(slug); catalog_titles.add(title); catalog_images.add(image)
 
+# Category images are a separate visual layer: they must never reuse a recipe image,
+# another category image, or an image already referenced elsewhere on the site.
+category_image_path = root / "data/category-images.json"
+category_images = json.loads(category_image_path.read_text(encoding="utf-8"))
+approved_categories = ["Breakfast", "Dinner", "Beef", "Pork", "Seafood", "Soup", "Dessert", "Healthy", "Chicken", "Vegetarian"]
+assert isinstance(category_images, dict), "data/category-images.json must contain an object"
+assert set(category_images) == set(approved_categories), "Category image registry must contain exactly the 10 approved categories"
+category_image_values = [normalize_image(value) for value in category_images.values()]
+assert all(category_image_values), "Every approved category must have a category image"
+assert len(category_image_values) == len(set(category_image_values)), "Duplicate category image detected"
+for category, image in zip(category_images, category_image_values):
+    assert image not in catalog_images, f"Category image reuses a recipe image: {category}"
+
+image_url_pattern = re.compile(r"https://images\.unsplash\.com/[^\"'\s)]+", re.I)
+site_image_urls = set()
+for path in root.rglob("*"):
+    if not path.is_file() or path == category_image_path or ".git" in path.parts:
+        continue
+    if path.suffix.lower() not in {".html", ".js", ".json", ".css", ".md", ".svg"}:
+        continue
+    try:
+        text = path.read_text(encoding="utf-8")
+    except UnicodeDecodeError:
+        continue
+    site_image_urls.update(normalize_image(value) for value in image_url_pattern.findall(text))
+for category, image in zip(category_images, category_image_values):
+    assert image not in site_image_urls, f"Category image is duplicated elsewhere on the site: {category}"
+
 sitemap_root = ET.parse(root / "sitemap.xml").getroot()
 urls = [e.text for e in sitemap_root.iter() if e.tag.endswith("}loc") and e.text]
 assert urls and len(urls) == len(set(urls)), "sitemap.xml contains missing or duplicate URLs"
@@ -83,7 +111,7 @@ for recipe in recipes:
     if recipe.get("status") != "draft":
         assert base + "recipe.html?id=" + recipe["id"] in urls, f"Published recipe missing from sitemap: {recipe['id']}"
 
-required = ["index.html", "recipes.html", "recipe.html", "category.html", "favorites.html", "about.html", "contact.html", "privacy.html", "terms.html", "disclaimer.html", "cookie-policy.html", "404.html", "robots.txt", "sitemap.xml", "site.webmanifest", "favicon.svg", "data/recipes.json", "data/videos.json", "assets/css/style.css", "assets/js/app.js", "assets/js/site.js", "assets/js/seo.js", "assets/js/video-loader.js"]
+required = ["index.html", "recipes.html", "recipe.html", "category.html", "categories.html", "favorites.html", "about.html", "contact.html", "privacy.html", "terms.html", "disclaimer.html", "cookie-policy.html", "404.html", "robots.txt", "sitemap.xml", "site.webmanifest", "favicon.svg", "data/recipes.json", "data/videos.json", "data/category-images.json", "assets/css/style.css", "assets/js/app.js", "assets/js/site.js", "assets/js/seo.js", "assets/js/video-loader.js"]
 for path in required:
     assert (root / path).is_file(), f"Missing required file: {path}"
 
@@ -102,4 +130,4 @@ for html in html_files:
         target=(html.parent / urlparse(ref).path).resolve()
         assert (target.exists() and root in target.parents) or target == root, f"Broken or escaping local reference in {html.relative_to(root)}: {ref}"
 
-print(f"OK: {len(recipes)} core recipes, {len(all_catalog_recipes)} total catalog/batch recipes, {len(videos)} English YouTube videos, {len(urls)} sitemap URLs, {len(required)} required files, local HTML references checked. Duplicate recipe IDs/slugs/titles/effective images, rich instructions, video attribution, English-only video policy, sitemap coverage, and asset checks: PASS.")
+print(f"OK: {len(recipes)} core recipes, {len(all_catalog_recipes)} total catalog/batch recipes, {len(videos)} English YouTube videos, {len(category_images)} unique category images, {len(urls)} sitemap URLs, {len(required)} required files, local HTML references checked. Duplicate recipe IDs/slugs/titles/effective images, category-image separation and uniqueness, rich instructions, video attribution, English-only video policy, sitemap coverage, and asset checks: PASS.")
