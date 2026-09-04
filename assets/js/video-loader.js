@@ -28,7 +28,7 @@
     if(!root||!card) return;
     const related=card.querySelector('.related')||root.querySelector('.related');
     if(!related||!related.parentNode) return;
-    let author=card.querySelector('.recipe-author');
+    let author=root.querySelector('.recipe-author');
     if(!author){
       author=document.createElement('p');
       author.className='recipe-author';
