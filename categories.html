@@ -1,12 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Explore Recipe Hub categories and find recipes by the kind of food you want to cook.">
-<meta name="robots" content="index,follow">
-<link rel="canonical" href="https://thejan200.github.io/recipe-hub.github.io/categories.html">
-<link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Explore Recipe Hub categories and find recipes by the kind of food you want to cook."><meta name="robots" content="index,follow">
+<link rel="canonical" href="https://thejan200.github.io/recipe-hub.github.io/categories.html"><link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Recipe Hub"><meta property="og:title" content="Recipe Categories | Recipe Hub"><meta property="og:description" content="Explore Recipe Hub categories and find recipes by the kind of food you want to cook."><meta property="og:url" content="https://thejan200.github.io/recipe-hub.github.io/categories.html"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Recipe Categories | Recipe Hub"><meta name="twitter:description" content="Explore Recipe Hub categories and find recipes by the kind of food you want to cook.">
 <title>Recipe Categories | Recipe Hub</title><link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="assets/css/brand.css?v=4">
 </head>
@@ -17,7 +14,7 @@
 <script src="assets/js/recipe-batch-loader.js"></script><script src="assets/js/app.js"></script><script src="assets/js/site.js"></script>
 <script>
 (()=>{
-const categoryDefinitions=[
+const approved=[
  {label:'Breakfast',query:'Breakfast',description:'Easy morning favorites, from pancakes and toast to comforting baked starts.',icon:'☀️'},
  {label:'Dinner',query:'Dinner',description:'Reliable dinner ideas for weeknights, family meals, and relaxed weekends.',icon:'🍽️'},
  {label:'Beef',query:'Beef',description:'Hearty beef dishes including skillet meals, tacos, roasts, and slow-cooked favorites.',icon:'🥩'},
@@ -29,14 +26,18 @@ const categoryDefinitions=[
  {label:'Chicken',query:'Chicken',description:'Popular chicken recipes for quick dinners, comfort food, and meal prep.',icon:'🍗'},
  {label:'Vegetarian',query:'Vegetarian',description:'Flavorful meat-free recipes packed with vegetables, grains, and simple ingredients.',icon:'🥕'}
 ];
+const cutoff='2026-09-04';
+const icons=['🍴','🌮','🍝','🥘','🍚','🥪','🍳','🥣','🍛','🧁'];
 const esc=value=>String(value??'').replace(/[&<>\\"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\\"':'&quot;',"'":'&#39;'}[c]));
 const matchesCategory=(r,category)=>r.category===category||((category==='Healthy'||category==='Vegetarian')&&Array.isArray(r.tags)&&r.tags.includes(category));
 async function render(){const root=document.getElementById('category-collection');if(!root)return;try{
-/* Keep this collection intentionally limited to the approved ten user-facing categories. */
 const response=await fetch('data/recipes.json');if(!response.ok)throw new Error(`HTTP ${response.status}`);const data=await response.json();const published=Array.isArray(data)?data.filter(r=>r&&r.status!=='draft'):[];
-const list=categoryDefinitions.map(def=>{const matches=published.filter(r=>matchesCategory(r,def.query));const representative=matches.find(r=>r.image)||matches[0]||{};return{...def,count:matches.length,image:representative.image,title:representative.title};}).filter(item=>item.count>0);
+const primaryCategories=[...new Set(published.map(r=>String(r.category||'').trim()).filter(Boolean))];
+const approvedQueries=new Set(approved.map(x=>x.query));
+const future=primaryCategories.filter(category=>!approvedQueries.has(category)&&published.some(r=>String(r.category||'').trim()===category&&String(r.datePublished||'')>cutoff)).map((category,i)=>{const matches=published.filter(r=>r.category===category);const rep=matches.find(r=>r.image)||matches[0]||{};return{label:category,query:category,description:`Explore ${category.toLowerCase()} recipes in the growing Recipe Hub collection.`,icon:icons[i%icons.length],count:matches.length,image:rep.image,title:rep.title,future:true}});
+const list=approved.map(def=>{const matches=published.filter(r=>matchesCategory(r,def.query));const representative=matches.find(r=>r.image)||matches[0]||{};return{...def,count:matches.length,image:representative.image,title:representative.title}}).filter(item=>item.count>0).concat(future).filter(item=>item.count>0);
 root.innerHTML=list.map(item=>{const countLabel=`${item.count} recipe${item.count===1?'':'s'}`;const href=`category.html?category=${encodeURIComponent(item.query)}`;return `<a class="category-card" href="${href}" aria-label="Browse ${esc(item.label)} recipes"><div class="category-card-image"><img src="${esc(item.image||'')}" alt="${esc(item.title||item.label)}" loading="lazy" width="900" height="600"></div><div class="category-card-body"><span class="category-icon" aria-hidden="true">${item.icon}</span><div class="category-card-copy"><p class="eyebrow">${esc(countLabel)}</p><h2>${esc(item.label)}</h2><p>${esc(item.description)}</p></div><span class="category-arrow" aria-hidden="true">→</span></div></a>`;}).join('');
-const schema={'@context':'https://schema.org','@type':'CollectionPage',name:'Recipe Categories | Recipe Hub',url:'https://thejan200.github.io/recipe-hub.github.io/categories.html',mainEntity:{'@type':'ItemList',itemListElement:list.map((item,index)=>({'@type':'ListItem',position:index+1,name:item.label,url:`https://thejan200.github.io/recipe-hub.github.io/category.html?category=${encodeURIComponent(item.query)}`}))}};const ld=document.createElement('script');ld.type='application/ld+json';ld.textContent=JSON.stringify(schema);document.head.appendChild(ld);
+const schema={'@context':'https://schema.org','@type':'CollectionPage',name:'Recipe Categories | Recipe Hub',url:'https://thejan200.github.io/recipe-hub.github.io/categories.html',mainEntity:{'@type':'ItemList',itemListElement:list.map((item,index)=>({'@type':'ListItem',position:index+1,name:item.label,url:`https://thejan200.github.io/recipe-hub.github.io/category.html?category=${encodeURIComponent(item.query)}`}))}};const old=document.getElementById('category-collection-schema');if(old)old.remove();const ld=document.createElement('script');ld.id='category-collection-schema';ld.type='application/ld+json';ld.textContent=JSON.stringify(schema);document.head.appendChild(ld);
 }catch(error){console.error('[Recipe Hub] Could not load categories:',error);root.innerHTML='<div class="category-empty"><h2>Categories are temporarily unavailable</h2><p>Please try again in a moment.</p><a class="btn btn-primary" href="recipes.html">Browse all recipes</a></div>';}}
 document.addEventListener('DOMContentLoaded',render);})();
 </script>
