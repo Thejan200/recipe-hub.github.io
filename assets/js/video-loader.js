@@ -34,6 +34,7 @@
       author.className='recipe-author';
       author.textContent='Author: Thejan Mahakumbura';
     }
+    if(author.parentNode===related.parentNode&&author.nextElementSibling===related) return;
     related.parentNode.insertBefore(author,related);
   }
 
