@@ -21,4 +21,32 @@
       return response;
     }
   };
+
+  function placeRecipeAuthor(){
+    const root=document.getElementById('recipe-detail');
+    const card=document.getElementById('recipe-card');
+    if(!root||!card) return;
+    const related=card.querySelector('.related')||root.querySelector('.related');
+    if(!related||!related.parentNode) return;
+    let author=card.querySelector('.recipe-author');
+    if(!author){
+      author=document.createElement('p');
+      author.className='recipe-author';
+      author.textContent='Author: Thejan Mahakumbura';
+    }
+    related.parentNode.insertBefore(author,related);
+  }
+
+  function watchRecipeAuthor(){
+    const root=document.getElementById('recipe-detail');
+    if(!root) return;
+    placeRecipeAuthor();
+    new MutationObserver(placeRecipeAuthor).observe(root,{childList:true,subtree:true});
+  }
+
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',watchRecipeAuthor,{once:true});
+  }else{
+    watchRecipeAuthor();
+  }
 })();
