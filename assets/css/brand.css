@@ -5,3 +5,12 @@
 
 /* Consistent keyboard focus without changing the existing visual design. */
 .brand:focus-visible,.main-nav a:focus-visible,.saved-link:focus-visible,.menu-toggle:focus-visible{outline:3px solid color-mix(in srgb,var(--accent) 45%,transparent);outline-offset:3px;border-radius:6px}.menu-toggle{cursor:pointer}
+
+/* Dark-mode contrast fixes for primary actions and the cookie-consent Accept button. */
+html[data-theme="dark"] .btn-primary,html[data-theme="dark"] .btn-dark{background:#f4f1eb!important;color:#111412!important;border-color:#f4f1eb!important;box-shadow:0 5px 18px rgba(0,0,0,.22)}
+html[data-theme="dark"] .btn-primary:hover,html[data-theme="dark"] .btn-dark:hover{background:#fff!important;color:#111412!important;border-color:#fff!important}
+html[data-theme="dark"] #cookie-banner .btn-dark{background:#f4f1eb!important;color:#111412!important;border-color:#f4f1eb!important}
+html[data-theme="dark"] #cookie-banner .btn-dark:hover{background:#fff!important;color:#111412!important;border-color:#fff!important}
+
+/* Site-wide navigation label styling for the added Categories link. */
+.main-nav a[data-nav-categories]{font-weight:600}
