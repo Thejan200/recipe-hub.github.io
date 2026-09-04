@@ -4,6 +4,20 @@
 
   const button=document.querySelector('.menu-toggle');
   const nav=document.querySelector('.main-nav');
+  if(nav){
+    const recipesLink=Array.from(nav.querySelectorAll('a')).find(a=>/^(Recipes|All Recipes)$/i.test(a.textContent.trim()));
+    if(recipesLink){
+      recipesLink.textContent='All Recipes';
+      recipesLink.href='recipes.html';
+      if(!nav.querySelector('[data-nav-categories]')){
+        const categories=document.createElement('a');
+        categories.href='category.html?category=All%20Recipes';
+        categories.textContent='Categories';
+        categories.setAttribute('data-nav-categories','');
+        recipesLink.insertAdjacentElement('afterend',categories);
+      }
+    }
+  }
   if(button&&nav){
     button.type='button';
     if(!nav.id)nav.id='site-navigation';
