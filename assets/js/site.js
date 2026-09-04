@@ -64,4 +64,58 @@
     const savedLink=header.querySelector('.saved-link');if(savedLink)savedLink.before(themeButton);else header.appendChild(themeButton);
     themeButton.onclick=()=>{const next=current()?'light':'dark';document.documentElement.setAttribute('data-theme',next);try{localStorage.setItem('rh-theme',next)}catch{}sync()};sync();
   }
+
+  /* Category collection policy: keep the ten current public categories visible,
+     hide legacy categories that were already present, and automatically allow
+     genuinely new primary categories to appear as new recipes are published. */
+  const currentCategories=new Set(['Breakfast','Dinner','Beef','Pork','Seafood','Soup','Dessert','Healthy','Chicken','Vegetarian']);
+  const legacyHiddenCategories=new Set(['Appetizer','Pasta','Salad','Quick & Easy']);
+  const categoryLabel=c=>c==='Dessert'?'Desserts':c;
+
+  function enhanceCategoryCollection(){
+    const root=document.getElementById('category-collection');
+    if(!root)return;
+    root.querySelectorAll('.category-card').forEach(card=>{
+      const heading=card.querySelector('h2');
+      const name=heading?.textContent?.trim()||'';
+      if(legacyHiddenCategories.has(name)&&!currentCategories.has(name)){card.remove();return;}
+      if(name==='Dessert'&&heading)heading.textContent='Desserts';
+    });
+  }
+
+  function categorySearchResult(){
+    const root=document.getElementById('recipe-results');
+    const input=document.getElementById('recipe-q');
+    if(!root||!input||typeof recipes==='undefined')return;
+    const q=input.value.trim().toLowerCase();
+    const old=document.getElementById('category-search-results');
+    if(old)old.remove();
+    if(!q)return;
+
+    const categories=[...new Set(recipes.flatMap(r=>{
+      const primary=String(r.category||'').trim();
+      const tags=Array.isArray(r.tags)?r.tags:[];
+      return [primary,...tags].filter(Boolean);
+    }))].filter(category=>!legacyHiddenCategories.has(category)&&category.toLowerCase().includes(q));
+    if(!categories.length)return;
+
+    const visibleCategories=categories.filter(category=>{
+      if(currentCategories.has(category))return true;
+      return recipes.some(r=>String(r.category||'').trim()===category);
+    });
+    if(!visibleCategories.length)return;
+
+    const esc=s=>String(s??'').replace(/[&<>\"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[c]));
+    const countFor=category=>recipes.filter(r=>String(r.category||'').trim()===category||(Array.isArray(r.tags)&&r.tags.includes(category))).length;
+    const wrap=document.createElement('section');
+    wrap.id='category-search-results';
+    wrap.setAttribute('aria-label','Matching recipe categories');
+    wrap.innerHTML=`<div class="category-search-heading"><p class="eyebrow">CATEGORY MATCH</p><h2>Browse matching categories</h2></div>`+visibleCategories.map(category=>`<a class="category-search-card" href="category.html?category=${encodeURIComponent(category)}"><span><strong>${esc(categoryLabel(category))}</strong><small>${countFor(category)} recipe${countFor(category)===1?'':'s'}</small></span><span aria-hidden="true">→</span></a>`).join('');
+    root.parentNode.insertBefore(wrap,root);
+  }
+
+  document.addEventListener('DOMContentLoaded',()=>{
+    if(document.getElementById('category-collection'))enhanceCategoryCollection();
+    if(document.getElementById('recipe-results'))categorySearchResult();
+  });
 })();
