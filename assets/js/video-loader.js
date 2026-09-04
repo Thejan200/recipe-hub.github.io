@@ -33,7 +33,7 @@
       author.className='recipe-author';
       author.textContent='Author: Thejan Mahakumbura';
     }
-    author.style.marginTop='28px';
+    author.style.marginTop='40px';
     if(author.parentNode===recipeBox&&recipeBox.lastElementChild===author) return;
     recipeBox.appendChild(author);
   }
