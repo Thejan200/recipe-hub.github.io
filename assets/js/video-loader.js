@@ -23,19 +23,16 @@
   };
 
   function placeRecipeAuthor(){
-    const root=document.getElementById('recipe-detail');
     const card=document.getElementById('recipe-card');
-    if(!root||!card) return;
-    const related=card.querySelector('.related')||root.querySelector('.related');
-    if(!related||!related.parentNode) return;
-    let author=root.querySelector('.recipe-author');
+    if(!card) return;
+    let author=card.querySelector('.recipe-author');
     if(!author){
       author=document.createElement('p');
       author.className='recipe-author';
       author.textContent='Author: Thejan Mahakumbura';
     }
-    if(author.parentNode===related.parentNode&&author.nextElementSibling===related) return;
-    related.parentNode.insertBefore(author,related);
+    if(author.parentNode===card&&card.lastElementChild===author) return;
+    card.appendChild(author);
   }
 
   function watchRecipeAuthor(){
