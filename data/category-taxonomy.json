@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "title": "Recipe Hub Category Taxonomy",
   "description": "Structured browsing taxonomy for Recipe Hub. Categories are grouped by user intent while recipe metadata such as cuisine, course, difficulty and time remain available for filters and future collections.",
   "groups": [
@@ -20,6 +20,12 @@
       "label": "Browse by Dish Type",
       "description": "Explore familiar recipe formats and comfort-food favorites.",
       "categories": ["Soup", "Dessert", "Pasta", "Salad", "Appetizer"]
+    },
+    {
+      "id": "cuisine",
+      "label": "Browse by Cuisine",
+      "description": "Explore recipes by culinary tradition, country, and regional cooking style.",
+      "categories": ["USA"]
     },
     {
       "id": "lifestyle",
@@ -101,6 +107,12 @@
       "icon": "🥣",
       "showOnLanding": false
     },
+    "USA": {
+      "label": "🇺🇸 USA — American Classics",
+      "description": "American classics and comfort-food favorites, from casseroles and barbecue to Southern and Italian-American staples.",
+      "icon": "🇺🇸",
+      "showOnLanding": true
+    },
     "Healthy": {
       "label": "Healthy",
       "description": "Balanced recipes built around practical ingredients and everyday cooking.",
@@ -123,6 +135,7 @@
   "recipeMetadata": {
     "primaryCategory": "category",
     "secondaryCollections": "tags",
+    "countryCollection": "country",
     "cuisine": "cuisine",
     "mealOrCourse": "course",
     "difficulty": "difficulty",
