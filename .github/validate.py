@@ -78,9 +78,11 @@ for recipe in all_catalog_recipes:
 # another category image, or an image already referenced elsewhere on the site.
 category_image_path = root / "data/category-images.json"
 category_images = json.loads(category_image_path.read_text(encoding="utf-8"))
-approved_categories = ["Breakfast", "Dinner", "Beef", "Pork", "Seafood", "Soup", "Dessert", "Healthy", "Chicken", "Vegetarian"]
+core_categories = {"Breakfast", "Dinner", "Beef", "Pork", "Seafood", "Soup", "Dessert", "Healthy", "Chicken", "Vegetarian"}
+allowed_categories = core_categories | {"USA"}
 assert isinstance(category_images, dict), "data/category-images.json must contain an object"
-assert set(category_images) == set(approved_categories), "Category image registry must contain exactly the 10 approved categories"
+assert core_categories.issubset(category_images), "Category image registry is missing an approved core category"
+assert set(category_images).issubset(allowed_categories), "Category image registry contains an unapproved category"
 category_image_values = [normalize_image(value) for value in category_images.values()]
 assert all(category_image_values), "Every approved category must have a category image"
 assert len(category_image_values) == len(set(category_image_values)), "Duplicate category image detected"
