@@ -48,7 +48,7 @@ for category in ("Breakfast", "Dinner", "Beef", "Pork", "Seafood", "Soup", "Dess
     assert base + "category.html?category=" + category in urls, f"Category missing from sitemap: {category}"
 assert base + "category.html?category=Vegan" not in urls, "Stale Vegan collection URL should not be in sitemap"
 
-# USA is a controlled cuisine collection and every new American-classics recipe belongs to it.
+# USA is a controlled cuisine collection and every American-classics recipe must remain launch-ready.
 usa_ids = {
     "chicken-and-rice-casserole", "chicken-bacon-ranch-casserole", "bbq-chicken", "chicken-fried-steak",
     "chicken-and-dumplings", "chicken-marsala", "chicken-piccata", "chicken-parmesan-casserole",
@@ -58,8 +58,28 @@ by_id = {r.get("id"): r for r in runtime_published}
 assert usa_ids.issubset(runtime_ids), "American classics batch must be runtime-published"
 for rid in usa_ids:
     recipe = by_id[rid]
+    for field in ("slug", "title", "category", "description", "image", "cuisine", "course", "difficulty", "datePublished", "author"):
+        assert recipe.get(field), f"American classic {rid} missing required field {field}"
     assert recipe.get("country") == "USA", f"American classic {rid} must declare country USA"
     assert "USA" in (recipe.get("tags") or []), f"American classic {rid} must belong to the USA collection"
+    assert recipe.get("author") == "Thejan Mahakumbura", f"American classic {rid} has the wrong author"
+    assert isinstance(recipe.get("ingredients"), list) and recipe["ingredients"], f"American classic {rid} needs ingredients"
+    instructions = recipe.get("instructions") or []
+    assert len(instructions) >= 8, f"American classic {rid} needs at least 8 detailed instruction steps"
+    assert all(isinstance(step, str) and len(step.strip()) >= 80 for step in instructions), f"American classic {rid} contains a short instruction step"
+    average_length = sum(len(step.strip()) for step in instructions) / len(instructions)
+    assert average_length >= 100, f"American classic {rid} instructions are too terse"
+    nutrition = recipe.get("nutrition") or {}
+    for field in ("calories", "protein", "carbohydrates", "fat"):
+        assert nutrition.get(field), f"American classic {rid} missing nutrition field {field}"
+    video = {**videos.get(rid, {}), **(recipe.get("video") or {})}
+    assert re.fullmatch(r"[A-Za-z0-9_-]{11}", str(video.get("youtubeId", ""))), f"American classic {rid} has an invalid YouTube ID"
+    assert video.get("channelUrl", "").startswith("https://www.youtube.com/") and video.get("channelUrl") != "https://www.youtube.com/", f"American classic {rid} needs a channel-specific YouTube attribution URL"
+
+# Key recipe/taxonomy surfaces must use one cache-busting site.js version so behavior stays consistent.
+for name in ("index.html", "recipes.html", "categories.html", "category.html", "recipe.html", "favorites.html"):
+    text = (root / name).read_text(encoding="utf-8")
+    assert 'assets/js/site.js?v=10' in text, f"Stale site.js cache version on {name}"
 
 # Catch the historic veggie-soup date mapping regression and require an audited fallback.
 app = (root / "assets/js/app.js").read_text(encoding="utf-8")
@@ -114,4 +134,4 @@ for path in root.rglob("*.webp"):
     raw = path.read_bytes()
     assert len(raw) >= 12 and raw[:4] == b"RIFF" and raw[8:12] == b"WEBP", f"Invalid WebP asset: {path.relative_to(root)}"
 
-print(f"EXTENDED OK: {len(runtime_published)} runtime-published recipes, complete video coverage, sitemap coverage, canonical/navigation checks, inline JavaScript syntax, and image-file integrity PASS.")
+print(f"EXTENDED OK: {len(runtime_published)} runtime-published recipes, complete video coverage, sitemap coverage, American-classics quality gates, cache-version consistency, canonical/navigation checks, inline JavaScript syntax, and image-file integrity PASS.")
