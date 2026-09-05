@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "title": "Recipe Hub Category Taxonomy",
+  "description": "Structured browsing taxonomy for Recipe Hub. Categories are grouped by user intent while recipe metadata such as cuisine, course, difficulty and time remain available for filters and future collections.",
+  "groups": [
+    {
+      "id": "meal",
+      "label": "Browse by Meal",
+      "description": "Find recipes for the part of the day or meal you are planning.",
+      "categories": ["Breakfast", "Dinner"]
+    },
+    {
+      "id": "ingredient",
+      "label": "Browse by Main Ingredient",
+      "description": "Start with the main protein or ingredient you want to cook.",
+      "categories": ["Chicken", "Beef", "Pork", "Seafood"]
+    },
+    {
+      "id": "dish",
+      "label": "Browse by Dish Type",
+      "description": "Explore familiar recipe formats and comfort-food favorites.",
+      "categories": ["Soup", "Dessert", "Pasta", "Salad", "Appetizer"]
+    },
+    {
+      "id": "lifestyle",
+      "label": "Browse by Lifestyle",
+      "description": "Discover recipes that fit common everyday eating preferences.",
+      "categories": ["Healthy", "Vegetarian"]
+    },
+    {
+      "id": "convenience",
+      "label": "Browse by Convenience",
+      "description": "Choose recipes based on speed and practical cooking needs.",
+      "categories": ["Quick & Easy"]
+    }
+  ],
+  "categories": {
+    "Breakfast": {
+      "label": "Breakfast",
+      "description": "Easy morning favorites, from pancakes and toast to comforting baked starts.",
+      "icon": "☀️",
+      "showOnLanding": true
+    },
+    "Dinner": {
+      "label": "Dinner",
+      "description": "Reliable dinner ideas for weeknights, family meals, and relaxed weekends.",
+      "icon": "🍽️",
+      "showOnLanding": true
+    },
+    "Chicken": {
+      "label": "Chicken",
+      "description": "Popular chicken recipes for quick dinners, comfort food, and meal prep.",
+      "icon": "🍗",
+      "showOnLanding": true
+    },
+    "Beef": {
+      "label": "Beef",
+      "description": "Hearty beef dishes including skillet meals, tacos, roasts, and slow-cooked favorites.",
+      "icon": "🥩",
+      "showOnLanding": true
+    },
+    "Pork": {
+      "label": "Pork",
+      "description": "Juicy pork recipes for easy weeknight meals and satisfying comfort food.",
+      "icon": "🍖",
+      "showOnLanding": true
+    },
+    "Seafood": {
+      "label": "Seafood",
+      "description": "Fresh and flavorful seafood recipes featuring salmon and other favorites.",
+      "icon": "🐟",
+      "showOnLanding": true
+    },
+    "Soup": {
+      "label": "Soup",
+      "description": "Comforting soups made for cozy lunches, easy dinners, and make-ahead meals.",
+      "icon": "🍲",
+      "showOnLanding": true
+    },
+    "Dessert": {
+      "label": "Desserts",
+      "description": "Sweet treats, cookies, cakes, and simple desserts for every occasion.",
+      "icon": "🍰",
+      "showOnLanding": true
+    },
+    "Pasta": {
+      "label": "Pasta",
+      "description": "Pasta recipes for simple weeknight meals, family dinners, and comforting classics.",
+      "icon": "🍝",
+      "showOnLanding": false
+    },
+    "Salad": {
+      "label": "Salads",
+      "description": "Fresh salads with practical ingredients for lunches, sides, and lighter meals.",
+      "icon": "🥗",
+      "showOnLanding": false
+    },
+    "Appetizer": {
+      "label": "Appetizers",
+      "description": "Shareable starters, dips, and small bites for gatherings and casual meals.",
+      "icon": "🥣",
+      "showOnLanding": false
+    },
+    "Healthy": {
+      "label": "Healthy",
+      "description": "Balanced recipes built around practical ingredients and everyday cooking.",
+      "icon": "🥬",
+      "showOnLanding": true
+    },
+    "Vegetarian": {
+      "label": "Vegetarian",
+      "description": "Flavorful meat-free recipes packed with vegetables, grains, and simple ingredients.",
+      "icon": "🥕",
+      "showOnLanding": true
+    },
+    "Quick & Easy": {
+      "label": "Quick & Easy",
+      "description": "Straightforward recipes designed for busy days and efficient home cooking.",
+      "icon": "⏱️",
+      "showOnLanding": false
+    }
+  },
+  "recipeMetadata": {
+    "primaryCategory": "category",
+    "secondaryCollections": "tags",
+    "cuisine": "cuisine",
+    "mealOrCourse": "course",
+    "difficulty": "difficulty",
+    "time": "totalTime"
+  }
+}
