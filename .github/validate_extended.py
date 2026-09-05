@@ -44,9 +44,22 @@ urls = {e.text for e in sitemap.iter() if e.tag.endswith("}loc") and e.text}
 for rid in runtime_ids:
     assert base + "recipe.html?id=" + rid in urls, f"Runtime published recipe missing from sitemap: {rid}"
 assert base + "categories.html" in urls, "Categories landing page missing from sitemap"
-for category in ("Breakfast", "Dinner", "Beef", "Pork", "Seafood", "Soup", "Dessert", "Healthy", "Chicken", "Vegetarian", "Quick%20%26%20Easy"):
+for category in ("Breakfast", "Dinner", "Beef", "Pork", "Seafood", "Soup", "Dessert", "Healthy", "Chicken", "Vegetarian", "Quick%20%26%20Easy", "USA"):
     assert base + "category.html?category=" + category in urls, f"Category missing from sitemap: {category}"
 assert base + "category.html?category=Vegan" not in urls, "Stale Vegan collection URL should not be in sitemap"
+
+# USA is a controlled cuisine collection and every new American-classics recipe belongs to it.
+usa_ids = {
+    "chicken-and-rice-casserole", "chicken-bacon-ranch-casserole", "bbq-chicken", "chicken-fried-steak",
+    "chicken-and-dumplings", "chicken-marsala", "chicken-piccata", "chicken-parmesan-casserole",
+    "creamy-tuscan-chicken", "marry-me-chicken"
+}
+by_id = {r.get("id"): r for r in runtime_published}
+assert usa_ids.issubset(runtime_ids), "American classics batch must be runtime-published"
+for rid in usa_ids:
+    recipe = by_id[rid]
+    assert recipe.get("country") == "USA", f"American classic {rid} must declare country USA"
+    assert "USA" in (recipe.get("tags") or []), f"American classic {rid} must belong to the USA collection"
 
 # Catch the historic veggie-soup date mapping regression and require an audited fallback.
 app = (root / "assets/js/app.js").read_text(encoding="utf-8")
