@@ -1,0 +1,92 @@
+{
+  "chicken-and-rice-casserole": {
+    "youtubeId": "hVp2rxMsUNk",
+    "title": "How to Make Chicken Rice Casserole | Get Cookin' | Allrecipes",
+    "channel": "Allrecipes",
+    "channelUrl": "https://www.youtube.com/@Allrecipes",
+    "url": "https://www.youtube.com/watch?v=hVp2rxMsUNk",
+    "language": "en",
+    "description": "English-language Allrecipes video demonstrating a homemade chicken and rice casserole."
+  },
+  "chicken-bacon-ranch-casserole": {
+    "youtubeId": "roMQosfaGQg",
+    "title": "Chicken Bacon Ranch Casserole",
+    "channel": "The Diary of a Real Housewife",
+    "channelUrl": "https://www.youtube.com/",
+    "url": "https://www.youtube.com/watch?v=roMQosfaGQg",
+    "language": "en",
+    "description": "English-language video demonstrating a creamy chicken bacon ranch casserole."
+  },
+  "bbq-chicken": {
+    "youtubeId": "VcSCPfgJ0Js",
+    "title": "How to Make Barbeque Chicken",
+    "channel": "Allrecipes",
+    "channelUrl": "https://www.youtube.com/@Allrecipes",
+    "url": "https://www.youtube.com/watch?v=VcSCPfgJ0Js",
+    "language": "en",
+    "description": "English-language video demonstrating classic barbecue chicken."
+  },
+  "chicken-fried-steak": {
+    "youtubeId": "Harh4V5wU5E",
+    "title": "How to Cook Chicken Fried Steak | Allrecipes",
+    "channel": "Allrecipes",
+    "channelUrl": "https://www.youtube.com/@Allrecipes",
+    "url": "https://www.youtube.com/watch?v=Harh4V5wU5E",
+    "language": "en",
+    "description": "English-language Allrecipes video demonstrating Southern chicken fried steak and gravy."
+  },
+  "chicken-and-dumplings": {
+    "youtubeId": "nud3xra8oZY",
+    "title": "How to Make Chicken and Dumplings | Allrecipes.com",
+    "channel": "Allrecipes",
+    "channelUrl": "https://www.youtube.com/@Allrecipes",
+    "url": "https://www.youtube.com/watch?v=nud3xra8oZY",
+    "language": "en",
+    "description": "English-language Allrecipes video demonstrating classic chicken and dumplings."
+  },
+  "chicken-marsala": {
+    "youtubeId": "JelAoVwdiYw",
+    "title": "CHICKEN MARSALA | The Perfect Easy Weeknight Dinner Recipe!",
+    "channel": "Downshiftology",
+    "channelUrl": "https://www.youtube.com/@Downshiftology",
+    "url": "https://www.youtube.com/watch?v=JelAoVwdiYw",
+    "language": "en",
+    "description": "English-language Downshiftology video demonstrating Italian-American chicken Marsala."
+  },
+  "chicken-piccata": {
+    "youtubeId": "ek8x1JMrwM8",
+    "title": "CHICKEN PICCATA for an easy 20-min dinner recipe!",
+    "channel": "Downshiftology",
+    "channelUrl": "https://www.youtube.com/@Downshiftology",
+    "url": "https://www.youtube.com/watch?v=ek8x1JMrwM8",
+    "language": "en",
+    "description": "English-language Downshiftology video demonstrating Italian-American chicken piccata."
+  },
+  "chicken-parmesan-casserole": {
+    "youtubeId": "EpZLpGPo1SQ",
+    "title": "How to Make Chicken Parmesan Casserole | Dinner Recipes",
+    "channel": "Allrecipes",
+    "channelUrl": "https://www.youtube.com/@Allrecipes",
+    "url": "https://www.youtube.com/watch?v=EpZLpGPo1SQ",
+    "language": "en",
+    "description": "English-language Allrecipes video demonstrating chicken Parmesan casserole."
+  },
+  "creamy-tuscan-chicken": {
+    "youtubeId": "UYVuRppTmCY",
+    "title": "This CREAMY TUSCAN CHICKEN is a wow-worthy dinner recipe with Mediterranean flair!",
+    "channel": "Downshiftology",
+    "channelUrl": "https://www.youtube.com/@Downshiftology",
+    "url": "https://www.youtube.com/watch?v=UYVuRppTmCY",
+    "language": "en",
+    "description": "English-language Downshiftology video demonstrating creamy Tuscan-style chicken."
+  },
+  "marry-me-chicken": {
+    "youtubeId": "PjJET32QoQ0",
+    "title": "Marry Me Chicken (The Recipe that Went Viral)",
+    "channel": "Chef Jack Ovens",
+    "channelUrl": "https://www.youtube.com/@ChefJackOvens",
+    "url": "https://www.youtube.com/watch?v=PjJET32QoQ0",
+    "language": "en",
+    "description": "English-language Chef Jack Ovens video demonstrating Marry Me Chicken."
+  }
+}
