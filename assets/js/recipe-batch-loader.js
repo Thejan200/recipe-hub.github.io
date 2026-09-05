@@ -76,7 +76,9 @@
 
   window.fetch = async (input, init) => {
     const url = typeof input === 'string' ? input : input?.url || '';
-    const key = Object.keys(batches).find(k => url.includes(k));
+    let resolvedUrl = url;
+    try { resolvedUrl = new URL(url, window.location.href).href; } catch {}
+    const key = Object.keys(batches).find(k => resolvedUrl.includes(k));
     if (!key) return nativeFetch(input, init);
 
     if (!cache.has(key)) {
