@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "title": "Recipe Hub Category Taxonomy",
-  "description": "Structured browsing taxonomy for Recipe Hub. Categories are grouped by user intent while recipe metadata such as cuisine, course, difficulty and time remain available for filters and future collections.",
+  "title": "BiteSparks Category Taxonomy",
+  "description": "Structured browsing taxonomy for BiteSparks. Categories are grouped by user intent while recipe metadata such as cuisine, course, difficulty and time remain available for filters and future collections.",
   "groups": [
     {
       "id": "meal",
