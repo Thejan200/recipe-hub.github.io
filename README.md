@@ -1,6 +1,6 @@
-# Recipe Hub
+# BiteSparks
 
-A fast, responsive, SEO-focused recipe website designed for a US-first international English-speaking audience.
+A fast, responsive, SEO-focused recipe website designed for an international English-speaking audience using US and UK English.
 
 ## Stack
 - Static HTML/CSS/JavaScript
@@ -16,6 +16,9 @@ A fast, responsive, SEO-focused recipe website designed for a US-first internati
 4. Use the local `admin/` helper to generate draft JSON.
 5. Commit changes to `main`.
 
+## Language rule
+All public BiteSparks content must be English only, using US or UK English. Recipe videos must be genuinely English-language videos, not merely labelled as English in metadata.
+
 ## SEO checklist
 - Maintain unique titles and descriptions.
 - Use descriptive recipe slugs.
@@ -27,4 +30,4 @@ A fast, responsive, SEO-focused recipe website designed for a US-first internati
 Ad slots, affiliate content, analytics, and newsletter integrations should be added only after their providers and consent requirements are configured. Do not put provider secrets or API keys in this static site.
 
 ## Deployment
-GitHub Pages can serve the repository directly. After enabling Pages, use the deployed URL as the canonical site URL and submit the sitemap in Search Console.
+GitHub Pages can serve the repository directly. The current canonical URL remains `https://thejan200.github.io/recipe-hub.github.io/` until a separate URL or repository migration is intentionally performed. Keep `sitemap.xml` aligned with the deployed canonical site URL.
