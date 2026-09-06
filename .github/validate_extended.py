@@ -81,9 +81,25 @@ for name in ("index.html", "recipes.html", "categories.html", "category.html", "
     text = (root / name).read_text(encoding="utf-8")
     assert 'assets/js/site.js?v=10' in text, f"Stale site.js cache version on {name}"
 
+# BiteSparks is the public brand. The legacy repository URL remains valid until a separate URL migration.
+brand_files = (
+    "index.html", "recipes.html", "categories.html", "category.html", "recipe.html", "favorites.html",
+    "about.html", "contact.html", "privacy.html", "terms.html", "disclaimer.html", "cookie-policy.html",
+    "404.html", "healthcheck.html", "admin/index.html", "site.webmanifest", "README.md",
+    "data/category-taxonomy.json", "assets/logo.svg", "assets/js/recipe-batch-loader.js"
+)
+for name in brand_files:
+    text = (root / name).read_text(encoding="utf-8")
+    assert "Recipe Hub" not in text, f"Legacy public brand text remains in {name}"
+manifest = json.loads((root / "site.webmanifest").read_text(encoding="utf-8"))
+assert manifest.get("name") == "BiteSparks" and manifest.get("short_name") == "BiteSparks", "Manifest must use BiteSparks branding"
+taxonomy = json.loads((root / "data/category-taxonomy.json").read_text(encoding="utf-8"))
+assert taxonomy.get("title") == "BiteSparks Category Taxonomy", "Category taxonomy must use BiteSparks branding"
+site = (root / "assets/js/site.js").read_text(encoding="utf-8")
+assert "BiteSparks uses essential browser storage" in site and "normalizeBrand" in site, "Runtime brand normalization is missing"
+
 # Catch the historic veggie-soup date mapping regression and require an audited fallback.
 app = (root / "assets/js/app.js").read_text(encoding="utf-8")
-site = (root / "assets/js/site.js").read_text(encoding="utf-8")
 assert ("'veggie-soup':'2026-08-31'" in app or "result.id==='veggie-soup'" in site), "veggie-soup needs datePublished mapping"
 
 # Core indexable static pages should carry canonical URLs.
@@ -134,4 +150,4 @@ for path in root.rglob("*.webp"):
     raw = path.read_bytes()
     assert len(raw) >= 12 and raw[:4] == b"RIFF" and raw[8:12] == b"WEBP", f"Invalid WebP asset: {path.relative_to(root)}"
 
-print(f"EXTENDED OK: {len(runtime_published)} runtime-published recipes, complete video coverage, sitemap coverage, American-classics quality gates, cache-version consistency, canonical/navigation checks, inline JavaScript syntax, and image-file integrity PASS.")
+print(f"EXTENDED OK: {len(runtime_published)} runtime-published recipes, complete video coverage, sitemap coverage, BiteSparks brand consistency, American-classics quality gates, cache-version consistency, canonical/navigation checks, inline JavaScript syntax, and image-file integrity PASS.")
