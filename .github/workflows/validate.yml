@@ -17,6 +17,8 @@ jobs:
         run: python .github/validate.py
       - name: Run extended runtime and inline audit
         run: python .github/validate_extended.py
+      - name: Validate BiteSparks internal naming
+        run: python .github/validate_brand.py
       - name: Validate JavaScript syntax
         shell: bash
         run: |
