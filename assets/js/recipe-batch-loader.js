@@ -73,7 +73,7 @@
       const duplicate = (id && ids.has(id)) || (title && titles.has(title)) || (image && images.has(image));
 
       if (duplicate) {
-        console.error('[Recipe Hub] Duplicate published recipe blocked:', recipe.id || recipe.title);
+        console.error('[BiteSparks] Duplicate published recipe blocked:', recipe.id || recipe.title);
         return { ...recipe, status: 'draft' };
       }
 
