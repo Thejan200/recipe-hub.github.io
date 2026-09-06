@@ -96,10 +96,14 @@ assert manifest.get("name") == "BiteSparks" and manifest.get("short_name") == "B
 taxonomy = json.loads((root / "data/category-taxonomy.json").read_text(encoding="utf-8"))
 assert taxonomy.get("title") == "BiteSparks Category Taxonomy", "Category taxonomy must use BiteSparks branding"
 site = (root / "assets/js/site.js").read_text(encoding="utf-8")
-assert "BiteSparks uses essential browser storage" in site and "normalizeBrand" in site, "Runtime brand normalization is missing"
+app = (root / "assets/js/app.js").read_text(encoding="utf-8")
+assert "Recipe Hub" not in site and "Recipe Hub" not in app, "Legacy runtime brand text remains in JavaScript"
+assert "bs-saved" in app, "BiteSparks saved-recipe storage key is missing"
+assert "bs-cookie-choice" in app and "bs-cookie-choice" in site, "BiteSparks cookie storage key is missing"
+assert "bs-theme" in app and "bs-theme" in site, "BiteSparks theme storage key is missing"
+assert "__bsAuditPatched" in site and "bsMenuBound" in site, "BiteSparks runtime marker names are missing"
 
 # Catch the historic veggie-soup date mapping regression and require an audited fallback.
-app = (root / "assets/js/app.js").read_text(encoding="utf-8")
 assert ("'veggie-soup':'2026-08-31'" in app or "result.id==='veggie-soup'" in site), "veggie-soup needs datePublished mapping"
 
 # Core indexable static pages should carry canonical URLs.
