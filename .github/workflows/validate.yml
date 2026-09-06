@@ -1,4 +1,4 @@
-name: Validate Recipe Hub
+name: Validate BiteSparks
 
 on:
   push:
