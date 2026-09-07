@@ -79,7 +79,7 @@ for rid in usa_ids:
 # Key recipe/taxonomy surfaces must use one cache-busting site.js version so behavior stays consistent.
 for name in ("index.html", "recipes.html", "categories.html", "category.html", "recipe.html", "favorites.html"):
     text = (root / name).read_text(encoding="utf-8")
-    assert 'assets/js/site.js?v=10' in text, f"Stale site.js cache version on {name}"
+    assert 'assets/js/site.js?v=11' in text, f"Stale site.js cache version on {name}"
 
 # BiteSparks is the public brand. The legacy repository URL remains valid until a separate URL migration.
 brand_files = (
