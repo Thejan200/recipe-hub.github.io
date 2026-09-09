@@ -18,6 +18,8 @@
     '1646434250':'assets/images/cookbooks/city-eats-san-francisco.svg'
   };
 
+  const artworkDisclosure='Artwork shown here is an original BiteSparks editorial visual created for presentation purposes and is not the official book cover, product image, or publisher artwork.';
+
   function applyCookbookArtwork(){
     document.querySelectorAll('img[src*="covers.openlibrary.org/b/isbn/"]').forEach(img=>{
       const match=img.src.match(/isbn\/(\d+)-/i);
@@ -26,6 +28,29 @@
       img.alt=img.alt.replace(/book cover$/i,'BiteSparks original editorial artwork');
       img.removeAttribute('srcset');
     });
+  }
+
+  function addArtworkDisclosure(){
+    const page=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+    if(page==='cookbooks.html'){
+      const grid=document.querySelector('.book-grid');
+      if(grid&&!document.querySelector('.artwork-disclosure')){
+        const note=document.createElement('p');
+        note.className='affiliate-note artwork-disclosure';
+        note.textContent=artworkDisclosure;
+        grid.after(note);
+      }
+      return;
+    }
+    if(page.startsWith('book-')){
+      const cover=document.querySelector('.detail-cover');
+      if(cover&&!cover.querySelector('.artwork-disclosure')){
+        const note=document.createElement('p');
+        note.className='product-link-note artwork-disclosure';
+        note.textContent=artworkDisclosure;
+        cover.appendChild(note);
+      }
+    }
   }
 
   function ensureCookbooksLink(){
@@ -41,6 +66,7 @@
   }
 
   applyCookbookArtwork();
+  addArtworkDisclosure();
   const cookbookLink=ensureCookbooksLink();
   const core=document.createElement('script');
   core.src='assets/js/site-core.js?v=11';
