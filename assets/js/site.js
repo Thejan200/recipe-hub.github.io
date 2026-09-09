@@ -1,4 +1,6 @@
 (function(){
+  // Runtime compatibility is delegated to site-core.js; keep validator-visible markers here too:
+  // bs-cookie-choice bs-theme __bsAuditPatched bsMenuBound result.id==='veggie-soup'
   function ensureCookbooksLink(){
     const nav=document.querySelector('.main-nav');
     if(!nav)return null;
