@@ -1,0 +1,92 @@
+{
+  "classic-cheeseburger": {
+    "youtubeId": "OxthpaRFCqU",
+    "title": "The Classic Cheeseburger from the movie \"Menu\"",
+    "channel": "Tikhon Cook and Travel",
+    "channelUrl": "https://www.youtube.com/@tihonct",
+    "url": "https://www.youtube.com/watch?v=OxthpaRFCqU",
+    "language": "en",
+    "description": "English-language cooking video demonstrating a classic cheeseburger from patty preparation through assembly."
+  },
+  "smash-burgers": {
+    "youtubeId": "rsIlzNqN0ok",
+    "title": "How to make a smash burger",
+    "channel": "J. Kenji López-Alt",
+    "channelUrl": "https://www.youtube.com/@JKenjiLopezAlt",
+    "url": "https://www.youtube.com/watch?v=rsIlzNqN0ok",
+    "language": "en",
+    "description": "English-language cooking video demonstrating the high-heat smash-burger technique."
+  },
+  "beef-stroganoff": {
+    "youtubeId": "4Et7hv4pz1o",
+    "title": "How to Make Homemade Beef Stroganoff | Allrecipes",
+    "channel": "Allrecipes",
+    "channelUrl": "https://www.youtube.com/@Allrecipes",
+    "url": "https://www.youtube.com/watch?v=4Et7hv4pz1o",
+    "language": "en",
+    "description": "English-language Allrecipes video demonstrating homemade beef stroganoff."
+  },
+  "classic-beef-chili": {
+    "youtubeId": "kspIvqBz_cE",
+    "title": "Classic Beef Chili - My #1 Winter Recipe",
+    "channel": "A Simple Palate",
+    "channelUrl": "https://www.youtube.com/@ASimplePalate",
+    "url": "https://www.youtube.com/watch?v=kspIvqBz_cE",
+    "language": "en",
+    "description": "English-language cooking video demonstrating a classic beef-and-bean chili."
+  },
+  "chili-mac": {
+    "youtubeId": "UIFjFuQmCrg",
+    "title": "How to Make Chili Mac",
+    "channel": "LearnToCook",
+    "channelUrl": "https://www.youtube.com/@LearnToCookcom",
+    "url": "https://www.youtube.com/watch?v=UIFjFuQmCrg",
+    "language": "en",
+    "description": "English-language cooking video demonstrating beef chili mac with macaroni."
+  },
+  "beef-enchiladas": {
+    "youtubeId": "CjoVxMSdfKg",
+    "title": "BEEF ENCHILADAS | Easy Enchilada Sauce Recipe | How To Make Cheesy Baked Enchiladas",
+    "channel": "Simply Mamá Cooks",
+    "channelUrl": "https://www.youtube.com/@SimplyMamaCooks",
+    "url": "https://www.youtube.com/watch?v=CjoVxMSdfKg",
+    "language": "en",
+    "description": "English-language step-by-step video demonstrating beef and cheese enchiladas with red sauce."
+  },
+  "beef-burritos": {
+    "youtubeId": "h4fen5cbKxM",
+    "title": "Beef Burrito Recipe",
+    "channel": "Natasha's Kitchen",
+    "channelUrl": "https://www.youtube.com/@NatashasKitchen",
+    "url": "https://www.youtube.com/watch?v=h4fen5cbKxM",
+    "language": "en",
+    "description": "English-language Natasha's Kitchen video demonstrating homemade beef burritos."
+  },
+  "beef-fajitas": {
+    "youtubeId": "PCjkJ-OmUG4",
+    "title": "The BEST STEAK FAJITAS You Can Make at Home!",
+    "channel": "Cooking Con Claudia",
+    "channelUrl": "https://www.youtube.com/@CookingConClaudia",
+    "url": "https://www.youtube.com/watch?v=PCjkJ-OmUG4",
+    "language": "en",
+    "description": "English-language cooking video demonstrating marinated steak fajitas with peppers and onions."
+  },
+  "philly-cheesesteak": {
+    "youtubeId": "Ehk5pSjPYlg",
+    "title": "How to Make a Classic Philly Cheesesteak | Allrecipes",
+    "channel": "Allrecipes",
+    "channelUrl": "https://www.youtube.com/@Allrecipes",
+    "url": "https://www.youtube.com/watch?v=Ehk5pSjPYlg",
+    "language": "en",
+    "description": "English-language Allrecipes video demonstrating a classic Philly cheesesteak."
+  },
+  "french-dip-sandwiches": {
+    "youtubeId": "rAg-4JyZ0vc",
+    "title": "The Best French Dip Sandwich Ever",
+    "channel": "Joshua Weissman Recipes",
+    "channelUrl": "https://www.youtube.com/@JoshuaWeissmanRecipes",
+    "url": "https://www.youtube.com/watch?v=rAg-4JyZ0vc",
+    "language": "en",
+    "description": "English-language cooking video demonstrating a French dip sandwich with beef and dipping jus."
+  }
+}

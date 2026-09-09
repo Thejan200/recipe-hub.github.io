@@ -1,8 +1,8 @@
 (() => {
   const nativeFetch = window.fetch.bind(window);
   const batches = {
-    '/data/recipes.json': ['data/recipes-batch-01.json', 'data/recipes-batch-02.json', 'data/recipes-batch-03.json', 'data/recipes-batch-04.json'],
-    '/data/videos.json': ['data/videos-batch-01.json', 'data/videos-batch-02.json', 'data/videos-batch-03.json', 'data/videos-batch-04.json']
+    '/data/recipes.json': ['data/recipes-batch-01.json', 'data/recipes-batch-02.json', 'data/recipes-batch-03.json', 'data/recipes-batch-04.json', 'data/recipes-batch-05.json'],
+    '/data/videos.json': ['data/videos-batch-01.json', 'data/videos-batch-02.json', 'data/videos-batch-03.json', 'data/videos-batch-04.json', 'data/videos-batch-05.json']
   };
   const cache = new Map();
   const publishedBatchCategories = {
@@ -39,7 +39,17 @@
     'chicken-piccata': 'Chicken',
     'chicken-parmesan-casserole': 'Dinner',
     'creamy-tuscan-chicken': 'Chicken',
-    'marry-me-chicken': 'Chicken'
+    'marry-me-chicken': 'Chicken',
+    'classic-cheeseburger': 'Beef',
+    'smash-burgers': 'Beef',
+    'beef-stroganoff': 'Beef',
+    'classic-beef-chili': 'Beef',
+    'chili-mac': 'Beef',
+    'beef-enchiladas': 'Beef',
+    'beef-burritos': 'Beef',
+    'beef-fajitas': 'Beef',
+    'philly-cheesesteak': 'Beef',
+    'french-dip-sandwiches': 'Beef'
   };
   const categoryOverrides = {
     'Greek Yogurt Berry Parfait': 'Dessert'
