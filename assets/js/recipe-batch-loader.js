@@ -59,7 +59,7 @@
     'spaghetti-and-meatballs': 'https://images.unsplash.com/photo-1714383611462-f730359f9145?auto=format&fit=crop&w=1200&q=82',
     'awesome-slow-cooker-pot-roast': 'https://images.unsplash.com/photo-1603185730021-ddc0c8097059?auto=format&fit=crop&w=1200&q=82',
     'classic-chicken-pot-pie': 'https://images.unsplash.com/photo-1650917331384-1fd06afa3230?auto=format&fit=crop&w=1200&q=82',
-    'beef-enchiladas': 'https://images.unsplash.com/photo-1686309652357-6881c1f3eea9?auto=format&fit=crop&w=1200&q=82'
+    'beef-enchiladas': 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Gfp-enchiladas.jpg'
   };
 
   const applyCategoryOverride = recipe => {
