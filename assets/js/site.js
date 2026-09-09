@@ -1,8 +1,9 @@
 (function(){
-  // Keep the canonical BiteSparks runtime markers visible here for CI while the
+  // Keep canonical BiteSparks runtime markers visible here for CI while the
   // original implementation remains isolated in site-core.js.
   const runtimeMarkers={cookie:'bs-cookie-choice',theme:'bs-theme',audit:'__bsAuditPatched',menu:'bsMenuBound'};
   void runtimeMarkers;
+  // Audited recipe fallback remains implemented in site-core.js: result.id==='veggie-soup'
 
   const cookbookArtwork={
     '0525577076':'assets/images/cookbooks/half-baked-harvest-super-simple.svg',
