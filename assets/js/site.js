@@ -65,12 +65,53 @@
     return link;
   }
 
+  function addSearchClearStyles(){
+    if(document.getElementById('bs-search-clear-styles'))return;
+    const style=document.createElement('style');
+    style.id='bs-search-clear-styles';
+    style.textContent='.hero-search .bs-search-clear{width:40px;min-width:40px;background:transparent;color:var(--muted);border-radius:9px;font-size:22px;line-height:1;padding:0;display:inline-flex;align-items:center;justify-content:center;box-shadow:none}.hero-search .bs-search-clear:hover{background:var(--soft);color:var(--ink)}.hero-search .bs-search-clear:focus-visible{outline:3px solid color-mix(in srgb,var(--accent) 45%,transparent);outline-offset:2px}.hero-search .bs-search-clear[hidden]{display:none!important}html[data-theme="dark"] .hero-search .bs-search-clear{background:transparent;color:#b2b8b3}html[data-theme="dark"] .hero-search .bs-search-clear:hover{background:#252a27;color:#fff}';
+    document.head.appendChild(style);
+  }
+
+  function setupSearchClearButtons(root=document){
+    addSearchClearStyles();
+    root.querySelectorAll('.hero-search input[name="q"],.hero-search input[type="search"]').forEach(input=>{
+      if(input.dataset.bsClearBound)return;
+      input.dataset.bsClearBound='1';
+      const form=input.closest('.hero-search');
+      if(!form)return;
+      const button=document.createElement('button');
+      button.type='button';
+      button.className='bs-search-clear';
+      button.setAttribute('aria-label','Clear search');
+      button.title='Clear search';
+      button.textContent='×';
+      const update=()=>{button.hidden=!input.value;};
+      button.addEventListener('click',()=>{
+        input.value='';
+        input.dispatchEvent(new Event('input',{bubbles:true}));
+        input.dispatchEvent(new Event('change',{bubbles:true}));
+        update();
+        input.focus();
+      });
+      input.addEventListener('input',update);
+      input.addEventListener('change',update);
+      input.insertAdjacentElement('afterend',button);
+      update();
+      requestAnimationFrame(update);
+    });
+  }
+
   applyCookbookArtwork();
   addArtworkDisclosure();
+  setupSearchClearButtons();
+  const searchObserver=new MutationObserver(()=>setupSearchClearButtons());
+  searchObserver.observe(document.documentElement,{childList:true,subtree:true});
   const cookbookLink=ensureCookbooksLink();
   const core=document.createElement('script');
   core.src='assets/js/site-core.js?v=11';
   core.onload=function(){
+    setupSearchClearButtons();
     const page=(location.pathname.split('/').pop()||'index.html').toLowerCase();
     if(page==='cookbooks.html'||page.startsWith('book-')){
       const nav=document.querySelector('.main-nav');
