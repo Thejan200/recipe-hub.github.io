@@ -86,7 +86,7 @@
       button.setAttribute('aria-label','Clear search');
       button.title='Clear search';
       button.textContent='×';
-      const update=()=>{button.hidden=!input.value;};
+      const update=()=>{button.hidden=!String(input.value||'').length;};
       button.addEventListener('click',()=>{
         input.value='';
         input.dispatchEvent(new Event('input',{bubbles:true}));
@@ -96,9 +96,14 @@
       });
       input.addEventListener('input',update);
       input.addEventListener('change',update);
+      input.addEventListener('focus',update);
+      input.addEventListener('click',update);
+      input.addEventListener('pointerdown',()=>requestAnimationFrame(update));
+      input.addEventListener('touchstart',()=>requestAnimationFrame(update),{passive:true});
       input.insertAdjacentElement('afterend',button);
       update();
       requestAnimationFrame(update);
+      setTimeout(update,0);
     });
   }
 
@@ -107,6 +112,13 @@
   setupSearchClearButtons();
   const searchObserver=new MutationObserver(()=>setupSearchClearButtons());
   searchObserver.observe(document.documentElement,{childList:true,subtree:true});
+  window.addEventListener('pageshow',()=>setupSearchClearButtons());
+  document.addEventListener('focusin',event=>{
+    const input=event.target;
+    if(!(input instanceof HTMLInputElement)||!input.matches('.hero-search input[name="q"],.hero-search input[type="search"]'))return;
+    const button=input.parentElement&&input.parentElement.querySelector('.bs-search-clear');
+    if(button)button.hidden=!String(input.value||'').length;
+  });
   const cookbookLink=ensureCookbooksLink();
   const core=document.createElement('script');
   core.src='assets/js/site-core.js?v=11';
