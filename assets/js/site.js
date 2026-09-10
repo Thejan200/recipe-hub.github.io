@@ -107,12 +107,52 @@
     });
   }
 
+  function addRecipePublishedDateStyles(){
+    if(document.getElementById('bs-recipe-date-styles'))return;
+    const style=document.createElement('style');
+    style.id='bs-recipe-date-styles';
+    style.textContent='.recipe-published-date{margin:12px 0 0;color:var(--muted);font-size:13px;font-weight:600}.recipe-published-date time{color:inherit}';
+    document.head.appendChild(style);
+  }
+
+  function addRecipePublishedDate(){
+    const detail=document.getElementById('recipe-detail');
+    if(!detail||detail.querySelector('.recipe-published-date')||typeof recipes==='undefined')return;
+    const id=new URLSearchParams(location.search).get('id');
+    const recipe=recipes.find(item=>item.id===id);
+    const raw=String(recipe?.datePublished||'').trim();
+    if(!raw)return;
+    const parts=raw.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if(!parts)return;
+    const date=new Date(Date.UTC(Number(parts[1]),Number(parts[2])-1,Number(parts[3])));
+    if(Number.isNaN(date.getTime()))return;
+    const heroCopy=detail.querySelector('.recipe-hero>div');
+    if(!heroCopy)return;
+    addRecipePublishedDateStyles();
+    const line=document.createElement('p');
+    line.className='recipe-published-date';
+    const time=document.createElement('time');
+    time.dateTime=raw;
+    time.textContent=new Intl.DateTimeFormat('en-US',{year:'numeric',month:'long',day:'numeric',timeZone:'UTC'}).format(date);
+    line.append('Published ');
+    line.appendChild(time);
+    const lead=heroCopy.querySelector('.lead');
+    if(lead)lead.insertAdjacentElement('afterend',line);else heroCopy.appendChild(line);
+  }
+
   applyCookbookArtwork();
   addArtworkDisclosure();
   setupSearchClearButtons();
-  const searchObserver=new MutationObserver(()=>setupSearchClearButtons());
+  addRecipePublishedDate();
+  const searchObserver=new MutationObserver(()=>{
+    setupSearchClearButtons();
+    addRecipePublishedDate();
+  });
   searchObserver.observe(document.documentElement,{childList:true,subtree:true});
-  window.addEventListener('pageshow',()=>setupSearchClearButtons());
+  window.addEventListener('pageshow',()=>{
+    setupSearchClearButtons();
+    addRecipePublishedDate();
+  });
   document.addEventListener('focusin',event=>{
     const input=event.target;
     if(!(input instanceof HTMLInputElement)||!input.matches('.hero-search input[name="q"],.hero-search input[type="search"]'))return;
@@ -124,6 +164,7 @@
   core.src='assets/js/site-core.js?v=11';
   core.onload=function(){
     setupSearchClearButtons();
+    addRecipePublishedDate();
     const page=(location.pathname.split('/').pop()||'index.html').toLowerCase();
     if(page==='cookbooks.html'||page.startsWith('book-')){
       const nav=document.querySelector('.main-nav');
