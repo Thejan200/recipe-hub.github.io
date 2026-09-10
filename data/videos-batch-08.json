@@ -1,11 +1,74 @@
 {
-  "french-toast":{"youtubeId":"UPz7aUqELXk","title":"How To Make FRENCH TOAST | Classic French Toast Recipe","channel":"Natashas Kitchen","channelUrl":"https://www.youtube.com/@Natashaskitchen","url":"https://www.youtube.com/watch?v=UPz7aUqELXk","language":"en"},
-  "cinnamon-french-toast":{"youtubeId":"Km7KRbKVu88","title":"Easy French Toast Recipe","channel":"Preppy Kitchen","channelUrl":"https://www.youtube.com/@PreppyKitchen","url":"https://www.youtube.com/watch?v=Km7KRbKVu88","language":"en"},
-  "breakfast-burritos":{"youtubeId":"f0AQD5fBXOU","title":"Freezer-Friendly Breakfast Burritos Recipe | Meal Prep","channel":"Natashas Kitchen","channelUrl":"https://www.youtube.com/@Natashaskitchen","url":"https://www.youtube.com/watch?v=f0AQD5fBXOU","language":"en"},
-  "breakfast-casserole":{"youtubeId":"mh48MKgI2vU","title":"How to Make Easy Breakfast Casserole | Allrecipes","channel":"Allrecipes","channelUrl":"https://www.youtube.com/@allrecipes","url":"https://www.youtube.com/watch?v=mh48MKgI2vU","language":"en"},
-  "sausage-breakfast-casserole":{"youtubeId":"p2YLQN5Zu7w","title":"Easy Sausage Breakfast Casserole - Christmas Inspired Recipe","channel":"Cowboy Kent Rollins","channelUrl":"https://www.youtube.com/@CowboyKentRollins","url":"https://www.youtube.com/watch?v=p2YLQN5Zu7w","language":"en"},
-  "eggs-benedict":{"youtubeId":"F2b47rRHOJw","title":"The Ultimate American Breakfast | SAM THE COOKING GUY 4K","channel":"SAM THE COOKING GUY","channelUrl":"https://www.youtube.com/@samthecookingguy","url":"https://www.youtube.com/watch?v=F2b47rRHOJw","language":"en"},
-  "hash-browns":{"youtubeId":"FREhiVYnLbA","title":"How To Make The Best Crispy Hash Browns Recipe","channel":"Natashas Kitchen","channelUrl":"https://www.youtube.com/@Natashaskitchen","url":"https://www.youtube.com/watch?v=FREhiVYnLbA","language":"en"},
-  "home-fries":{"youtubeId":"QKkH5V-oPWQ","title":"Delicious Pan Fried Potatoes | SAM THE COOKING GUY","channel":"SAM THE COOKING GUY","channelUrl":"https://www.youtube.com/@samthecookingguy","url":"https://www.youtube.com/watch?v=QKkH5V-oPWQ","language":"en"},
-  "breakfast-tacos":{"youtubeId":"b2FkFJronPQ","title":"Easy Breakfast Tacos Recipe - Two Ways","channel":"Natashas Kitchen","channelUrl":"https://www.youtube.com/@Natashaskitchen","url":"https://www.youtube.com/watch?v=b2FkFJronPQ","language":"en"}
+  "french-toast": {
+    "youtubeId": "UPz7aUqELXk",
+    "title": "How To Make FRENCH TOAST | Classic French Toast Recipe",
+    "channel": "Natashas Kitchen",
+    "channelUrl": "https://www.youtube.com/@Natashaskitchen",
+    "url": "https://www.youtube.com/watch?v=UPz7aUqELXk",
+    "language": "en"
+  },
+  "cinnamon-french-toast": {
+    "youtubeId": "Km7KRbKVu88",
+    "title": "Easy French Toast Recipe",
+    "channel": "Preppy Kitchen",
+    "channelUrl": "https://www.youtube.com/@PreppyKitchen",
+    "url": "https://www.youtube.com/watch?v=Km7KRbKVu88",
+    "language": "en"
+  },
+  "breakfast-burritos": {
+    "youtubeId": "f0AQD5fBXOU",
+    "title": "Freezer-Friendly Breakfast Burritos Recipe | Meal Prep",
+    "channel": "Natashas Kitchen",
+    "channelUrl": "https://www.youtube.com/@Natashaskitchen",
+    "url": "https://www.youtube.com/watch?v=f0AQD5fBXOU",
+    "language": "en"
+  },
+  "breakfast-casserole": {
+    "youtubeId": "mh48MKgI2vU",
+    "title": "How to Make Easy Breakfast Casserole | Allrecipes",
+    "channel": "Allrecipes",
+    "channelUrl": "https://www.youtube.com/@allrecipes",
+    "url": "https://www.youtube.com/watch?v=mh48MKgI2vU",
+    "language": "en"
+  },
+  "sausage-breakfast-casserole": {
+    "youtubeId": "lLXrkyrAykc",
+    "title": "How to Make Sausage Breakfast Casserole | Allrecipes.com",
+    "channel": "Allrecipes",
+    "channelUrl": "https://www.youtube.com/@allrecipes",
+    "url": "https://www.youtube.com/watch?v=lLXrkyrAykc",
+    "language": "en"
+  },
+  "eggs-benedict": {
+    "youtubeId": "c8T_gtzHa5g",
+    "title": "Easy Eggs Benedict Recipe",
+    "channel": "Preppy Kitchen",
+    "channelUrl": "https://www.youtube.com/@PreppyKitchen",
+    "url": "https://www.youtube.com/watch?v=c8T_gtzHa5g",
+    "language": "en"
+  },
+  "hash-browns": {
+    "youtubeId": "FREhiVYnLbA",
+    "title": "How To Make The Best Crispy Hash Browns Recipe",
+    "channel": "Natashas Kitchen",
+    "channelUrl": "https://www.youtube.com/@Natashaskitchen",
+    "url": "https://www.youtube.com/watch?v=FREhiVYnLbA",
+    "language": "en"
+  },
+  "home-fries": {
+    "youtubeId": "QKkH5V-oPWQ",
+    "title": "Delicious Pan Fried Potatoes | SAM THE COOKING GUY",
+    "channel": "SAM THE COOKING GUY",
+    "channelUrl": "https://www.youtube.com/@samthecookingguy",
+    "url": "https://www.youtube.com/watch?v=QKkH5V-oPWQ",
+    "language": "en"
+  },
+  "breakfast-tacos": {
+    "youtubeId": "b2FkFJronPQ",
+    "title": "Easy Breakfast Tacos Recipe - Two Ways",
+    "channel": "Natashas Kitchen",
+    "channelUrl": "https://www.youtube.com/@Natashaskitchen",
+    "url": "https://www.youtube.com/watch?v=b2FkFJronPQ",
+    "language": "en"
+  }
 }
