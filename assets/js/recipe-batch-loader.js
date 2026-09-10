@@ -1,8 +1,8 @@
 (() => {
   const nativeFetch = window.fetch.bind(window);
   const batches = {
-    '/data/recipes.json': ['data/recipes-batch-01.json', 'data/recipes-batch-02.json', 'data/recipes-batch-03.json', 'data/recipes-batch-04.json', 'data/recipes-batch-05.json', 'data/recipes-batch-06.json'],
-    '/data/videos.json': ['data/videos-batch-01.json', 'data/videos-batch-02.json', 'data/videos-batch-03.json', 'data/videos-batch-04.json', 'data/videos-batch-05.json', 'data/videos-batch-06.json']
+    '/data/recipes.json': ['data/recipes-batch-01.json', 'data/recipes-batch-02.json', 'data/recipes-batch-03.json', 'data/recipes-batch-04.json', 'data/recipes-batch-05.json', 'data/recipes-batch-06.json', 'data/recipes-batch-07.json'],
+    '/data/videos.json': ['data/videos-batch-01.json', 'data/videos-batch-02.json', 'data/videos-batch-03.json', 'data/videos-batch-04.json', 'data/videos-batch-05.json', 'data/videos-batch-06.json', 'data/videos-batch-07.json']
   };
   const cache = new Map();
   const publishedBatchCategories = {
@@ -59,7 +59,17 @@
     'beef-nachos': 'Beef',
     'beef-quesadillas': 'Beef',
     'steak-bites': 'Beef',
-    'garlic-butter-steak': 'Beef'
+    'garlic-butter-steak': 'Beef',
+    'pulled-pork': 'Pork',
+    'bbq-ribs': 'Pork',
+    'baby-back-ribs': 'Pork',
+    'pork-tenderloin': 'Pork',
+    'pork-carnitas': 'Pork',
+    'pork-belly': 'Pork',
+    'pork-loin-roast': 'Pork',
+    'sausage-and-peppers': 'Pork',
+    'biscuits-and-gravy': 'Pork',
+    'ham-and-cheese-casserole': 'Pork'
   };
   const categoryOverrides = {
     'Greek Yogurt Berry Parfait': 'Dessert'
