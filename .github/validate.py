@@ -54,6 +54,8 @@ effective_image_overrides = {
     "awesome-slow-cooker-pot-roast": "https://images.unsplash.com/photo-1603185730021-ddc0c8097059?auto=format&fit=crop&w=1200&q=82",
     "classic-chicken-pot-pie": "https://images.unsplash.com/photo-1650917331384-1fd06afa3230?auto=format&fit=crop&w=1200&q=82",
     "beef-enchiladas": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Gfp-enchiladas.jpg",
+    "breakfast-casserole": "assets/images/recipes/breakfast-casserole.webp",
+    "sausage-breakfast-casserole": "assets/images/recipes/sausage-breakfast-casserole.webp",
     "breakfast-tacos": "https://images.unsplash.com/photo-1632370339733-759652742546?auto=format&fit=crop&fm=webp&w=1200&q=78"
 }
 
