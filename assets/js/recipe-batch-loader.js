@@ -77,7 +77,7 @@
     'korean-beef-bowls': 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Korean_Beef_Bulgogi_Rice_Bowl_%2834817154336%29.jpg/1280px-Korean_Beef_Bulgogi_Rice_Bowl_%2834817154336%29.jpg',
     'ground-beef-casserole': 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Sauteed_beef_and_mushroom_casserole.jpg/1280px-Sauteed_beef_and_mushroom_casserole.jpg',
     'beef-nachos': 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Beef_Nachos_02.jpg/1280px-Beef_Nachos_02.jpg',
-    'beef-quesadillas': 'https://images.unsplash.com/photo-_BW-YmENFcM?auto=format&fit=crop&fm=webp&w=1200&q=78',
+    'beef-quesadillas': 'https://images.unsplash.com/photo-1673990349292-ed2dfa7988c9?auto=format&fit=crop&fm=webp&w=1200&q=78',
     'steak-bites': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Beef_steak_slices_on_a_platter_with_sauce.JPG/1280px-Beef_steak_slices_on_a_platter_with_sauce.JPG',
     'garlic-butter-steak': 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Beef_steak_with_garlic_butter.jpg/1280px-Beef_steak_with_garlic_butter.jpg'
   };
