@@ -70,7 +70,16 @@
     'awesome-slow-cooker-pot-roast': 'https://images.unsplash.com/photo-1603185730021-ddc0c8097059?auto=format&fit=crop&w=1200&q=82',
     'classic-chicken-pot-pie': 'https://images.unsplash.com/photo-1650917331384-1fd06afa3230?auto=format&fit=crop&w=1200&q=82',
     'beef-enchiladas': 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Gfp-enchiladas.jpg',
-    'salisbury-steak-meatballs': 'https://images.unsplash.com/photo-1632071773782-f68ef6109422?auto=format&fit=crop&w=1200&q=82'
+    'sloppy-joes': 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Sloppy_joe_sandwiches.jpg/1280px-Sloppy_joe_sandwiches.jpg',
+    'salisbury-steak': 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Salisbury_steak.jpg/1280px-Salisbury_steak.jpg',
+    'salisbury-steak-meatballs': 'https://images.unsplash.com/photo-1632071773782-f68ef6109422?auto=format&fit=crop&fm=webp&w=1200&q=78',
+    'beef-and-broccoli': 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Beef_and_broccoli_stir_fry.jpg/1280px-Beef_and_broccoli_stir_fry.jpg',
+    'korean-beef-bowls': 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Korean_Beef_Bulgogi_Rice_Bowl_%2834817154336%29.jpg/1280px-Korean_Beef_Bulgogi_Rice_Bowl_%2834817154336%29.jpg',
+    'ground-beef-casserole': 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Sauteed_beef_and_mushroom_casserole.jpg/1280px-Sauteed_beef_and_mushroom_casserole.jpg',
+    'beef-nachos': 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Beef_Nachos_02.jpg/1280px-Beef_Nachos_02.jpg',
+    'beef-quesadillas': 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/The_Quesadilla.jpg/1152px-The_Quesadilla.jpg',
+    'steak-bites': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Beef_steak_slices_on_a_platter_with_sauce.JPG/1280px-Beef_steak_slices_on_a_platter_with_sauce.JPG',
+    'garlic-butter-steak': 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Beef_steak_with_garlic_butter.jpg/1280px-Beef_steak_with_garlic_butter.jpg'
   };
 
   const applyCategoryOverride = recipe => {
