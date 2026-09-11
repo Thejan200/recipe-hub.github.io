@@ -42,6 +42,7 @@
     note.appendChild(link); frame.insertAdjacentElement('afterend', note);
   };
   new MutationObserver(renderImageCredit).observe(document.documentElement, { childList: true, subtree: true });
+  setInterval(renderImageCredit, 500);
   window.fetch = async (input, init) => {
     const url = typeof input === 'string' ? input : input?.url || ''; let resolvedUrl = url;
     try { resolvedUrl = new URL(url, window.location.href).href; } catch {}
