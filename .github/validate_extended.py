@@ -90,6 +90,7 @@ for rid in usa_ids:
 for name in ("index.html", "recipes.html", "categories.html", "category.html", "recipe.html", "favorites.html"):
     text = (root / name).read_text(encoding="utf-8")
     assert 'assets/js/site.js?v=12' in text, f"Stale site.js cache version on {name}"
+    assert 'assets/js/app.js?v=12' in text, f"Stale app.js cache version on {name}"
 
 # BiteSparks is the public brand. The legacy repository URL remains valid until a separate URL migration.
 brand_files = (
