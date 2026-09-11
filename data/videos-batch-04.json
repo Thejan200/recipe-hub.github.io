@@ -6,7 +6,9 @@
     "channelUrl": "https://www.youtube.com/@Allrecipes",
     "url": "https://www.youtube.com/watch?v=hVp2rxMsUNk",
     "language": "en",
-    "description": "English-language Allrecipes video demonstrating a homemade chicken and rice casserole."
+    "description": "English-language Allrecipes video demonstrating a homemade chicken and rice casserole.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/hVp2rxMsUNk/hqdefault.jpg",
+    "uploadDate": "2023-11-06T09:00:36-08:00"
   },
   "chicken-bacon-ranch-casserole": {
     "youtubeId": "roMQosfaGQg",
@@ -15,7 +17,9 @@
     "channelUrl": "https://www.youtube.com/channel/UCfwSoYQTBdjnXxn29jEQmzQ",
     "url": "https://www.youtube.com/watch?v=roMQosfaGQg",
     "language": "en",
-    "description": "English-language video demonstrating a creamy chicken bacon ranch casserole."
+    "description": "English-language video demonstrating a creamy chicken bacon ranch casserole.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/roMQosfaGQg/hqdefault.jpg",
+    "uploadDate": "2021-03-05T11:00:25-08:00"
   },
   "bbq-chicken": {
     "youtubeId": "VcSCPfgJ0Js",
@@ -24,7 +28,9 @@
     "channelUrl": "https://www.youtube.com/@Allrecipes",
     "url": "https://www.youtube.com/watch?v=VcSCPfgJ0Js",
     "language": "en",
-    "description": "English-language video demonstrating classic barbecue chicken."
+    "description": "English-language video demonstrating classic barbecue chicken.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/VcSCPfgJ0Js/hqdefault.jpg",
+    "uploadDate": "2018-07-21T03:00:04-07:00"
   },
   "chicken-fried-steak": {
     "youtubeId": "Harh4V5wU5E",
@@ -33,7 +39,9 @@
     "channelUrl": "https://www.youtube.com/@Allrecipes",
     "url": "https://www.youtube.com/watch?v=Harh4V5wU5E",
     "language": "en",
-    "description": "English-language Allrecipes video demonstrating Southern chicken fried steak and gravy."
+    "description": "English-language Allrecipes video demonstrating Southern chicken fried steak and gravy.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Harh4V5wU5E/hqdefault.jpg",
+    "uploadDate": "2023-02-17T07:00:13-08:00"
   },
   "chicken-and-dumplings": {
     "youtubeId": "nud3xra8oZY",
@@ -42,7 +50,9 @@
     "channelUrl": "https://www.youtube.com/@Allrecipes",
     "url": "https://www.youtube.com/watch?v=nud3xra8oZY",
     "language": "en",
-    "description": "English-language Allrecipes video demonstrating classic chicken and dumplings."
+    "description": "English-language Allrecipes video demonstrating classic chicken and dumplings.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/nud3xra8oZY/hqdefault.jpg",
+    "uploadDate": "2012-07-26T02:00:09-07:00"
   },
   "chicken-marsala": {
     "youtubeId": "JelAoVwdiYw",
@@ -51,7 +61,9 @@
     "channelUrl": "https://www.youtube.com/@Downshiftology",
     "url": "https://www.youtube.com/watch?v=JelAoVwdiYw",
     "language": "en",
-    "description": "English-language Downshiftology video demonstrating Italian-American chicken Marsala."
+    "description": "English-language Downshiftology video demonstrating Italian-American chicken Marsala.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/JelAoVwdiYw/hqdefault.jpg",
+    "uploadDate": "2024-10-20T08:30:07-07:00"
   },
   "chicken-piccata": {
     "youtubeId": "ek8x1JMrwM8",
@@ -60,7 +72,9 @@
     "channelUrl": "https://www.youtube.com/@Downshiftology",
     "url": "https://www.youtube.com/watch?v=ek8x1JMrwM8",
     "language": "en",
-    "description": "English-language Downshiftology video demonstrating Italian-American chicken piccata."
+    "description": "English-language Downshiftology video demonstrating Italian-American chicken piccata.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/ek8x1JMrwM8/hqdefault.jpg",
+    "uploadDate": "2023-06-01T08:30:37-07:00"
   },
   "chicken-parmesan-casserole": {
     "youtubeId": "EpZLpGPo1SQ",
@@ -69,7 +83,9 @@
     "channelUrl": "https://www.youtube.com/@Allrecipes",
     "url": "https://www.youtube.com/watch?v=EpZLpGPo1SQ",
     "language": "en",
-    "description": "English-language Allrecipes video demonstrating chicken Parmesan casserole."
+    "description": "English-language Allrecipes video demonstrating chicken Parmesan casserole.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/EpZLpGPo1SQ/hqdefault.jpg",
+    "uploadDate": "2018-11-29T11:45:00-08:00"
   },
   "creamy-tuscan-chicken": {
     "youtubeId": "UYVuRppTmCY",
@@ -78,7 +94,9 @@
     "channelUrl": "https://www.youtube.com/@Downshiftology",
     "url": "https://www.youtube.com/watch?v=UYVuRppTmCY",
     "language": "en",
-    "description": "English-language Downshiftology video demonstrating creamy Tuscan-style chicken."
+    "description": "English-language Downshiftology video demonstrating creamy Tuscan-style chicken.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/UYVuRppTmCY/hqdefault.jpg",
+    "uploadDate": "2022-09-22T08:33:15-07:00"
   },
   "marry-me-chicken": {
     "youtubeId": "PjJET32QoQ0",
@@ -87,6 +105,8 @@
     "channelUrl": "https://www.youtube.com/@ChefJackOvens",
     "url": "https://www.youtube.com/watch?v=PjJET32QoQ0",
     "language": "en",
-    "description": "English-language Chef Jack Ovens video demonstrating Marry Me Chicken."
+    "description": "English-language Chef Jack Ovens video demonstrating Marry Me Chicken.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/PjJET32QoQ0/hqdefault.jpg",
+    "uploadDate": "2024-09-05T06:30:19-07:00"
   }
 }

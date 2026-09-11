@@ -37,6 +37,8 @@ for recipe in runtime_published:
     for field in ("youtubeId", "title", "channel", "channelUrl", "url", "language"):
         assert video.get(field), f"Runtime published recipe {rid} missing video field {field}"
     assert video["language"].lower() == "en", f"Runtime published recipe {rid} must use an English video"
+    assert video.get("thumbnailUrl", "").startswith("https://i.ytimg.com/vi/"), f"Runtime published recipe {rid} needs a YouTube thumbnail URL"
+    assert re.fullmatch(r"\d{4}-\d{2}-\d{2}T.+", str(video.get("uploadDate", ""))), f"Runtime published recipe {rid} needs a verified video upload date"
 
 # Sitemap must cover all runtime-published recipe URLs and all user-facing category collections.
 sitemap = ET.parse(root / "sitemap.xml").getroot()
@@ -44,6 +46,14 @@ urls = {e.text for e in sitemap.iter() if e.tag.endswith("}loc") and e.text}
 for rid in runtime_ids:
     assert base + "recipe.html?id=" + rid in urls, f"Runtime published recipe missing from sitemap: {rid}"
 assert base + "categories.html" in urls, "Categories landing page missing from sitemap"
+for name in (
+    "cookbooks.html", "book-half-baked-harvest-super-simple.html", "book-everyday-eats.html",
+    "book-air-fryer-recipes-cathy-yoder.html", "book-good-lookin-cookin.html",
+    "book-air-fryer-cookbook-600.html", "book-pioneer-woman-essential-recipes.html",
+    "book-complete-baby-toddler-cookbook.html", "book-lets-get-cooking.html",
+    "book-the-mediterranean-dish.html", "book-city-eats-san-francisco.html"
+):
+    assert base + name in urls, f"Cookbook page missing from sitemap: {name}"
 for category in ("Breakfast", "Dinner", "Beef", "Pork", "Seafood", "Soup", "Dessert", "Healthy", "Chicken", "Vegetarian", "Quick%20%26%20Easy", "USA"):
     assert base + "category.html?category=" + category in urls, f"Category missing from sitemap: {category}"
 assert base + "category.html?category=Vegan" not in urls, "Stale Vegan collection URL should not be in sitemap"
@@ -79,7 +89,7 @@ for rid in usa_ids:
 # Key recipe/taxonomy surfaces must use one cache-busting site.js version so behavior stays consistent.
 for name in ("index.html", "recipes.html", "categories.html", "category.html", "recipe.html", "favorites.html"):
     text = (root / name).read_text(encoding="utf-8")
-    assert 'assets/js/site.js?v=11' in text, f"Stale site.js cache version on {name}"
+    assert 'assets/js/site.js?v=12' in text, f"Stale site.js cache version on {name}"
 
 # BiteSparks is the public brand. The legacy repository URL remains valid until a separate URL migration.
 brand_files = (
@@ -102,6 +112,10 @@ assert "bs-saved" in app, "BiteSparks saved-recipe storage key is missing"
 assert "bs-cookie-choice" in app and "bs-cookie-choice" in site, "BiteSparks cookie storage key is missing"
 assert "bs-theme" in app and "bs-theme" in site, "BiteSparks theme storage key is missing"
 assert "__bsAuditPatched" in site and "bsMenuBound" in site, "BiteSparks runtime marker names are missing"
+assert "newest.slice(0,3)" in app, "Home latest recipes must be selected from the date-sorted catalog"
+assert "Category not found" in app and "noindex,follow" in app, "Unknown category pages must not be indexable"
+assert "new URL(r.image,SITE_URL).href" in app, "Recipe social/schema images must use absolute URLs"
+assert "thumbnailUrl" in app and "uploadDate" in app, "Recipe VideoObject schema must include required metadata"
 
 # Catch the historic veggie-soup date mapping regression and require an audited fallback.
 assert ("'veggie-soup':'2026-08-31'" in app or "result.id==='veggie-soup'" in site), "veggie-soup needs datePublished mapping"

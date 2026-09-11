@@ -1,12 +1,112 @@
 {
-  "southern-fried-chicken":{"youtubeId":"hXkepSgN_zo","title":"How To Make Southern Fried Chicken | Allrecipes.com","channel":"Allrecipes","channelUrl":"https://www.youtube.com/@Allrecipes","url":"https://www.youtube.com/watch?v=hXkepSgN_zo","language":"en","description":"English Southern fried chicken cooking demonstration by Allrecipes."},
-  "buffalo-chicken-dip":{"youtubeId":"LVG_rpt_xsg","title":"How to Make Buffalo Chicken Dip | Allrecipes.com","channel":"Allrecipes","channelUrl":"https://www.youtube.com/@Allrecipes","url":"https://www.youtube.com/watch?v=LVG_rpt_xsg","language":"en","description":"English Buffalo chicken dip cooking demonstration by Allrecipes."},
-  "chicken-alfredo":{"youtubeId":"F7CU0qBdj04","title":"Easy Chicken Alfredo Recipe","channel":"Preppy Kitchen","channelUrl":"https://www.youtube.com/@PreppyKitchen","url":"https://www.youtube.com/watch?v=F7CU0qBdj04","language":"en","description":"English chicken Alfredo cooking demonstration by Preppy Kitchen."},
-  "chicken-parmesan":{"youtubeId":"gwSOwAe_IVY","title":"Classic Chicken Parmesan Recipe","channel":"Natashas Kitchen","channelUrl":"https://www.youtube.com/@NatashasKitchen","url":"https://www.youtube.com/watch?v=gwSOwAe_IVY","language":"en","description":"English classic chicken Parmesan cooking demonstration by Natashas Kitchen."},
-  "chicken-enchiladas":{"youtubeId":"a37Bus86q28","title":"How to Make Chicken Enchiladas | Allrecipes","channel":"Allrecipes","channelUrl":"https://www.youtube.com/@Allrecipes","url":"https://www.youtube.com/watch?v=a37Bus86q28","language":"en","description":"English chicken enchiladas cooking demonstration by Allrecipes."},
-  "chicken-fajitas":{"youtubeId":"g-LT0igt9lo","title":"How to Make Easy Chicken Fajitas in Minutes - Quick and Simple Recipe!","channel":"Natashas Kitchen","channelUrl":"https://www.youtube.com/@NatashasKitchen","url":"https://www.youtube.com/watch?v=g-LT0igt9lo","language":"en","description":"English-language chicken fajitas cooking demonstration by Natashas Kitchen."},
-  "chicken-caesar-salad":{"youtubeId":"3cKK5-5yoN0","title":"Chicken Caesar Salad | A classic recipe for everyone's favorite salad!","channel":"Wyse Guide","channelUrl":"https://www.youtube.com/@WyseGuide","url":"https://www.youtube.com/watch?v=3cKK5-5yoN0","language":"en","description":"English chicken Caesar salad cooking demonstration by Wyse Guide."},
-  "chicken-noodle-soup":{"youtubeId":"06Vrqqo1SaU","title":"How To Make Easy Chicken Noodle Soup Recipe - Natasha's Kitchen","channel":"Natashas Kitchen","channelUrl":"https://www.youtube.com/@NatashasKitchen","url":"https://www.youtube.com/watch?v=06Vrqqo1SaU","language":"en","description":"English homemade chicken noodle soup cooking demonstration by Natashas Kitchen."},
-  "chicken-fried-rice":{"youtubeId":"wGchwPHWvs4","title":"Easy Chicken Fried Rice in 15 Minutes | Allrecipes","channel":"Allrecipes","channelUrl":"https://www.youtube.com/@Allrecipes","url":"https://www.youtube.com/watch?v=wGchwPHWvs4","language":"en","description":"English chicken fried rice cooking demonstration by Allrecipes."},
-  "classic-chocolate-chip-cookies":{"youtubeId":"loqCY9b7aec","title":"Classic Chocolate Chip Cookies Recipe","channel":"Preppy Kitchen","channelUrl":"https://www.youtube.com/@PreppyKitchen","url":"https://www.youtube.com/watch?v=loqCY9b7aec","language":"en","description":"English classic chocolate chip cookies cooking demonstration by Preppy Kitchen."}
+  "southern-fried-chicken": {
+    "youtubeId": "hXkepSgN_zo",
+    "title": "How To Make Southern Fried Chicken | Allrecipes.com",
+    "channel": "Allrecipes",
+    "channelUrl": "https://www.youtube.com/@Allrecipes",
+    "url": "https://www.youtube.com/watch?v=hXkepSgN_zo",
+    "language": "en",
+    "description": "English Southern fried chicken cooking demonstration by Allrecipes.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/hXkepSgN_zo/hqdefault.jpg",
+    "uploadDate": "2012-11-10T05:00:41-08:00"
+  },
+  "buffalo-chicken-dip": {
+    "youtubeId": "LVG_rpt_xsg",
+    "title": "How to Make Buffalo Chicken Dip | Allrecipes.com",
+    "channel": "Allrecipes",
+    "channelUrl": "https://www.youtube.com/@Allrecipes",
+    "url": "https://www.youtube.com/watch?v=LVG_rpt_xsg",
+    "language": "en",
+    "description": "English Buffalo chicken dip cooking demonstration by Allrecipes.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/LVG_rpt_xsg/hqdefault.jpg",
+    "uploadDate": "2012-05-14T08:09:57-07:00"
+  },
+  "chicken-alfredo": {
+    "youtubeId": "F7CU0qBdj04",
+    "title": "Easy Chicken Alfredo Recipe",
+    "channel": "Preppy Kitchen",
+    "channelUrl": "https://www.youtube.com/@PreppyKitchen",
+    "url": "https://www.youtube.com/watch?v=F7CU0qBdj04",
+    "language": "en",
+    "description": "English chicken Alfredo cooking demonstration by Preppy Kitchen.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/F7CU0qBdj04/hqdefault.jpg",
+    "uploadDate": "2023-06-13T12:00:11-07:00"
+  },
+  "chicken-parmesan": {
+    "youtubeId": "gwSOwAe_IVY",
+    "title": "Classic Chicken Parmesan Recipe",
+    "channel": "Natashas Kitchen",
+    "channelUrl": "https://www.youtube.com/@NatashasKitchen",
+    "url": "https://www.youtube.com/watch?v=gwSOwAe_IVY",
+    "language": "en",
+    "description": "English classic chicken Parmesan cooking demonstration by Natashas Kitchen.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/gwSOwAe_IVY/hqdefault.jpg",
+    "uploadDate": "2020-02-28T08:30:10-08:00"
+  },
+  "chicken-enchiladas": {
+    "youtubeId": "a37Bus86q28",
+    "title": "How to Make Chicken Enchiladas | Allrecipes",
+    "channel": "Allrecipes",
+    "channelUrl": "https://www.youtube.com/@Allrecipes",
+    "url": "https://www.youtube.com/watch?v=a37Bus86q28",
+    "language": "en",
+    "description": "English chicken enchiladas cooking demonstration by Allrecipes.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/a37Bus86q28/hqdefault.jpg",
+    "uploadDate": "2012-05-15T08:05:03-07:00"
+  },
+  "chicken-fajitas": {
+    "youtubeId": "g-LT0igt9lo",
+    "title": "How to Make Easy Chicken Fajitas in Minutes - Quick and Simple Recipe!",
+    "channel": "Natashas Kitchen",
+    "channelUrl": "https://www.youtube.com/@NatashasKitchen",
+    "url": "https://www.youtube.com/watch?v=g-LT0igt9lo",
+    "language": "en",
+    "description": "English-language chicken fajitas cooking demonstration by Natashas Kitchen.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/g-LT0igt9lo/hqdefault.jpg",
+    "uploadDate": "2023-04-28T08:30:08-07:00"
+  },
+  "chicken-caesar-salad": {
+    "youtubeId": "3cKK5-5yoN0",
+    "title": "Chicken Caesar Salad | A classic recipe for everyone's favorite salad!",
+    "channel": "Wyse Guide",
+    "channelUrl": "https://www.youtube.com/@WyseGuide",
+    "url": "https://www.youtube.com/watch?v=3cKK5-5yoN0",
+    "language": "en",
+    "description": "English chicken Caesar salad cooking demonstration by Wyse Guide.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/3cKK5-5yoN0/hqdefault.jpg",
+    "uploadDate": "2024-03-10T07:00:01-07:00"
+  },
+  "chicken-noodle-soup": {
+    "youtubeId": "06Vrqqo1SaU",
+    "title": "How To Make Easy Chicken Noodle Soup Recipe - Natasha's Kitchen",
+    "channel": "Natashas Kitchen",
+    "channelUrl": "https://www.youtube.com/@NatashasKitchen",
+    "url": "https://www.youtube.com/watch?v=06Vrqqo1SaU",
+    "language": "en",
+    "description": "English homemade chicken noodle soup cooking demonstration by Natashas Kitchen.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/06Vrqqo1SaU/hqdefault.jpg",
+    "uploadDate": "2018-11-30T08:43:26-08:00"
+  },
+  "chicken-fried-rice": {
+    "youtubeId": "wGchwPHWvs4",
+    "title": "Easy Chicken Fried Rice in 15 Minutes | Allrecipes",
+    "channel": "Allrecipes",
+    "channelUrl": "https://www.youtube.com/@Allrecipes",
+    "url": "https://www.youtube.com/watch?v=wGchwPHWvs4",
+    "language": "en",
+    "description": "English chicken fried rice cooking demonstration by Allrecipes.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/wGchwPHWvs4/hqdefault.jpg",
+    "uploadDate": "2024-01-24T08:01:53-08:00"
+  },
+  "classic-chocolate-chip-cookies": {
+    "youtubeId": "loqCY9b7aec",
+    "title": "Classic Chocolate Chip Cookies Recipe",
+    "channel": "Preppy Kitchen",
+    "channelUrl": "https://www.youtube.com/@PreppyKitchen",
+    "url": "https://www.youtube.com/watch?v=loqCY9b7aec",
+    "language": "en",
+    "description": "English classic chocolate chip cookies cooking demonstration by Preppy Kitchen.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/loqCY9b7aec/hqdefault.jpg",
+    "uploadDate": "2021-11-30T12:00:29-08:00"
+  }
 }

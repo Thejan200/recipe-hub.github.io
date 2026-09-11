@@ -6,7 +6,9 @@
     "channelUrl": "https://www.youtube.com/@NatashasKitchen",
     "url": "https://www.youtube.com/watch?v=YPgoUhZwfFA",
     "language": "en",
-    "description": "English cooking demonstration for creamy lemon chicken pasta published by Natashas Kitchen."
+    "description": "English cooking demonstration for creamy lemon chicken pasta published by Natashas Kitchen.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/YPgoUhZwfFA/hqdefault.jpg",
+    "uploadDate": "2019-07-05T08:28:17-07:00"
   },
   "avocado-toast": {
     "youtubeId": "WyuAFUxJLjM",
@@ -15,7 +17,9 @@
     "channelUrl": "https://www.youtube.com/@SortedFood",
     "url": "https://www.youtube.com/watch?v=WyuAFUxJLjM",
     "language": "en",
-    "description": "English avocado toast cooking demonstration published by Sorted Food."
+    "description": "English avocado toast cooking demonstration published by Sorted Food.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/WyuAFUxJLjM/hqdefault.jpg",
+    "uploadDate": "2017-05-12T02:00:02-07:00"
   },
   "salmon-bowl": {
     "youtubeId": "-3h4O4on_-4",
@@ -24,7 +28,9 @@
     "channelUrl": "https://www.youtube.com/@ChefJackOvens",
     "url": "https://www.youtube.com/watch?v=-3h4O4on_-4",
     "language": "en",
-    "description": "English honey garlic salmon bowl cooking demonstration published by Chef Jack Ovens."
+    "description": "English honey garlic salmon bowl cooking demonstration published by Chef Jack Ovens.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/-3h4O4on_-4/hqdefault.jpg",
+    "uploadDate": "2022-06-06T05:30:00-07:00"
   },
   "berry-parfait": {
     "youtubeId": "bstdhwk-LC4",
@@ -33,7 +39,9 @@
     "channelUrl": "https://www.youtube.com/@HistoryofFood",
     "url": "https://www.youtube.com/watch?v=bstdhwk-LC4",
     "language": "en",
-    "description": "English yogurt berry parfait demonstration published by History of Food."
+    "description": "English yogurt berry parfait demonstration published by History of Food.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/bstdhwk-LC4/hqdefault.jpg",
+    "uploadDate": "2024-08-14T05:18:54-07:00"
   },
   "chocolate-cake": {
     "youtubeId": "ZqMqTB7RSjo",
@@ -42,7 +50,9 @@
     "channelUrl": "https://www.youtube.com/@Allrecipes",
     "url": "https://www.youtube.com/watch?v=ZqMqTB7RSjo",
     "language": "en",
-    "description": "English one-bowl chocolate cake demonstration published by Allrecipes."
+    "description": "English one-bowl chocolate cake demonstration published by Allrecipes.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/ZqMqTB7RSjo/hqdefault.jpg",
+    "uploadDate": "2013-06-10T05:00:40-07:00"
   },
   "veggie-soup": {
     "youtubeId": "r0ifkoDKt44",
@@ -51,6 +61,8 @@
     "channelUrl": "https://www.youtube.com/@thestayhomechef",
     "url": "https://www.youtube.com/watch?v=r0ifkoDKt44",
     "language": "en",
-    "description": "English vegetable soup cooking demonstration published by The Stay At Home Chef."
+    "description": "English vegetable soup cooking demonstration published by The Stay At Home Chef.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/r0ifkoDKt44/hqdefault.jpg",
+    "uploadDate": "2022-10-08T07:30:09-07:00"
   }
 }

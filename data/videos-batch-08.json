@@ -5,7 +5,9 @@
     "channel": "Natashas Kitchen",
     "channelUrl": "https://www.youtube.com/@Natashaskitchen",
     "url": "https://www.youtube.com/watch?v=UPz7aUqELXk",
-    "language": "en"
+    "language": "en",
+    "thumbnailUrl": "https://i.ytimg.com/vi/UPz7aUqELXk/hqdefault.jpg",
+    "uploadDate": "2021-03-19T08:30:13-07:00"
   },
   "cinnamon-french-toast": {
     "youtubeId": "Km7KRbKVu88",
@@ -13,7 +15,9 @@
     "channel": "Preppy Kitchen",
     "channelUrl": "https://www.youtube.com/@PreppyKitchen",
     "url": "https://www.youtube.com/watch?v=Km7KRbKVu88",
-    "language": "en"
+    "language": "en",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Km7KRbKVu88/hqdefault.jpg",
+    "uploadDate": "2025-05-01T12:26:12-07:00"
   },
   "breakfast-burritos": {
     "youtubeId": "f0AQD5fBXOU",
@@ -21,7 +25,9 @@
     "channel": "Natashas Kitchen",
     "channelUrl": "https://www.youtube.com/@Natashaskitchen",
     "url": "https://www.youtube.com/watch?v=f0AQD5fBXOU",
-    "language": "en"
+    "language": "en",
+    "thumbnailUrl": "https://i.ytimg.com/vi/f0AQD5fBXOU/hqdefault.jpg",
+    "uploadDate": "2019-08-23T08:30:13-07:00"
   },
   "breakfast-casserole": {
     "youtubeId": "mh48MKgI2vU",
@@ -29,7 +35,9 @@
     "channel": "Allrecipes",
     "channelUrl": "https://www.youtube.com/@allrecipes",
     "url": "https://www.youtube.com/watch?v=mh48MKgI2vU",
-    "language": "en"
+    "language": "en",
+    "thumbnailUrl": "https://i.ytimg.com/vi/mh48MKgI2vU/hqdefault.jpg",
+    "uploadDate": "2023-09-13T07:00:37-07:00"
   },
   "sausage-breakfast-casserole": {
     "youtubeId": "lLXrkyrAykc",
@@ -37,7 +45,9 @@
     "channel": "Allrecipes",
     "channelUrl": "https://www.youtube.com/@allrecipes",
     "url": "https://www.youtube.com/watch?v=lLXrkyrAykc",
-    "language": "en"
+    "language": "en",
+    "thumbnailUrl": "https://i.ytimg.com/vi/lLXrkyrAykc/hqdefault.jpg",
+    "uploadDate": "2012-06-07T08:42:31-07:00"
   },
   "eggs-benedict": {
     "youtubeId": "c8T_gtzHa5g",
@@ -45,7 +55,9 @@
     "channel": "Preppy Kitchen",
     "channelUrl": "https://www.youtube.com/@PreppyKitchen",
     "url": "https://www.youtube.com/watch?v=c8T_gtzHa5g",
-    "language": "en"
+    "language": "en",
+    "thumbnailUrl": "https://i.ytimg.com/vi/c8T_gtzHa5g/hqdefault.jpg",
+    "uploadDate": "2023-12-19T12:00:22-08:00"
   },
   "hash-browns": {
     "youtubeId": "FREhiVYnLbA",
@@ -53,7 +65,9 @@
     "channel": "Natashas Kitchen",
     "channelUrl": "https://www.youtube.com/@Natashaskitchen",
     "url": "https://www.youtube.com/watch?v=FREhiVYnLbA",
-    "language": "en"
+    "language": "en",
+    "thumbnailUrl": "https://i.ytimg.com/vi/FREhiVYnLbA/hqdefault.jpg",
+    "uploadDate": "2022-05-20T08:30:09-07:00"
   },
   "home-fries": {
     "youtubeId": "nWjoH9SN2bg",
@@ -61,7 +75,9 @@
     "channel": "In The Kitchen With Gina Young",
     "channelUrl": "https://www.youtube.com/@InTheKitchenWithGinaYoung",
     "url": "https://www.youtube.com/watch?v=nWjoH9SN2bg",
-    "language": "en"
+    "language": "en",
+    "thumbnailUrl": "https://i.ytimg.com/vi/nWjoH9SN2bg/hqdefault.jpg",
+    "uploadDate": "2020-06-24T19:01:55-07:00"
   },
   "breakfast-tacos": {
     "youtubeId": "b2FkFJronPQ",
@@ -69,6 +85,8 @@
     "channel": "Natashas Kitchen",
     "channelUrl": "https://www.youtube.com/@Natashaskitchen",
     "url": "https://www.youtube.com/watch?v=b2FkFJronPQ",
-    "language": "en"
+    "language": "en",
+    "thumbnailUrl": "https://i.ytimg.com/vi/b2FkFJronPQ/hqdefault.jpg",
+    "uploadDate": "2022-09-23T08:30:09-07:00"
   }
 }

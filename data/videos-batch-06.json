@@ -1,12 +1,102 @@
 {
-  "sloppy-joes":{"youtubeId":"Lmow-LHbygU","title":"Quick & Easy Sloppy Joes: My Family's Favorite Weeknight Meal!","channel":"Natasha's Kitchen","channelUrl":"https://www.youtube.com/@Natashaskitchen","url":"https://www.youtube.com/watch?v=Lmow-LHbygU","language":"en"},
-  "salisbury-steak":{"youtubeId":"g3tdZUPWwpk","title":"How to Make Easy Homemade Salisbury Steak | Allrecipes","channel":"Allrecipes","channelUrl":"https://www.youtube.com/@allrecipes","url":"https://www.youtube.com/watch?v=g3tdZUPWwpk","language":"en"},
-  "salisbury-steak-meatballs":{"youtubeId":"8sWuDsug3ZM","title":"30-Minute Perfect Salisbury Steak Meatballs","channel":"All Wings Everything","channelUrl":"https://www.youtube.com/@allwingseverything","url":"https://www.youtube.com/watch?v=8sWuDsug3ZM","language":"en"},
-  "beef-and-broccoli":{"youtubeId":"8eITNSfct3Q","title":"How To Make Beef and Broccoli Recipe with Stir Fry Sauce","channel":"Natasha's Kitchen","channelUrl":"https://www.youtube.com/@Natashaskitchen","url":"https://www.youtube.com/watch?v=8eITNSfct3Q","language":"en"},
-  "korean-beef-bowls":{"youtubeId":"olK8IrYgS0c","title":"Quick Korean Beef Rice Bowl | WEEKNIGHTING","channel":"Brian Lagerstrom","channelUrl":"https://www.youtube.com/@BrianLagerstrom","url":"https://www.youtube.com/watch?v=olK8IrYgS0c","language":"en"},
-  "ground-beef-casserole":{"youtubeId":"QDX_tJ-yJsY","title":"Easy Ground Beef Casserole Recipe","channel":"Yummy Inspirations","channelUrl":"https://www.youtube.com/@YummyInspirations","url":"https://www.youtube.com/watch?v=QDX_tJ-yJsY","language":"en"},
-  "beef-nachos":{"youtubeId":"N3ypNxHpT0k","title":"HOW TO MAKE BEEF NACHOS","channel":"SimpleCookingChannel","channelUrl":"https://www.youtube.com/@simplecookingchannel","url":"https://www.youtube.com/watch?v=N3ypNxHpT0k","language":"en"},
-  "beef-quesadillas":{"youtubeId":"sO7YgAa9IBA","title":"The Ultimate Cheesy Ground Beef Quesadillas","channel":"Cooking with Shirani","channelUrl":"https://www.youtube.com/@CookingwithShirani","url":"https://www.youtube.com/watch?v=sO7YgAa9IBA","language":"en"},
-  "steak-bites":{"youtubeId":"-2TE2ViRlac","title":"Garlic Butter Steak Bites","channel":"Chef Billy Parisi","channelUrl":"https://www.youtube.com/@ChefBillyParisi","url":"https://www.youtube.com/watch?v=-2TE2ViRlac","language":"en"},
-  "garlic-butter-steak":{"youtubeId":"aFCfY68Mqh0","title":"THE EASIEST GARLIC BUTTER STEAK I'VE EVER MADE | SAM THE COOKING GUY","channel":"SAM THE COOKING GUY","channelUrl":"https://www.youtube.com/@samthecookingguy","url":"https://www.youtube.com/watch?v=aFCfY68Mqh0","language":"en"}
+  "sloppy-joes": {
+    "youtubeId": "Lmow-LHbygU",
+    "title": "Quick & Easy Sloppy Joes: My Family's Favorite Weeknight Meal!",
+    "channel": "Natasha's Kitchen",
+    "channelUrl": "https://www.youtube.com/@Natashaskitchen",
+    "url": "https://www.youtube.com/watch?v=Lmow-LHbygU",
+    "language": "en",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Lmow-LHbygU/hqdefault.jpg",
+    "uploadDate": "2025-06-06T09:00:07-07:00"
+  },
+  "salisbury-steak": {
+    "youtubeId": "g3tdZUPWwpk",
+    "title": "How to Make Easy Homemade Salisbury Steak | Allrecipes",
+    "channel": "Allrecipes",
+    "channelUrl": "https://www.youtube.com/@allrecipes",
+    "url": "https://www.youtube.com/watch?v=g3tdZUPWwpk",
+    "language": "en",
+    "thumbnailUrl": "https://i.ytimg.com/vi/g3tdZUPWwpk/hqdefault.jpg",
+    "uploadDate": "2021-09-11T11:00:11-07:00"
+  },
+  "salisbury-steak-meatballs": {
+    "youtubeId": "8sWuDsug3ZM",
+    "title": "30-Minute Perfect Salisbury Steak Meatballs",
+    "channel": "All Wings Everything",
+    "channelUrl": "https://www.youtube.com/@allwingseverything",
+    "url": "https://www.youtube.com/watch?v=8sWuDsug3ZM",
+    "language": "en",
+    "thumbnailUrl": "https://i.ytimg.com/vi/8sWuDsug3ZM/hqdefault.jpg",
+    "uploadDate": "2024-03-20T12:22:18-07:00"
+  },
+  "beef-and-broccoli": {
+    "youtubeId": "8eITNSfct3Q",
+    "title": "How To Make Beef and Broccoli Recipe with Stir Fry Sauce",
+    "channel": "Natasha's Kitchen",
+    "channelUrl": "https://www.youtube.com/@Natashaskitchen",
+    "url": "https://www.youtube.com/watch?v=8eITNSfct3Q",
+    "language": "en",
+    "thumbnailUrl": "https://i.ytimg.com/vi/8eITNSfct3Q/hqdefault.jpg",
+    "uploadDate": "2019-08-30T09:00:12-07:00"
+  },
+  "korean-beef-bowls": {
+    "youtubeId": "olK8IrYgS0c",
+    "title": "Quick Korean Beef Rice Bowl | WEEKNIGHTING",
+    "channel": "Brian Lagerstrom",
+    "channelUrl": "https://www.youtube.com/@BrianLagerstrom",
+    "url": "https://www.youtube.com/watch?v=olK8IrYgS0c",
+    "language": "en",
+    "thumbnailUrl": "https://i.ytimg.com/vi/olK8IrYgS0c/hqdefault.jpg",
+    "uploadDate": "2022-05-09T09:00:44-07:00"
+  },
+  "ground-beef-casserole": {
+    "youtubeId": "QDX_tJ-yJsY",
+    "title": "Easy Ground Beef Casserole Recipe",
+    "channel": "Yummy Inspirations",
+    "channelUrl": "https://www.youtube.com/@YummyInspirations",
+    "url": "https://www.youtube.com/watch?v=QDX_tJ-yJsY",
+    "language": "en",
+    "thumbnailUrl": "https://i.ytimg.com/vi/QDX_tJ-yJsY/hqdefault.jpg",
+    "uploadDate": "2024-05-09T05:56:06-07:00"
+  },
+  "beef-nachos": {
+    "youtubeId": "N3ypNxHpT0k",
+    "title": "HOW TO MAKE BEEF NACHOS",
+    "channel": "SimpleCookingChannel",
+    "channelUrl": "https://www.youtube.com/@simplecookingchannel",
+    "url": "https://www.youtube.com/watch?v=N3ypNxHpT0k",
+    "language": "en",
+    "thumbnailUrl": "https://i.ytimg.com/vi/N3ypNxHpT0k/hqdefault.jpg",
+    "uploadDate": "2014-05-13T15:34:09-07:00"
+  },
+  "beef-quesadillas": {
+    "youtubeId": "sO7YgAa9IBA",
+    "title": "The Ultimate Cheesy Ground Beef Quesadillas",
+    "channel": "Cooking with Shirani",
+    "channelUrl": "https://www.youtube.com/@CookingwithShirani",
+    "url": "https://www.youtube.com/watch?v=sO7YgAa9IBA",
+    "language": "en",
+    "thumbnailUrl": "https://i.ytimg.com/vi/sO7YgAa9IBA/hqdefault.jpg",
+    "uploadDate": "2026-01-24T06:01:17-08:00"
+  },
+  "steak-bites": {
+    "youtubeId": "-2TE2ViRlac",
+    "title": "Garlic Butter Steak Bites",
+    "channel": "Chef Billy Parisi",
+    "channelUrl": "https://www.youtube.com/@ChefBillyParisi",
+    "url": "https://www.youtube.com/watch?v=-2TE2ViRlac",
+    "language": "en",
+    "thumbnailUrl": "https://i.ytimg.com/vi/-2TE2ViRlac/hqdefault.jpg",
+    "uploadDate": "2026-06-17T08:00:35-07:00"
+  },
+  "garlic-butter-steak": {
+    "youtubeId": "aFCfY68Mqh0",
+    "title": "THE EASIEST GARLIC BUTTER STEAK I'VE EVER MADE | SAM THE COOKING GUY",
+    "channel": "SAM THE COOKING GUY",
+    "channelUrl": "https://www.youtube.com/@samthecookingguy",
+    "url": "https://www.youtube.com/watch?v=aFCfY68Mqh0",
+    "language": "en",
+    "thumbnailUrl": "https://i.ytimg.com/vi/aFCfY68Mqh0/hqdefault.jpg",
+    "uploadDate": "2023-07-03T12:26:03-07:00"
+  }
 }

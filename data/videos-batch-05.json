@@ -6,7 +6,9 @@
     "channelUrl": "https://www.youtube.com/@gregskitchen",
     "url": "https://www.youtube.com/watch?v=KViwguG-tSk",
     "language": "en",
-    "description": "English-language cooking tutorial demonstrating how to make and assemble a classic cheeseburger."
+    "description": "English-language cooking tutorial demonstrating how to make and assemble a classic cheeseburger.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/KViwguG-tSk/hqdefault.jpg",
+    "uploadDate": "2020-04-27T14:32:16-07:00"
   },
   "smash-burgers": {
     "youtubeId": "7dP7xJEasY4",
@@ -15,7 +17,9 @@
     "channelUrl": "https://www.youtube.com/@BrianLagerstrom",
     "url": "https://www.youtube.com/watch?v=7dP7xJEasY4",
     "language": "en",
-    "description": "English-language step-by-step cooking tutorial covering burger sauce, beef preparation, smashing, high-heat cooking, cheese melting, and final assembly."
+    "description": "English-language step-by-step cooking tutorial covering burger sauce, beef preparation, smashing, high-heat cooking, cheese melting, and final assembly.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/7dP7xJEasY4/hqdefault.jpg",
+    "uploadDate": "2020-12-03T09:00:04-08:00"
   },
   "beef-stroganoff": {
     "youtubeId": "4Et7hv4pz1o",
@@ -24,7 +28,9 @@
     "channelUrl": "https://www.youtube.com/@Allrecipes",
     "url": "https://www.youtube.com/watch?v=4Et7hv4pz1o",
     "language": "en",
-    "description": "English-language Allrecipes video demonstrating homemade beef stroganoff."
+    "description": "English-language Allrecipes video demonstrating homemade beef stroganoff.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/4Et7hv4pz1o/hqdefault.jpg",
+    "uploadDate": "2022-01-15T09:43:10-08:00"
   },
   "classic-beef-chili": {
     "youtubeId": "kspIvqBz_cE",
@@ -33,7 +39,9 @@
     "channelUrl": "https://www.youtube.com/@ASimplePalate",
     "url": "https://www.youtube.com/watch?v=kspIvqBz_cE",
     "language": "en",
-    "description": "English-language cooking video demonstrating a classic beef-and-bean chili."
+    "description": "English-language cooking video demonstrating a classic beef-and-bean chili.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/kspIvqBz_cE/hqdefault.jpg",
+    "uploadDate": "2025-01-23T10:02:45-08:00"
   },
   "chili-mac": {
     "youtubeId": "UIFjFuQmCrg",
@@ -42,7 +50,9 @@
     "channelUrl": "https://www.youtube.com/@LearnToCookcom",
     "url": "https://www.youtube.com/watch?v=UIFjFuQmCrg",
     "language": "en",
-    "description": "English-language cooking video demonstrating beef chili mac with macaroni."
+    "description": "English-language cooking video demonstrating beef chili mac with macaroni.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/UIFjFuQmCrg/hqdefault.jpg",
+    "uploadDate": "2014-02-27T08:37:26-08:00"
   },
   "beef-enchiladas": {
     "youtubeId": "CjoVxMSdfKg",
@@ -51,7 +61,9 @@
     "channelUrl": "https://www.youtube.com/@SimplyMamaCooks",
     "url": "https://www.youtube.com/watch?v=CjoVxMSdfKg",
     "language": "en",
-    "description": "English-language step-by-step video demonstrating beef and cheese enchiladas with red sauce."
+    "description": "English-language step-by-step video demonstrating beef and cheese enchiladas with red sauce.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/CjoVxMSdfKg/hqdefault.jpg",
+    "uploadDate": "2019-01-25T17:26:52-08:00"
   },
   "beef-burritos": {
     "youtubeId": "h4fen5cbKxM",
@@ -60,7 +72,9 @@
     "channelUrl": "https://www.youtube.com/@NatashasKitchen",
     "url": "https://www.youtube.com/watch?v=h4fen5cbKxM",
     "language": "en",
-    "description": "English-language Natasha's Kitchen video demonstrating homemade beef burritos."
+    "description": "English-language Natasha's Kitchen video demonstrating homemade beef burritos.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/h4fen5cbKxM/hqdefault.jpg",
+    "uploadDate": "2024-11-08T11:00:06-08:00"
   },
   "beef-fajitas": {
     "youtubeId": "PCjkJ-OmUG4",
@@ -69,7 +83,9 @@
     "channelUrl": "https://www.youtube.com/@CookingConClaudia",
     "url": "https://www.youtube.com/watch?v=PCjkJ-OmUG4",
     "language": "en",
-    "description": "English-language cooking video demonstrating marinated steak fajitas with peppers and onions."
+    "description": "English-language cooking video demonstrating marinated steak fajitas with peppers and onions.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/PCjkJ-OmUG4/hqdefault.jpg",
+    "uploadDate": "2022-09-27T15:29:32-07:00"
   },
   "philly-cheesesteak": {
     "youtubeId": "Ehk5pSjPYlg",
@@ -78,7 +94,9 @@
     "channelUrl": "https://www.youtube.com/@Allrecipes",
     "url": "https://www.youtube.com/watch?v=Ehk5pSjPYlg",
     "language": "en",
-    "description": "English-language Allrecipes video demonstrating a classic Philly cheesesteak."
+    "description": "English-language Allrecipes video demonstrating a classic Philly cheesesteak.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Ehk5pSjPYlg/hqdefault.jpg",
+    "uploadDate": "2021-10-16T07:00:06-07:00"
   },
   "french-dip-sandwiches": {
     "youtubeId": "rAg-4JyZ0vc",
@@ -87,6 +105,8 @@
     "channelUrl": "https://www.youtube.com/@JoshuaWeissmanRecipes",
     "url": "https://www.youtube.com/watch?v=rAg-4JyZ0vc",
     "language": "en",
-    "description": "English-language cooking video demonstrating a French dip sandwich with beef and dipping jus."
+    "description": "English-language cooking video demonstrating a French dip sandwich with beef and dipping jus.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/rAg-4JyZ0vc/hqdefault.jpg",
+    "uploadDate": "2026-06-17T07:30:28-07:00"
   }
 }

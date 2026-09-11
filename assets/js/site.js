@@ -161,7 +161,7 @@
   });
   const cookbookLink=ensureCookbooksLink();
   const core=document.createElement('script');
-  core.src='assets/js/site-core.js?v=11';
+  core.src='assets/js/site-core.js?v=12';
   core.onload=function(){
     setupSearchClearButtons();
     addRecipePublishedDate();
