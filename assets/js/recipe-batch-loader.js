@@ -5,6 +5,10 @@
     '/data/videos.json': ['data/videos-batch-01.json', 'data/videos-batch-02.json', 'data/videos-batch-03.json', 'data/videos-batch-04.json', 'data/videos-batch-05.json', 'data/videos-batch-06.json', 'data/videos-batch-07.json', 'data/videos-batch-08.json', 'data/videos-batch-09.json']
   };
   const cache = new Map();
+  const imageCredits = {
+    'taco-soup': { text: 'Photo by Collin Harvey, CC BY 2.0', url: 'https://commons.wikimedia.org/wiki/File:Taco_soup.jpg' },
+    'beef-barley-soup': { text: 'Photo by jeffreyw, CC BY 2.0', url: 'https://commons.wikimedia.org/wiki/File:Beef_barley_soup_(15439896429).jpg' }
+  };
   const publishedBatchCategories = {
     'honey-glazed-chicken-breast': 'Chicken', 'classic-family-meatloaf': 'Dinner', 'baked-mac-and-cheese': 'Dinner', 'easy-lasagna': 'Dinner', 'air-fryer-chicken-wings': 'Chicken', 'golden-baked-pork-chops': 'Dinner', 'old-fashioned-beef-stew': 'Dinner', 'ground-beef-tacos': 'Dinner', 'spaghetti-and-meatballs': 'Dinner', 'fluffy-buttermilk-pancakes': 'Breakfast', 'classic-banana-bread': 'Breakfast', 'easy-sugar-cookies': 'Dessert', 'awesome-slow-cooker-pot-roast': 'Dinner', 'classic-chicken-pot-pie': 'Dinner', 'southern-fried-chicken': 'Chicken', 'buffalo-chicken-dip': 'Appetizer', 'chicken-alfredo': 'Pasta', 'chicken-parmesan': 'Chicken', 'chicken-enchiladas': 'Dinner', 'chicken-fajitas': 'Chicken', 'chicken-caesar-salad': 'Salad', 'chicken-noodle-soup': 'Soup', 'chicken-fried-rice': 'Dinner', 'classic-chocolate-chip-cookies': 'Dessert', 'chicken-and-rice-casserole': 'Dinner', 'chicken-bacon-ranch-casserole': 'Dinner', 'bbq-chicken': 'Chicken', 'chicken-fried-steak': 'Beef', 'chicken-and-dumplings': 'Dinner', 'chicken-marsala': 'Chicken', 'chicken-piccata': 'Chicken', 'chicken-parmesan-casserole': 'Dinner', 'creamy-tuscan-chicken': 'Chicken', 'marry-me-chicken': 'Chicken', 'classic-cheeseburger': 'Beef', 'smash-burgers': 'Beef', 'beef-stroganoff': 'Beef', 'classic-beef-chili': 'Beef', 'chili-mac': 'Beef', 'beef-enchiladas': 'Beef', 'beef-burritos': 'Beef', 'beef-fajitas': 'Beef', 'philly-cheesesteak': 'Beef', 'french-dip-sandwiches': 'Beef', 'sloppy-joes': 'Beef', 'salisbury-steak': 'Beef', 'salisbury-steak-meatballs': 'Beef', 'beef-and-broccoli': 'Beef', 'korean-beef-bowls': 'Beef', 'ground-beef-casserole': 'Beef', 'beef-nachos': 'Beef', 'beef-quesadillas': 'Beef', 'steak-bites': 'Beef', 'garlic-butter-steak': 'Beef', 'pulled-pork': 'Pork', 'bbq-ribs': 'Pork', 'baby-back-ribs': 'Pork', 'pork-tenderloin': 'Pork', 'pork-carnitas': 'Pork', 'pork-belly': 'Pork', 'pork-loin-roast': 'Pork', 'sausage-and-peppers': 'Pork', 'biscuits-and-gravy': 'Breakfast', 'ham-and-cheese-casserole': 'Pork',
     'french-toast': 'Breakfast', 'cinnamon-french-toast': 'Breakfast', 'breakfast-burritos': 'Breakfast', 'breakfast-casserole': 'Breakfast', 'sausage-breakfast-casserole': 'Breakfast', 'eggs-benedict': 'Breakfast', 'hash-browns': 'Breakfast', 'home-fries': 'Breakfast', 'breakfast-tacos': 'Breakfast',
@@ -30,11 +34,11 @@
   const renderImageCredit = () => {
     if (!location.pathname.endsWith('/recipe.html') || document.querySelector('.image-credit')) return;
     const id = new URLSearchParams(location.search).get('id');
-    const recipe = Array.isArray(window.recipes) ? window.recipes.find(item => item.id === id) : null;
+    const credit = imageCredits[id];
     const frame = document.querySelector('#recipe-detail .detail-image-frame');
-    if (!recipe?.imageCredit || !frame) return;
+    if (!credit || !frame) return;
     const note = document.createElement('p'); note.className = 'image-credit'; note.append('Image: ');
-    const link = document.createElement('a'); link.href = recipe.imageCredit.url; link.target = '_blank'; link.rel = 'noopener noreferrer'; link.textContent = recipe.imageCredit.text;
+    const link = document.createElement('a'); link.href = credit.url; link.target = '_blank'; link.rel = 'noopener noreferrer'; link.textContent = credit.text;
     note.appendChild(link); frame.insertAdjacentElement('afterend', note);
   };
   new MutationObserver(renderImageCredit).observe(document.documentElement, { childList: true, subtree: true });
