@@ -2,7 +2,7 @@ let recipes=[];
 const SITE_URL='https://thejan200.github.io/recipe-hub.github.io/';
 const PAGE_SIZE=9;
 const RECIPE_PUBLISHED_DATES={
- 'lemon-chicken-pasta':'2026-08-31','avocado-toast':'2026-08-31','salmon-bowl':'2026-08-31','berry-parfait':'2026-08-31','chocolate-cake':'2026-08-31','vegetable-soup':'2026-08-31',
+ 'lemon-chicken-pasta':'2026-08-31','avocado-toast':'2026-08-31','salmon-bowl':'2026-08-31','berry-parfait':'2026-08-31','chocolate-cake':'2026-09-13','vegetable-soup':'2026-08-31',
  'honey-glazed-chicken-breast':'2026-09-03','classic-family-meatloaf':'2026-09-03','baked-mac-and-cheese':'2026-09-03','easy-lasagna':'2026-09-03','air-fryer-chicken-wings':'2026-09-03','golden-baked-pork-chops':'2026-09-03','old-fashioned-beef-stew':'2026-09-03','ground-beef-tacos':'2026-09-03','spaghetti-and-meatballs':'2026-09-03','fluffy-buttermilk-pancakes':'2026-09-03',
  'classic-banana-bread':'2026-09-03','easy-sugar-cookies':'2026-09-03','awesome-slow-cooker-pot-roast':'2026-09-03','classic-chicken-pot-pie':'2026-09-03',
  'classic-chocolate-chip-cookies':'2026-09-03','southern-fried-chicken':'2026-09-03','buffalo-chicken-dip':'2026-09-03','chicken-alfredo':'2026-09-03','chicken-parmesan':'2026-09-03','chicken-enchiladas':'2026-09-03','chicken-fajitas':'2026-09-03','chicken-fried-rice':'2026-09-03','chicken-caesar-salad':'2026-09-03','chicken-noodle-soup':'2026-09-03'
