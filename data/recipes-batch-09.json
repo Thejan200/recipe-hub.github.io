@@ -501,11 +501,7 @@
       "Beef"
     ],
     "country": "USA",
-    "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Taco%20soup.jpg",
-    "imageCredit": {
-      "text": "Photo by Collin Harvey, CC BY 2.0",
-      "url": "https://commons.wikimedia.org/wiki/File:Taco_soup.jpg"
-    },
+    "image": "assets/images/recipes/taco-soup-generated.webp",
     "description": "A fast one-pot taco soup loaded with seasoned ground beef, beans, corn, tomatoes, and familiar Tex-Mex toppings.",
     "prepTime": "PT15M",
     "cookTime": "PT30M",
@@ -668,11 +664,7 @@
       "Beef"
     ],
     "country": "USA",
-    "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Beef%20barley%20soup%20%2815439896429%29.jpg",
-    "imageCredit": {
-      "text": "Photo by jeffreyw, CC BY 2.0",
-      "url": "https://commons.wikimedia.org/wiki/File:Beef_barley_soup_(15439896429).jpg"
-    },
+    "image": "assets/images/recipes/beef-barley-soup-generated.webp",
     "description": "Hearty beef barley soup with browned chuck, tender vegetables, and chewy pearl barley in a rich savory broth.",
     "prepTime": "PT20M",
     "cookTime": "PT1H40M",
