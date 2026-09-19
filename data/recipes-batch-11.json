@@ -1,0 +1,178 @@
+[
+  {
+    "id": "apple-crisp", "slug": "apple-crisp", "title": "Apple Crisp", "status": "draft", "category": "Dessert",
+    "tags": ["USA", "American", "Dessert", "Baking", "Fruit Dessert"], "country": "USA", "image": "assets/images/recipes/apple-crisp-generated.webp",
+    "description": "Tender cinnamon apples baked beneath a generous golden oat streusel until the fruit juices turn thick and bubbling.",
+    "prepTime": "PT20M", "cookTime": "PT45M", "totalTime": "PT1H5M", "servings": 8, "calories": 390, "cuisine": "American", "course": "Dessert", "difficulty": "Easy",
+    "ingredients": ["6 medium baking apples, peeled, cored, and sliced evenly", "2 tbsp lemon juice", "1/3 cup granulated sugar", "1 tbsp all-purpose flour", "1 tsp ground cinnamon", "1/4 tsp ground nutmeg", "1 cup old-fashioned rolled oats", "3/4 cup all-purpose flour", "1/2 cup packed light brown sugar", "1/2 tsp kosher salt", "1/2 cup cold unsalted butter, cubed", "Vanilla ice cream, optional"],
+    "instructions": [
+      "Heat the oven to 350°F, lightly butter an 8-inch square baking dish, and set it on a rimmed sheet pan to catch any bubbling fruit juices.",
+      "Toss the evenly sliced apples with lemon juice, granulated sugar, one tablespoon flour, cinnamon, and nutmeg until every surface is coated.",
+      "Spread the apples in the prepared dish in an even layer, including all seasoned juices, so thick and thin pockets do not cook at different rates.",
+      "Combine rolled oats, three-quarter cup flour, brown sugar, and salt, breaking apart every firm lump of sugar before adding the cold butter.",
+      "Cut or rub the butter into the oat mixture until pea-sized pieces and irregular clumps form; stop before the topping becomes a smooth paste.",
+      "Scatter the topping loosely and evenly over the apples without pressing it down, leaving a craggy surface that can become crisp in the oven.",
+      "Bake for 40 to 50 minutes, until the topping is deep golden and thick fruit bubbles rise around the edges and near the center of the dish.",
+      "Cool for at least 15 minutes so the juices thicken, then spoon into bowls and add vanilla ice cream only when ready to serve."
+    ],
+    "tips": ["Mix tart and sweet firm apples for balanced flavor.", "Keep the butter cold for crisp streusel clumps.", "Bubbling near the center confirms the filling is cooked."],
+    "commonMistakes": ["Uneven apple slices cook at different rates.", "Quick oats make a softer topping than rolled oats.", "Serving immediately makes the filling look watery."],
+    "substitutions": ["Use gluten-free flour and certified gluten-free oats if needed.", "Replace nutmeg with allspice.", "Use pears for up to half of the apples."],
+    "storage": ["Cool completely before covering.", "Refrigerate for up to 5 days.", "Reheat uncovered at 350°F until warm and crisp."],
+    "nutrition": {"calories": 390, "protein": "4 g", "carbohydrates": "61 g", "fat": "16 g", "fiber": "5 g", "sugar": "37 g", "sodium": "150 mg"}, "datePublished": "2026-09-19", "author": "Thejan Mahakumbura"
+  },
+  {
+    "id": "peach-cobbler", "slug": "peach-cobbler", "title": "Peach Cobbler", "status": "draft", "category": "Dessert",
+    "tags": ["USA", "American", "Southern", "Dessert", "Baking"], "country": "USA", "image": "assets/images/recipes/peach-cobbler-generated.webp",
+    "description": "Juicy cinnamon-scented peaches baked beneath tender golden buttermilk biscuit topping.",
+    "prepTime": "PT25M", "cookTime": "PT45M", "totalTime": "PT1H10M", "servings": 8, "calories": 360, "cuisine": "American", "course": "Dessert", "difficulty": "Easy",
+    "ingredients": ["7 cups sliced ripe peaches", "1/2 cup granulated sugar", "2 tbsp cornstarch", "1 tbsp lemon juice", "1 tsp vanilla extract", "1/2 tsp cinnamon", "1 1/2 cups all-purpose flour", "1/3 cup granulated sugar", "2 tsp baking powder", "1/2 tsp kosher salt", "6 tbsp cold unsalted butter, cubed", "3/4 cup cold buttermilk", "1 tbsp coarse sugar, optional"],
+    "instructions": [
+      "Heat the oven to 375°F, butter a 9-inch square baking dish, and place it on a rimmed sheet pan in case the peach filling bubbles over.",
+      "Toss the peaches with sugar, cornstarch, lemon juice, vanilla, and cinnamon until the starch disappears and every slice looks glossy.",
+      "Transfer the peaches and their juices to the dish, spread them evenly, and bake for 10 minutes while preparing the biscuit topping.",
+      "Whisk flour, sugar, baking powder, and salt thoroughly, then cut in the cold butter until the mixture contains coarse pea-sized crumbs.",
+      "Pour in the cold buttermilk and fold gently just until no dry flour remains; a slightly shaggy dough produces a more tender biscuit.",
+      "Drop spoonfuls of dough over the hot peaches with small gaps for steam, then sprinkle coarse sugar over the tops if desired.",
+      "Bake for 30 to 35 minutes more, until the biscuits are deeply golden and a center biscuit is fully baked rather than wet underneath.",
+      "Rest the cobbler for 20 minutes so the peach juices set to a spoonable consistency, then serve warm without covering the crisp topping."
+    ],
+    "tips": ["Use fragrant peaches that yield slightly to pressure.", "Keep butter and buttermilk cold.", "Check the underside of a center biscuit for doneness."],
+    "commonMistakes": ["Very soft peaches can collapse into puree.", "Overmixing makes the biscuits tough.", "Removing the cobbler before the center topping cooks leaves raw dough."],
+    "substitutions": ["Use thawed and drained frozen peaches.", "Make soured milk with milk and lemon juice instead of buttermilk.", "Use nectarines in place of some peaches."],
+    "storage": ["Refrigerate covered for up to 4 days.", "Reheat uncovered at 350°F.", "Freeze fully cooled cobbler for up to 2 months."],
+    "nutrition": {"calories": 360, "protein": "5 g", "carbohydrates": "59 g", "fat": "13 g", "fiber": "3 g", "sugar": "34 g", "sodium": "260 mg"}, "datePublished": "2026-09-19", "author": "Thejan Mahakumbura"
+  },
+  {
+    "id": "blueberry-muffins", "slug": "blueberry-muffins", "title": "Blueberry Muffins", "status": "draft", "category": "Dessert",
+    "tags": ["USA", "American", "Baking", "Muffins", "Breakfast"], "country": "USA", "image": "assets/images/recipes/blueberry-muffins-generated.webp",
+    "description": "Tall bakery-style blueberry muffins with tender vanilla crumb, juicy berries, and crisp sugared tops.",
+    "prepTime": "PT20M", "cookTime": "PT22M", "totalTime": "PT42M", "servings": 12, "calories": 250, "cuisine": "American", "course": "Breakfast", "difficulty": "Easy",
+    "ingredients": ["2 cups all-purpose flour", "2 tsp baking powder", "1/2 tsp kosher salt", "1/2 cup unsalted butter, softened", "3/4 cup granulated sugar", "2 large eggs, room temperature", "2 tsp vanilla extract", "1/2 cup sour cream", "1/4 cup milk", "1 1/2 cups blueberries, fresh or frozen", "1 tbsp flour, for berries", "2 tbsp coarse sugar"],
+    "instructions": [
+      "Heat the oven to 400°F, line a 12-cup muffin pan with paper liners, and lightly grease the exposed top surface to prevent sticking.",
+      "Whisk two cups flour, baking powder, and salt until evenly combined so no concentrated pocket of leavener remains in the batter.",
+      "Beat softened butter and sugar until noticeably lighter and fluffy, then beat in the eggs one at a time and add the vanilla.",
+      "Blend in sour cream and milk on low speed; the mixture may look slightly curdled, which will smooth out when the flour is folded in.",
+      "Fold the dry mixture into the wet ingredients only until a few flour streaks remain, avoiding vigorous mixing that develops tough gluten.",
+      "Toss the blueberries with one tablespoon flour, fold them gently into the thick batter, and reserve a few berries for visible muffin tops.",
+      "Divide batter evenly, filling the cups nearly full, add the reserved berries and coarse sugar, and bake until the domes turn golden.",
+      "Check at 20 to 24 minutes with a tester away from a berry; cool in the pan 5 minutes, then move muffins to a rack to prevent soggy bottoms."
+    ],
+    "tips": ["Do not thaw frozen blueberries before folding them in.", "Room-temperature dairy blends more evenly.", "A high initial oven temperature encourages tall domes."],
+    "commonMistakes": ["Overmixing produces tunnels and a tough crumb.", "A tester pushed through a berry can falsely look underbaked.", "Leaving muffins in the hot pan traps steam."],
+    "substitutions": ["Use plain Greek yogurt instead of sour cream.", "Replace blueberries with raspberries.", "Use lemon zest for a citrus variation."],
+    "storage": ["Keep airtight at room temperature for 2 days.", "Refrigerate for up to 5 days.", "Freeze cooled muffins for up to 2 months."],
+    "nutrition": {"calories": 250, "protein": "4 g", "carbohydrates": "36 g", "fat": "10 g", "fiber": "2 g", "sugar": "18 g", "sodium": "180 mg"}, "datePublished": "2026-09-19", "author": "Thejan Mahakumbura"
+  },
+  {
+    "id": "chocolate-chip-muffins", "slug": "chocolate-chip-muffins", "title": "Chocolate Chip Muffins", "status": "draft", "category": "Dessert",
+    "tags": ["USA", "American", "Baking", "Muffins", "Chocolate"], "country": "USA", "image": "assets/images/recipes/chocolate-chip-muffins-generated.webp",
+    "description": "Golden bakery-style vanilla muffins with tall domes and semisweet chocolate chips in every bite.",
+    "prepTime": "PT15M", "cookTime": "PT22M", "totalTime": "PT37M", "servings": 12, "calories": 320, "cuisine": "American", "course": "Breakfast", "difficulty": "Easy",
+    "ingredients": ["2 1/4 cups all-purpose flour", "2 tsp baking powder", "1/2 tsp baking soda", "1/2 tsp kosher salt", "1/2 cup unsalted butter, melted and cooled", "3/4 cup granulated sugar", "2 large eggs", "2 tsp vanilla extract", "3/4 cup sour cream", "1/4 cup milk", "1 1/4 cups semisweet chocolate chips", "2 tbsp coarse sugar, optional"],
+    "instructions": [
+      "Heat the oven to 400°F, line a standard 12-cup muffin pan, and lightly grease the pan surface around each liner for easy release.",
+      "Whisk flour, baking powder, baking soda, and salt in a large bowl until the leaveners are distributed with no visible small lumps.",
+      "Whisk cooled melted butter with sugar, eggs, and vanilla until glossy, then whisk in sour cream and milk until mostly smooth.",
+      "Pour the wet ingredients into the dry mixture and fold with a spatula only until a few dry streaks remain in the thick batter.",
+      "Reserve a small handful of chocolate chips, fold the rest through the batter with several broad turns, and stop as soon as combined.",
+      "Portion batter evenly into the liners until nearly full, then press the reserved chips on top and add coarse sugar if using.",
+      "Bake for 5 minutes at 400°F, reduce the oven to 350°F without opening the door, and continue 14 to 17 minutes until golden.",
+      "Test through plain crumb rather than melted chocolate, then cool 5 minutes in the pan before transferring muffins to a wire rack."
+    ],
+    "tips": ["Cool melted butter before adding eggs.", "Reserve chips for attractive tops.", "The two-temperature bake supports taller domes."],
+    "commonMistakes": ["Hot butter can scramble the eggs.", "Overfolding makes dense muffins.", "Testing through a chocolate pocket can resemble raw batter."],
+    "substitutions": ["Use Greek yogurt instead of sour cream.", "Use milk chocolate or chopped dark chocolate.", "Replace some chips with toasted walnuts."],
+    "storage": ["Store airtight at room temperature for 3 days.", "Warm briefly before serving.", "Freeze cooled muffins for up to 2 months."],
+    "nutrition": {"calories": 320, "protein": "5 g", "carbohydrates": "45 g", "fat": "14 g", "fiber": "2 g", "sugar": "25 g", "sodium": "230 mg"}, "datePublished": "2026-09-19", "author": "Thejan Mahakumbura"
+  },
+  {
+    "id": "cinnamon-rolls", "slug": "cinnamon-rolls", "title": "Cinnamon Rolls", "status": "draft", "category": "Dessert",
+    "tags": ["USA", "American", "Baking", "Sweet Rolls", "Breakfast"], "country": "USA", "image": "assets/images/recipes/cinnamon-rolls-generated.webp",
+    "description": "Soft, fluffy cinnamon rolls layered with brown sugar filling and finished with tangy cream cheese icing.",
+    "prepTime": "PT35M", "cookTime": "PT25M", "totalTime": "PT2H45M", "servings": 12, "calories": 410, "cuisine": "American", "course": "Breakfast", "difficulty": "Medium",
+    "ingredients": ["3/4 cup whole milk", "2 1/4 tsp active dry yeast", "1/4 cup granulated sugar", "2 large eggs", "6 tbsp unsalted butter, melted and cooled", "3 1/2 cups all-purpose flour", "1 tsp kosher salt", "1/2 cup softened unsalted butter", "3/4 cup packed brown sugar", "2 tbsp ground cinnamon", "4 oz cream cheese, softened", "1 cup powdered sugar", "2 tbsp milk", "1/2 tsp vanilla extract"],
+    "instructions": [
+      "Warm the milk to about 105–110°F, stir in yeast and a pinch of sugar, and wait 5 to 10 minutes until a foamy cap confirms activity.",
+      "Whisk the remaining sugar, eggs, and cooled melted butter into the yeast mixture, then add flour and salt to form a shaggy dough.",
+      "Knead for 8 to 10 minutes until smooth, elastic, and slightly tacky rather than wet, adding extra flour only one spoonful at a time.",
+      "Place the dough in a lightly greased bowl, cover, and let it rise in a warm draft-free place until doubled, about 60 to 90 minutes.",
+      "Roll the dough into an even rectangle, spread softened butter nearly to the edges, and cover it evenly with brown sugar and cinnamon.",
+      "Roll tightly from a long edge, pinch the seam, cut into 12 equal pieces, and arrange them cut-side up in a buttered baking dish.",
+      "Cover and rise 30 to 45 minutes until puffy and touching, then bake at 350°F for 23 to 28 minutes until golden and 190°F inside.",
+      "Beat cream cheese, powdered sugar, milk, and vanilla smooth, cool the rolls 10 minutes, and spread icing while warm but not scorching hot."
+    ],
+    "tips": ["Milk hotter than 120°F can damage yeast.", "Use dental floss for clean slices.", "An instant-read thermometer prevents doughy centers."],
+    "commonMistakes": ["Adding too much flour creates dry rolls.", "Loose rolling makes gaps in the spirals.", "Icing immediately on oven-hot rolls makes it disappear."],
+    "substitutions": ["Use instant yeast and skip the foaming wait.", "Use bread flour for a chewier roll.", "Make a simple powdered-sugar glaze without cream cheese."],
+    "storage": ["Cover at room temperature for 1 day.", "Refrigerate cream-cheese-iced rolls for up to 4 days.", "Rewarm gently before serving."],
+    "nutrition": {"calories": 410, "protein": "7 g", "carbohydrates": "59 g", "fat": "17 g", "fiber": "2 g", "sugar": "29 g", "sodium": "260 mg"}, "datePublished": "2026-09-19", "author": "Thejan Mahakumbura"
+  },
+  {
+    "id": "banana-pudding", "slug": "banana-pudding", "title": "Banana Pudding", "status": "draft", "category": "Dessert",
+    "tags": ["USA", "American", "Southern", "Dessert", "No Bake"], "country": "USA", "image": "assets/images/recipes/banana-pudding-generated.webp",
+    "description": "Classic Southern banana pudding layered with vanilla custard, fresh bananas, vanilla wafers, and whipped cream.",
+    "prepTime": "PT35M", "cookTime": "PT10M", "totalTime": "PT4H45M", "servings": 10, "calories": 390, "cuisine": "American", "course": "Dessert", "difficulty": "Easy",
+    "ingredients": ["3/4 cup granulated sugar", "1/4 cup cornstarch", "1/4 tsp kosher salt", "3 cups whole milk", "4 large egg yolks", "2 tbsp unsalted butter", "2 tsp vanilla extract", "4 just-ripe bananas, sliced", "1 box (11 oz) vanilla wafer cookies", "1 1/2 cups heavy cream", "3 tbsp powdered sugar", "1 tsp vanilla extract for cream"],
+    "instructions": [
+      "Whisk sugar, cornstarch, and salt in a saucepan, then gradually whisk in milk until completely smooth before placing it over medium heat.",
+      "Whisk egg yolks in a heatproof bowl, slowly stream in one cup of hot milk mixture while whisking, then return everything to the saucepan.",
+      "Cook while whisking constantly until the custard bubbles and thickens, then continue for one minute so the cornstarch loses its raw taste.",
+      "Remove from heat, stir in butter and vanilla, press plastic wrap directly on the surface, and cool until no longer steaming hot.",
+      "Whip the heavy cream with powdered sugar and vanilla to medium peaks that hold shape but remain smooth rather than grainy.",
+      "Arrange vanilla wafers in the bottom of a trifle bowl, add an even layer of banana slices, and spread one-third of the cooled custard over them.",
+      "Repeat the wafer, banana, and custard layers, then finish with whipped cream and a few reserved wafers or crumbs on the surface.",
+      "Cover and refrigerate for at least 4 hours so the wafers soften, then serve within 24 hours while the bananas remain fresh-looking."
+    ],
+    "tips": ["Use yellow bananas with few brown spots.", "Temper yolks gradually to avoid scrambling.", "Press wrap on warm custard to prevent a skin."],
+    "commonMistakes": ["Leaving custard unattended can scorch it.", "Overripe bananas become mushy and brown quickly.", "Overwhipped cream turns grainy."],
+    "substitutions": ["Use instant vanilla pudding for a shortcut.", "Use shortbread cookies instead of vanilla wafers.", "Use stabilized whipped topping when longer holding is necessary."],
+    "storage": ["Keep refrigerated and tightly covered.", "Best within 24 hours and acceptable for up to 3 days.", "Do not freeze because bananas and custard become watery."],
+    "nutrition": {"calories": 390, "protein": "6 g", "carbohydrates": "56 g", "fat": "17 g", "fiber": "2 g", "sugar": "37 g", "sodium": "190 mg"}, "datePublished": "2026-09-19", "author": "Thejan Mahakumbura"
+  },
+  {
+    "id": "chocolate-fudge", "slug": "chocolate-fudge", "title": "Chocolate Fudge", "status": "draft", "category": "Dessert",
+    "tags": ["USA", "American", "Dessert", "Candy", "Chocolate"], "country": "USA", "image": "assets/images/recipes/chocolate-fudge-generated.webp",
+    "description": "Rich, smooth chocolate fudge made with semisweet chocolate, condensed milk, vanilla, and a pinch of salt.",
+    "prepTime": "PT15M", "cookTime": "PT10M", "totalTime": "PT3H25M", "servings": 25, "calories": 150, "cuisine": "American", "course": "Dessert", "difficulty": "Easy",
+    "ingredients": ["3 cups semisweet chocolate chips", "1 can (14 oz) sweetened condensed milk", "3 tbsp unsalted butter", "1 tsp vanilla extract", "1/4 tsp kosher salt", "1/2 cup chopped toasted walnuts, optional", "Flaky sea salt, optional"],
+    "instructions": [
+      "Line an 8-inch square pan with parchment extending over two sides, lightly butter the paper, and measure every ingredient before heating.",
+      "Place chocolate chips, sweetened condensed milk, butter, and kosher salt in a heavy saucepan set over the lowest practical heat.",
+      "Stir slowly and continuously with a flexible spatula, scraping the bottom and corners so concentrated milk and chocolate cannot scorch.",
+      "Remove the pan as soon as the mixture is smooth and glossy with no unmelted chips; prolonged heating can make finished fudge oily or grainy.",
+      "Stir in vanilla and optional toasted walnuts off the heat, folding only until evenly distributed without beating air into the mixture.",
+      "Immediately spread the thick fudge into the lined pan, press it into the corners, and smooth the top before it begins to set.",
+      "Add a very light sprinkle of flaky salt if desired, then refrigerate uncovered until firm throughout, about 3 hours or overnight.",
+      "Lift out by the parchment, let stand 5 minutes, and cut with a warm dry knife, cleaning the blade between cuts for neat squares."
+    ],
+    "tips": ["Use chocolate you enjoy eating on its own.", "Low heat protects the condensed milk.", "A warm clean knife makes tidy pieces."],
+    "commonMistakes": ["High heat can scorch or separate the mixture.", "Using evaporated milk instead of condensed milk prevents setting.", "Cutting before fully chilled smears the edges."],
+    "substitutions": ["Use bittersweet chips for darker flavor.", "Replace walnuts with pecans.", "Add peppermint extract sparingly instead of vanilla."],
+    "storage": ["Keep airtight at cool room temperature for 1 week.", "Refrigerate for up to 3 weeks.", "Freeze layered between parchment for up to 3 months."],
+    "nutrition": {"calories": 150, "protein": "2 g", "carbohydrates": "20 g", "fat": "8 g", "fiber": "1 g", "sugar": "18 g", "sodium": "45 mg"}, "datePublished": "2026-09-19", "author": "Thejan Mahakumbura"
+  },
+  {
+    "id": "peanut-butter-cookies", "slug": "peanut-butter-cookies", "title": "Peanut Butter Cookies", "status": "draft", "category": "Dessert",
+    "tags": ["USA", "American", "Dessert", "Baking", "Cookies"], "country": "USA", "image": "assets/images/recipes/peanut-butter-cookies-generated.webp",
+    "description": "Classic peanut butter cookies with crisp edges, tender centers, and the traditional fork crosshatch.",
+    "prepTime": "PT20M", "cookTime": "PT12M", "totalTime": "PT1H2M", "servings": 24, "calories": 190, "cuisine": "American", "course": "Dessert", "difficulty": "Easy",
+    "ingredients": ["1 1/4 cups all-purpose flour", "1/2 tsp baking soda", "1/2 tsp baking powder", "1/2 tsp kosher salt", "1/2 cup unsalted butter, softened", "1/2 cup creamy conventional peanut butter", "1/2 cup granulated sugar", "1/2 cup packed light brown sugar", "1 large egg", "1 tsp vanilla extract", "2 tbsp granulated sugar, for rolling"],
+    "instructions": [
+      "Whisk flour, baking soda, baking powder, and salt together thoroughly, then line two baking sheets with parchment for even release.",
+      "Beat softened butter, peanut butter, granulated sugar, and brown sugar for 2 to 3 minutes until lighter, creamy, and fully blended.",
+      "Beat in the egg and vanilla just until smooth, scraping the bowl so no streaks of butter or peanut butter remain near the bottom.",
+      "Add the dry ingredients and mix on low only until the last flour disappears; overmixing at this stage can make the cookies tough.",
+      "Cover and chill the dough for 30 minutes so it firms enough to hold the fork pattern and spread at a controlled rate in the oven.",
+      "Heat the oven to 350°F, roll dough into 1 1/2-tablespoon balls, coat lightly in sugar, and space them 2 inches apart on the sheets.",
+      "Flatten each ball gently with a fork in two perpendicular directions, creating a clear crosshatch without pressing the cookie paper-thin.",
+      "Bake 10 to 12 minutes until the edges are set and lightly golden while centers remain soft, then cool 5 minutes before moving to racks."
+    ],
+    "tips": ["Use conventional emulsified peanut butter for predictable spread.", "Chill sticky dough before shaping.", "The cookies finish setting on the hot pan."],
+    "commonMistakes": ["Natural oily peanut butter can cause excessive spread.", "Overflattening creates dry thin cookies.", "Waiting for firm centers in the oven overbakes them."],
+    "substitutions": ["Use crunchy peanut butter for extra texture.", "Roll in coarse sugar for more crunch.", "Add chopped roasted peanuts if desired."],
+    "storage": ["Store airtight at room temperature for up to 5 days.", "Freeze baked cookies for up to 2 months.", "Freeze shaped dough balls and thaw before pressing and baking."],
+    "nutrition": {"calories": 190, "protein": "4 g", "carbohydrates": "22 g", "fat": "10 g", "fiber": "1 g", "sugar": "14 g", "sodium": "150 mg"}, "datePublished": "2026-09-19", "author": "Thejan Mahakumbura"
+  }
+]
