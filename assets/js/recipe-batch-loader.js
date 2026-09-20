@@ -1,8 +1,8 @@
 (() => {
   const nativeFetch = window.fetch.bind(window);
   const batches = {
-    '/data/recipes.json': ['data/recipes-batch-01.json', 'data/recipes-batch-02.json', 'data/recipes-batch-03.json', 'data/recipes-batch-04.json', 'data/recipes-batch-05.json', 'data/recipes-batch-06.json', 'data/recipes-batch-07.json', 'data/recipes-batch-08.json', 'data/recipes-batch-09.json', 'data/recipes-batch-10.json', 'data/recipes-batch-11.json', 'data/recipes-batch-12.json', 'data/recipes-batch-13.json'],
-    '/data/videos.json': ['data/videos-batch-01.json', 'data/videos-batch-02.json', 'data/videos-batch-03.json', 'data/videos-batch-04.json', 'data/videos-batch-05.json', 'data/videos-batch-06.json', 'data/videos-batch-07.json', 'data/videos-batch-08.json', 'data/videos-batch-09.json', 'data/videos-batch-10.json', 'data/videos-batch-11.json', 'data/videos-batch-12.json', 'data/videos-batch-13.json']
+    '/data/recipes.json': ['data/recipes-batch-01.json', 'data/recipes-batch-02.json', 'data/recipes-batch-03.json', 'data/recipes-batch-04.json', 'data/recipes-batch-05.json', 'data/recipes-batch-06.json', 'data/recipes-batch-07.json', 'data/recipes-batch-08.json', 'data/recipes-batch-09.json', 'data/recipes-batch-10.json', 'data/recipes-batch-11.json', 'data/recipes-batch-12.json', 'data/recipes-batch-13.json', 'data/recipes-batch-14.json'],
+    '/data/videos.json': ['data/videos-batch-01.json', 'data/videos-batch-02.json', 'data/videos-batch-03.json', 'data/videos-batch-04.json', 'data/videos-batch-05.json', 'data/videos-batch-06.json', 'data/videos-batch-07.json', 'data/videos-batch-08.json', 'data/videos-batch-09.json', 'data/videos-batch-10.json', 'data/videos-batch-11.json', 'data/videos-batch-12.json', 'data/videos-batch-13.json', 'data/videos-batch-14.json']
   };
   const cache = new Map();
   const publishedBatchCategories = {
@@ -12,7 +12,8 @@
     'apple-pie': 'Dessert', 'pumpkin-pie': 'Dessert', 'pecan-pie': 'Dessert', 'key-lime-pie': 'Dessert', 'cheesecake': 'Dessert', 'new-york-cheesecake': 'Dessert', 'carrot-cake': 'Dessert', 'red-velvet-cake': 'Dessert', 'brownies': 'Dessert', 'blondies': 'Dessert', 'vanilla-cake': 'Dessert',
     'apple-crisp': 'Dessert', 'peach-cobbler': 'Dessert', 'blueberry-muffins': 'Dessert', 'chocolate-chip-muffins': 'Dessert', 'cinnamon-rolls': 'Dessert', 'banana-pudding': 'Dessert', 'chocolate-fudge': 'Dessert', 'peanut-butter-cookies': 'Dessert',
     'air-fryer-french-fries': 'Appetizer', 'air-fryer-chicken-breast': 'Chicken', 'air-fryer-salmon': 'Seafood', 'air-fryer-steak': 'Beef', 'air-fryer-mozzarella-sticks': 'Appetizer', 'one-pot-chicken-pasta': 'Pasta', 'one-pot-taco-pasta': 'Dinner', 'slow-cooker-chicken': 'Chicken', 'slow-cooker-chili': 'Beef', 'slow-cooker-pulled-pork': 'Pork',
-    'chicken-tikka-masala': 'Chicken', 'chicken-curry': 'Chicken', 'beef-wellington': 'Beef', 'steak-and-kidney-pie': 'Beef', 'cottage-pie': 'Beef', 'shepherds-pie': 'Dinner', 'lancashire-hotpot': 'Dinner', 'beef-and-ale-pie': 'Beef', 'chicken-and-leek-pie': 'Chicken', 'fish-pie': 'Seafood'
+    'chicken-tikka-masala': 'Chicken', 'chicken-curry': 'Chicken', 'beef-wellington': 'Beef', 'steak-and-kidney-pie': 'Beef', 'cottage-pie': 'Beef', 'shepherds-pie': 'Dinner', 'lancashire-hotpot': 'Dinner', 'beef-and-ale-pie': 'Beef', 'chicken-and-leek-pie': 'Chicken', 'fish-pie': 'Seafood',
+    'apple-crumble': 'Dessert', 'eton-mess': 'Dessert', 'victoria-sponge': 'Dessert', 'bakewell-tart': 'Dessert', 'lemon-drizzle-cake': 'Dessert', 'scones': 'Dessert', 'christmas-pudding': 'Dessert', 'mince-pies': 'Dessert', 'treacle-tart': 'Dessert', 'rice-pudding': 'Dessert', 'bread-and-butter-pudding': 'Dessert', 'chicken-balti': 'Chicken', 'beef-madras': 'Beef'
   };
   const categoryOverrides = { 'Greek Yogurt Berry Parfait': 'Dessert' };
   const batchImageOverrides = {
