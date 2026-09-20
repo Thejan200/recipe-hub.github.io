@@ -15,7 +15,7 @@
 <script>
 (()=>{
 const esc=value=>String(value??'').replace(/[&<>\\"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\\"':'&quot;',"'":'&#39;'}[c]));
-const matchesCategory=(recipe,category)=>recipe.category===category||Array.isArray(recipe.tags)&&recipe.tags.includes(category);
+const matchesCategory=(recipe,category)=>recipe.category===category||recipe.country===category||Array.isArray(recipe.tags)&&recipe.tags.includes(category);
 async function getJson(path){const response=await fetch(path);if(!response.ok)throw new Error(`${path}: HTTP ${response.status}`);return response.json()}
 function makeCard(key,def,count,image){const label=def.label||key;const countLabel=`${count} recipe${count===1?'':'s'}`;const href=`category.html?category=${encodeURIComponent(key)}`;const visual=image?`<div class="category-card-image"><img src="${esc(image)}" alt="${esc(label)} category" loading="lazy" width="1200" height="675" decoding="async"></div>`:`<div class="category-card-image category-card-image--empty" aria-hidden="true"><span>${esc(def.icon||'🍴')}</span></div>`;return `<a class="category-card" href="${href}" aria-label="Browse ${esc(label)} recipes">${visual}<div class="category-card-body"><span class="category-icon" aria-hidden="true">${esc(def.icon||'🍴')}</span><div class="category-card-copy"><p class="eyebrow">${esc(countLabel)}</p><h3>${esc(label)}</h3><p>${esc(def.description||`Explore ${label.toLowerCase()} recipes in the BiteSparks collection.`)}</p></div><span class="category-arrow" aria-hidden="true">→</span></div></a>`}
 async function render(){const root=document.getElementById('category-collection');if(!root)return;try{

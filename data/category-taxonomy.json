@@ -25,7 +25,7 @@
       "id": "cuisine",
       "label": "Browse by Cuisine",
       "description": "Explore recipes by culinary tradition, country, and regional cooking style.",
-      "categories": ["USA"]
+      "categories": ["USA", "UK"]
     },
     {
       "id": "lifestyle",
@@ -111,6 +111,12 @@
       "label": "🇺🇸 USA — American Classics",
       "description": "American classics and comfort-food favorites, from casseroles and barbecue to Southern and Italian-American staples.",
       "icon": "🇺🇸",
+      "showOnLanding": true
+    },
+    "UK": {
+      "label": "🇬🇧 UK — British Classics",
+      "description": "Traditional British favorites, comforting bakes, iconic puddings, savory pies, and Britain’s celebrated multicultural dishes.",
+      "icon": "🇬🇧",
       "showOnLanding": true
     },
     "Healthy": {

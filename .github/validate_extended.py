@@ -54,7 +54,7 @@ for name in (
     "book-the-mediterranean-dish.html", "book-city-eats-san-francisco.html"
 ):
     assert base + name in urls, f"Cookbook page missing from sitemap: {name}"
-for category in ("Breakfast", "Dinner", "Beef", "Pork", "Seafood", "Soup", "Dessert", "Healthy", "Chicken", "Vegetarian", "Quick%20%26%20Easy", "USA"):
+for category in ("Breakfast", "Dinner", "Beef", "Pork", "Seafood", "Soup", "Dessert", "Healthy", "Chicken", "Vegetarian", "Quick%20%26%20Easy", "USA", "UK"):
     assert base + "category.html?category=" + category in urls, f"Category missing from sitemap: {category}"
 assert base + "category.html?category=Vegan" not in urls, "Stale Vegan collection URL should not be in sitemap"
 
@@ -85,6 +85,22 @@ for rid in usa_ids:
     video = {**videos.get(rid, {}), **(recipe.get("video") or {})}
     assert re.fullmatch(r"[A-Za-z0-9_-]{11}", str(video.get("youtubeId", ""))), f"American classic {rid} has an invalid YouTube ID"
     assert video.get("channelUrl", "").startswith("https://www.youtube.com/") and video.get("channelUrl") != "https://www.youtube.com/", f"American classic {rid} needs a channel-specific YouTube attribution URL"
+
+# UK is a controlled cuisine collection while each recipe retains its primary overlay category.
+uk_ids = {
+    "chicken-tikka-masala", "chicken-curry", "beef-wellington", "steak-and-kidney-pie", "cottage-pie",
+    "shepherds-pie", "lancashire-hotpot", "beef-and-ale-pie", "chicken-and-leek-pie", "fish-pie",
+    "apple-crumble", "eton-mess", "victoria-sponge", "bakewell-tart", "lemon-drizzle-cake", "scones",
+    "christmas-pudding", "mince-pies", "treacle-tart", "rice-pudding", "bread-and-butter-pudding",
+    "chicken-balti", "beef-madras"
+}
+assert uk_ids.issubset(runtime_ids), "British classics batches must be runtime-published"
+assert len(uk_ids) == 23, "British classics collection must contain the 23 approved recipes"
+for rid in uk_ids:
+    recipe = by_id[rid]
+    assert recipe.get("country") == "UK", f"British classic {rid} must declare country UK"
+    assert "UK" in (recipe.get("tags") or []), f"British classic {rid} must belong to the UK collection"
+    assert recipe.get("category") and recipe.get("category") != "UK", f"British classic {rid} must retain its primary overlay category"
 
 # Key recipe/taxonomy surfaces must use one cache-busting site.js version so behavior stays consistent.
 for name in ("index.html", "recipes.html", "categories.html", "category.html", "recipe.html", "favorites.html"):
@@ -169,4 +185,4 @@ for path in root.rglob("*.webp"):
     raw = path.read_bytes()
     assert len(raw) >= 12 and raw[:4] == b"RIFF" and raw[8:12] == b"WEBP", f"Invalid WebP asset: {path.relative_to(root)}"
 
-print(f"EXTENDED OK: {len(runtime_published)} runtime-published recipes, complete video coverage, sitemap coverage, BiteSparks brand consistency, American-classics quality gates, cache-version consistency, canonical/navigation checks, inline JavaScript syntax, and image-file integrity PASS.")
+print(f"EXTENDED OK: {len(runtime_published)} runtime-published recipes, complete video coverage, sitemap coverage, BiteSparks brand consistency, American- and British-classics quality gates, cache-version consistency, canonical/navigation checks, inline JavaScript syntax, and image-file integrity PASS.")
