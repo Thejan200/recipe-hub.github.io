@@ -1,0 +1,960 @@
+[
+  {
+    "id": "lamb-curry",
+    "slug": "lamb-curry",
+    "title": "Lamb Curry",
+    "status": "draft",
+    "category": "Dinner",
+    "tags": [
+      "UK",
+      "British Indian",
+      "Lamb",
+      "Curry",
+      "Dinner"
+    ],
+    "country": "UK",
+    "image": "assets/images/recipes/lamb-curry-generated.webp",
+    "description": "Tender lamb simmered in a tomato-rich British curry-house style sauce with ginger, garlic, warm spices, and coriander.",
+    "prepTime": "PT20M",
+    "cookTime": "PT1H20M",
+    "totalTime": "PT1H40M",
+    "servings": 4,
+    "calories": 610,
+    "cuisine": "British Indian",
+    "course": "Main Course",
+    "difficulty": "Medium",
+    "ingredients": [
+      "2 tbsp vegetable oil",
+      "900 g boneless lamb shoulder, trimmed and cut into 3 cm pieces",
+      "1 large onion, finely chopped",
+      "4 garlic cloves, grated",
+      "1 tbsp fresh ginger, grated",
+      "2 tbsp mild curry powder",
+      "1 tsp ground cumin",
+      "1 tsp ground coriander",
+      "1/2 tsp turmeric",
+      "1/2 tsp chilli powder",
+      "400 g canned chopped tomatoes",
+      "240 ml lamb or beef stock",
+      "120 g plain yogurt",
+      "1 tsp salt",
+      "1/2 tsp black pepper",
+      "2 tbsp chopped fresh coriander"
+    ],
+    "instructions": [
+      "Set out every measured ingredient before turning on the heat, then prepare the vegetables, protein, seasonings, and serving pieces so the recipe moves smoothly without rushed chopping.",
+      "Warm the main pan or oven dish gradually and add the cooking fat, using medium heat so the aromatics can soften and release flavor without scorching on the base.",
+      "Add the primary savory ingredients in the order listed, stirring patiently so each piece is coated with the seasoning and begins to build color before liquid is added.",
+      "Pour in the measured liquid or sauce ingredients, scrape the browned bits from the pan, and bring the mixture to a steady simmer rather than an aggressive boil.",
+      "Cook until the texture matches the recipe: meat should be tender and safe, potatoes or rice should be fully cooked, and sauces should coat the spoon without tasting raw.",
+      "Taste carefully near the end and adjust only with the listed salt, pepper, lemon, vinegar, or herbs so the finished recipe remains aligned with the demonstrated tutorial.",
+      "Rest the finished dish briefly off the heat, allowing starches, dairy, meat juices, or sauces to settle before slicing, spooning, or plating for clean presentation.",
+      "Serve while warm with the suggested accompaniments, keeping crisp elements uncovered and creamy or saucy elements gently stirred so the final plate has the intended texture."
+    ],
+    "tips": [
+      "Use boneless shoulder for tenderness.",
+      "Simmer gently until the lamb yields to a fork.",
+      "Stir yogurt in off the boil to avoid splitting."
+    ],
+    "commonMistakes": [
+      "Boiling hard can toughen lamb.",
+      "Adding yogurt over high heat may curdle.",
+      "Skipping browning weakens the sauce."
+    ],
+    "substitutions": [
+      "Use beef stock if lamb stock is unavailable.",
+      "Use Greek yogurt instead of plain yogurt.",
+      "Reduce chilli powder for a milder curry."
+    ],
+    "storage": [
+      "Refrigerate for up to 3 days.",
+      "Freeze cooled portions for up to 3 months.",
+      "Reheat gently until piping hot."
+    ],
+    "nutrition": {
+      "calories": 610,
+      "protein": "43 g",
+      "carbohydrates": "18 g",
+      "fat": "41 g",
+      "fiber": "4 g",
+      "sugar": "8 g",
+      "sodium": "780 mg"
+    },
+    "datePublished": "2026-09-21",
+    "author": "Thejan Mahakumbura"
+  },
+  {
+    "id": "sausage-casserole",
+    "slug": "sausage-casserole",
+    "title": "Sausage Casserole",
+    "status": "draft",
+    "category": "Pork",
+    "tags": [
+      "UK",
+      "British",
+      "Sausage",
+      "Casserole",
+      "Dinner"
+    ],
+    "country": "UK",
+    "image": "assets/images/recipes/sausage-casserole-generated.webp",
+    "description": "Browned British sausages baked in a hearty tomato gravy with beans, carrots, onion, herbs, and a comforting casserole finish.",
+    "prepTime": "PT15M",
+    "cookTime": "PT45M",
+    "totalTime": "PT1H",
+    "servings": 4,
+    "calories": 560,
+    "cuisine": "British",
+    "course": "Main Course",
+    "difficulty": "Easy",
+    "ingredients": [
+      "1 tbsp olive oil",
+      "8 pork sausages",
+      "1 large onion, sliced",
+      "2 carrots, sliced",
+      "2 garlic cloves, minced",
+      "1 tbsp tomato paste",
+      "400 g canned chopped tomatoes",
+      "400 g canned cannellini beans, drained",
+      "250 ml chicken stock",
+      "1 tsp Worcestershire sauce",
+      "1 tsp dried thyme",
+      "1 bay leaf",
+      "1/2 tsp salt",
+      "1/2 tsp black pepper",
+      "2 tbsp chopped parsley"
+    ],
+    "instructions": [
+      "Set out every measured ingredient before turning on the heat, then prepare the vegetables, protein, seasonings, and serving pieces so the recipe moves smoothly without rushed chopping.",
+      "Warm the main pan or oven dish gradually and add the cooking fat, using medium heat so the aromatics can soften and release flavor without scorching on the base.",
+      "Add the primary savory ingredients in the order listed, stirring patiently so each piece is coated with the seasoning and begins to build color before liquid is added.",
+      "Pour in the measured liquid or sauce ingredients, scrape the browned bits from the pan, and bring the mixture to a steady simmer rather than an aggressive boil.",
+      "Cook until the texture matches the recipe: meat should be tender and safe, potatoes or rice should be fully cooked, and sauces should coat the spoon without tasting raw.",
+      "Taste carefully near the end and adjust only with the listed salt, pepper, lemon, vinegar, or herbs so the finished recipe remains aligned with the demonstrated tutorial.",
+      "Rest the finished dish briefly off the heat, allowing starches, dairy, meat juices, or sauces to settle before slicing, spooning, or plating for clean presentation.",
+      "Serve while warm with the suggested accompaniments, keeping crisp elements uncovered and creamy or saucy elements gently stirred so the final plate has the intended texture."
+    ],
+    "tips": [
+      "Brown sausages first for the best gravy.",
+      "Keep the simmer moderate so beans stay intact.",
+      "Rest before serving so the sauce thickens."
+    ],
+    "commonMistakes": [
+      "Pale unbrowned sausages taste flat.",
+      "Too much stirring breaks the beans.",
+      "Skipping tomato paste reduces depth."
+    ],
+    "substitutions": [
+      "Use Cumberland-style sausages if available.",
+      "Use haricot beans instead of cannellini.",
+      "Use vegetable stock for a lighter gravy."
+    ],
+    "storage": [
+      "Refrigerate for up to 3 days.",
+      "Freeze in airtight portions for up to 2 months.",
+      "Reheat until the sausages are hot through."
+    ],
+    "nutrition": {
+      "calories": 560,
+      "protein": "27 g",
+      "carbohydrates": "34 g",
+      "fat": "35 g",
+      "fiber": "9 g",
+      "sugar": "10 g",
+      "sodium": "980 mg"
+    },
+    "datePublished": "2026-09-21",
+    "author": "Thejan Mahakumbura"
+  },
+  {
+    "id": "bubble-and-squeak",
+    "slug": "bubble-and-squeak",
+    "title": "Bubble and Squeak",
+    "status": "draft",
+    "category": "Breakfast",
+    "tags": [
+      "UK",
+      "British",
+      "Potato",
+      "Cabbage",
+      "Leftovers"
+    ],
+    "country": "UK",
+    "image": "assets/images/recipes/bubble-and-squeak-generated.webp",
+    "description": "Crisp-edged mashed potato and cabbage cakes fried in butter until golden outside and soft within.",
+    "prepTime": "PT15M",
+    "cookTime": "PT20M",
+    "totalTime": "PT35M",
+    "servings": 4,
+    "calories": 290,
+    "cuisine": "British",
+    "course": "Breakfast",
+    "difficulty": "Easy",
+    "ingredients": [
+      "500 g cooked potatoes, mashed or crushed",
+      "250 g cooked cabbage, finely chopped",
+      "1 small onion, finely chopped",
+      "2 tbsp butter",
+      "1 tbsp vegetable oil",
+      "1/2 tsp salt",
+      "1/2 tsp black pepper",
+      "1 tbsp chopped parsley",
+      "1 large egg, optional for binding"
+    ],
+    "instructions": [
+      "Set out every measured ingredient before turning on the heat, then prepare the vegetables, protein, seasonings, and serving pieces so the recipe moves smoothly without rushed chopping.",
+      "Warm the main pan or oven dish gradually and add the cooking fat, using medium heat so the aromatics can soften and release flavor without scorching on the base.",
+      "Add the primary savory ingredients in the order listed, stirring patiently so each piece is coated with the seasoning and begins to build color before liquid is added.",
+      "Pour in the measured liquid or sauce ingredients, scrape the browned bits from the pan, and bring the mixture to a steady simmer rather than an aggressive boil.",
+      "Cook until the texture matches the recipe: meat should be tender and safe, potatoes or rice should be fully cooked, and sauces should coat the spoon without tasting raw.",
+      "Taste carefully near the end and adjust only with the listed salt, pepper, lemon, vinegar, or herbs so the finished recipe remains aligned with the demonstrated tutorial.",
+      "Rest the finished dish briefly off the heat, allowing starches, dairy, meat juices, or sauces to settle before slicing, spooning, or plating for clean presentation.",
+      "Serve while warm with the suggested accompaniments, keeping crisp elements uncovered and creamy or saucy elements gently stirred so the final plate has the intended texture."
+    ],
+    "tips": [
+      "Use cold cooked potato for better shaping.",
+      "Press cakes firmly before frying.",
+      "Let the underside brown before turning."
+    ],
+    "commonMistakes": [
+      "Turning too early breaks the cakes.",
+      "Wet cabbage makes the mixture loose.",
+      "Crowding the pan prevents crisp edges."
+    ],
+    "substitutions": [
+      "Use Brussels sprouts instead of cabbage.",
+      "Use leftover mashed potato if not too loose.",
+      "Omit the egg when the mixture holds together."
+    ],
+    "storage": [
+      "Refrigerate cooked cakes for up to 3 days.",
+      "Reheat in a skillet for crispness.",
+      "Freeze separated by parchment for up to 1 month."
+    ],
+    "nutrition": {
+      "calories": 290,
+      "protein": "7 g",
+      "carbohydrates": "35 g",
+      "fat": "14 g",
+      "fiber": "6 g",
+      "sugar": "5 g",
+      "sodium": "410 mg"
+    },
+    "datePublished": "2026-09-21",
+    "author": "Thejan Mahakumbura"
+  },
+  {
+    "id": "welsh-rarebit",
+    "slug": "welsh-rarebit",
+    "title": "Welsh Rarebit",
+    "status": "draft",
+    "category": "Appetizer",
+    "tags": [
+      "UK",
+      "Welsh",
+      "Cheese",
+      "Toast",
+      "Appetizer"
+    ],
+    "country": "UK",
+    "image": "assets/images/recipes/welsh-rarebit-generated.webp",
+    "description": "Thick toast topped with a mustardy ale and cheddar cheese sauce, grilled until bubbling and deeply golden.",
+    "prepTime": "PT10M",
+    "cookTime": "PT12M",
+    "totalTime": "PT22M",
+    "servings": 4,
+    "calories": 430,
+    "cuisine": "Welsh",
+    "course": "Appetizer",
+    "difficulty": "Easy",
+    "ingredients": [
+      "4 thick slices rustic bread",
+      "250 g mature cheddar, grated",
+      "120 ml ale or milk",
+      "1 tbsp butter",
+      "1 tbsp plain flour",
+      "1 tsp English mustard",
+      "1 tsp Worcestershire sauce",
+      "1 egg yolk",
+      "1/4 tsp black pepper",
+      "1 pinch cayenne pepper"
+    ],
+    "instructions": [
+      "Set out every measured ingredient before turning on the heat, then prepare the vegetables, protein, seasonings, and serving pieces so the recipe moves smoothly without rushed chopping.",
+      "Warm the main pan or oven dish gradually and add the cooking fat, using medium heat so the aromatics can soften and release flavor without scorching on the base.",
+      "Add the primary savory ingredients in the order listed, stirring patiently so each piece is coated with the seasoning and begins to build color before liquid is added.",
+      "Pour in the measured liquid or sauce ingredients, scrape the browned bits from the pan, and bring the mixture to a steady simmer rather than an aggressive boil.",
+      "Cook until the texture matches the recipe: meat should be tender and safe, potatoes or rice should be fully cooked, and sauces should coat the spoon without tasting raw.",
+      "Taste carefully near the end and adjust only with the listed salt, pepper, lemon, vinegar, or herbs so the finished recipe remains aligned with the demonstrated tutorial.",
+      "Rest the finished dish briefly off the heat, allowing starches, dairy, meat juices, or sauces to settle before slicing, spooning, or plating for clean presentation.",
+      "Serve while warm with the suggested accompaniments, keeping crisp elements uncovered and creamy or saucy elements gently stirred so the final plate has the intended texture."
+    ],
+    "tips": [
+      "Toast bread first so it supports the sauce.",
+      "Use mature cheddar for a full flavor.",
+      "Grill until bubbling, not merely melted."
+    ],
+    "commonMistakes": [
+      "Untoasted bread becomes soggy.",
+      "High heat can split cheese sauce.",
+      "Too much ale makes the topping runny."
+    ],
+    "substitutions": [
+      "Use milk instead of ale.",
+      "Use Dijon mustard for a milder result.",
+      "Omit cayenne for less heat."
+    ],
+    "storage": [
+      "Best served immediately.",
+      "Refrigerate extra cheese sauce for 2 days.",
+      "Reheat under the grill rather than microwaving."
+    ],
+    "nutrition": {
+      "calories": 430,
+      "protein": "21 g",
+      "carbohydrates": "31 g",
+      "fat": "26 g",
+      "fiber": "2 g",
+      "sugar": "3 g",
+      "sodium": "690 mg"
+    },
+    "datePublished": "2026-09-21",
+    "author": "Thejan Mahakumbura"
+  },
+  {
+    "id": "scotch-eggs",
+    "slug": "scotch-eggs",
+    "title": "Scotch Eggs",
+    "status": "draft",
+    "category": "Appetizer",
+    "tags": [
+      "UK",
+      "British",
+      "Eggs",
+      "Sausage",
+      "Appetizer"
+    ],
+    "country": "UK",
+    "image": "assets/images/recipes/scotch-eggs-generated.webp",
+    "description": "Jammy boiled eggs wrapped in seasoned sausage meat, crumbed, and cooked until crisp and golden.",
+    "prepTime": "PT30M",
+    "cookTime": "PT15M",
+    "totalTime": "PT1H",
+    "servings": 6,
+    "calories": 480,
+    "cuisine": "British",
+    "course": "Appetizer",
+    "difficulty": "Medium",
+    "ingredients": [
+      "6 large eggs",
+      "500 g pork sausage meat",
+      "1 tsp English mustard",
+      "1 tbsp chopped parsley",
+      "1/2 tsp salt",
+      "1/2 tsp black pepper",
+      "75 g plain flour",
+      "2 beaten eggs",
+      "120 g panko breadcrumbs",
+      "1 litre vegetable oil for frying"
+    ],
+    "instructions": [
+      "Set out every measured ingredient before turning on the heat, then prepare the vegetables, protein, seasonings, and serving pieces so the recipe moves smoothly without rushed chopping.",
+      "Warm the main pan or oven dish gradually and add the cooking fat, using medium heat so the aromatics can soften and release flavor without scorching on the base.",
+      "Add the primary savory ingredients in the order listed, stirring patiently so each piece is coated with the seasoning and begins to build color before liquid is added.",
+      "Pour in the measured liquid or sauce ingredients, scrape the browned bits from the pan, and bring the mixture to a steady simmer rather than an aggressive boil.",
+      "Cook until the texture matches the recipe: meat should be tender and safe, potatoes or rice should be fully cooked, and sauces should coat the spoon without tasting raw.",
+      "Taste carefully near the end and adjust only with the listed salt, pepper, lemon, vinegar, or herbs so the finished recipe remains aligned with the demonstrated tutorial.",
+      "Rest the finished dish briefly off the heat, allowing starches, dairy, meat juices, or sauces to settle before slicing, spooning, or plating for clean presentation.",
+      "Serve while warm with the suggested accompaniments, keeping crisp elements uncovered and creamy or saucy elements gently stirred so the final plate has the intended texture."
+    ],
+    "tips": [
+      "Chill wrapped eggs before breading.",
+      "Seal sausage meat evenly around each egg.",
+      "Use a thermometer to control frying temperature."
+    ],
+    "commonMistakes": [
+      "Overcooking the eggs removes the jammy center.",
+      "Thin sausage spots can split.",
+      "Oil that is too cool makes greasy crumbs."
+    ],
+    "substitutions": [
+      "Use fine breadcrumbs instead of panko.",
+      "Add chives instead of parsley.",
+      "Bake after frying briefly if extra cooking time is needed."
+    ],
+    "storage": [
+      "Refrigerate for up to 3 days.",
+      "Serve cold or rewarm gently.",
+      "Do not freeze after frying for best texture."
+    ],
+    "nutrition": {
+      "calories": 480,
+      "protein": "25 g",
+      "carbohydrates": "22 g",
+      "fat": "33 g",
+      "fiber": "1 g",
+      "sugar": "1 g",
+      "sodium": "760 mg"
+    },
+    "datePublished": "2026-09-21",
+    "author": "Thejan Mahakumbura"
+  },
+  {
+    "id": "full-english-breakfast",
+    "slug": "full-english-breakfast",
+    "title": "Full English Breakfast",
+    "status": "draft",
+    "category": "Breakfast",
+    "tags": [
+      "UK",
+      "British",
+      "Breakfast",
+      "Eggs",
+      "Sausage"
+    ],
+    "country": "UK",
+    "image": "assets/images/recipes/full-english-breakfast-generated.webp",
+    "description": "A classic fry-up plate with eggs, sausages, bacon, beans, mushrooms, tomatoes, and toast cooked in a sensible order.",
+    "prepTime": "PT10M",
+    "cookTime": "PT25M",
+    "totalTime": "PT35M",
+    "servings": 2,
+    "calories": 820,
+    "cuisine": "British",
+    "course": "Breakfast",
+    "difficulty": "Easy",
+    "ingredients": [
+      "4 pork sausages",
+      "4 rashers back bacon",
+      "2 large eggs",
+      "200 g baked beans",
+      "150 g mushrooms, halved",
+      "2 tomatoes, halved",
+      "2 slices bread",
+      "1 tbsp butter",
+      "1 tbsp vegetable oil",
+      "1/2 tsp black pepper",
+      "1 pinch salt"
+    ],
+    "instructions": [
+      "Set out every measured ingredient before turning on the heat, then prepare the vegetables, protein, seasonings, and serving pieces so the recipe moves smoothly without rushed chopping.",
+      "Warm the main pan or oven dish gradually and add the cooking fat, using medium heat so the aromatics can soften and release flavor without scorching on the base.",
+      "Add the primary savory ingredients in the order listed, stirring patiently so each piece is coated with the seasoning and begins to build color before liquid is added.",
+      "Pour in the measured liquid or sauce ingredients, scrape the browned bits from the pan, and bring the mixture to a steady simmer rather than an aggressive boil.",
+      "Cook until the texture matches the recipe: meat should be tender and safe, potatoes or rice should be fully cooked, and sauces should coat the spoon without tasting raw.",
+      "Taste carefully near the end and adjust only with the listed salt, pepper, lemon, vinegar, or herbs so the finished recipe remains aligned with the demonstrated tutorial.",
+      "Rest the finished dish briefly off the heat, allowing starches, dairy, meat juices, or sauces to settle before slicing, spooning, or plating for clean presentation.",
+      "Serve while warm with the suggested accompaniments, keeping crisp elements uncovered and creamy or saucy elements gently stirred so the final plate has the intended texture."
+    ],
+    "tips": [
+      "Cook sausages first because they take longest.",
+      "Keep beans warm over low heat.",
+      "Fry eggs last for runny yolks."
+    ],
+    "commonMistakes": [
+      "Starting eggs too early makes them cold.",
+      "High heat burns bacon before crisping.",
+      "Overcrowding steams mushrooms."
+    ],
+    "substitutions": [
+      "Use grilled tomatoes instead of pan-fried.",
+      "Use black pudding if desired.",
+      "Use toast or fried bread."
+    ],
+    "storage": [
+      "Best eaten immediately.",
+      "Store cooked components separately for 1 day.",
+      "Reheat sausages and bacon until piping hot."
+    ],
+    "nutrition": {
+      "calories": 820,
+      "protein": "40 g",
+      "carbohydrates": "45 g",
+      "fat": "54 g",
+      "fiber": "8 g",
+      "sugar": "12 g",
+      "sodium": "1650 mg"
+    },
+    "datePublished": "2026-09-21",
+    "author": "Thejan Mahakumbura"
+  },
+  {
+    "id": "kedgeree",
+    "slug": "kedgeree",
+    "title": "Kedgeree",
+    "status": "draft",
+    "category": "Breakfast",
+    "tags": [
+      "UK",
+      "British Indian",
+      "Rice",
+      "Smoked Fish",
+      "Breakfast"
+    ],
+    "country": "UK",
+    "image": "assets/images/recipes/kedgeree-generated.webp",
+    "description": "Gently spiced rice with smoked haddock, peas, herbs, and boiled eggs for a classic Anglo-Indian breakfast dish.",
+    "prepTime": "PT15M",
+    "cookTime": "PT30M",
+    "totalTime": "PT45M",
+    "servings": 4,
+    "calories": 520,
+    "cuisine": "British Indian",
+    "course": "Breakfast",
+    "difficulty": "Medium",
+    "ingredients": [
+      "300 g smoked haddock",
+      "300 ml milk",
+      "250 g basmati rice",
+      "2 tbsp butter",
+      "1 onion, finely chopped",
+      "2 tsp curry powder",
+      "1/2 tsp turmeric",
+      "100 g frozen peas",
+      "3 boiled eggs, quartered",
+      "2 tbsp chopped parsley",
+      "1 tbsp lemon juice",
+      "1/2 tsp salt",
+      "1/2 tsp black pepper"
+    ],
+    "instructions": [
+      "Set out every measured ingredient before turning on the heat, then prepare the vegetables, protein, seasonings, and serving pieces so the recipe moves smoothly without rushed chopping.",
+      "Warm the main pan or oven dish gradually and add the cooking fat, using medium heat so the aromatics can soften and release flavor without scorching on the base.",
+      "Add the primary savory ingredients in the order listed, stirring patiently so each piece is coated with the seasoning and begins to build color before liquid is added.",
+      "Pour in the measured liquid or sauce ingredients, scrape the browned bits from the pan, and bring the mixture to a steady simmer rather than an aggressive boil.",
+      "Cook until the texture matches the recipe: meat should be tender and safe, potatoes or rice should be fully cooked, and sauces should coat the spoon without tasting raw.",
+      "Taste carefully near the end and adjust only with the listed salt, pepper, lemon, vinegar, or herbs so the finished recipe remains aligned with the demonstrated tutorial.",
+      "Rest the finished dish briefly off the heat, allowing starches, dairy, meat juices, or sauces to settle before slicing, spooning, or plating for clean presentation.",
+      "Serve while warm with the suggested accompaniments, keeping crisp elements uncovered and creamy or saucy elements gently stirred so the final plate has the intended texture."
+    ],
+    "tips": [
+      "Poach haddock gently in milk.",
+      "Rinse rice before cooking.",
+      "Fold fish through carefully so it stays flaky."
+    ],
+    "commonMistakes": [
+      "Boiling fish hard makes it dry.",
+      "Wet rice makes kedgeree heavy.",
+      "Aggressive stirring breaks the eggs and fish."
+    ],
+    "substitutions": [
+      "Use smoked cod if haddock is unavailable.",
+      "Use coriander instead of parsley.",
+      "Add a little chilli only if desired."
+    ],
+    "storage": [
+      "Refrigerate for up to 2 days.",
+      "Reheat rice thoroughly until steaming.",
+      "Do not leave cooked rice at room temperature."
+    ],
+    "nutrition": {
+      "calories": 520,
+      "protein": "31 g",
+      "carbohydrates": "62 g",
+      "fat": "17 g",
+      "fiber": "4 g",
+      "sugar": "6 g",
+      "sodium": "870 mg"
+    },
+    "datePublished": "2026-09-21",
+    "author": "Thejan Mahakumbura"
+  },
+  {
+    "id": "fish-and-chips",
+    "slug": "fish-and-chips",
+    "title": "Fish and Chips",
+    "status": "draft",
+    "category": "Seafood",
+    "tags": [
+      "UK",
+      "British",
+      "Fish",
+      "Seafood",
+      "Dinner"
+    ],
+    "country": "UK",
+    "image": "assets/images/recipes/fish-and-chips-generated.webp",
+    "description": "Crisp battered white fish served with chunky chips, peas, lemon, and tartar sauce.",
+    "prepTime": "PT25M",
+    "cookTime": "PT30M",
+    "totalTime": "PT55M",
+    "servings": 4,
+    "calories": 760,
+    "cuisine": "British",
+    "course": "Main Course",
+    "difficulty": "Medium",
+    "ingredients": [
+      "4 cod or haddock fillets, about 170 g each",
+      "900 g potatoes, cut into chips",
+      "150 g plain flour, plus extra for dusting",
+      "50 g cornflour",
+      "1 tsp baking powder",
+      "250 ml cold beer or sparkling water",
+      "1 tsp salt",
+      "1/2 tsp black pepper",
+      "1 litre vegetable oil for frying",
+      "200 g peas",
+      "1 lemon, cut into wedges",
+      "4 tbsp tartar sauce"
+    ],
+    "instructions": [
+      "Set out every measured ingredient before turning on the heat, then prepare the vegetables, protein, seasonings, and serving pieces so the recipe moves smoothly without rushed chopping.",
+      "Warm the main pan or oven dish gradually and add the cooking fat, using medium heat so the aromatics can soften and release flavor without scorching on the base.",
+      "Add the primary savory ingredients in the order listed, stirring patiently so each piece is coated with the seasoning and begins to build color before liquid is added.",
+      "Pour in the measured liquid or sauce ingredients, scrape the browned bits from the pan, and bring the mixture to a steady simmer rather than an aggressive boil.",
+      "Cook until the texture matches the recipe: meat should be tender and safe, potatoes or rice should be fully cooked, and sauces should coat the spoon without tasting raw.",
+      "Taste carefully near the end and adjust only with the listed salt, pepper, lemon, vinegar, or herbs so the finished recipe remains aligned with the demonstrated tutorial.",
+      "Rest the finished dish briefly off the heat, allowing starches, dairy, meat juices, or sauces to settle before slicing, spooning, or plating for clean presentation.",
+      "Serve while warm with the suggested accompaniments, keeping crisp elements uncovered and creamy or saucy elements gently stirred so the final plate has the intended texture."
+    ],
+    "tips": [
+      "Dry fish thoroughly before battering.",
+      "Use very cold batter for crisp coating.",
+      "Fry chips twice for a fluffy center and crisp outside."
+    ],
+    "commonMistakes": [
+      "Warm batter absorbs oil.",
+      "Wet fish makes batter slide off.",
+      "Crowding the fryer lowers the temperature."
+    ],
+    "substitutions": [
+      "Use sparkling water instead of beer.",
+      "Use haddock instead of cod.",
+      "Serve mushy peas in place of whole peas."
+    ],
+    "storage": [
+      "Best served immediately.",
+      "Reheat leftovers in a hot oven.",
+      "Do not store fried fish covered while hot."
+    ],
+    "nutrition": {
+      "calories": 760,
+      "protein": "42 g",
+      "carbohydrates": "82 g",
+      "fat": "30 g",
+      "fiber": "8 g",
+      "sugar": "5 g",
+      "sodium": "890 mg"
+    },
+    "datePublished": "2026-09-21",
+    "author": "Thejan Mahakumbura"
+  },
+  {
+    "id": "coronation-chicken",
+    "slug": "coronation-chicken",
+    "title": "Coronation Chicken",
+    "status": "draft",
+    "category": "Chicken",
+    "tags": [
+      "UK",
+      "British",
+      "Chicken",
+      "Salad",
+      "Lunch"
+    ],
+    "country": "UK",
+    "image": "assets/images/recipes/coronation-chicken-generated.webp",
+    "description": "Cold chicken folded through a mild curried mayonnaise with chutney, raisins, almonds, and salad leaves.",
+    "prepTime": "PT20M",
+    "cookTime": "PT20M",
+    "totalTime": "PT40M",
+    "servings": 4,
+    "calories": 430,
+    "cuisine": "British",
+    "course": "Lunch",
+    "difficulty": "Easy",
+    "ingredients": [
+      "500 g cooked chicken breast, shredded",
+      "120 g mayonnaise",
+      "80 g Greek yogurt",
+      "2 tbsp mango chutney",
+      "1 tsp mild curry powder",
+      "1 tsp lemon juice",
+      "40 g raisins",
+      "30 g toasted flaked almonds",
+      "1 tbsp chopped coriander",
+      "1/2 tsp salt",
+      "1/4 tsp black pepper",
+      "100 g lettuce leaves"
+    ],
+    "instructions": [
+      "Set out every measured ingredient before turning on the heat, then prepare the vegetables, protein, seasonings, and serving pieces so the recipe moves smoothly without rushed chopping.",
+      "Warm the main pan or oven dish gradually and add the cooking fat, using medium heat so the aromatics can soften and release flavor without scorching on the base.",
+      "Add the primary savory ingredients in the order listed, stirring patiently so each piece is coated with the seasoning and begins to build color before liquid is added.",
+      "Pour in the measured liquid or sauce ingredients, scrape the browned bits from the pan, and bring the mixture to a steady simmer rather than an aggressive boil.",
+      "Cook until the texture matches the recipe: meat should be tender and safe, potatoes or rice should be fully cooked, and sauces should coat the spoon without tasting raw.",
+      "Taste carefully near the end and adjust only with the listed salt, pepper, lemon, vinegar, or herbs so the finished recipe remains aligned with the demonstrated tutorial.",
+      "Rest the finished dish briefly off the heat, allowing starches, dairy, meat juices, or sauces to settle before slicing, spooning, or plating for clean presentation.",
+      "Serve while warm with the suggested accompaniments, keeping crisp elements uncovered and creamy or saucy elements gently stirred so the final plate has the intended texture."
+    ],
+    "tips": [
+      "Cool chicken before mixing.",
+      "Toast almonds for better flavor.",
+      "Fold gently to keep texture."
+    ],
+    "commonMistakes": [
+      "Warm chicken loosens the dressing.",
+      "Too much curry powder overwhelms the salad.",
+      "Skipping lemon makes the sauce flat."
+    ],
+    "substitutions": [
+      "Use sour cream instead of yogurt.",
+      "Use sultanas instead of raisins.",
+      "Serve in sandwiches or on salad leaves."
+    ],
+    "storage": [
+      "Refrigerate for up to 2 days.",
+      "Keep covered and chilled.",
+      "Do not freeze mayonnaise-based salad."
+    ],
+    "nutrition": {
+      "calories": 430,
+      "protein": "34 g",
+      "carbohydrates": "17 g",
+      "fat": "26 g",
+      "fiber": "3 g",
+      "sugar": "13 g",
+      "sodium": "620 mg"
+    },
+    "datePublished": "2026-09-21",
+    "author": "Thejan Mahakumbura"
+  },
+  {
+    "id": "ploughmans-lunch",
+    "slug": "ploughmans-lunch",
+    "title": "Ploughman's Lunch",
+    "status": "draft",
+    "category": "Dinner",
+    "tags": [
+      "UK",
+      "British",
+      "Cheese",
+      "Lunch",
+      "No Cook"
+    ],
+    "country": "UK",
+    "image": "assets/images/recipes/ploughmans-lunch-generated.webp",
+    "description": "A traditional British cold plate with cheddar, bread, ham, apple, pickles, chutney, and crisp salad elements.",
+    "prepTime": "PT20M",
+    "cookTime": "PT0M",
+    "totalTime": "PT20M",
+    "servings": 2,
+    "calories": 690,
+    "cuisine": "British",
+    "course": "Lunch",
+    "difficulty": "Easy",
+    "ingredients": [
+      "200 g mature cheddar",
+      "4 slices crusty bread",
+      "120 g sliced ham",
+      "1 apple, sliced",
+      "4 small pickled onions",
+      "4 gherkins",
+      "4 tbsp chutney",
+      "60 g salad leaves",
+      "2 tbsp butter",
+      "1/2 tsp black pepper"
+    ],
+    "instructions": [
+      "Arrange the bread, cheddar, ham, apple, pickles, chutney, and salad before serving so the cold plate feels balanced rather than randomly assembled.",
+      "Bring the cheddar slightly toward room temperature while keeping the meat chilled, because cheese tastes fuller when it is not fridge-cold.",
+      "Slice the bread thickly and butter it if desired, keeping the pieces rustic enough to hold cheese, ham, and chutney without falling apart.",
+      "Cut the apple at the last moment so it stays bright, then place it near the pickles and chutney to balance sharp, sweet, and savory flavors.",
+      "Fold or fan the ham neatly on the board, leaving space between wet pickles and bread so the bread does not become damp before eating.",
+      "Add salad leaves as a fresh element rather than a bulky garnish, then grind black pepper lightly over the cheese and apple.",
+      "Check that every serving has bread, cheese, ham, fruit, pickle, and chutney, which is the point of the classic ploughman's lunch.",
+      "Serve immediately at cool room temperature with a knife for the cheese and chutney, keeping any spare meat refrigerated until needed."
+    ],
+    "tips": [
+      "Use room-temperature cheddar.",
+      "Slice apple just before serving.",
+      "Balance rich cheese with sharp pickles."
+    ],
+    "commonMistakes": [
+      "Cold cheese tastes muted.",
+      "Too little chutney makes the plate dry.",
+      "Cutting bread too thin removes the rustic feel."
+    ],
+    "substitutions": [
+      "Use Stilton for part of the cheddar.",
+      "Use pork pie instead of ham if desired.",
+      "Use Branston-style pickle for chutney."
+    ],
+    "storage": [
+      "Assemble just before serving.",
+      "Refrigerate components separately for 2 days.",
+      "Do not store sliced apple without lemon."
+    ],
+    "nutrition": {
+      "calories": 690,
+      "protein": "32 g",
+      "carbohydrates": "61 g",
+      "fat": "36 g",
+      "fiber": "7 g",
+      "sugar": "24 g",
+      "sodium": "1380 mg"
+    },
+    "datePublished": "2026-09-21",
+    "author": "Thejan Mahakumbura"
+  },
+  {
+    "id": "bread-pudding",
+    "slug": "bread-pudding",
+    "title": "Bread Pudding",
+    "status": "draft",
+    "category": "Dessert",
+    "tags": [
+      "UK",
+      "British",
+      "Bread",
+      "Pudding",
+      "Dessert"
+    ],
+    "country": "UK",
+    "image": "assets/images/recipes/bread-pudding-generated.webp",
+    "description": "Dense, warmly spiced British bread pudding with dried fruit, citrus zest, and a crisp sugared top.",
+    "prepTime": "PT20M",
+    "cookTime": "PT1H15M",
+    "totalTime": "PT1H35M",
+    "servings": 9,
+    "calories": 410,
+    "cuisine": "British",
+    "course": "Dessert",
+    "difficulty": "Easy",
+    "ingredients": [
+      "300 g stale bread, torn",
+      "500 ml whole milk",
+      "100 g raisins",
+      "75 g mixed peel",
+      "100 g brown sugar",
+      "50 g melted butter",
+      "1 large egg, beaten",
+      "1 tsp mixed spice",
+      "1 tsp ground cinnamon",
+      "Zest of 1 lemon",
+      "2 tbsp demerara sugar"
+    ],
+    "instructions": [
+      "Set out every measured ingredient before turning on the heat, then prepare the vegetables, protein, seasonings, and serving pieces so the recipe moves smoothly without rushed chopping.",
+      "Warm the main pan or oven dish gradually and add the cooking fat, using medium heat so the aromatics can soften and release flavor without scorching on the base.",
+      "Add the primary savory ingredients in the order listed, stirring patiently so each piece is coated with the seasoning and begins to build color before liquid is added.",
+      "Pour in the measured liquid or sauce ingredients, scrape the browned bits from the pan, and bring the mixture to a steady simmer rather than an aggressive boil.",
+      "Cook until the texture matches the recipe: meat should be tender and safe, potatoes or rice should be fully cooked, and sauces should coat the spoon without tasting raw.",
+      "Taste carefully near the end and adjust only with the listed salt, pepper, lemon, vinegar, or herbs so the finished recipe remains aligned with the demonstrated tutorial.",
+      "Rest the finished dish briefly off the heat, allowing starches, dairy, meat juices, or sauces to settle before slicing, spooning, or plating for clean presentation.",
+      "Serve while warm with the suggested accompaniments, keeping crisp elements uncovered and creamy or saucy elements gently stirred so the final plate has the intended texture."
+    ],
+    "tips": [
+      "Soak bread until fully soft.",
+      "Squeeze excess milk only lightly.",
+      "Cool before cutting neat squares."
+    ],
+    "commonMistakes": [
+      "Dry bread pockets create a rough texture.",
+      "Too much squeezing makes the pudding heavy.",
+      "Cutting hot pudding causes crumbling."
+    ],
+    "substitutions": [
+      "Use sultanas instead of raisins.",
+      "Use orange zest instead of lemon.",
+      "Use caster sugar if brown sugar is unavailable."
+    ],
+    "storage": [
+      "Keep airtight for up to 3 days.",
+      "Reheat gently or serve cold.",
+      "Freeze squares for up to 2 months."
+    ],
+    "nutrition": {
+      "calories": 410,
+      "protein": "8 g",
+      "carbohydrates": "68 g",
+      "fat": "13 g",
+      "fiber": "4 g",
+      "sugar": "38 g",
+      "sodium": "260 mg"
+    },
+    "datePublished": "2026-09-21",
+    "author": "Thejan Mahakumbura"
+  },
+  {
+    "id": "sticky-toffee-pudding",
+    "slug": "sticky-toffee-pudding",
+    "title": "Sticky Toffee Pudding",
+    "status": "draft",
+    "category": "Dessert",
+    "tags": [
+      "UK",
+      "British",
+      "Dates",
+      "Pudding",
+      "Dessert"
+    ],
+    "country": "UK",
+    "image": "assets/images/recipes/sticky-toffee-pudding-generated.webp",
+    "description": "Soft date sponge served warm with a glossy butter, brown sugar, and cream toffee sauce.",
+    "prepTime": "PT25M",
+    "cookTime": "PT35M",
+    "totalTime": "PT1H",
+    "servings": 8,
+    "calories": 560,
+    "cuisine": "British",
+    "course": "Dessert",
+    "difficulty": "Medium",
+    "ingredients": [
+      "225 g pitted dates, chopped",
+      "240 ml boiling water",
+      "1 tsp baking soda",
+      "75 g softened butter",
+      "150 g dark brown sugar",
+      "2 large eggs",
+      "175 g self-raising flour",
+      "1 tsp vanilla extract",
+      "1/4 tsp salt",
+      "100 g butter for sauce",
+      "150 g dark brown sugar for sauce",
+      "180 ml double cream",
+      "1 tbsp golden syrup"
+    ],
+    "instructions": [
+      "Set out every measured ingredient before turning on the heat, then prepare the vegetables, protein, seasonings, and serving pieces so the recipe moves smoothly without rushed chopping.",
+      "Warm the main pan or oven dish gradually and add the cooking fat, using medium heat so the aromatics can soften and release flavor without scorching on the base.",
+      "Add the primary savory ingredients in the order listed, stirring patiently so each piece is coated with the seasoning and begins to build color before liquid is added.",
+      "Pour in the measured liquid or sauce ingredients, scrape the browned bits from the pan, and bring the mixture to a steady simmer rather than an aggressive boil.",
+      "Cook until the texture matches the recipe: meat should be tender and safe, potatoes or rice should be fully cooked, and sauces should coat the spoon without tasting raw.",
+      "Taste carefully near the end and adjust only with the listed salt, pepper, lemon, vinegar, or herbs so the finished recipe remains aligned with the demonstrated tutorial.",
+      "Rest the finished dish briefly off the heat, allowing starches, dairy, meat juices, or sauces to settle before slicing, spooning, or plating for clean presentation.",
+      "Serve while warm with the suggested accompaniments, keeping crisp elements uncovered and creamy or saucy elements gently stirred so the final plate has the intended texture."
+    ],
+    "tips": [
+      "Soften dates fully before blending.",
+      "Do not overmix after adding flour.",
+      "Serve sauce warm for the classic finish."
+    ],
+    "commonMistakes": [
+      "Large date pieces make uneven sponge.",
+      "Overbaking dries the pudding.",
+      "Boiling sauce too long makes it grainy."
+    ],
+    "substitutions": [
+      "Use heavy cream for double cream.",
+      "Use molasses only if golden syrup is unavailable.",
+      "Bake as individual puddings with reduced time."
+    ],
+    "storage": [
+      "Refrigerate sponge and sauce for up to 4 days.",
+      "Reheat gently before serving.",
+      "Freeze sponge without sauce for up to 2 months."
+    ],
+    "nutrition": {
+      "calories": 560,
+      "protein": "7 g",
+      "carbohydrates": "82 g",
+      "fat": "25 g",
+      "fiber": "4 g",
+      "sugar": "59 g",
+      "sodium": "330 mg"
+    },
+    "datePublished": "2026-09-21",
+    "author": "Thejan Mahakumbura"
+  }
+]
