@@ -13,7 +13,7 @@
       "Dinner"
     ],
     "country": "UK",
-    "image": "assets/images/recipes/lamb-curry-generated.webp",
+    "image": "assets/images/recipes/lamb-curry-generated.webp?v=individual-1",
     "description": "Tender lamb simmered in a tomato-rich British curry-house style sauce with ginger, garlic, warm spices, and coriander.",
     "prepTime": "PT20M",
     "cookTime": "PT1H20M",
@@ -97,7 +97,7 @@
       "Dinner"
     ],
     "country": "UK",
-    "image": "assets/images/recipes/sausage-casserole-generated.webp",
+    "image": "assets/images/recipes/sausage-casserole-generated.webp?v=individual-1",
     "description": "Browned British sausages baked in a hearty tomato gravy with beans, carrots, onion, herbs, and a comforting casserole finish.",
     "prepTime": "PT15M",
     "cookTime": "PT45M",
@@ -180,7 +180,7 @@
       "Leftovers"
     ],
     "country": "UK",
-    "image": "assets/images/recipes/bubble-and-squeak-generated.webp",
+    "image": "assets/images/recipes/bubble-and-squeak-generated.webp?v=individual-1",
     "description": "Crisp-edged mashed potato and cabbage cakes fried in butter until golden outside and soft within.",
     "prepTime": "PT15M",
     "cookTime": "PT20M",
@@ -257,7 +257,7 @@
       "Appetizer"
     ],
     "country": "UK",
-    "image": "assets/images/recipes/welsh-rarebit-generated.webp",
+    "image": "assets/images/recipes/welsh-rarebit-generated.webp?v=individual-1",
     "description": "Thick toast topped with a mustardy ale and cheddar cheese sauce, grilled until bubbling and deeply golden.",
     "prepTime": "PT10M",
     "cookTime": "PT12M",
@@ -335,7 +335,7 @@
       "Appetizer"
     ],
     "country": "UK",
-    "image": "assets/images/recipes/scotch-eggs-generated.webp",
+    "image": "assets/images/recipes/scotch-eggs-generated.webp?v=individual-1",
     "description": "Jammy boiled eggs wrapped in seasoned sausage meat, crumbed, and cooked until crisp and golden.",
     "prepTime": "PT30M",
     "cookTime": "PT15M",
@@ -413,7 +413,7 @@
       "Sausage"
     ],
     "country": "UK",
-    "image": "assets/images/recipes/full-english-breakfast-generated.webp",
+    "image": "assets/images/recipes/full-english-breakfast-generated.webp?v=individual-1",
     "description": "A classic fry-up plate with eggs, sausages, bacon, beans, mushrooms, tomatoes, and toast cooked in a sensible order.",
     "prepTime": "PT10M",
     "cookTime": "PT25M",
@@ -492,7 +492,7 @@
       "Breakfast"
     ],
     "country": "UK",
-    "image": "assets/images/recipes/kedgeree-generated.webp",
+    "image": "assets/images/recipes/kedgeree-generated.webp?v=individual-1",
     "description": "Gently spiced rice with smoked haddock, peas, herbs, and boiled eggs for a classic Anglo-Indian breakfast dish.",
     "prepTime": "PT15M",
     "cookTime": "PT30M",
@@ -573,7 +573,7 @@
       "Dinner"
     ],
     "country": "UK",
-    "image": "assets/images/recipes/fish-and-chips-generated.webp",
+    "image": "assets/images/recipes/fish-and-chips-generated.webp?v=individual-1",
     "description": "Crisp battered white fish served with chunky chips, peas, lemon, and tartar sauce.",
     "prepTime": "PT25M",
     "cookTime": "PT30M",
@@ -653,7 +653,7 @@
       "Lunch"
     ],
     "country": "UK",
-    "image": "assets/images/recipes/coronation-chicken-generated.webp",
+    "image": "assets/images/recipes/coronation-chicken-generated.webp?v=individual-1",
     "description": "Cold chicken folded through a mild curried mayonnaise with chutney, raisins, almonds, and salad leaves.",
     "prepTime": "PT20M",
     "cookTime": "PT20M",
@@ -733,7 +733,7 @@
       "No Cook"
     ],
     "country": "UK",
-    "image": "assets/images/recipes/ploughmans-lunch-generated.webp",
+    "image": "assets/images/recipes/ploughmans-lunch-generated.webp?v=individual-1",
     "description": "A traditional British cold plate with cheddar, bread, ham, apple, pickles, chutney, and crisp salad elements.",
     "prepTime": "PT20M",
     "cookTime": "PT0M",
@@ -811,7 +811,7 @@
       "Dessert"
     ],
     "country": "UK",
-    "image": "assets/images/recipes/bread-pudding-generated.webp",
+    "image": "assets/images/recipes/bread-pudding-generated.webp?v=individual-1",
     "description": "Dense, warmly spiced British bread pudding with dried fruit, citrus zest, and a crisp sugared top.",
     "prepTime": "PT20M",
     "cookTime": "PT1H15M",
@@ -890,7 +890,7 @@
       "Dessert"
     ],
     "country": "UK",
-    "image": "assets/images/recipes/sticky-toffee-pudding-generated.webp",
+    "image": "assets/images/recipes/sticky-toffee-pudding-generated.webp?v=individual-1",
     "description": "Soft date sponge served warm with a glossy butter, brown sugar, and cream toffee sauce.",
     "prepTime": "PT25M",
     "cookTime": "PT35M",
