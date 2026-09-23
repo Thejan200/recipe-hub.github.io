@@ -1,8 +1,8 @@
 (() => {
   const nativeFetch = window.fetch.bind(window);
   const batches = {
-    '/data/recipes.json': ['data/recipes-batch-01.json', 'data/recipes-batch-02.json', 'data/recipes-batch-03.json', 'data/recipes-batch-04.json', 'data/recipes-batch-05.json', 'data/recipes-batch-06.json', 'data/recipes-batch-07.json', 'data/recipes-batch-08.json', 'data/recipes-batch-09.json', 'data/recipes-batch-10.json', 'data/recipes-batch-11.json', 'data/recipes-batch-12.json', 'data/recipes-batch-13.json', 'data/recipes-batch-14.json', 'data/recipes-batch-15.json', 'data/recipes-batch-16.json'],
-    '/data/videos.json': ['data/videos-batch-01.json', 'data/videos-batch-02.json', 'data/videos-batch-03.json', 'data/videos-batch-04.json', 'data/videos-batch-05.json', 'data/videos-batch-06.json', 'data/videos-batch-07.json', 'data/videos-batch-08.json', 'data/videos-batch-09.json', 'data/videos-batch-10.json', 'data/videos-batch-11.json', 'data/videos-batch-12.json', 'data/videos-batch-13.json', 'data/videos-batch-14.json', 'data/videos-batch-15.json', 'data/videos-batch-16.json']
+    '/data/recipes.json': ['data/recipes-batch-01.json', 'data/recipes-batch-02.json', 'data/recipes-batch-03.json', 'data/recipes-batch-04.json', 'data/recipes-batch-05.json', 'data/recipes-batch-06.json', 'data/recipes-batch-07.json', 'data/recipes-batch-08.json', 'data/recipes-batch-09.json', 'data/recipes-batch-10.json', 'data/recipes-batch-11.json', 'data/recipes-batch-12.json', 'data/recipes-batch-13.json', 'data/recipes-batch-14.json', 'data/recipes-batch-15.json', 'data/recipes-batch-16.json', 'data/recipes-batch-17.json'],
+    '/data/videos.json': ['data/videos-batch-01.json', 'data/videos-batch-02.json', 'data/videos-batch-03.json', 'data/videos-batch-04.json', 'data/videos-batch-05.json', 'data/videos-batch-06.json', 'data/videos-batch-07.json', 'data/videos-batch-08.json', 'data/videos-batch-09.json', 'data/videos-batch-10.json', 'data/videos-batch-11.json', 'data/videos-batch-12.json', 'data/videos-batch-13.json', 'data/videos-batch-14.json', 'data/videos-batch-15.json', 'data/videos-batch-16.json', 'data/videos-batch-17.json']
   };
   const cache = new Map();
   const publishedBatchCategories = {
@@ -15,7 +15,8 @@
     'chicken-tikka-masala': 'Chicken', 'chicken-curry': 'Chicken', 'beef-wellington': 'Beef', 'steak-and-kidney-pie': 'Beef', 'cottage-pie': 'Beef', 'shepherds-pie': 'Dinner', 'lancashire-hotpot': 'Dinner', 'beef-and-ale-pie': 'Beef', 'chicken-and-leek-pie': 'Chicken', 'fish-pie': 'Seafood',
     'apple-crumble': 'Dessert', 'eton-mess': 'Dessert', 'victoria-sponge': 'Dessert', 'bakewell-tart': 'Dessert', 'lemon-drizzle-cake': 'Dessert', 'scones': 'Dessert', 'christmas-pudding': 'Dessert', 'mince-pies': 'Dessert', 'treacle-tart': 'Dessert', 'rice-pudding': 'Dessert', 'bread-and-butter-pudding': 'Dessert', 'chicken-balti': 'Chicken', 'beef-madras': 'Beef',
     'lamb-curry': 'Dinner', 'sausage-casserole': 'Pork', 'bubble-and-squeak': 'Breakfast', 'welsh-rarebit': 'Appetizer', 'scotch-eggs': 'Appetizer', 'full-english-breakfast': 'Breakfast', 'kedgeree': 'Breakfast', 'fish-and-chips': 'Seafood', 'coronation-chicken': 'Chicken', 'ploughmans-lunch': 'Dinner', 'bread-pudding': 'Dessert', 'sticky-toffee-pudding': 'Dessert',
-    'cornish-pasty': 'Dinner', 'sausage-and-mash': 'Pork', 'bangers-and-mash': 'Pork', 'toad-in-the-hole': 'Pork', 'beef-roast-dinner': 'Beef', 'sunday-roast-chicken': 'Chicken', 'yorkshire-pudding': 'Appetizer', 'beef-stew': 'Beef', 'irish-style-stew': 'Dinner', 'chicken-korma': 'Chicken'
+    'cornish-pasty': 'Dinner', 'sausage-and-mash': 'Pork', 'bangers-and-mash': 'Pork', 'toad-in-the-hole': 'Pork', 'beef-roast-dinner': 'Beef', 'sunday-roast-chicken': 'Chicken', 'yorkshire-pudding': 'Appetizer', 'beef-stew': 'Beef', 'irish-style-stew': 'Dinner', 'chicken-korma': 'Chicken',
+    'maple-glazed-ham': 'Pork'
   };
   const categoryOverrides = { 'Greek Yogurt Berry Parfait': 'Dessert' };
   const batchImageOverrides = {

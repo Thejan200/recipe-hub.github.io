@@ -54,7 +54,7 @@ for name in (
     "book-the-mediterranean-dish.html", "book-city-eats-san-francisco.html"
 ):
     assert base + name in urls, f"Cookbook page missing from sitemap: {name}"
-for category in ("Breakfast", "Dinner", "Beef", "Pork", "Seafood", "Soup", "Dessert", "Healthy", "Chicken", "Vegetarian", "Quick%20%26%20Easy", "USA", "UK"):
+for category in ("Breakfast", "Dinner", "Beef", "Pork", "Seafood", "Soup", "Dessert", "Healthy", "Chicken", "Vegetarian", "Quick%20%26%20Easy", "USA", "UK", "Canada"):
     assert base + "category.html?category=" + category in urls, f"Category missing from sitemap: {category}"
 assert base + "category.html?category=Vegan" not in urls, "Stale Vegan collection URL should not be in sitemap"
 
@@ -106,11 +106,19 @@ for rid in uk_ids:
     assert "UK" in (recipe.get("tags") or []), f"British classic {rid} must belong to the UK collection"
     assert recipe.get("category") and recipe.get("category") != "UK", f"British classic {rid} must retain its primary overlay category"
 
+# Canada country collection and overlapping meal/protein categories are kept in sync.
+canada_recipe = by_id["maple-glazed-ham"]
+assert canada_recipe["country"] == "Canada" and {"Canada", "Dinner", "Pork"}.issubset(set(canada_recipe["tags"]))
+assert canada_recipe["category"] == "Pork" and "maple-glazed-ham" in runtime_ids
+assert "Canada" in next(g["categories"] for g in json.loads((root / "data/category-taxonomy.json").read_text())["groups"] if g["id"] == "cuisine")
+assert (root / json.loads((root / "data/category-images.json").read_text())["Canada"]).is_file()
+assert (root / canada_recipe["image"].split("?")[0]).is_file()
+
 # Key recipe/taxonomy surfaces must use one cache-busting site.js version so behavior stays consistent.
 for name in ("index.html", "recipes.html", "categories.html", "category.html", "recipe.html", "favorites.html"):
     text = (root / name).read_text(encoding="utf-8")
-    assert 'assets/js/site.js?v=13' in text, f"Stale site.js cache version on {name}"
-    assert 'assets/js/app.js?v=14' in text, f"Stale app.js cache version on {name}"
+    assert 'assets/js/site.js?v=14' in text, f"Stale site.js cache version on {name}"
+    assert 'assets/js/app.js?v=15' in text, f"Stale app.js cache version on {name}"
 
 # BiteSparks is the public brand. The legacy repository URL remains valid until a separate URL migration.
 brand_files = (

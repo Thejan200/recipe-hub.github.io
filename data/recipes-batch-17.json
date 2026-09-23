@@ -1,0 +1,56 @@
+[
+  {
+    "id": "maple-glazed-ham",
+    "slug": "maple-glazed-ham",
+    "title": "Maple Glazed Ham",
+    "status": "draft",
+    "category": "Pork",
+    "tags": [
+      "Canada",
+      "Dinner",
+      "Pork"
+    ],
+    "country": "Canada",
+    "image": "assets/images/recipes/maple-glazed-ham-generated.webp?v=individual-1",
+    "description": "A celebratory Canadian maple and mustard glazed leg ham, scored with cloves and roasted until glossy.",
+    "prepTime": "PT30M",
+    "cookTime": "PT2H",
+    "totalTime": "PT2H30M",
+    "servings": 10,
+    "calories": 480,
+    "cuisine": "Canadian",
+    "course": "Main Course",
+    "difficulty": "Easy",
+    "ingredients": [
+      "1 cooked leg ham",
+      "30 whole cloves",
+      "100 g butter",
+      "80 g brown sugar",
+      "50 g Dijon mustard",
+      "60 g pure maple syrup"
+    ],
+    "instructions": [
+      "Heat the oven to 160°C. Combine the butter, brown sugar, Dijon mustard and maple syrup in a saucepan over medium heat. Bring to a gentle boil, simmer for 15 to 20 minutes and take off the heat.",
+      "Remove the ham rind while leaving the fat intact. Score the fat in a diamond pattern, with cuts about 3 cm apart. Brush the ham with a first layer of glaze and press a whole clove into each diamond.",
+      "Roast the ham for about 90 minutes. After the first 20 minutes, brush with more glaze every 20 minutes until all the glaze has been used and the outside looks glossy.",
+      "Take the ham out of the oven and let it rest briefly before carving. Serve in slices."
+    ],
+    "tips": [
+      "Choose a ready-to-eat leg ham; this recipe glazes and reheats an already cooked ham.",
+      "Keep the fat layer beneath the rind for neat scoring and a rich glaze."
+    ],
+    "commonMistakes": [
+      "Boiling the glaze too hard can scorch the sugar; keep it at a gentle simmer.",
+      "Do not cut deeply into the meat when scoring the fat."
+    ],
+    "substitutions": [
+      "Whole-grain Dijon can stand in for smooth Dijon mustard."
+    ],
+    "storage": [
+      "Cool leftovers promptly and refrigerate in a covered container for up to 3 days.",
+      "Reheat slices thoroughly before serving."
+    ],
+    "datePublished": "2026-09-23",
+    "author": "Thejan Mahakumbura"
+  }
+]
