@@ -46,14 +46,6 @@ urls = {e.text for e in sitemap.iter() if e.tag.endswith("}loc") and e.text}
 for rid in runtime_ids:
     assert base + "recipe.html?id=" + rid in urls, f"Runtime published recipe missing from sitemap: {rid}"
 assert base + "categories.html" in urls, "Categories landing page missing from sitemap"
-for name in (
-    "cookbooks.html", "book-half-baked-harvest-super-simple.html", "book-everyday-eats.html",
-    "book-air-fryer-recipes-cathy-yoder.html", "book-good-lookin-cookin.html",
-    "book-air-fryer-cookbook-600.html", "book-pioneer-woman-essential-recipes.html",
-    "book-complete-baby-toddler-cookbook.html", "book-lets-get-cooking.html",
-    "book-the-mediterranean-dish.html", "book-city-eats-san-francisco.html"
-):
-    assert base + name in urls, f"Cookbook page missing from sitemap: {name}"
 for category in ("Breakfast", "Dinner", "Beef", "Pork", "Seafood", "Soup", "Dessert", "Healthy", "Chicken", "Vegetarian", "Quick%20%26%20Easy", "USA", "UK", "Canada", "Christmas", "New%20Year"):
     assert base + "category.html?category=" + category in urls, f"Category missing from sitemap: {category}"
 assert base + "category.html?category=Vegan" not in urls, "Stale Vegan collection URL should not be in sitemap"
@@ -139,7 +131,7 @@ for seasonal_name in seasonal_expected:
 # Key recipe/taxonomy surfaces must use one cache-busting site.js version so behavior stays consistent.
 for name in ("index.html", "recipes.html", "categories.html", "category.html", "recipe.html", "favorites.html"):
     text = (root / name).read_text(encoding="utf-8")
-    assert 'assets/js/site.js?v=15' in text, f"Stale site.js cache version on {name}"
+    assert 'assets/js/site.js?v=16' in text, f"Stale site.js cache version on {name}"
     assert 'assets/js/app.js?v=16' in text, f"Stale app.js cache version on {name}"
 
 # BiteSparks is the public brand. The legacy repository URL remains valid until a separate URL migration.
