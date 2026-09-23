@@ -7,37 +7,69 @@
       "id": "meal",
       "label": "Browse by Meal",
       "description": "Find recipes for the part of the day or meal you are planning.",
-      "categories": ["Breakfast", "Dinner"]
+      "categories": [
+        "Breakfast",
+        "Dinner"
+      ]
     },
     {
       "id": "ingredient",
       "label": "Browse by Main Ingredient",
       "description": "Start with the main protein or ingredient you want to cook.",
-      "categories": ["Chicken", "Beef", "Pork", "Seafood"]
+      "categories": [
+        "Chicken",
+        "Beef",
+        "Pork",
+        "Seafood"
+      ]
     },
     {
       "id": "dish",
       "label": "Browse by Dish Type",
       "description": "Explore familiar recipe formats and comfort-food favorites.",
-      "categories": ["Soup", "Dessert", "Pasta", "Salad", "Appetizer"]
+      "categories": [
+        "Soup",
+        "Dessert",
+        "Pasta",
+        "Salad",
+        "Appetizer"
+      ]
     },
     {
       "id": "cuisine",
       "label": "Browse by Cuisine",
       "description": "Explore recipes by culinary tradition, country, and regional cooking style.",
-      "categories": ["USA", "UK", "Canada"]
+      "categories": [
+        "USA",
+        "UK",
+        "Canada"
+      ]
     },
     {
       "id": "lifestyle",
       "label": "Browse by Lifestyle",
       "description": "Discover recipes that fit common everyday eating preferences.",
-      "categories": ["Healthy", "Vegetarian"]
+      "categories": [
+        "Healthy",
+        "Vegetarian"
+      ]
     },
     {
       "id": "convenience",
       "label": "Browse by Convenience",
       "description": "Choose recipes based on speed and practical cooking needs.",
-      "categories": ["Quick & Easy"]
+      "categories": [
+        "Quick & Easy"
+      ]
+    },
+    {
+      "id": "occasion",
+      "label": "Browse by Occasion",
+      "description": "Find recipes curated for festive gatherings and seasonal celebrations.",
+      "categories": [
+        "Christmas",
+        "New Year"
+      ]
     }
   ],
   "categories": {
@@ -142,6 +174,18 @@
       "description": "Straightforward recipes designed for busy days and efficient home cooking.",
       "icon": "⏱️",
       "showOnLanding": false
+    },
+    "Christmas": {
+      "label": "🎄 Christmas Recipes",
+      "description": "Festive mains, comforting sides, holiday bakes, puddings, pies, and treats for Christmas gatherings.",
+      "icon": "🎄",
+      "showOnLanding": true
+    },
+    "New Year": {
+      "label": "🎉 New Year Recipes",
+      "description": "Celebration dinners, party bites, desserts, and relaxed brunch favorites for welcoming the New Year.",
+      "icon": "🎉",
+      "showOnLanding": true
     }
   },
   "recipeMetadata": {

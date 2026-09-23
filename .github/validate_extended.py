@@ -54,7 +54,7 @@ for name in (
     "book-the-mediterranean-dish.html", "book-city-eats-san-francisco.html"
 ):
     assert base + name in urls, f"Cookbook page missing from sitemap: {name}"
-for category in ("Breakfast", "Dinner", "Beef", "Pork", "Seafood", "Soup", "Dessert", "Healthy", "Chicken", "Vegetarian", "Quick%20%26%20Easy", "USA", "UK", "Canada"):
+for category in ("Breakfast", "Dinner", "Beef", "Pork", "Seafood", "Soup", "Dessert", "Healthy", "Chicken", "Vegetarian", "Quick%20%26%20Easy", "USA", "UK", "Canada", "Christmas", "New%20Year"):
     assert base + "category.html?category=" + category in urls, f"Category missing from sitemap: {category}"
 assert base + "category.html?category=Vegan" not in urls, "Stale Vegan collection URL should not be in sitemap"
 
@@ -114,11 +114,33 @@ assert "Canada" in next(g["categories"] for g in json.loads((root / "data/catego
 assert (root / json.loads((root / "data/category-images.json").read_text())["Canada"]).is_file()
 assert (root / canada_recipe["image"].split("?")[0]).is_file()
 
+taxonomy = json.loads((root / "data/category-taxonomy.json").read_text(encoding="utf-8"))
+
+# Seasonal collections are curated overlays and keep every recipe's primary category intact.
+seasonal_expected = {
+    "Christmas": {'awesome-slow-cooker-pot-roast', 'chicken-and-leek-pie', 'treacle-tart', 'cinnamon-rolls', 'beef-roast-dinner', 'chocolate-fudge', 'baked-mac-and-cheese', 'apple-crumble', 'apple-pie', 'pumpkin-pie', 'chocolate-cake', 'bread-and-butter-pudding', 'beef-wellington', 'shepherds-pie', 'easy-sugar-cookies', 'classic-chocolate-chip-cookies', 'carrot-cake', 'steak-and-kidney-pie', 'pork-loin-roast', 'pork-tenderloin', 'christmas-pudding', 'mince-pies', 'yorkshire-pudding', 'cheesecake', 'maple-glazed-ham', 'breakfast-casserole', 'sausage-casserole', 'sticky-toffee-pudding', 'sunday-roast-chicken', 'sausage-breakfast-casserole', 'cottage-pie', 'classic-chicken-pot-pie', 'pecan-pie', 'red-velvet-cake'},
+    "New Year": {'bbq-ribs', 'chicken-fajitas', 'chicken-marsala', 'french-toast', 'new-york-cheesecake', 'chocolate-fudge', 'sausage-and-peppers', 'honey-glazed-chicken-breast', 'air-fryer-mozzarella-sticks', 'chocolate-cake', 'beef-wellington', 'eggs-benedict', 'marry-me-chicken', 'brownies', 'steak-bites', 'air-fryer-chicken-wings', 'chicken-parmesan', 'scotch-eggs', 'coronation-chicken', 'garlic-butter-steak', 'cheesecake', 'maple-glazed-ham', 'breakfast-casserole', 'home-fries', 'sticky-toffee-pudding', 'ham-and-cheese-casserole', 'buffalo-chicken-dip', 'baby-back-ribs', 'sausage-breakfast-casserole', 'hash-browns', 'eton-mess', 'victoria-sponge', 'pecan-pie', 'red-velvet-cake', 'beef-nachos'}
+}
+for seasonal_name, expected_ids in seasonal_expected.items():
+    assert expected_ids.issubset(runtime_ids), f"{seasonal_name} collection includes an unpublished recipe"
+    assert len(expected_ids) == len(set(expected_ids)), f"{seasonal_name} collection has duplicate IDs"
+seasonal_block = re.search(r"const seasonalRecipeCategories\s*=\s*(\{.*?\});", loader)
+assert seasonal_block, "Seasonal collection mapping missing from batch loader"
+seasonal_mapping = json.loads(seasonal_block.group(1))
+for seasonal_name, expected_ids in seasonal_expected.items():
+    actual_ids = {rid for rid, categories in seasonal_mapping.items() if seasonal_name in categories}
+    assert actual_ids == expected_ids, f"{seasonal_name} mapping does not match its approved recipe set"
+assert "Christmas" in taxonomy["categories"] and "New Year" in taxonomy["categories"]
+assert set(next(g["categories"] for g in taxonomy["groups"] if g["id"] == "occasion")) == {"Christmas", "New Year"}
+for seasonal_name in seasonal_expected:
+    image_path = root / json.loads((root / "data/category-images.json").read_text(encoding="utf-8"))[seasonal_name]
+    assert image_path.is_file(), f"Missing category image for {seasonal_name}"
+
 # Key recipe/taxonomy surfaces must use one cache-busting site.js version so behavior stays consistent.
 for name in ("index.html", "recipes.html", "categories.html", "category.html", "recipe.html", "favorites.html"):
     text = (root / name).read_text(encoding="utf-8")
-    assert 'assets/js/site.js?v=14' in text, f"Stale site.js cache version on {name}"
-    assert 'assets/js/app.js?v=15' in text, f"Stale app.js cache version on {name}"
+    assert 'assets/js/site.js?v=15' in text, f"Stale site.js cache version on {name}"
+    assert 'assets/js/app.js?v=16' in text, f"Stale app.js cache version on {name}"
 
 # BiteSparks is the public brand. The legacy repository URL remains valid until a separate URL migration.
 brand_files = (
