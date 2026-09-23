@@ -1,0 +1,682 @@
+[
+  {
+    "id": "cornish-pasty",
+    "slug": "cornish-pasty",
+    "title": "Cornish Pasty",
+    "status": "draft",
+    "category": "Dinner",
+    "tags": [
+      "UK",
+      "British",
+      "Pastry",
+      "Beef",
+      "Dinner"
+    ],
+    "country": "UK",
+    "image": "assets/images/recipes/cornish-pasty-generated.webp?v=individual-1",
+    "description": "Hand-crimped Cornish pasties with homemade butter-and-lard pastry, beef skirt, potato, swede, and onion.",
+    "prepTime": "PT1H40M",
+    "cookTime": "PT45M",
+    "totalTime": "PT2H25M",
+    "servings": 4,
+    "calories": 620,
+    "cuisine": "British",
+    "course": "Main Course",
+    "difficulty": "Medium",
+    "ingredients": [
+      "500 g strong white bread flour",
+      "10 g fine salt",
+      "125 g cold unsalted butter for pastry",
+      "125 g cold lard for pastry",
+      "150 ml cold water",
+      "400 g beef skirt, finely diced",
+      "300 g waxy potatoes, diced",
+      "150 g swede, diced",
+      "100 g onion, diced",
+      "2 g ground white pepper",
+      "40 g butter for filling",
+      "1 egg, beaten for glaze"
+    ],
+    "instructions": [
+      "Rub the cold pastry butter and lard into the flour and salt. Mix in the cold water, knead just until the pastry holds together, divide into four and chill for at least one hour.",
+      "Dice beef, potatoes, swede and onion into small even pieces. Season the vegetables and beef with white pepper.",
+      "Heat the oven to 170°C. Roll each pastry portion to a circle about 3 mm thick and divide the raw filling evenly between them.",
+      "Dot each filling with the 40 g of filling butter. Fold pastry over, crimp the edges firmly, cut a small steam vent and brush with beaten egg.",
+      "Bake on a lined tray for around 45 minutes, until the crust is golden and the filling cooked through. Rest for 10 minutes before serving."
+    ],
+    "tips": [
+      "Dice the filling small so it cooks inside the pastry.",
+      "Crimp firmly to seal the pasty edge.",
+      "Bake until deeply golden and let the filling settle before eating."
+    ],
+    "commonMistakes": [
+      "Warm pastry tears when folded; chill it before rolling.",
+      "Large filling pieces can remain firm while the pastry browns.",
+      "A poorly crimped edge leaks juices during baking."
+    ],
+    "substitutions": [
+      "Use vegetable shortening in place of pastry lard if needed.",
+      "Use rutabaga in place of swede.",
+      "Use beef skirt for the traditional texture."
+    ],
+    "storage": [
+      "Cool promptly, cover and refrigerate for up to 3 days.",
+      "Reheat in an oven until the filling is piping hot."
+    ],
+    "datePublished": "2026-09-21",
+    "author": "Thejan Mahakumbura"
+  },
+  {
+    "id": "sausage-and-mash",
+    "slug": "sausage-and-mash",
+    "title": "Sausage and Mash",
+    "status": "draft",
+    "category": "Pork",
+    "tags": [
+      "UK",
+      "British",
+      "Sausage",
+      "Potato",
+      "Dinner"
+    ],
+    "country": "UK",
+    "image": "assets/images/recipes/sausage-and-mash-generated.webp?v=individual-1",
+    "description": "Browned pork sausages served with creamy mashed potatoes and a rich onion gravy for a classic British comfort meal.",
+    "prepTime": "PT15M",
+    "cookTime": "PT35M",
+    "totalTime": "PT50M",
+    "servings": 2,
+    "calories": 760,
+    "cuisine": "British",
+    "course": "Main Course",
+    "difficulty": "Easy",
+    "ingredients": [
+      "6 English pork sausages",
+      "450 g potatoes, peeled and chunked",
+      "2 tbsp milk",
+      "2 tbsp butter for mash",
+      "500 ml beef stock",
+      "1 tbsp butter for gravy",
+      "1 tbsp plain flour",
+      "2 medium onions, sliced",
+      "1 1/2 tsp sugar",
+      "4 tsp Worcestershire sauce",
+      "2 sprigs thyme",
+      "Salt and white pepper to taste",
+      "Oil for frying the sausages"
+    ],
+    "instructions": [
+      "Peel and chunk the potatoes; slice the onions. Put the potatoes in salted water and simmer until they yield easily to a fork.",
+      "While the potatoes cook, brown the sausages in a little oil over medium heat, turning until evenly cooked through. Keep warm.",
+      "Melt the gravy butter in the sausage pan and slowly soften the onions until golden. Stir in the sugar and thyme.",
+      "Sprinkle flour over the onions and cook briefly. Gradually add the beef stock, stirring until smooth; add Worcestershire sauce and simmer until the gravy coats a spoon.",
+      "Drain the potatoes well. Mash with the milk and butter, then season with salt and white pepper.",
+      "Serve three sausages per person over warm mash with onion gravy spooned on top."
+    ],
+    "tips": [
+      "Use a heavy pan so the sausages brown evenly.",
+      "Warm the milk before adding it to mash.",
+      "Cook onions slowly for a deeper gravy."
+    ],
+    "commonMistakes": [
+      "Undercooked sausages are unsafe; cook thoroughly.",
+      "Rushing the onions leaves the gravy sharp.",
+      "Too much liquid makes the mash watery."
+    ],
+    "substitutions": [
+      "Use Cumberland sausages for a traditional flavor.",
+      "Use chicken stock for a lighter gravy.",
+      "Use olive oil instead of vegetable oil."
+    ],
+    "storage": [
+      "Refrigerate sausages, mash and gravy separately for up to 2 days.",
+      "Reheat each component thoroughly before serving."
+    ],
+    "datePublished": "2026-09-21",
+    "author": "Thejan Mahakumbura"
+  },
+  {
+    "id": "bangers-and-mash",
+    "slug": "bangers-and-mash",
+    "title": "Bangers and Mash",
+    "status": "draft",
+    "category": "Pork",
+    "tags": [
+      "UK",
+      "British",
+      "Sausage",
+      "Potato",
+      "Pub Food"
+    ],
+    "country": "UK",
+    "image": "assets/images/recipes/bangers-and-mash-generated.webp?v=individual-1",
+    "description": "Classic bangers and mash with juicy browned sausages, buttery mashed potatoes, and glossy onion gravy.",
+    "prepTime": "PT15M",
+    "cookTime": "PT35M",
+    "totalTime": "PT50M",
+    "servings": 4,
+    "calories": 690,
+    "cuisine": "British",
+    "course": "Main Course",
+    "difficulty": "Easy",
+    "ingredients": [
+      "8 pork sausages",
+      "2 tbsp olive oil",
+      "900 g Yukon Gold potatoes, peeled and cubed",
+      "120 ml milk, warmed",
+      "4 tbsp unsalted butter",
+      "1 large onion, thinly sliced",
+      "1 tbsp plain flour",
+      "240 ml beef or chicken broth",
+      "1 tsp Worcestershire sauce (optional)",
+      "Salt and pepper to taste",
+      "Fresh parsley for garnish"
+    ],
+    "instructions": [
+      "Boil the cubed potatoes in salted water until tender. Warm the milk separately.",
+      "Heat the olive oil in a skillet and cook the sausages, turning regularly, until browned and cooked through. Transfer to a warm plate.",
+      "Cook the sliced onion in the same pan until soft and lightly browned. Stir in the flour for one minute.",
+      "Gradually stir in the broth and optional Worcestershire sauce. Simmer until the onion gravy thickens; season to taste.",
+      "Drain the potatoes and mash thoroughly with the warm milk and butter. Season with salt and pepper.",
+      "Divide the mash between plates, add the sausages, and pour over the onion gravy. Finish with parsley."
+    ],
+    "tips": [
+      "Do not pierce the sausages while browning.",
+      "Mash potatoes while hot for the smoothest texture.",
+      "Whisk flour into the onions before adding stock."
+    ],
+    "commonMistakes": [
+      "Turning sausages too often prevents browning.",
+      "Cold milk cools the mash and makes it stiff.",
+      "Adding broth too quickly can leave flour lumps in the gravy."
+    ],
+    "substitutions": [
+      "Use beef dripping instead of oil for pub flavor.",
+      "Use Dijon mustard if English mustard is unavailable.",
+      "Use vegetarian sausages for a meat-free version."
+    ],
+    "storage": [
+      "Refrigerate the cooked components separately for up to 2 days.",
+      "Reheat thoroughly, loosening the gravy with a splash of water if necessary."
+    ],
+    "datePublished": "2026-09-21",
+    "author": "Thejan Mahakumbura"
+  },
+  {
+    "id": "toad-in-the-hole",
+    "slug": "toad-in-the-hole",
+    "title": "Toad in the Hole",
+    "status": "draft",
+    "category": "Pork",
+    "tags": [
+      "UK",
+      "British",
+      "Sausage",
+      "Yorkshire Pudding",
+      "Dinner"
+    ],
+    "country": "UK",
+    "image": "assets/images/recipes/toad-in-the-hole-generated.webp?v=individual-1",
+    "description": "Pork sausages baked in a puffed Yorkshire pudding batter and served with savory onion gravy.",
+    "prepTime": "PT15M",
+    "cookTime": "PT35M",
+    "totalTime": "PT50M",
+    "servings": 4,
+    "calories": 620,
+    "cuisine": "British",
+    "course": "Main Course",
+    "difficulty": "Medium",
+    "ingredients": [
+      "2 tbsp sunflower oil",
+      "8 pork sausages",
+      "4 sprigs fresh rosemary",
+      "2 large red onions, thinly sliced",
+      "2 garlic cloves, thinly sliced",
+      "2 knobs unsalted butter",
+      "6 tbsp balsamic vinegar",
+      "1 vegetable stock cube",
+      "285 ml milk",
+      "115 g plain flour",
+      "3 large eggs",
+      "A pinch of sea salt"
+    ],
+    "instructions": [
+      "Whisk the milk, flour, eggs and a pinch of sea salt into a smooth batter; let it stand while the oven heats.",
+      "Heat the oven to 240°C. Add the sunflower oil to a metal roasting tin and heat until very hot, with a larger tray beneath to catch spills.",
+      "Carefully add sausages and allow them to begin browning. Pour the batter around them, add rosemary and return to the oven.",
+      "Bake without opening the oven door until the batter is puffed and golden and sausages are cooked through.",
+      "Meanwhile, cook the sliced red onions and garlic in butter until soft. Add balsamic vinegar and reduce it by half, then add the stock cube and a little water to make a glossy gravy.",
+      "Serve the toad in the hole immediately with the onion gravy."
+    ],
+    "tips": [
+      "Rest the batter while the sausages start cooking.",
+      "Use a very hot dish for the strongest rise.",
+      "Serve immediately before the pudding softens."
+    ],
+    "commonMistakes": [
+      "A cool tin stops the batter rising.",
+      "Opening the oven door early can deflate the pudding.",
+      "A crowded tin leaves the batter undercooked around the sausages."
+    ],
+    "substitutions": [
+      "Use a good quality pork sausage.",
+      "Use vegetable oil if sunflower oil is unavailable.",
+      "Use fresh thyme if rosemary is unavailable."
+    ],
+    "storage": [
+      "Best eaten immediately while crisp.",
+      "Refrigerate leftovers for up to 2 days and reheat in a hot oven until the sausage is piping hot."
+    ],
+    "datePublished": "2026-09-21",
+    "author": "Thejan Mahakumbura"
+  },
+  {
+    "id": "beef-roast-dinner",
+    "slug": "beef-roast-dinner",
+    "title": "Beef Roast Dinner",
+    "status": "draft",
+    "category": "Beef",
+    "tags": [
+      "UK",
+      "British",
+      "Roast",
+      "Sunday Dinner",
+      "Beef"
+    ],
+    "country": "UK",
+    "image": "assets/images/recipes/beef-roast-dinner-generated.webp?v=individual-1",
+    "description": "A traditional roast beef dinner with homemade Yorkshire puddings and pan gravy; serve with separately prepared roast potatoes and seasonal vegetables.",
+    "prepTime": "PT10M",
+    "cookTime": "PT1H20M",
+    "totalTime": "PT1H50M",
+    "servings": 6,
+    "calories": 760,
+    "cuisine": "British",
+    "course": "Main Course",
+    "difficulty": "Medium",
+    "ingredients": [
+      "1.5 kg rib of beef or roasting joint",
+      "1/2 tsp mustard powder",
+      "1/2 tsp ground black pepper for beef",
+      "1/2 tsp salt for beef",
+      "1 carrot for roasting base",
+      "1 small onion for roasting base",
+      "1 celery stick for roasting base",
+      "200 ml boiling water",
+      "100 g plain flour for Yorkshire puddings",
+      "3 eggs",
+      "100 ml combined milk and water for batter",
+      "1/2 tsp salt for batter",
+      "2 tsp plain flour to thicken gravy",
+      "A little goose fat, lard, or oil for the pudding tin"
+    ],
+    "instructions": [
+      "Heat the oven to 230°C. Rub the beef with mustard powder, salt and pepper. Place the carrot, onion and celery in a roasting pan and set the beef on top with the boiling water.",
+      "Roast at high heat for 20 minutes, then reduce the oven to 180°C. Cook to your preferred doneness, checking the center with a meat thermometer.",
+      "Rest the beef under loose foil for 20–30 minutes. Raise the oven heat again while making the Yorkshire pudding batter.",
+      "Whisk the pudding flour, eggs, batter salt, and combined milk and water to a smooth, pourable consistency. Heat a little fat in six cups of a metal muffin tin.",
+      "Pour batter into the hot tin and bake 15–20 minutes without opening the oven until risen and browned.",
+      "Strain the roasting juices into a saucepan, whisk in the gravy flour, and heat until slightly thickened. Slice the rested beef and serve with hot Yorkshire puddings and gravy."
+    ],
+    "tips": [
+      "Bring beef close to room temperature before roasting.",
+      "Rest beef before slicing to keep it juicy.",
+      "Roast potatoes separately for crisp edges."
+    ],
+    "commonMistakes": [
+      "Slicing immediately after roasting lets the juices run out.",
+      "Pouring Yorkshire batter into cool fat prevents it rising.",
+      "Opening the oven during pudding baking makes it collapse."
+    ],
+    "substitutions": [
+      "Use another suitable roasting joint in place of rib of beef.",
+      "Use goose fat, lard, or neutral oil in the pudding tin.",
+      "Serve with separately prepared roast potatoes and seasonal vegetables."
+    ],
+    "storage": [
+      "Refrigerate beef, gravy and puddings separately for up to 3 days.",
+      "Reheat beef and gravy thoroughly; crisp puddings briefly in a hot oven."
+    ],
+    "datePublished": "2026-09-21",
+    "author": "Thejan Mahakumbura"
+  },
+  {
+    "id": "sunday-roast-chicken",
+    "slug": "sunday-roast-chicken",
+    "title": "Sunday Roast Chicken",
+    "status": "draft",
+    "category": "Chicken",
+    "tags": [
+      "UK",
+      "British",
+      "Roast",
+      "Sunday Dinner",
+      "Chicken"
+    ],
+    "country": "UK",
+    "image": "assets/images/recipes/sunday-roast-chicken-generated.webp?v=individual-1",
+    "description": "A simple British Sunday roast chicken with pan gravy; serve alongside your preferred roast potatoes and vegetables.",
+    "prepTime": "PT25M",
+    "cookTime": "PT1H30M",
+    "totalTime": "PT1H55M",
+    "servings": 4,
+    "calories": 480,
+    "cuisine": "British",
+    "course": "Main Course",
+    "difficulty": "Medium",
+    "ingredients": [
+      "1 whole chicken, 1.75–2 kg",
+      "1 tbsp olive oil",
+      "1/2 tsp salt",
+      "1/2 tsp black pepper",
+      "1/4 tsp dried thyme",
+      "1/2 lemon, cut into wedges (optional)",
+      "Pan juices from the roasted chicken",
+      "3 chicken stock cubes",
+      "720 ml hot vegetable cooking stock",
+      "1/4 tsp salt for gravy",
+      "1/4 tsp black pepper for gravy",
+      "2 tbsp cornflour",
+      "5 tbsp cold water"
+    ],
+    "instructions": [
+      "Heat the oven to 180°C. Pat the chicken dry and rub with olive oil, salt, pepper and dried thyme. Place the lemon wedges in the cavity if using.",
+      "Roast on a tray for about 45 minutes per kilogram plus another 20 minutes. Check the thickest part reaches at least 75°C before removing it.",
+      "Rest the chicken while making the gravy. Pour the meat juices into a saucepan, add the crumbled stock cubes and hot vegetable cooking stock, and scrape up the browned bits.",
+      "Whisk the cornflour with cold water, then add slowly to the simmering gravy until thickened. Season with the separate gravy salt and pepper.",
+      "Carve the rested chicken and serve with the gravy and your choice of roast vegetables."
+    ],
+    "tips": [
+      "Dry the chicken skin before adding butter and oil.",
+      "Roast until the juices run clear at the thickest part.",
+      "Rest the bird before carving."
+    ],
+    "commonMistakes": [
+      "Cooking only by time can leave the thickest part underdone; check the temperature.",
+      "Skipping the rest makes the carved meat lose juices.",
+      "Adding dry cornflour directly to gravy creates lumps."
+    ],
+    "substitutions": [
+      "Omit the lemon if preferred.",
+      "Use hot vegetable cooking liquid as the gravy stock.",
+      "Serve with separately prepared roast potatoes or vegetables."
+    ],
+    "storage": [
+      "Refrigerate cooked chicken and gravy separately for up to 3 days.",
+      "Reheat until piping hot throughout."
+    ],
+    "datePublished": "2026-09-21",
+    "author": "Thejan Mahakumbura"
+  },
+  {
+    "id": "yorkshire-pudding",
+    "slug": "yorkshire-pudding",
+    "title": "Yorkshire Pudding",
+    "status": "draft",
+    "category": "Appetizer",
+    "tags": [
+      "UK",
+      "British",
+      "Side Dish",
+      "Roast Dinner"
+    ],
+    "country": "UK",
+    "image": "assets/images/recipes/yorkshire-pudding-generated.webp?v=individual-1",
+    "description": "Tall, crisp Yorkshire puddings made from eggs, flour, milk, salt, and hot fat for a classic roast dinner side.",
+    "prepTime": "PT20M",
+    "cookTime": "PT20M",
+    "totalTime": "PT40M",
+    "servings": 12,
+    "calories": 112,
+    "cuisine": "British",
+    "course": "Side Dish",
+    "difficulty": "Medium",
+    "ingredients": [
+      "120 g plain flour",
+      "1 tsp salt",
+      "300 ml whole milk",
+      "3 large eggs",
+      "60 ml beef drippings, lard, or vegetable oil"
+    ],
+    "instructions": [
+      "Whisk the flour and salt in one bowl. Whisk the eggs and whole milk in another, then gradually combine into a smooth batter. Refrigerate while the oven heats.",
+      "Heat the oven to 220°C. Add about one teaspoon of drippings or oil to each cup of a 12-cup metal muffin tin and heat the tin for about 10 minutes.",
+      "Stir the cold batter, then swiftly pour roughly 60 ml into each hot cup. Return the tin to the oven immediately.",
+      "Bake for about 20 minutes without opening the oven until tall, crisp and golden. Serve at once."
+    ],
+    "tips": [
+      "Rest the batter for a lighter texture.",
+      "Heat the fat until very hot before pouring batter.",
+      "Do not open the oven during the first rise."
+    ],
+    "commonMistakes": [
+      "Putting batter into cool oil gives flat puddings.",
+      "Opening the oven door early lets steam escape.",
+      "Overfilling each tin cup stops the center setting."
+    ],
+    "substitutions": [
+      "Use vegetable oil instead of beef dripping.",
+      "Use semi-skimmed milk if needed.",
+      "Bake in a muffin tin for individual puddings."
+    ],
+    "storage": [
+      "Best served as soon as baked.",
+      "Refrigerate leftovers for up to 3 days and re-crisp in a hot oven."
+    ],
+    "datePublished": "2026-09-21",
+    "author": "Thejan Mahakumbura"
+  },
+  {
+    "id": "beef-stew",
+    "slug": "beef-stew",
+    "title": "Beef Stew",
+    "status": "draft",
+    "category": "Beef",
+    "tags": [
+      "UK",
+      "British",
+      "Stew",
+      "Comfort Food",
+      "Dinner"
+    ],
+    "country": "UK",
+    "image": "assets/images/recipes/beef-stew-generated.webp?v=individual-1",
+    "description": "Slow-cooked Scottish beef stew with potatoes, swede, carrots, red wine, and a rich savory gravy.",
+    "prepTime": "PT10M",
+    "cookTime": "PT4H",
+    "totalTime": "PT4H10M",
+    "servings": 6,
+    "calories": 548,
+    "cuisine": "Scottish",
+    "course": "Main Course",
+    "difficulty": "Easy",
+    "ingredients": [
+      "2 tbsp vegetable oil",
+      "1 kg braising beef, cut into bite-size chunks",
+      "2 tbsp plain flour",
+      "1/4 tsp salt and 1/4 tsp pepper for flour",
+      "2 large onions, chopped",
+      "3 garlic cloves, crushed",
+      "2 tbsp red currant jelly or cranberry sauce",
+      "500 ml red wine",
+      "2 large carrots, chopped",
+      "2 medium potatoes, chopped",
+      "1/2 small swede, chopped",
+      "700 ml beef stock",
+      "2 tbsp tomato purée",
+      "1 tbsp Worcestershire sauce",
+      "3 bay leaves",
+      "2 tsp dark brown sugar",
+      "1/2 tsp salt",
+      "1/2 tsp crushed black pepper",
+      "Fresh parsley and thyme to serve"
+    ],
+    "instructions": [
+      "Heat the oven to 160°C fan. Mix the flour with the first measure of salt and pepper, then coat the beef lightly.",
+      "Heat the oil in a lidded ovenproof pot. Brown the beef in batches so the pieces sear instead of steaming.",
+      "Add the onions and cook until softened; stir in the garlic and red currant jelly. Pour in the wine and simmer for five minutes.",
+      "Add carrots, potatoes, swede, stock, tomato purée, Worcestershire sauce, bay leaves, sugar, and remaining salt and pepper.",
+      "Bring to a gentle simmer. Cover and cook in the oven for three to four hours, stirring occasionally, until the beef is tender.",
+      "Remove the bay leaves. Spoon into bowls and finish with parsley and thyme."
+    ],
+    "tips": [
+      "Brown beef in batches for a deeper stew flavor.",
+      "Keep the simmer low so the meat tenderizes.",
+      "Add potatoes large enough to hold their shape."
+    ],
+    "commonMistakes": [
+      "Crowding the pan steams rather than browns the beef.",
+      "Too little braising time leaves the meat chewy.",
+      "A hard boil reduces the sauce too quickly."
+    ],
+    "substitutions": [
+      "Use chuck roast instead of stewing beef.",
+      "Use parsnips instead of some carrots.",
+      "Use gluten-free flour if needed."
+    ],
+    "storage": [
+      "Cool promptly and refrigerate for up to 3 days.",
+      "Reheat until piping hot; freeze cooled portions for up to 3 months."
+    ],
+    "datePublished": "2026-09-21",
+    "author": "Thejan Mahakumbura"
+  },
+  {
+    "id": "irish-style-stew",
+    "slug": "irish-style-stew",
+    "title": "Irish-style Stew",
+    "status": "draft",
+    "category": "Dinner",
+    "tags": [
+      "UK",
+      "Irish-style",
+      "Stew",
+      "Lamb",
+      "Comfort Food"
+    ],
+    "country": "UK",
+    "image": "assets/images/recipes/irish-style-stew-generated.webp?v=individual-1",
+    "description": "An Irish family lamb stew with carrots, celery, onion, and a layer of sliced potatoes baked until tender.",
+    "prepTime": "PT30M",
+    "cookTime": "PT1H30M",
+    "totalTime": "PT2H",
+    "servings": 6,
+    "calories": 540,
+    "cuisine": "Irish-style",
+    "course": "Main Course",
+    "difficulty": "Easy",
+    "ingredients": [
+      "2 tbsp rapeseed oil",
+      "1 kg lamb shoulder, trimmed and cut into chunks",
+      "2 onions, roughly chopped",
+      "3 celery stalks, sliced",
+      "4 large carrots, chopped",
+      "1 bay leaf",
+      "1 litre beef or lamb stock",
+      "900 g potatoes, peeled and sliced",
+      "A knob of butter",
+      "Sea salt and ground black pepper to taste"
+    ],
+    "instructions": [
+      "Heat one tablespoon of oil in a flameproof casserole. Brown the lamb in batches, then transfer to a plate.",
+      "Add the remaining oil, onions, celery and carrots to the pot. Cook until softened, about five minutes. Heat the oven to 160°C.",
+      "Return the lamb to the pot with the bay leaf and stock. Season gently and bring to a simmer.",
+      "Arrange the sliced potatoes over the stew and dot with butter. Cover and bake for about 90 minutes until the lamb is tender.",
+      "Uncover for another 10 minutes to color the potatoes. Remove the bay leaf and serve warm."
+    ],
+    "tips": [
+      "Use shoulder for the best tender texture.",
+      "Skim the broth if needed for a cleaner finish.",
+      "Add parsley at the end for freshness."
+    ],
+    "commonMistakes": [
+      "Boiling vigorously can toughen lamb and break up potatoes.",
+      "Thick potato slices may remain firm after the lamb is tender.",
+      "Skipping the uncovered finish leaves the potato top pale."
+    ],
+    "substitutions": [
+      "Use beef if lamb is unavailable.",
+      "Use chicken stock instead of lamb stock.",
+      "Use pearl barley for a heartier stew."
+    ],
+    "storage": [
+      "Cool promptly and refrigerate for up to 3 days.",
+      "Reheat until piping hot; freeze portions for up to 2 months."
+    ],
+    "datePublished": "2026-09-21",
+    "author": "Thejan Mahakumbura"
+  },
+  {
+    "id": "chicken-korma",
+    "slug": "chicken-korma",
+    "title": "Chicken Korma",
+    "status": "draft",
+    "category": "Chicken",
+    "tags": [
+      "UK",
+      "British Indian",
+      "Curry",
+      "Chicken",
+      "Dinner"
+    ],
+    "country": "UK",
+    "image": "assets/images/recipes/chicken-korma-generated.webp?v=individual-1",
+    "description": "A mild British Indian chicken korma with coconut cream, yogurt, almonds, and warm spices.",
+    "prepTime": "PT10M",
+    "cookTime": "PT20M",
+    "totalTime": "PT30M",
+    "servings": 4,
+    "calories": 590,
+    "cuisine": "British Indian",
+    "course": "Main Course",
+    "difficulty": "Easy",
+    "ingredients": [
+      "2 tbsp ghee or sunflower oil",
+      "1 onion, finely chopped",
+      "525 g chicken breast, cubed",
+      "2 garlic cloves, minced",
+      "2 tsp minced ginger",
+      "1 tsp ground cumin",
+      "1 1/2 tsp ground coriander",
+      "1 1/2 tsp garam masala",
+      "1/2 tsp mild chilli powder",
+      "1/2 tsp turmeric",
+      "1/4 tsp salt",
+      "1/4 tsp white pepper",
+      "2 tbsp tomato purée",
+      "120 ml full-fat plain yogurt",
+      "120 ml coconut cream",
+      "2 tbsp ground almonds",
+      "1 tbsp sugar",
+      "60 ml double cream",
+      "2 tbsp chopped fresh coriander"
+    ],
+    "instructions": [
+      "Heat the ghee or oil in a wide pan. Soften the finely chopped onion for about five minutes.",
+      "Add the cubed chicken breast and cook, turning, until its exterior is opaque. Stir in garlic, ginger, spices, salt, pepper and tomato purée.",
+      "Cook the spice mixture briefly, then stir in yogurt, coconut cream, ground almonds and sugar. Simmer gently for six to eight minutes until the chicken is cooked through.",
+      "Stir in the double cream off the heat. Scatter fresh coriander over the curry and serve."
+    ],
+    "tips": [
+      "Use gentle heat once yogurt and cream are added.",
+      "Ground almonds thicken the sauce and keep it mild.",
+      "Rest for a few minutes before serving with rice."
+    ],
+    "commonMistakes": [
+      "Boiling the yogurt sauce hard can cause it to split.",
+      "Undercooking the chicken is unsafe; check it is cooked through.",
+      "Adding cream before reducing the heat can make the sauce grainy."
+    ],
+    "substitutions": [
+      "Use sunflower oil in place of ghee.",
+      "Omit mild chilli powder for a milder curry.",
+      "Use blanched almond flour in place of ground almonds."
+    ],
+    "storage": [
+      "Refrigerate cooled curry for up to 2 days.",
+      "Reheat gently until the chicken is piping hot; do not repeatedly reheat."
+    ],
+    "datePublished": "2026-09-21",
+    "author": "Thejan Mahakumbura"
+  }
+]

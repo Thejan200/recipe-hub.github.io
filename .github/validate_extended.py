@@ -94,10 +94,12 @@ uk_ids = {
     "christmas-pudding", "mince-pies", "treacle-tart", "rice-pudding", "bread-and-butter-pudding",
     "chicken-balti", "beef-madras", "lamb-curry", "sausage-casserole", "bubble-and-squeak",
     "welsh-rarebit", "scotch-eggs", "full-english-breakfast", "kedgeree", "fish-and-chips",
-    "coronation-chicken", "ploughmans-lunch", "bread-pudding", "sticky-toffee-pudding"
+    "coronation-chicken", "ploughmans-lunch", "bread-pudding", "sticky-toffee-pudding",
+    "cornish-pasty", "sausage-and-mash", "bangers-and-mash", "toad-in-the-hole", "beef-roast-dinner",
+    "sunday-roast-chicken", "yorkshire-pudding", "beef-stew", "irish-style-stew", "chicken-korma"
 }
 assert uk_ids.issubset(runtime_ids), "British classics batches must be runtime-published"
-assert len(uk_ids) == 35, "British classics collection must contain the 23 approved recipes"
+assert len(uk_ids) == 45, "British classics collection must contain 45 approved recipes"
 for rid in uk_ids:
     recipe = by_id[rid]
     assert recipe.get("country") == "UK", f"British classic {rid} must declare country UK"
