@@ -1,0 +1,541 @@
+[
+  {
+    "status": "draft",
+    "country": "Canada",
+    "cuisine": "Canadian",
+    "author": "Thejan Mahakumbura",
+    "datePublished": "2026-09-27",
+    "difficulty": "Easy",
+    "id": "salmon-cakes",
+    "slug": "salmon-cakes",
+    "title": "Salmon Cakes",
+    "category": "Seafood",
+    "tags": [
+      "Canada",
+      "Seafood",
+      "Dinner"
+    ],
+    "image": "assets/images/recipes/salmon-cakes-generated.webp?v=individual-1",
+    "description": "Crisp salmon cakes with herbs and a tender centre.",
+    "ingredients": [
+      "14.75 ounces canned wild pink salmon, drained",
+      "2 large eggs, lightly beaten",
+      "1/2 cup plain bread crumbs",
+      "1/4 cup mayonnaise",
+      "1 tablespoon Dijon mustard",
+      "1 tablespoon lemon juice",
+      "2 tablespoons chopped fresh parsley",
+      "2 tablespoons neutral oil",
+      "salt and black pepper"
+    ],
+    "instructions": [
+      "Drain the salmon well and remove any large bones or skin.",
+      "Combine salmon, eggs, breadcrumbs, mayonnaise, mustard, lemon juice and parsley in a bowl.",
+      "Season lightly, then mix just until the mixture holds together.",
+      "Shape into eight even patties and chill for 10 minutes.",
+      "Heat oil in a skillet over medium heat.",
+      "Cook patties without crowding for 3 to 4 minutes per side.",
+      "Turn only when the underside is deeply golden.",
+      "Drain briefly and serve hot with lemon."
+    ],
+    "course": "Main Course",
+    "prepTime": "PT15M",
+    "cookTime": "PT10M",
+    "totalTime": "PT25M",
+    "servings": 4,
+    "calories": 290,
+    "tips": [
+      "Measure and prepare every ingredient before heating the pan.",
+      "Taste and adjust seasoning near the end of cooking.",
+      "Let the finished dish rest briefly before serving."
+    ],
+    "commonMistakes": [
+      "Rushing the browning or simmering stage.",
+      "Overcrowding the pan or pot.",
+      "Skipping the final seasoning check."
+    ],
+    "substitutions": [
+      "Use an equivalent stock when the listed stock is unavailable.",
+      "Use a similar fresh herb if the listed herb is unavailable.",
+      "Choose a comparable cut or seafood of the same cooking time."
+    ],
+    "storage": [
+      "Cool leftovers within two hours and refrigerate in an airtight container.",
+      "Reheat gently until piping hot throughout.",
+      "Freeze only fully cooled portions in freezer-safe containers."
+    ]
+  },
+  {
+    "status": "draft",
+    "country": "Canada",
+    "cuisine": "Canadian",
+    "author": "Thejan Mahakumbura",
+    "datePublished": "2026-09-27",
+    "difficulty": "Easy",
+    "id": "salmon-chowder",
+    "slug": "salmon-chowder",
+    "title": "Salmon Chowder",
+    "category": "Soup",
+    "tags": [
+      "Canada",
+      "Seafood",
+      "Soup",
+      "Dinner"
+    ],
+    "image": "assets/images/recipes/salmon-chowder-generated.webp?v=individual-1",
+    "description": "Creamy smoked salmon chowder with bacon, corn and herbs.",
+    "ingredients": [
+      "6 slices bacon, diced",
+      "1 onion, diced",
+      "2 carrots, diced",
+      "2 celery ribs, diced",
+      "3 garlic cloves, minced",
+      "4 cups chicken broth",
+      "1 cup mini gnocchi",
+      "1 cup corn kernels",
+      "8 ounces hot-smoked salmon",
+      "1 cup whole milk",
+      "1/2 cup heavy cream",
+      "1/2 cup grated Parmesan",
+      "fresh dill, parsley and lemon"
+    ],
+    "instructions": [
+      "Cook bacon until crisp and reserve it.",
+      "Soften onion, carrot and celery in the rendered fat.",
+      "Stir in garlic and cook until fragrant.",
+      "Add broth and bring the soup to a gentle simmer.",
+      "Cook until the vegetables are tender.",
+      "Add gnocchi and cook according to its package timing.",
+      "Fold in corn, salmon, milk, cream and Parmesan.",
+      "Warm gently without boiling, then finish with herbs and lemon."
+    ],
+    "course": "Soup",
+    "prepTime": "PT20M",
+    "cookTime": "PT30M",
+    "totalTime": "PT50M",
+    "servings": 6,
+    "calories": 510,
+    "tips": [
+      "Measure and prepare every ingredient before heating the pan.",
+      "Taste and adjust seasoning near the end of cooking.",
+      "Let the finished dish rest briefly before serving."
+    ],
+    "commonMistakes": [
+      "Rushing the browning or simmering stage.",
+      "Overcrowding the pan or pot.",
+      "Skipping the final seasoning check."
+    ],
+    "substitutions": [
+      "Use an equivalent stock when the listed stock is unavailable.",
+      "Use a similar fresh herb if the listed herb is unavailable.",
+      "Choose a comparable cut or seafood of the same cooking time."
+    ],
+    "storage": [
+      "Cool leftovers within two hours and refrigerate in an airtight container.",
+      "Reheat gently until piping hot throughout.",
+      "Freeze only fully cooled portions in freezer-safe containers."
+    ]
+  },
+  {
+    "status": "draft",
+    "country": "Canada",
+    "cuisine": "Canadian",
+    "author": "Thejan Mahakumbura",
+    "datePublished": "2026-09-27",
+    "difficulty": "Easy",
+    "id": "seafood-chowder",
+    "slug": "seafood-chowder",
+    "title": "Seafood Chowder",
+    "category": "Soup",
+    "tags": [
+      "Canada",
+      "Seafood",
+      "Soup",
+      "Dinner"
+    ],
+    "image": "assets/images/recipes/seafood-chowder-generated.webp?v=individual-1",
+    "description": "A creamy Nova Scotia-style seafood chowder with fish and shellfish.",
+    "ingredients": [
+      "2 tablespoons butter",
+      "1 onion, diced",
+      "2 celery stalks, diced",
+      "2 medium potatoes, diced",
+      "3 cups fish stock",
+      "1 cup heavy cream",
+      "1 cup milk",
+      "8 ounces white fish, cubed",
+      "8 ounces shrimp, peeled",
+      "8 ounces scallops",
+      "fresh parsley",
+      "salt and black pepper"
+    ],
+    "instructions": [
+      "Melt butter in a heavy pot over medium heat.",
+      "Cook onion and celery until softened.",
+      "Add potatoes and fish stock, then simmer until almost tender.",
+      "Stir in cream and milk and keep the heat gentle.",
+      "Add the fish and cook until nearly opaque.",
+      "Add shrimp and scallops in the final minutes.",
+      "Season and simmer only until all seafood is just cooked.",
+      "Rest for five minutes, then serve with parsley."
+    ],
+    "course": "Soup",
+    "prepTime": "PT20M",
+    "cookTime": "PT30M",
+    "totalTime": "PT50M",
+    "servings": 6,
+    "calories": 430,
+    "tips": [
+      "Measure and prepare every ingredient before heating the pan.",
+      "Taste and adjust seasoning near the end of cooking.",
+      "Let the finished dish rest briefly before serving."
+    ],
+    "commonMistakes": [
+      "Rushing the browning or simmering stage.",
+      "Overcrowding the pan or pot.",
+      "Skipping the final seasoning check."
+    ],
+    "substitutions": [
+      "Use an equivalent stock when the listed stock is unavailable.",
+      "Use a similar fresh herb if the listed herb is unavailable.",
+      "Choose a comparable cut or seafood of the same cooking time."
+    ],
+    "storage": [
+      "Cool leftovers within two hours and refrigerate in an airtight container.",
+      "Reheat gently until piping hot throughout.",
+      "Freeze only fully cooled portions in freezer-safe containers."
+    ]
+  },
+  {
+    "status": "draft",
+    "country": "Canada",
+    "cuisine": "Canadian",
+    "author": "Thejan Mahakumbura",
+    "datePublished": "2026-09-27",
+    "difficulty": "Easy",
+    "id": "french-canadian-pea-soup",
+    "slug": "french-canadian-pea-soup",
+    "title": "French Canadian Pea Soup",
+    "category": "Soup",
+    "tags": [
+      "Canada",
+      "Soup",
+      "Pork",
+      "Dinner"
+    ],
+    "image": "assets/images/recipes/french-canadian-pea-soup-generated.webp?v=individual-1",
+    "description": "Traditional French Canadian yellow pea soup with ham.",
+    "ingredients": [
+      "1 pound dried yellow peas",
+      "1/2 pound salt pork or ham",
+      "3 carrots, diced",
+      "1 onion, diced",
+      "2 bay leaves",
+      "1/4 cup chopped fresh parsley",
+      "10 cups water",
+      "salt and black pepper"
+    ],
+    "instructions": [
+      "Rinse the peas and check them for debris.",
+      "Brown the salt pork in a large soup pot.",
+      "Cook carrots and onion in the rendered fat until softened.",
+      "Stir in peas, bay leaves, parsley and water.",
+      "Bring to a boil, then reduce to a low simmer.",
+      "Cook partly covered until the peas are tender and thick.",
+      "Remove bay leaves and adjust salt and pepper.",
+      "Rest for ten minutes before ladling into bowls."
+    ],
+    "course": "Soup",
+    "prepTime": "PT20M",
+    "cookTime": "PT4H30M",
+    "totalTime": "PT4H50M",
+    "servings": 8,
+    "calories": 310,
+    "tips": [
+      "Measure and prepare every ingredient before heating the pan.",
+      "Taste and adjust seasoning near the end of cooking.",
+      "Let the finished dish rest briefly before serving."
+    ],
+    "commonMistakes": [
+      "Rushing the browning or simmering stage.",
+      "Overcrowding the pan or pot.",
+      "Skipping the final seasoning check."
+    ],
+    "substitutions": [
+      "Use an equivalent stock when the listed stock is unavailable.",
+      "Use a similar fresh herb if the listed herb is unavailable.",
+      "Choose a comparable cut or seafood of the same cooking time."
+    ],
+    "storage": [
+      "Cool leftovers within two hours and refrigerate in an airtight container.",
+      "Reheat gently until piping hot throughout.",
+      "Freeze only fully cooled portions in freezer-safe containers."
+    ]
+  },
+  {
+    "status": "draft",
+    "country": "Canada",
+    "cuisine": "Canadian",
+    "author": "Thejan Mahakumbura",
+    "datePublished": "2026-09-27",
+    "difficulty": "Easy",
+    "id": "canadian-chicken-pot-pie",
+    "slug": "canadian-chicken-pot-pie",
+    "title": "Chicken Pot Pie",
+    "category": "Chicken",
+    "tags": [
+      "Canada",
+      "Chicken",
+      "Dinner"
+    ],
+    "image": "assets/images/recipes/canadian-chicken-pot-pie-generated.webp?v=individual-1",
+    "description": "Creamy chicken and vegetable filling beneath a flaky golden crust.",
+    "ingredients": [
+      "2 cups cooked chicken, diced",
+      "1 cup carrots, diced",
+      "1 cup peas",
+      "1/2 cup celery, diced",
+      "1/2 cup onion, diced",
+      "1/3 cup butter",
+      "1/3 cup flour",
+      "1 3/4 cups chicken broth",
+      "2/3 cup milk",
+      "2 pie crusts",
+      "salt, pepper and thyme"
+    ],
+    "instructions": [
+      "Heat the oven to 425°F (220°C).",
+      "Cook onion, celery and carrots in butter until tender.",
+      "Stir in flour and cook for one minute.",
+      "Whisk in broth and milk until the sauce thickens.",
+      "Fold in chicken, peas and seasoning.",
+      "Line a pie dish with one crust and add the cooled filling.",
+      "Cover with the second crust, seal the edge and cut vents.",
+      "Bake until deeply golden and bubbling, then rest before slicing."
+    ],
+    "course": "Main Course",
+    "prepTime": "PT30M",
+    "cookTime": "PT40M",
+    "totalTime": "PT1H10M",
+    "servings": 8,
+    "calories": 520,
+    "tips": [
+      "Measure and prepare every ingredient before heating the pan.",
+      "Taste and adjust seasoning near the end of cooking.",
+      "Let the finished dish rest briefly before serving."
+    ],
+    "commonMistakes": [
+      "Rushing the browning or simmering stage.",
+      "Overcrowding the pan or pot.",
+      "Skipping the final seasoning check."
+    ],
+    "substitutions": [
+      "Use an equivalent stock when the listed stock is unavailable.",
+      "Use a similar fresh herb if the listed herb is unavailable.",
+      "Choose a comparable cut or seafood of the same cooking time."
+    ],
+    "storage": [
+      "Cool leftovers within two hours and refrigerate in an airtight container.",
+      "Reheat gently until piping hot throughout.",
+      "Freeze only fully cooled portions in freezer-safe containers."
+    ]
+  },
+  {
+    "status": "draft",
+    "country": "Canada",
+    "cuisine": "Canadian",
+    "author": "Thejan Mahakumbura",
+    "datePublished": "2026-09-27",
+    "difficulty": "Easy",
+    "id": "tourtiere-meat-pie",
+    "slug": "tourtiere-meat-pie",
+    "title": "Tourtière Meat Pie",
+    "category": "Pork",
+    "tags": [
+      "Canada",
+      "Pork",
+      "Beef",
+      "Dinner"
+    ],
+    "image": "assets/images/recipes/tourtiere-meat-pie-generated.webp?v=individual-1",
+    "description": "French Canadian double-crust meat pie with warm spices.",
+    "ingredients": [
+      "2 cups all-purpose flour",
+      "1 cup unsalted butter",
+      "1/2 cup sour cream",
+      "1 pound ground pork",
+      "1 pound ground beef",
+      "2 onions, chopped",
+      "2 celery ribs, chopped",
+      "28 ounces canned tomatoes, drained",
+      "3/4 teaspoon cinnamon",
+      "3/4 teaspoon dried savory",
+      "1/2 cup fresh breadcrumbs",
+      "1 egg"
+    ],
+    "instructions": [
+      "Make the pastry and chill it until firm.",
+      "Cook onion, celery and garlic in oil until softened.",
+      "Brown pork and beef, breaking it into small pieces.",
+      "Add tomatoes, cinnamon and savory and simmer until thick.",
+      "Stir in breadcrumbs and cool the filling completely.",
+      "Line a pie plate with rolled pastry and add the filling.",
+      "Top with the remaining pastry, seal, vent and egg-wash.",
+      "Bake at 375°F (190°C) until deeply browned, then rest before slicing."
+    ],
+    "course": "Main Course",
+    "prepTime": "PT30M",
+    "cookTime": "PT1H10M",
+    "totalTime": "PT1H40M",
+    "servings": 8,
+    "calories": 650,
+    "tips": [
+      "Measure and prepare every ingredient before heating the pan.",
+      "Taste and adjust seasoning near the end of cooking.",
+      "Let the finished dish rest briefly before serving."
+    ],
+    "commonMistakes": [
+      "Rushing the browning or simmering stage.",
+      "Overcrowding the pan or pot.",
+      "Skipping the final seasoning check."
+    ],
+    "substitutions": [
+      "Use an equivalent stock when the listed stock is unavailable.",
+      "Use a similar fresh herb if the listed herb is unavailable.",
+      "Choose a comparable cut or seafood of the same cooking time."
+    ],
+    "storage": [
+      "Cool leftovers within two hours and refrigerate in an airtight container.",
+      "Reheat gently until piping hot throughout.",
+      "Freeze only fully cooled portions in freezer-safe containers."
+    ]
+  },
+  {
+    "status": "draft",
+    "country": "Canada",
+    "cuisine": "Canadian",
+    "author": "Thejan Mahakumbura",
+    "datePublished": "2026-09-27",
+    "difficulty": "Easy",
+    "id": "canadian-roast-beef",
+    "slug": "canadian-roast-beef",
+    "title": "Roast Beef",
+    "category": "Beef",
+    "tags": [
+      "Canada",
+      "Beef",
+      "Dinner"
+    ],
+    "image": "assets/images/recipes/canadian-roast-beef-generated.webp?v=individual-1",
+    "description": "Simple roasted eye of round beef, sliced thinly for a Canadian family dinner.",
+    "ingredients": [
+      "3 pounds beef eye of round roast",
+      "1/2 teaspoon kosher salt",
+      "1/2 teaspoon garlic powder",
+      "1/4 teaspoon black pepper"
+    ],
+    "instructions": [
+      "Bring the roast toward room temperature for 45 minutes.",
+      "Heat the oven to 375°F (190°C).",
+      "Tie the roast at intervals if it is not already tied.",
+      "Mix salt, garlic powder and pepper.",
+      "Rub the seasoning evenly over all sides.",
+      "Place the roast on a rack in a roasting pan.",
+      "Roast until the centre reaches the chosen doneness temperature.",
+      "Rest loosely covered for 15 to 20 minutes, then slice thinly."
+    ],
+    "course": "Main Course",
+    "prepTime": "PT10M",
+    "cookTime": "PT1H",
+    "totalTime": "PT1H25M",
+    "servings": 6,
+    "calories": 484,
+    "tips": [
+      "Measure and prepare every ingredient before heating the pan.",
+      "Taste and adjust seasoning near the end of cooking.",
+      "Let the finished dish rest briefly before serving."
+    ],
+    "commonMistakes": [
+      "Rushing the browning or simmering stage.",
+      "Overcrowding the pan or pot.",
+      "Skipping the final seasoning check."
+    ],
+    "substitutions": [
+      "Use an equivalent stock when the listed stock is unavailable.",
+      "Use a similar fresh herb if the listed herb is unavailable.",
+      "Choose a comparable cut or seafood of the same cooking time."
+    ],
+    "storage": [
+      "Cool leftovers within two hours and refrigerate in an airtight container.",
+      "Reheat gently until piping hot throughout.",
+      "Freeze only fully cooled portions in freezer-safe containers."
+    ]
+  },
+  {
+    "status": "draft",
+    "country": "Canada",
+    "cuisine": "Canadian",
+    "author": "Thejan Mahakumbura",
+    "datePublished": "2026-09-27",
+    "difficulty": "Easy",
+    "id": "canadian-meatloaf",
+    "slug": "canadian-meatloaf",
+    "title": "Canadian Meatloaf",
+    "category": "Beef",
+    "tags": [
+      "Canada",
+      "Beef",
+      "Dinner"
+    ],
+    "image": "assets/images/recipes/canadian-meatloaf-generated.webp?v=individual-1",
+    "description": "Juicy ketchup-glazed beef meatloaf for a comforting Canadian dinner.",
+    "ingredients": [
+      "1 1/2 pounds ground beef",
+      "1 large egg",
+      "1 onion, chopped",
+      "1 cup milk",
+      "1 cup dry bread crumbs",
+      "1 teaspoon salt",
+      "1/4 teaspoon black pepper",
+      "1/3 cup ketchup",
+      "2 tablespoons brown sugar",
+      "2 tablespoons prepared mustard"
+    ],
+    "instructions": [
+      "Heat the oven to 350°F (175°C).",
+      "Mix beef, egg, onion, milk, breadcrumbs, salt and pepper gently.",
+      "Shape the mixture into a loaf in a lined pan.",
+      "Whisk ketchup, brown sugar and mustard for the glaze.",
+      "Spread half the glaze over the loaf.",
+      "Bake until the centre reaches 160°F (71°C).",
+      "Brush with remaining glaze during the final minutes.",
+      "Rest ten minutes before slicing and serving."
+    ],
+    "course": "Main Course",
+    "prepTime": "PT15M",
+    "cookTime": "PT1H",
+    "totalTime": "PT1H15M",
+    "servings": 8,
+    "calories": 390,
+    "tips": [
+      "Measure and prepare every ingredient before heating the pan.",
+      "Taste and adjust seasoning near the end of cooking.",
+      "Let the finished dish rest briefly before serving."
+    ],
+    "commonMistakes": [
+      "Rushing the browning or simmering stage.",
+      "Overcrowding the pan or pot.",
+      "Skipping the final seasoning check."
+    ],
+    "substitutions": [
+      "Use an equivalent stock when the listed stock is unavailable.",
+      "Use a similar fresh herb if the listed herb is unavailable.",
+      "Choose a comparable cut or seafood of the same cooking time."
+    ],
+    "storage": [
+      "Cool leftovers within two hours and refrigerate in an airtight container.",
+      "Reheat gently until piping hot throughout.",
+      "Freeze only fully cooled portions in freezer-safe containers."
+    ]
+  }
+]

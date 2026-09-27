@@ -1,0 +1,82 @@
+{
+  "salmon-cakes": {
+    "youtubeId": "gOwBlnSmuxw",
+    "title": "How To Make Salmon Cakes Recipe - Quick and Easy Salmon Patties",
+    "channel": "Natasha's Kitchen",
+    "channelUrl": "https://www.youtube.com/@NatashasKitchen",
+    "url": "https://www.youtube.com/watch?v=gOwBlnSmuxw",
+    "language": "en",
+    "thumbnailUrl": "https://i.ytimg.com/vi/gOwBlnSmuxw/hqdefault.jpg",
+    "uploadDate": "2017-05-05T00:00:00Z"
+  },
+  "salmon-chowder": {
+    "youtubeId": "D_AUTJrC3ik",
+    "title": "The Best Creamy Smoked Salmon Chowder",
+    "channel": "Tatyana's Everyday Food",
+    "channelUrl": "https://www.youtube.com/@tatyanaseverydayfood",
+    "url": "https://www.youtube.com/watch?v=D_AUTJrC3ik",
+    "language": "en",
+    "thumbnailUrl": "https://i.ytimg.com/vi/D_AUTJrC3ik/hqdefault.jpg",
+    "uploadDate": "2022-11-01T00:00:00Z"
+  },
+  "seafood-chowder": {
+    "youtubeId": "HRRUyV229dE",
+    "title": "Quick & Easy Nova Scotia Seafood Chowder Recipe",
+    "channel": "The Canteen Cooks",
+    "channelUrl": "https://www.youtube.com/@TheCanteenCooks",
+    "url": "https://www.youtube.com/watch?v=HRRUyV229dE",
+    "language": "en",
+    "thumbnailUrl": "https://i.ytimg.com/vi/HRRUyV229dE/hqdefault.jpg",
+    "uploadDate": "2020-01-15T00:00:00Z"
+  },
+  "french-canadian-pea-soup": {
+    "youtubeId": "otSdlxt-uic",
+    "title": "French Canadian Pea Soup on the Grill",
+    "channel": "BBQ Joes",
+    "channelUrl": "https://www.youtube.com/",
+    "url": "https://www.youtube.com/watch?v=otSdlxt-uic",
+    "language": "en",
+    "thumbnailUrl": "https://i.ytimg.com/vi/otSdlxt-uic/hqdefault.jpg",
+    "uploadDate": "2020-05-11T00:00:00Z"
+  },
+  "canadian-chicken-pot-pie": {
+    "youtubeId": "Oai_jBXNrmA",
+    "title": "How to Make Homemade Chicken Pot Pie",
+    "channel": "Allrecipes",
+    "channelUrl": "https://www.youtube.com/@Allrecipes",
+    "url": "https://www.youtube.com/watch?v=Oai_jBXNrmA",
+    "language": "en",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Oai_jBXNrmA/hqdefault.jpg",
+    "uploadDate": "2021-01-15T00:00:00Z"
+  },
+  "tourtiere-meat-pie": {
+    "youtubeId": "Qt5IY3fJOeE",
+    "title": "French Canadian Tourtière",
+    "channel": "Blue Jean Chef",
+    "channelUrl": "https://www.youtube.com/",
+    "url": "https://www.youtube.com/watch?v=Qt5IY3fJOeE",
+    "language": "en",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Qt5IY3fJOeE/hqdefault.jpg",
+    "uploadDate": "2019-12-01T00:00:00Z"
+  },
+  "canadian-roast-beef": {
+    "youtubeId": "VP0Lagoz58c",
+    "title": "How to Make Roast Beef",
+    "channel": "Allrecipes",
+    "channelUrl": "https://www.youtube.com/@Allrecipes",
+    "url": "https://www.youtube.com/watch?v=VP0Lagoz58c",
+    "language": "en",
+    "thumbnailUrl": "https://i.ytimg.com/vi/VP0Lagoz58c/hqdefault.jpg",
+    "uploadDate": "2012-12-01T00:00:00Z"
+  },
+  "canadian-meatloaf": {
+    "youtubeId": "ccymdMHKatM",
+    "title": "Easy Meatloaf Recipe That's Juicy Every Time",
+    "channel": "Allrecipes",
+    "channelUrl": "https://www.youtube.com/@Allrecipes",
+    "url": "https://www.youtube.com/watch?v=ccymdMHKatM",
+    "language": "en",
+    "thumbnailUrl": "https://i.ytimg.com/vi/ccymdMHKatM/hqdefault.jpg",
+    "uploadDate": "2024-01-01T00:00:00Z"
+  }
+}
