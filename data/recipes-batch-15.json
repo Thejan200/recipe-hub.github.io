@@ -98,57 +98,56 @@
     ],
     "country": "UK",
     "image": "assets/images/recipes/sausage-casserole-generated.webp?v=individual-1",
-    "description": "A hearty British sausage casserole with pancetta, cavolo nero, tomato, red wine, and tender herb dumplings.",
+    "description": "An oven-baked British sausage casserole with tomato, stock, vegetables, herbs, and a rich, thick gravy.",
     "prepTime": "PT15M",
-    "cookTime": "PT35M",
-    "totalTime": "PT50M",
+    "cookTime": "PT1H45M",
+    "totalTime": "PT2H",
     "servings": 4,
-    "calories": 560,
+    "calories": 981,
     "cuisine": "British",
     "course": "Main Course",
     "difficulty": "Easy",
     "ingredients": [
       "1 tbsp olive oil",
-      "8 pork sausages",
-      "1 onion, finely sliced",
-      "150 g pancetta, cubed",
-      "2 garlic cloves, crushed",
-      "1 tbsp tomato purée",
-      "150 ml red wine",
-      "400 g canned chopped tomatoes",
-      "400 ml beef stock",
-      "1 tbsp gravy granules",
-      "100 g cavolo nero, thickly shredded with woody stems removed",
-      "100 g self-raising flour",
-      "50 g butter, cubed",
-      "1 tsp dried thyme",
-      "75 ml cold water",
-      "Salt and black pepper, to season"
+      "6–8 large pork sausages (about 700 g)",
+      "1 large onion, sliced (150 g)",
+      "3 garlic cloves, minced (15 g)",
+      "1 medium carrot, diced (100 g)",
+      "1 celery stick, diced (50 g)",
+      "3 tbsp steel-cut oats (45 g)",
+      "800 g canned chopped tomatoes",
+      "2 tbsp tomato purée (30 g)",
+      "650 ml beef stock",
+      "1 tbsp Worcestershire sauce (15 ml)",
+      "1 tsp brown sugar (5 g)",
+      "1 tsp dried thyme (2 g)",
+      "1 tsp smoked paprika (2 g)",
+      "1/2 tsp black pepper (1 g)",
+      "Salt, to taste",
+      "2 tbsp fresh parsley, chopped"
     ],
     "instructions": [
-      "Heat half the olive oil in a large lidded frying pan or casserole over medium heat. Brown the sausages for a few minutes on each side, then transfer them to a plate.",
-      "Add the remaining oil to the pan, then cook the onion and pancetta for about 10 minutes until the onion is soft and the pancetta is golden.",
-      "Meanwhile, pulse the flour, butter and thyme in a food processor until they resemble coarse crumbs. Add the cold water and seasoning, then pulse briefly to make a sticky dumpling dough.",
-      "Stir the garlic and tomato purée into the onion mixture and cook for 1 minute until fragrant.",
-      "Raise the heat, add the red wine and simmer until reduced by about two-thirds. Add the chopped tomatoes, beef stock and gravy granules, whisking until the granules dissolve.",
-      "Return the sausages to the pan with the cavolo nero and stir to combine. Spoon about eight tablespoons of dumpling dough over the casserole.",
-      "Reduce the heat to medium, cover and simmer for 20 minutes, until the dumplings are puffed and cooked through and the sausages are hot throughout.",
-      "Season to taste and serve the casserole hot."
+      "Heat the oven to 200°C fan. Put the sausages in a casserole dish and cook for 20–25 minutes, turning once halfway through, until browned.",
+      "Add the sliced onion, garlic, carrot, celery, steel-cut oats, chopped tomatoes, tomato purée, beef stock, Worcestershire sauce, brown sugar, thyme, smoked paprika, black pepper, salt, and parsley to the dish.",
+      "Stir everything together well, cover the dish, and reduce the oven to 170°C fan (190°C conventional).",
+      "Bake covered for 1 hour, stirring once halfway through so the sauce thickens evenly and the vegetables cook through.",
+      "Remove the lid and bake for a further 20–25 minutes, until the gravy is thick and the sausages are glossy and cooked through.",
+      "Taste for salt, spoon into warm bowls, and serve immediately."
     ],
     "tips": [
-      "Brown sausages first for the best gravy.",
-      "Keep the simmer moderate so beans stay intact.",
-      "Rest before serving so the sauce thickens."
+      "Use steel-cut oats, not rolled oats, to help the sauce thicken during baking.",
+      "Turn the sausages halfway through the first bake so they brown evenly.",
+      "Bake uncovered at the end to concentrate the tomato gravy."
     ],
     "commonMistakes": [
-      "Pale unbrowned sausages taste flat.",
-      "Too much stirring breaks the beans.",
-      "Skipping tomato paste reduces depth."
+      "Skipping the initial browning leaves the sausages pale and less flavorful.",
+      "Using rolled oats instead of steel-cut oats changes the casserole texture.",
+      "Leaving the lid on for the final bake prevents the sauce from thickening."
     ],
     "substitutions": [
-      "Use Cumberland-style sausages if available.",
-      "Use haricot beans instead of cannellini.",
-      "Use vegetable stock for a lighter gravy."
+      "Use good-quality pork sausages as shown in the tutorial.",
+      "Use beef stock for the intended rich gravy.",
+      "Use fresh parsley as the final herb."
     ],
     "storage": [
       "Refrigerate for up to 3 days.",
@@ -156,13 +155,13 @@
       "Reheat until the sausages are hot through."
     ],
     "nutrition": {
-      "calories": 560,
-      "protein": "27 g",
-      "carbohydrates": "34 g",
-      "fat": "35 g",
-      "fiber": "9 g",
-      "sugar": "10 g",
-      "sodium": "980 mg"
+      "calories": 981,
+      "protein": "39.07 g",
+      "carbohydrates": "36.11 g",
+      "fat": "73.15 g",
+      "fiber": "6.2 g",
+      "sugar": "9.7 g",
+      "sodium": "2177 mg"
     },
     "datePublished": "2026-09-21",
     "author": "Thejan Mahakumbura"
@@ -729,54 +728,48 @@
     ],
     "country": "UK",
     "image": "assets/images/recipes/ploughmans-lunch-generated.webp?v=individual-1",
-    "description": "A British sharing platter of crusty bread, English cheeses, ham, chutney, pickles, eggs, fresh vegetables, and apple.",
-    "prepTime": "PT40M",
-    "cookTime": "PT6M",
-    "totalTime": "PT46M",
+    "description": "A modern British Ploughman's Lunch platter with breads, meat, cheeses, pickled items, eggs, fruit, vegetables, and chutney.",
+    "prepTime": "PT20M",
+    "cookTime": "PT0M",
+    "totalTime": "PT20M",
     "servings": 4,
     "calories": 690,
     "cuisine": "British",
     "course": "Lunch",
     "difficulty": "Easy",
     "ingredients": [
-      "4 thick slices white crusty bread",
-      "2 wedges aged English cheddar",
-      "1 wedge Stilton cheese",
-      "2 thick slices ham",
-      "1/2 cup strong chutney, such as Branston pickle",
-      "6 gherkins",
-      "10 silverskin onions or cocktail onions",
-      "2 boiled eggs, peeled and halved lengthwise",
-      "1 sweet apple, sliced and brushed with lemon juice",
-      "2 thick slices Lincolnshire plum bread",
-      "1 1/4 cups watercress",
-      "2 large radishes, thickly sliced",
-      "2 celery stalks with leaves, rinsed and patted dry",
-      "2 tsp Colman's mustard",
-      "1 tbsp salted butter, at room temperature"
+      "2 types of bread",
+      "Meat selection: ham, salami, cold roast meats, or pork pies",
+      "2 kinds of hard or semi-hard cheese",
+      "Pickled items: gherkins, pickles, beetroot, artichoke, pickled onions, or pickled carrots",
+      "Boiled eggs",
+      "Cherry tomatoes",
+      "Fresh apple or other fresh fruit",
+      "Olives",
+      "Chutney or relish",
+      "Lettuce greens",
+      "Fresh herbs"
     ],
     "instructions": [
-      "Put the butter, mustard, chutney, onions, gherkins, and watercress into separate small bowls.",
-      "To cook the eggs, cover them with cold water in a saucepan, bring to a boil, cook for 6 minutes, then cool in ice water for 10 minutes. Peel and halve them lengthwise.",
-      "Rinse and dry the radishes and celery. Slice the radishes thickly and cut the celery into short pieces.",
-      "Slice the apple and brush each piece with lemon juice to prevent browning. Cut the ham into 1 1/2-inch pieces.",
-      "Keep everything except the bread and butter chilled until needed, then bring the cheeses, ham, eggs, and produce toward cool room temperature about 30 minutes before serving.",
-      "Arrange all ingredients on a large wooden board or platter and serve immediately."
+      "Choose two breads, a meat selection, two hard or semi-hard cheeses, and a mix of pickled items for the platter.",
+      "Prepare the boiled eggs, cherry tomatoes, fresh apple or fruit, olives, chutney or relish, lettuce greens, and herbs.",
+      "Arrange the breads, meat, cheeses, pickled items, eggs, fruit, vegetables, olives, chutney, greens, and herbs across a serving platter.",
+      "Keep wet pickled items and chutney separate from the bread until serving, then serve the completed platter immediately."
     ],
     "tips": [
-      "Use room-temperature cheddar.",
-      "Slice apple just before serving.",
-      "Balance rich cheese with sharp pickles."
+      "Use the component groups in the tutorial rather than limiting the platter to one cheese or one bread.",
+      "Mix pickled and fresh elements to balance the rich cheese and meat.",
+      "Keep the arrangement flexible while retaining every listed component group."
     ],
     "commonMistakes": [
-      "Cold cheese tastes muted.",
-      "Too little chutney makes the plate dry.",
-      "Cutting bread too thin removes the rustic feel."
+      "Leaving out the pickled element makes the platter less balanced.",
+      "Using only one bread or cheese misses the tutorial's two-type format.",
+      "Mixing wet items directly into the bread too early makes it soggy."
     ],
     "substitutions": [
-      "Use Stilton for part of the cheddar.",
-      "Use pork pie instead of ham if desired.",
-      "Use Branston-style pickle for chutney."
+      "Choose any meat from the tutorial's selection ideas.",
+      "Choose any of the listed pickled items to suit availability.",
+      "Use chutney or relish as the condiment."
     ],
     "storage": [
       "Assemble just before serving.",
