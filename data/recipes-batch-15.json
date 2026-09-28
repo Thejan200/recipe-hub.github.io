@@ -724,11 +724,12 @@
       "British",
       "Cheese",
       "Lunch",
-      "No Cook"
+      "No Cook",
+      "Ploughmans Lunch"
     ],
     "country": "UK",
     "image": "assets/images/recipes/ploughmans-lunch-generated.webp?v=individual-1",
-    "description": "A modern British Ploughman's Lunch platter with breads, meat, cheeses, pickled items, eggs, fruit, vegetables, and chutney.",
+    "description": "A flexible British Ploughman's Lunch built around good bread, cheese, and pickled onions, with quality local produce chosen to taste.",
     "prepTime": "PT20M",
     "cookTime": "PT0M",
     "totalTime": "PT20M",
@@ -738,38 +739,32 @@
     "course": "Lunch",
     "difficulty": "Easy",
     "ingredients": [
-      "2 types of bread",
-      "Meat selection: ham, salami, cold roast meats, or pork pies",
-      "2 kinds of hard or semi-hard cheese",
-      "Pickled items: gherkins, pickles, beetroot, artichoke, pickled onions, or pickled carrots",
-      "Boiled eggs",
-      "Cherry tomatoes",
-      "Fresh apple or other fresh fruit",
-      "Olives",
-      "Chutney or relish",
-      "Lettuce greens",
-      "Fresh herbs"
+      "Good bread",
+      "A selection of local cheeses",
+      "Pickled onions",
+      "Optional baked ham",
+      "Optional locally sourced pickles or seasonal produce"
     ],
     "instructions": [
-      "Choose two breads, a meat selection, two hard or semi-hard cheeses, and a mix of pickled items for the platter.",
-      "Prepare the boiled eggs, cherry tomatoes, fresh apple or fruit, olives, chutney or relish, lettuce greens, and herbs.",
-      "Arrange the breads, meat, cheeses, pickled items, eggs, fruit, vegetables, olives, chutney, greens, and herbs across a serving platter.",
-      "Keep wet pickled items and chutney separate from the bread until serving, then serve the completed platter immediately."
+      "Choose good bread, a selection of local cheeses, and pickled onions as the essential elements of the plate.",
+      "Add optional baked ham and other locally sourced pickles or seasonal produce that you would like to serve.",
+      "Arrange the components on a platter so each person can combine the bread, cheese, and pickled elements to taste.",
+      "Serve immediately as a cold lunch."
     ],
     "tips": [
-      "Use the component groups in the tutorial rather than limiting the platter to one cheese or one bread.",
-      "Mix pickled and fresh elements to balance the rich cheese and meat.",
-      "Keep the arrangement flexible while retaining every listed component group."
+      "Use the best local produce available; the tutorial presents the plate as a flexible combination rather than a fixed formula.",
+      "Keep bread, cheese, and pickled onions as the foundation of the plate.",
+      "Arrange wet pickles away from the bread until serving."
     ],
     "commonMistakes": [
-      "Leaving out the pickled element makes the platter less balanced.",
-      "Using only one bread or cheese misses the tutorial's two-type format.",
-      "Mixing wet items directly into the bread too early makes it soggy."
+      "Leaving out the pickled element removes the contrast central to the platter.",
+      "Treating optional additions as mandatory makes a flexible lunch needlessly rigid.",
+      "Putting wet pickles directly on the bread too early makes it soggy."
     ],
     "substitutions": [
-      "Choose any meat from the tutorial's selection ideas.",
-      "Choose any of the listed pickled items to suit availability.",
-      "Use chutney or relish as the condiment."
+      "Choose cheeses and optional produce from trusted local producers.",
+      "Use baked ham only if you want a meat component.",
+      "Choose pickled onions as the required pickled element."
     ],
     "storage": [
       "Assemble just before serving.",
