@@ -330,7 +330,7 @@
     ],
     "country": "UK",
     "image": "assets/images/recipes/scotch-eggs-generated.webp?v=individual-1",
-    "description": "Jammy boiled eggs wrapped in seasoned sausage meat, crumbed, and cooked until crisp and golden.",
+    "description": "Soft-cooked eggs wrapped in Italian sausage, breaded, and fried until crisp and golden.",
     "prepTime": "PT30M",
     "cookTime": "PT15M",
     "totalTime": "PT1H",
@@ -340,41 +340,36 @@
     "course": "Appetizer",
     "difficulty": "Medium",
     "ingredients": [
-      "6 large eggs",
-      "500 g pork sausage meat",
-      "1 tsp English mustard",
-      "1 tbsp chopped parsley",
-      "1/2 tsp salt",
-      "1/2 tsp black pepper",
-      "75 g plain flour",
-      "2 beaten eggs",
-      "120 g panko breadcrumbs",
-      "1 litre vegetable oil for frying"
+      "6 large eggs, straight from the refrigerator",
+      "21 oz Italian sausage meat (3.5 oz per egg)",
+      "White flour, for breading",
+      "2 eggs, beaten, for breading",
+      "Panko breadcrumbs, as needed for breading",
+      "Neutral oil, for frying"
     ],
     "instructions": [
-      "Set out every measured ingredient before turning on the heat, then prepare the vegetables, protein, seasonings, and serving pieces so the recipe moves smoothly without rushed chopping.",
-      "Warm the main pan or oven dish gradually and add the cooking fat, using medium heat so the aromatics can soften and release flavor without scorching on the base.",
-      "Add the primary savory ingredients in the order listed, stirring patiently so each piece is coated with the seasoning and begins to build color before liquid is added.",
-      "Pour in the measured liquid or sauce ingredients, scrape the browned bits from the pan, and bring the mixture to a steady simmer rather than an aggressive boil.",
-      "Cook until the texture matches the recipe: meat should be tender and safe, potatoes or rice should be fully cooked, and sauces should coat the spoon without tasting raw.",
-      "Taste carefully near the end and adjust only with the listed salt, pepper, lemon, vinegar, or herbs so the finished recipe remains aligned with the demonstrated tutorial.",
-      "Rest the finished dish briefly off the heat, allowing starches, dairy, meat juices, or sauces to settle before slicing, spooning, or plating for clean presentation.",
-      "Serve while warm with the suggested accompaniments, keeping crisp elements uncovered and creamy or saucy elements gently stirred so the final plate has the intended texture."
+      "Place the six cold eggs in water, bring to a boil, and cook only until the yolks reach the soft-cooked texture you want after frying.",
+      "Cool and peel the eggs carefully, then keep them chilled while preparing the sausage and breading.",
+      "Divide the Italian sausage meat into six equal portions of about 3.5 oz each, then seal one portion evenly around each peeled egg.",
+      "Set up a breading station with white flour, the two beaten eggs, and panko breadcrumbs.",
+      "Coat each sausage-wrapped egg in flour, beaten egg, then panko, pressing the crumbs on gently.",
+      "Fry in neutral oil until the sausage is cooked through and the panko coating is deeply crisp and golden.",
+      "Drain briefly, rest just long enough to handle safely, then cut and serve while warm."
     ],
     "tips": [
-      "Chill wrapped eggs before breading.",
-      "Seal sausage meat evenly around each egg.",
-      "Use a thermometer to control frying temperature."
+      "Use eggs straight from the refrigerator, as shown in the tutorial.",
+      "Keep each sausage portion close to 3.5 oz for an even coating.",
+      "Choose the yolk texture before frying because the final fry continues the cooking."
     ],
     "commonMistakes": [
-      "Overcooking the eggs removes the jammy center.",
-      "Thin sausage spots can split.",
-      "Oil that is too cool makes greasy crumbs."
+      "Overcooking the eggs removes the soft center.",
+      "Thin or unsealed sausage spots can split during frying.",
+      "Skipping flour, egg, or panko leaves the coating unable to crisp properly."
     ],
     "substitutions": [
-      "Use fine breadcrumbs instead of panko.",
-      "Add chives instead of parsley.",
-      "Bake after frying briefly if extra cooking time is needed."
+      "Use mild or hot Italian sausage meat according to your preferred heat level.",
+      "Use a deep, neutral frying oil suitable for frying.",
+      "Serve the finished Scotch eggs warm or cold."
     ],
     "storage": [
       "Refrigerate for up to 3 days.",
@@ -408,7 +403,7 @@
     ],
     "country": "UK",
     "image": "assets/images/recipes/full-english-breakfast-generated.webp?v=individual-1",
-    "description": "A classic fry-up plate with eggs, sausages, bacon, beans, mushrooms, tomatoes, and toast cooked in a sensible order.",
+    "description": "A Full Monty fry-up with sausages, bacon, eggs, tomatoes, mushrooms, baked beans, black pudding, fried bread, toast, jam, and tea.",
     "prepTime": "PT10M",
     "cookTime": "PT25M",
     "totalTime": "PT35M",
@@ -418,42 +413,38 @@
     "course": "Breakfast",
     "difficulty": "Easy",
     "ingredients": [
-      "4 pork sausages",
-      "4 rashers back bacon",
-      "2 large eggs",
-      "200 g baked beans",
-      "150 g mushrooms, halved",
-      "2 tomatoes, halved",
-      "2 slices bread",
-      "1 tbsp butter",
-      "1 tbsp vegetable oil",
-      "1/2 tsp black pepper",
-      "1 pinch salt"
+      "Sausages",
+      "Bacon",
+      "Eggs",
+      "Tomatoes",
+      "Mushrooms",
+      "Baked beans",
+      "Black pudding",
+      "Fried bread",
+      "Toast and jam",
+      "Tea, to serve"
     ],
     "instructions": [
-      "Set out every measured ingredient before turning on the heat, then prepare the vegetables, protein, seasonings, and serving pieces so the recipe moves smoothly without rushed chopping.",
-      "Warm the main pan or oven dish gradually and add the cooking fat, using medium heat so the aromatics can soften and release flavor without scorching on the base.",
-      "Add the primary savory ingredients in the order listed, stirring patiently so each piece is coated with the seasoning and begins to build color before liquid is added.",
-      "Pour in the measured liquid or sauce ingredients, scrape the browned bits from the pan, and bring the mixture to a steady simmer rather than an aggressive boil.",
-      "Cook until the texture matches the recipe: meat should be tender and safe, potatoes or rice should be fully cooked, and sauces should coat the spoon without tasting raw.",
-      "Taste carefully near the end and adjust only with the listed salt, pepper, lemon, vinegar, or herbs so the finished recipe remains aligned with the demonstrated tutorial.",
-      "Rest the finished dish briefly off the heat, allowing starches, dairy, meat juices, or sauces to settle before slicing, spooning, or plating for clean presentation.",
-      "Serve while warm with the suggested accompaniments, keeping crisp elements uncovered and creamy or saucy elements gently stirred so the final plate has the intended texture."
+      "Prepare the breakfast components before cooking so the fry-up can be served together while hot.",
+      "Cook the sausages first, then cook the bacon and black pudding until heated through and browned to your preference.",
+      "Cook the mushrooms and tomatoes until tender, and warm the baked beans gently.",
+      "Fry the eggs and fried bread near the end so they are hot at serving time.",
+      "Serve the sausages, bacon, eggs, tomatoes, mushrooms, beans, black pudding, and fried bread with toast, jam, and tea."
     ],
     "tips": [
-      "Cook sausages first because they take longest.",
-      "Keep beans warm over low heat.",
-      "Fry eggs last for runny yolks."
+      "Cook the components in an order that lets everything reach the plate hot.",
+      "Warm the baked beans gently while the fried items finish.",
+      "Cook the eggs near the end for the yolk texture you prefer."
     ],
     "commonMistakes": [
-      "Starting eggs too early makes them cold.",
-      "High heat burns bacon before crisping.",
-      "Overcrowding steams mushrooms."
+      "Starting the eggs too early leaves them cold by serving time.",
+      "High heat can burn the bacon before it is ready.",
+      "Crowding the pan can steam rather than brown the mushrooms."
     ],
     "substitutions": [
-      "Use grilled tomatoes instead of pan-fried.",
-      "Use black pudding if desired.",
-      "Use toast or fried bread."
+      "Use fried bread as part of the Full Monty plate.",
+      "Serve toast and jam alongside the cooked breakfast.",
+      "Serve a mug of tea with the breakfast."
     ],
     "storage": [
       "Best eaten immediately.",
@@ -648,7 +639,7 @@
     ],
     "country": "UK",
     "image": "assets/images/recipes/coronation-chicken-generated.webp?v=individual-1",
-    "description": "Cold chicken folded through a mild curried mayonnaise with chutney, raisins, almonds, and salad leaves.",
+    "description": "Chicken in a mild curried mayonnaise and crème fraîche sauce with apricots and sultanas.",
     "prepTime": "PT20M",
     "cookTime": "PT20M",
     "totalTime": "PT40M",
@@ -658,43 +649,46 @@
     "course": "Lunch",
     "difficulty": "Easy",
     "ingredients": [
-      "500 g cooked chicken breast, shredded",
-      "120 g mayonnaise",
-      "80 g Greek yogurt",
-      "2 tbsp mango chutney",
-      "1 tsp mild curry powder",
-      "1 tsp lemon juice",
-      "40 g raisins",
-      "30 g toasted flaked almonds",
-      "1 tbsp chopped coriander",
-      "1/2 tsp salt",
-      "1/4 tsp black pepper",
-      "100 g lettuce leaves"
+      "2–3 chicken breasts",
+      "500 ml chicken stock",
+      "A large knob of butter (or oil) for frying",
+      "1 small onion, finely diced",
+      "1–2 bay leaves",
+      "1 tbsp mild curry powder",
+      "1 tsp turmeric",
+      "1/2 tsp brown sugar",
+      "1 tbsp tomato purée",
+      "60 ml red wine",
+      "60 ml water",
+      "200 g mayonnaise",
+      "125 g crème fraîche",
+      "1/2 tbsp lemon juice",
+      "2 tbsp dried apricots, chopped",
+      "2 tbsp sultanas",
+      "Salt and pepper, to taste"
     ],
     "instructions": [
-      "Set out every measured ingredient before turning on the heat, then prepare the vegetables, protein, seasonings, and serving pieces so the recipe moves smoothly without rushed chopping.",
-      "Warm the main pan or oven dish gradually and add the cooking fat, using medium heat so the aromatics can soften and release flavor without scorching on the base.",
-      "Add the primary savory ingredients in the order listed, stirring patiently so each piece is coated with the seasoning and begins to build color before liquid is added.",
-      "Pour in the measured liquid or sauce ingredients, scrape the browned bits from the pan, and bring the mixture to a steady simmer rather than an aggressive boil.",
-      "Cook until the texture matches the recipe: meat should be tender and safe, potatoes or rice should be fully cooked, and sauces should coat the spoon without tasting raw.",
-      "Taste carefully near the end and adjust only with the listed salt, pepper, lemon, vinegar, or herbs so the finished recipe remains aligned with the demonstrated tutorial.",
-      "Rest the finished dish briefly off the heat, allowing starches, dairy, meat juices, or sauces to settle before slicing, spooning, or plating for clean presentation.",
-      "Serve while warm with the suggested accompaniments, keeping crisp elements uncovered and creamy or saucy elements gently stirred so the final plate has the intended texture."
+      "Poach the chicken breasts in the chicken stock with the diced onion and bay leaves until cooked through, then cool the chicken and reserve the stock for another use.",
+      "Fry the onion in the butter or oil until softened, then stir in the curry powder, turmeric, brown sugar, and tomato purée.",
+      "Add the red wine and water, simmer the curry base briefly, then let it cool completely.",
+      "Mix the cooled curry base with the mayonnaise, crème fraîche, and lemon juice.",
+      "Fold in the cooled chicken, chopped dried apricots, and sultanas.",
+      "Season with salt and pepper to taste, then chill before serving."
     ],
     "tips": [
-      "Cool chicken before mixing.",
-      "Toast almonds for better flavor.",
-      "Fold gently to keep texture."
+      "Cool the curry base completely before adding the mayonnaise and crème fraîche.",
+      "Cool the poached chicken before folding it into the sauce.",
+      "Fold in the apricots and sultanas gently at the end."
     ],
     "commonMistakes": [
-      "Warm chicken loosens the dressing.",
-      "Too much curry powder overwhelms the salad.",
-      "Skipping lemon makes the sauce flat."
+      "Warm curry base can loosen the mayonnaise and crème fraîche sauce.",
+      "Adding the dairy sauce before the curry base cools can affect its texture.",
+      "Skipping the lemon juice can leave the finished sauce tasting flat."
     ],
     "substitutions": [
-      "Use sour cream instead of yogurt.",
-      "Use sultanas instead of raisins.",
-      "Serve in sandwiches or on salad leaves."
+      "Use oil instead of butter for frying the onion.",
+      "Adjust the salt and pepper only after the sauce is fully mixed.",
+      "Use one or two bay leaves, as preferred."
     ],
     "storage": [
       "Refrigerate for up to 2 days.",
