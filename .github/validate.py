@@ -113,9 +113,9 @@ base = "https://thejan200.github.io/recipe-hub.github.io/"
 assert all(u.startswith(base) for u in urls), "Sitemap contains an unexpected URL"
 for recipe in recipes:
     if recipe.get("status") != "draft":
-        assert base + "recipe.html?id=" + recipe["id"] in urls, f"Published recipe missing from sitemap: {recipe['id']}"
+        assert base + "recipes/" + recipe["id"] + "/" in urls, f"Published static recipe missing from sitemap: {recipe['id']}"
 
-required = ["index.html", "recipes.html", "recipe.html", "category.html", "categories.html", "favorites.html", "about.html", "contact.html", "privacy.html", "terms.html", "disclaimer.html", "cookie-policy.html", "404.html", "robots.txt", "sitemap.xml", "site.webmanifest", "favicon.svg", "data/recipes.json", "data/videos.json", "data/category-images.json", "assets/css/style.css", "assets/js/app.js", "assets/js/site.js", "assets/js/seo.js", "assets/js/video-loader.js"]
+required = ["index.html", "recipes.html", "recipe.html", "category.html", "categories.html", "favorites.html", "about.html", "contact.html", "privacy.html", "terms.html", "disclaimer.html", "cookie-policy.html", "404.html", "robots.txt", "sitemap.xml", "site.webmanifest", "favicon.svg", "data/recipes.json", "data/videos.json", "data/category-images.json", "assets/css/style.css", "assets/css/static-seo.css", "assets/js/app.js", "assets/js/site.js", "assets/js/static-pages.js", "assets/js/seo.js", "assets/js/video-loader.js", "tools/build-static-seo-pages.js", "recipes/index.html"]
 for path in required:
     assert (root / path).is_file(), f"Missing required file: {path}"
 

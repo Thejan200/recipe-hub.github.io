@@ -40,15 +40,16 @@ for recipe in runtime_published:
     assert video.get("thumbnailUrl", "").startswith("https://i.ytimg.com/vi/"), f"Runtime published recipe {rid} needs a YouTube thumbnail URL"
     assert re.fullmatch(r"\d{4}-\d{2}-\d{2}T.+", str(video.get("uploadDate", ""))), f"Runtime published recipe {rid} needs a verified video upload date"
 
-# Sitemap must cover all runtime-published recipe URLs and all user-facing category collections.
+# Sitemap must cover all runtime-published static recipe URLs and all static category collections.
 sitemap = ET.parse(root / "sitemap.xml").getroot()
 urls = {e.text for e in sitemap.iter() if e.tag.endswith("}loc") and e.text}
 for rid in runtime_ids:
-    assert base + "recipe.html?id=" + rid in urls, f"Runtime published recipe missing from sitemap: {rid}"
+    assert base + "recipes/" + rid + "/" in urls, f"Runtime published static recipe missing from sitemap: {rid}"
 assert base + "categories.html" in urls, "Categories landing page missing from sitemap"
 for category in ("Breakfast", "Dinner", "Beef", "Pork", "Seafood", "Soup", "Dessert", "Healthy", "Chicken", "Vegetarian", "Quick%20%26%20Easy", "USA", "UK", "Canada", "Christmas", "New%20Year"):
-    assert base + "category.html?category=" + category in urls, f"Category missing from sitemap: {category}"
-assert base + "category.html?category=Vegan" not in urls, "Stale Vegan collection URL should not be in sitemap"
+    slug = category.lower().replace("%20%26%20", "-and-").replace("%20", "-")
+    assert base + "categories/" + slug + "/" in urls, f"Static category missing from sitemap: {category}"
+assert base + "categories/vegan/" not in urls, "Stale Vegan collection URL should not be in sitemap"
 
 # USA is a controlled cuisine collection and every American-classics recipe must remain launch-ready.
 usa_ids = {
@@ -128,8 +129,10 @@ for seasonal_name in seasonal_expected:
     image_path = root / json.loads((root / "data/category-images.json").read_text(encoding="utf-8"))[seasonal_name]
     assert image_path.is_file(), f"Missing category image for {seasonal_name}"
 
-# Key recipe/taxonomy surfaces must use one cache-busting site.js version so behavior stays consistent.
-for name in ("index.html", "recipes.html", "categories.html", "category.html", "recipe.html", "favorites.html"):
+# Dynamic collection surfaces must use one cache-busting site.js version so behavior stays consistent.
+# The legacy query URL documents are intentional noindex redirects; their static
+# canonical replacements are checked by validate_static_seo.py.
+for name in ("index.html", "recipes.html", "categories.html", "favorites.html"):
     text = (root / name).read_text(encoding="utf-8")
     assert 'assets/js/site.js?v=16' in text, f"Stale site.js cache version on {name}"
     assert 'assets/js/app.js?v=16' in text, f"Stale app.js cache version on {name}"
