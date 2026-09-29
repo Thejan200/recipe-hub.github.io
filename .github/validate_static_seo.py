@@ -81,6 +81,14 @@ for recipe in runtime_recipes:
     assert schema.get("@type") == "Recipe" and schema.get("name") == recipe["title"], f"Wrong Recipe schema for {recipe['id']}"
     assert schema.get("recipeIngredient") and schema.get("recipeInstructions"), f"Incomplete Recipe schema for {recipe['id']}"
     assert schema.get("video", {}).get("embedUrl", "").startswith("https://www.youtube.com/embed/"), f"Missing VideoObject for {recipe['id']}"
+    html = page.read_text(encoding="utf-8")
+    credit_pattern = re.compile(
+        r'<p class="video-credit">Video courtesy of <a href="([^"]+)"[^>]*>.*?</a>\. Please support the creator by <a href="([^"]+)"[^>]*>subscribing to their YouTube channel</a>\.</p>'
+    )
+    credit_match = credit_pattern.search(html)
+    assert credit_match, f"Missing YouTube attribution/subscription credit for {recipe['id']}"
+    assert credit_match.group(1) == credit_match.group(2), f"Inconsistent YouTube channel links for {recipe['id']}"
+    assert credit_match.group(1).startswith("https://www.youtube.com/"), f"Invalid YouTube channel link for {recipe['id']}"
 
 taxonomy = json.loads((root / "data/category-taxonomy.json").read_text(encoding="utf-8"))
 for category in taxonomy["categories"]:
