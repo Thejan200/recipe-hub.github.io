@@ -22,7 +22,7 @@
   // Recipe PDF buttons: route the action to the site's PDF generator instead of the browser's native print dialog.
   if (document.getElementById('recipe-card') && document.getElementById('recipe-detail')) {
     const pdfScript = document.createElement('script');
-    pdfScript.src = new URL(document.currentScript.src.replace(/static-pages\\.js(?:\\?.*)?$/, 'pdf-export.js'));
+    pdfScript.src = new URL(document.currentScript.src.replace(/static-pages\.js(?:\?.*)?$/, 'pdf-export.js'));
     pdfScript.defer = true;
     document.head.appendChild(pdfScript);
     document.querySelectorAll('button[onclick="window.print()"]')?.forEach(button => {
