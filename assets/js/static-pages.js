@@ -19,6 +19,17 @@
     theme.addEventListener('click', () => { const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'; document.documentElement.setAttribute('data-theme', next); try { localStorage.setItem('bs-theme', next); } catch {} sync(); });
     header.querySelector('.saved-link')?.before(theme); sync();
   }
+  // Recipe PDF buttons: route the action to the site's PDF generator instead of the browser's native print dialog.
+  if (document.getElementById('recipe-card') && document.getElementById('recipe-detail')) {
+    const pdfScript = document.createElement('script');
+    pdfScript.src = new URL(document.currentScript.src.replace(/static-pages\.js(?:\?.*)?$/, 'pdf-export.js'));
+    pdfScript.defer = true;
+    document.head.appendChild(pdfScript);
+    document.querySelectorAll('button[onclick="window.print()"]')?.forEach(button => {
+      button.removeAttribute('onclick');
+      button.addEventListener('click', () => window.downloadRecipePDF?.());
+    });
+  }
   document.querySelectorAll('.video-credit').forEach(credit => {
     const channelLink = credit.querySelector('a[href^="https://www.youtube.com/"]');
     if (!channelLink) return;
