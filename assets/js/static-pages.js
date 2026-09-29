@@ -19,6 +19,13 @@
     theme.addEventListener('click', () => { const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'; document.documentElement.setAttribute('data-theme', next); try { localStorage.setItem('bs-theme', next); } catch {} sync(); });
     header.querySelector('.saved-link')?.before(theme); sync();
   }
+  document.querySelectorAll('.video-credit').forEach(credit => {
+    const channelLink = credit.querySelector('a[href^="https://www.youtube.com/"]');
+    if (!channelLink) return;
+    const channelUrl = channelLink.getAttribute('href');
+    const channelName = channelLink.textContent.trim() || 'YouTube';
+    credit.innerHTML = `Video courtesy of <a href="${channelUrl}" rel="noopener noreferrer">${channelName}</a>. Please support the creator by <a href="${channelUrl}" rel="noopener noreferrer">subscribing to their YouTube channel</a>.`;
+  });
   document.querySelectorAll('[data-save-recipe]').forEach(button => button.addEventListener('click', () => {
     const id = button.dataset.saveRecipe; let saved = [];
     try { saved = JSON.parse(localStorage.getItem('bs-saved') || '[]'); } catch {}
