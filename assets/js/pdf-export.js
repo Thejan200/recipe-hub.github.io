@@ -300,6 +300,5 @@
     }
   }
 
-  window.downloadRecipePDF = downloadRecipePDF;
-  window.print = downloadRecipePDF;
+  window.downloadRecipePDF = downloadRecipePDF; 
 })();
