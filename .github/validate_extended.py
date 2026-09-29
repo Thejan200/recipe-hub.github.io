@@ -206,6 +206,17 @@ for html in list(root.glob("*.html")) + list((root / "admin").glob("*.html")):
         finally:
             temp.unlink(missing_ok=True)
 
+# Every current and future runtime recipe receives at least five search aliases
+# and five relevant search/SEO phrases from the client-side metadata generator.
+for recipe in runtime_published:
+    title = re.sub(r"[^a-z0-9]+", " ", str(recipe.get("title", "")).lower()).strip()
+    simple = re.sub(r"\b(classic|easy|best|homemade|traditional|old fashioned|quick|simple)\b", " ", title)
+    simple = re.sub(r"\s+", " ", simple).strip() or title
+    assert len({title, simple, simple[:-1] if simple.endswith("s") else simple + "s", f"{recipe.get('category', '').lower()} {simple}", f"{recipe.get('country') or recipe.get('cuisine') or ''} {simple}", f"recipe {simple}"}) >= 5, f"Search metadata cannot produce five aliases for {recipe['id']}"
+assert "recipeSearchMetadata" in app and "searchAliases" in app and "seoKeywords" in app, "Automatic recipe search metadata is missing"
+assert "levenshtein" in app and "isCloseSearchToken" in app and "matchesRecipeSearch" in app, "Typo-tolerant recipe search is missing"
+assert "'keywords':r.seoKeywords.join(', ')" in app, "Recipe schema SEO keywords are missing"
+
 # Validate remaining WebP assets are actually WebP files.
 for path in root.rglob("*.webp"):
     raw = path.read_bytes()
