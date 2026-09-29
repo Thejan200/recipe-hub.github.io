@@ -274,7 +274,7 @@
 
   async function downloadRecipePDF() {
     const source = document.getElementById('recipe-card');
-    const detail = document.getElementById('recipe-detail');
+    const detail = document.getElementById('recipe-detail') || document.querySelector('.recipe-hero');
     if (!source || !detail) return;
 
     const title = source.getAttribute('data-print-title') || document.title.replace(/\s*\|.*$/, '') || 'Recipe';

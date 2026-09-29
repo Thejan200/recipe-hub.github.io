@@ -20,7 +20,7 @@
     header.querySelector('.saved-link')?.before(theme); sync();
   }
   // Recipe PDF buttons: route the action to the site's PDF generator instead of the browser's native print dialog.
-  if (document.getElementById('recipe-card') && document.getElementById('recipe-detail')) {
+  if (document.getElementById('recipe-card')) {
     const pdfScript = document.createElement('script');
     pdfScript.src = new URL(document.currentScript.src.replace(/static-pages\.js(?:\?.*)?$/, 'pdf-export.js'));
     pdfScript.defer = true;
