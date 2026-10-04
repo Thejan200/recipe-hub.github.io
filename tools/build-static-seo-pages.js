@@ -8,7 +8,7 @@ const path = require('path');
 const vm = require('vm');
 
 const root = path.resolve(__dirname, '..');
-const siteUrl = 'https://thejan200.github.io/recipe-hub.github.io/';
+const siteUrl = 'https://bitesparks.com/';
 const marker = '.bitesparks-static-output';
 const staticCategoryNames = new Set(['Breakfast', 'Dinner', 'Chicken', 'Beef', 'Pork', 'Seafood', 'Soup', 'Dessert', 'Pasta', 'Salad', 'Appetizer', 'USA', 'Canada', 'UK', 'Healthy', 'Vegetarian', 'Quick & Easy', 'Christmas', 'New Year']);
 
