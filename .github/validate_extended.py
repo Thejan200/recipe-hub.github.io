@@ -7,7 +7,7 @@ import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 
 root = pathlib.Path(__file__).resolve().parents[1]
-base = "https://thejan200.github.io/recipe-hub.github.io/"
+base = "https://bitesparks.com/"
 
 # Reconstruct the catalog that the browser publishes through recipe-batch-loader.js.
 recipe_files = [root / "data/recipes.json"] + sorted(root.glob("data/recipes-batch-*.json"))
