@@ -109,7 +109,7 @@ for category, image in zip(category_images, category_image_values):
 sitemap_root = ET.parse(root / "sitemap.xml").getroot()
 urls = [e.text for e in sitemap_root.iter() if e.tag.endswith("}loc") and e.text]
 assert urls and len(urls) == len(set(urls)), "sitemap.xml contains missing or duplicate URLs"
-base = "https://thejan200.github.io/recipe-hub.github.io/"
+base = "https://bitesparks.com/"
 assert all(u.startswith(base) for u in urls), "Sitemap contains an unexpected URL"
 for recipe in recipes:
     if recipe.get("status") != "draft":

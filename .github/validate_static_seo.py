@@ -7,7 +7,7 @@ import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 
 root = pathlib.Path(__file__).resolve().parents[1]
-base = "https://thejan200.github.io/recipe-hub.github.io/"
+base = "https://bitesparks.com/"
 
 # The committed static output must always be rebuilt from the exact runtime
 # catalog before a publish. This is a build-time check only; no server or data
