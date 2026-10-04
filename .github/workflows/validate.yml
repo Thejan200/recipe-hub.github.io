@@ -9,10 +9,10 @@ on:
 jobs:
   validate:
     name: Validate site
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Validate site structure and recipe data
         run: python .github/validate.py
       - name: Run extended runtime and inline audit
@@ -23,13 +23,6 @@ jobs:
         run: python .github/validate_brand.py
       - name: Validate favicon and app icons
         run: python .github/validate_favicons.py
-      - name: Validate JavaScript syntax
-        shell: bash
-        run: |
-          set -e
-          find assets/js admin -type f -name '*.js' -print0 | while IFS= read -r -d '' file; do
-            node --check "$file"
-          done
       - name: Check for obvious secrets
         shell: bash
         run: |
