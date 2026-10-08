@@ -36,6 +36,11 @@ if before != after:
             print("ANCHOR", marker, generated.find(marker))
         pos = generated.find('"name":"Caesar Salad"')
         print("CAESAR_CONTEXT", generated[max(0,pos-1800):pos+500] if pos >= 0 else "NOT FOUND")
+        committed = subprocess.run(["git","show","HEAD:recipes/index.html"],cwd=root,capture_output=True,text=True,check=True).stdout
+        import difflib
+        diff=list(difflib.unified_diff(committed.splitlines(),generated.splitlines(),n=1))
+        print("RECIPES_INDEX_DIFF_LINES", len(diff))
+        for line in diff[:40]: print("DIFF", line[:500])
         print("TAIL", generated[-1800:])
     raise AssertionError("Static SEO output was stale. Run: node tools/build-static-seo-pages.js and commit the generated files.")
 
