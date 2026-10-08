@@ -34,6 +34,8 @@ if before != after:
         # before output was fingerprinted before build; recover expected current file from git is not available here, so print structural anchors from generated output.
         for marker in ["Browse 181 BiteSparks recipes","Browse 182 BiteSparks recipes","181 recipes","182 recipes","maple-chicken","caesar-salad"]:
             print("ANCHOR", marker, generated.find(marker))
+        pos = generated.find('"name":"Caesar Salad"')
+        print("CAESAR_CONTEXT", generated[max(0,pos-1800):pos+500] if pos >= 0 else "NOT FOUND")
         print("TAIL", generated[-1800:])
     raise AssertionError("Static SEO output was stale. Run: node tools/build-static-seo-pages.js and commit the generated files.")
 
