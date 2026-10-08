@@ -21,35 +21,7 @@ def output_fingerprint():
 before = output_fingerprint()
 result = subprocess.run(["node", "tools/build-static-seo-pages.js"], cwd=root, capture_output=True, text=True)
 assert result.returncode == 0, f"Static SEO build failed:\n{result.stdout}\n{result.stderr}"
-after = output_fingerprint()
-if before != after:
-    print("STATIC SEO DIFF FILES:")
-    for key in sorted(set(before) | set(after)):
-        if before.get(key) != after.get(key): print(key)
-    p = root / "recipes/index.html"
-    if p.is_file():
-        generated = p.read_text(encoding="utf-8")
-        print("RECIPES_INDEX_LEN", len(generated))
-        old_bytes = p.read_bytes()
-        # before output was fingerprinted before build; recover expected current file from git is not available here, so print structural anchors from generated output.
-        for marker in ["Browse 181 BiteSparks recipes","Browse 182 BiteSparks recipes","181 recipes","182 recipes","maple-chicken","caesar-salad"]:
-            print("ANCHOR", marker, generated.find(marker))
-        pos = generated.find('"name":"Caesar Salad"')
-        print("CAESAR_CONTEXT", generated[max(0,pos-1800):pos+500] if pos >= 0 else "NOT FOUND")
-        committed = subprocess.run(["git","show","HEAD:recipes/index.html"],cwd=root,capture_output=True,text=True,check=True).stdout
-        import difflib
-        diff=list(difflib.unified_diff(committed.splitlines(),generated.splitlines(),n=1))
-        print("RECIPES_INDEX_DIFF_LINES", len(diff))
-        import difflib as _dl
-        sm=_dl.SequenceMatcher(None,committed,generated)
-        for tag,a1,a2,b1,b2 in sm.get_opcodes():
-            if tag != "equal":
-                print("CHANGE",tag,a1,a2,b1,b2)
-                print("COMMITTED_CHUNK",repr(committed[max(0,a1-180):min(len(committed),a2+180)]))
-                print("GENERATED_CHUNK",repr(generated[max(0,b1-180):min(len(generated),b2+180)]))
-                break
-        print("TAIL", generated[-1800:])
-    raise AssertionError("Static SEO output was stale. Run: node tools/build-static-seo-pages.js and commit the generated files.")
+assert before == output_fingerprint(), "Static SEO output was stale. Run: node tools/build-static-seo-pages.js and commit the generated files."
 
 loader = (root / "assets/js/recipe-batch-loader.js").read_text(encoding="utf-8")
 block = re.search(r"const publishedBatchCategories\s*=\s*\{(.*?)\};", loader, re.S)
