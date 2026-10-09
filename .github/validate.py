@@ -126,6 +126,13 @@ class RefParser(HTMLParser):
         for key in ("href", "src"):
             if attrs.get(key): self.refs.append(attrs[key])
 
+# Require the exact Google AdSense account meta tag once in every published HTML file.
+adsense_tag = '<meta name="google-adsense-account" content="ca-pub-3013687081262680">'
+html_pages = sorted(root.rglob("*.html"))
+for html in html_pages:
+    page = html.read_text(encoding="utf-8")
+    assert page.count(adsense_tag) == 1, f"Expected exactly one AdSense account meta tag in {html.relative_to(root)}"
+
 html_files = list(root.glob("*.html")) + list((root / "admin").glob("*.html"))
 for html in html_files:
     parser=RefParser(); parser.feed(html.read_text(encoding="utf-8"))
