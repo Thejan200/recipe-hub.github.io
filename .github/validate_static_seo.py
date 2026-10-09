@@ -21,10 +21,7 @@ def output_fingerprint():
 before = output_fingerprint()
 result = subprocess.run(["node", "tools/build-static-seo-pages.js"], cwd=root, capture_output=True, text=True)
 assert result.returncode == 0, f"Static SEO build failed:\n{result.stdout}\n{result.stderr}"
-after = output_fingerprint()
-if before != after:
-    changed = sorted(path for path in set(before) | set(after) if before.get(path) != after.get(path))
-    raise AssertionError("Static SEO output was stale. Generated-output differences: " + ", ".join(changed[:30]))
+assert before == output_fingerprint(), "Static SEO output was stale. Run: node tools/build-static-seo-pages.js and commit the generated files."
 
 loader = (root / "assets/js/recipe-batch-loader.js").read_text(encoding="utf-8")
 block = re.search(r"const publishedBatchCategories\s*=\s*\{(.*?)\};", loader, re.S)
