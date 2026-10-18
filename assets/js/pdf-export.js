@@ -172,6 +172,8 @@
     function card(titleText, bodyTexts) {
       const lineH = 4.8;
       const innerW = contentW - 12;
+      // A card is deliberately kept intact. This matches the approved recipe
+      // handout structure and avoids splitting a note heading from its advice.
       let estimated = 12 + 7;
       const wrappedBodies = bodyTexts.map(t => {
         const lines = doc.splitTextToSize(cleanText(t), innerW);
@@ -179,11 +181,7 @@
         return lines;
       });
       estimated += 7;
-      if (estimated <= contentW * 0 + (bottom - margin)) pageBreak(estimated);
-      if (y + estimated > bottom) {
-        doc.addPage();
-        y = margin;
-      }
+      pageBreak(estimated);
       const top = y - 2;
       doc.setFillColor(...colors.soft);
       doc.setDrawColor(...colors.line);
@@ -268,16 +266,21 @@
       }
     }
 
-    // Tips / mistakes / substitutions / storage: each complete card stays together.
+    // Helpful Notes follows the approved handout format: a dedicated section
+    // heading followed by four complete, recipe-specific cards.
     // Static recipe pages place Helpful Notes beside the recipe card rather than
     // inside .recipe-hero. Search from the full page scope so printed PDFs use
     // the same recipe-specific notes readers see on the page.
     const editorialCards = [...detail.querySelectorAll('.recipe-editorial .editorial-card')];
-    editorialCards.forEach(el => {
+    const notes = editorialCards.map(el => {
       const h = cleanText(el.querySelector('h3')?.textContent || 'Recipe Notes');
       const items = [...el.querySelectorAll('li')].map(li => cleanText(li.textContent)).filter(Boolean);
-      if (items.length) card(h, items);
+      return { heading: h.replace(/^[^A-Za-z0-9]+\s*/, ''), items };
     });
+    if (notes.some(note => note.items.length)) {
+      heading('Helpful Notes', 15);
+      notes.filter(note => note.items.length).forEach(note => card(note.heading, note.items));
+    }
 
     // Small footer on every generated PDF page is deliberately omitted; the document remains recipe-focused.
     return doc;
