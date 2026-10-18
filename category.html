@@ -11,7 +11,7 @@
     (() => {
       const params = new URLSearchParams(location.search);
       const category = params.get('category');
-      const slugs = {'Breakfast':'breakfast','Dinner':'dinner','Chicken':'chicken','Beef':'beef','Pork':'pork','Seafood':'seafood','Soup':'soup','Dessert':'dessert','Pasta':'pasta','Salad':'salad','Appetizer':'appetizer','USA':'usa','Canada':'canada','UK':'uk','Healthy':'healthy','Vegetarian':'vegetarian','Quick & Easy':'quick-and-easy','Christmas':'christmas','New Year':'new-year'};
+      const slugs = {'Breakfast':'breakfast','Lunch':'lunch','Dinner':'dinner','Chicken':'chicken','Beef':'beef','Pork':'pork','Seafood':'seafood','Soup':'soup','Dessert':'dessert','Pasta':'pasta','Salad':'salad','Appetizer':'appetizer','USA':'usa','Canada':'canada','UK':'uk','Healthy':'healthy','Vegetarian':'vegetarian','Quick & Easy':'quick-and-easy','Christmas':'christmas','New Year':'new-year'};
       if (category && !params.get('q') && slugs[category]) location.replace(`categories/${slugs[category]}/`);
     })();
   </script>

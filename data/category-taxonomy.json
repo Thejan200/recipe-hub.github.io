@@ -9,6 +9,7 @@
       "description": "Find recipes for the part of the day or meal you are planning.",
       "categories": [
         "Breakfast",
+        "Lunch",
         "Dinner"
       ]
     },
@@ -77,6 +78,12 @@
       "label": "Breakfast",
       "description": "Easy morning favorites, from pancakes and toast to comforting baked starts.",
       "icon": "☀️",
+      "showOnLanding": true
+    },
+    "Lunch": {
+      "label": "Lunch",
+      "description": "Easy lunch recipes for workdays, relaxed weekends, and satisfying midday meals.",
+      "icon": "🥪",
       "showOnLanding": true
     },
     "Dinner": {
