@@ -95,6 +95,8 @@
     function setBody() {
       doc.setFont('helvetica', 'normal');
       doc.setFontSize(10.5);
+      doc.setCharSpace(0);
+      doc.setLineHeightFactor(1.15);
       doc.setTextColor(...colors.ink);
     }
 
@@ -112,6 +114,7 @@
       pageBreak(size * 0.45 + 9);
       doc.setFont('times', 'bold');
       doc.setFontSize(size);
+      doc.setCharSpace(0);
       doc.setTextColor(...colors.ink);
       doc.text(text, margin, y);
       y += size * 0.48 + 5;
@@ -126,6 +129,7 @@
       pageBreak(12);
       doc.setFont('helvetica', 'bold');
       doc.setFontSize(12.5);
+      doc.setCharSpace(0);
       doc.setTextColor(...colors.ink);
       doc.text(text, margin, y);
       y += 7;
@@ -141,6 +145,7 @@
       pageBreak(h + 2);
       doc.setFont('helvetica', 'bold');
       doc.setFontSize(10.5);
+      doc.setCharSpace(0);
       doc.text('•', x, y);
       setBody();
       doc.text(lines, textX, y, { lineHeightFactor: 1 });
@@ -156,6 +161,7 @@
       pageBreak(Math.min(h + 2, 18));
       doc.setFont('helvetica', 'bold');
       doc.setFontSize(10.5);
+      doc.setCharSpace(0);
       doc.setTextColor(235, 78, 31);
       doc.text(`${index}.`, x, y);
       setBody();
@@ -186,6 +192,7 @@
       y += 4;
       doc.setFont('times', 'bold');
       doc.setFontSize(13);
+      doc.setCharSpace(0);
       doc.setTextColor(...colors.ink);
       doc.text(titleText, margin + 6, y);
       y += 7;
@@ -201,6 +208,7 @@
     // Title — vector text, so it remains crisp instead of being rasterized.
     doc.setFont('times', 'bold');
     doc.setFontSize(25);
+    doc.setCharSpace(0);
     doc.setTextColor(...colors.ink);
     const titleLines = doc.splitTextToSize(title, contentW);
     doc.text(titleLines, margin, y, { lineHeightFactor: 1.12 });
@@ -261,6 +269,9 @@
     }
 
     // Tips / mistakes / substitutions / storage: each complete card stays together.
+    // Static recipe pages place Helpful Notes beside the recipe card rather than
+    // inside .recipe-hero. Search from the full page scope so printed PDFs use
+    // the same recipe-specific notes readers see on the page.
     const editorialCards = [...detail.querySelectorAll('.recipe-editorial .editorial-card')];
     editorialCards.forEach(el => {
       const h = cleanText(el.querySelector('h3')?.textContent || 'Recipe Notes');
@@ -274,7 +285,7 @@
 
   async function downloadRecipePDF() {
     const source = document.getElementById('recipe-card');
-    const detail = document.getElementById('recipe-detail') || document.querySelector('.recipe-hero');
+    const detail = document.getElementById('recipe-detail') || source.closest('main') || document.querySelector('main');
     if (!source || !detail) return;
 
     const title = source.getAttribute('data-print-title') || document.title.replace(/\s*\|.*$/, '') || 'Recipe';
