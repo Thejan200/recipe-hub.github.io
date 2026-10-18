@@ -80,6 +80,12 @@ for recipe in runtime_recipes:
     schema = json.loads(parser.scripts[0])
     assert schema.get("@type") == "Recipe" and schema.get("name") == recipe["title"], f"Wrong Recipe schema for {recipe['id']}"
     assert schema.get("recipeIngredient") and schema.get("recipeInstructions"), f"Incomplete Recipe schema for {recipe['id']}"
+    for index, step in enumerate(schema["recipeInstructions"], start=1):
+        assert step.get("@type") == "HowToStep" and step.get("text") and step.get("name"), f"Incomplete instruction step for {recipe['id']}"
+        assert step.get("url") == f"{expected_url}#step-{index}", f"Wrong instruction URL for {recipe['id']}"
+        assert step.get("image"), f"Missing instruction image for {recipe['id']}"
+        assert f'id="step-{index}"' in page.read_text(encoding="utf-8"), f"Missing instruction anchor for {recipe['id']}"
+    assert "aggregateRating" not in schema, f"Unexpected aggregate rating for {recipe['id']}"
     assert schema.get("video", {}).get("embedUrl", "").startswith("https://www.youtube.com/embed/"), f"Missing VideoObject for {recipe['id']}"
 
 taxonomy = json.loads((root / "data/category-taxonomy.json").read_text(encoding="utf-8"))

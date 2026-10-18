@@ -25,6 +25,16 @@ const minuteValue = value => {
 const slugify = value => String(value ?? '').toLowerCase().trim()
   .replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const isoDuration = minutes => `PT${Math.max(0, Number(minutes) || 0)}M`;
+// A concise, descriptive label for Recipe/HowToStep structured data. This is
+// intentionally derived from the visible instruction, so the JSON-LD remains
+// faithful to the on-page recipe content without adding editorial claims.
+const stepName = instruction => {
+  const text = String(instruction ?? '').replace(/\s+/g, ' ').trim();
+  const clause = text.split(/[.;]|,\s+(?:then|before|while|until|and)\s+/i)[0].trim();
+  const words = clause.split(' ').filter(Boolean);
+  const label = words.slice(0, 12).join(' ');
+  return label.length > 90 ? `${label.slice(0, 87).trimEnd()}…` : (label || 'Prepare the recipe');
+};
 const publishedDateFallbacks = {
   'lemon-chicken-pasta': '2026-08-31', 'avocado-toast': '2026-08-31',
   'salmon-bowl': '2026-08-31', 'berry-parfait': '2026-08-31',
@@ -117,7 +127,17 @@ function recipeSchema(recipe, canonical) {
     keywords: [recipe.title, recipe.category, recipe.country, recipe.cuisine, ...recipe.tags].filter(Boolean).join(', '),
     prepTime: isoDuration(recipe.prep), cookTime: isoDuration(recipe.cook), totalTime: isoDuration(recipe.total),
     recipeYield: String(recipe.servings || ''), recipeCategory: recipe.category, recipeCuisine: recipe.cuisine,
-    recipeIngredient: recipe.ingredients, recipeInstructions: recipe.instructions.map(text => ({ '@type': 'HowToStep', text })), nutrition,
+    recipeIngredient: recipe.ingredients,
+    recipeInstructions: recipe.instructions.map((text, index) => ({
+      '@type': 'HowToStep',
+      name: stepName(text),
+      text,
+      url: `${canonical}#step-${index + 1}`,
+      // Use the same public recipe image already shown on this page. No new
+      // media, tracking, or third-party asset is introduced by this markup.
+      image: new URL(recipe.image, siteUrl).href
+    })),
+    nutrition,
     mainEntityOfPage: canonical
   };
   if (recipe.video?.youtubeId) {
@@ -138,7 +158,7 @@ function recipePage(recipe, recipes) {
   const categories = [...new Set([recipe.category, recipe.country, ...recipe.tags].filter(category => staticCategoryNames.has(category)))].slice(0, 5);
   const video = recipe.video?.youtubeId ? `<section class="recipe-video"><div class="section-head"><h2>Watch the tutorial</h2></div><div class="video-frame"><iframe src="https://www.youtube.com/embed/${encodeURIComponent(recipe.video.youtubeId)}" title="${esc(recipe.video.title || `${recipe.title} video tutorial`)}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><p class="video-credit">Video: <a href="${esc(recipe.video.url || `https://www.youtube.com/watch?v=${recipe.video.youtubeId}`)}" rel="noopener noreferrer">${esc(recipe.video.channel || 'YouTube')}</a></p></section>` : '';
   const related = relatedFor(recipe, recipes);
-  const body = `<section class="recipe-hero"><div><p class="eyebrow">${esc(recipe.category)} · ${esc(recipe.difficulty || 'Easy')}</p><h1>${esc(recipe.title)}</h1><p class="lead">${esc(recipe.description)}</p><p class="recipe-published-date">Published <time datetime="${esc(recipe.datePublished)}">${esc(recipe.datePublished)}</time></p><div class="recipe-meta"><span>⏱ ${recipe.total} min</span><span>🍽 ${esc(recipe.servings)} servings</span><span>🔥 ${esc(recipe.calories)} cal</span></div><div class="recipe-taxonomy-chips" aria-label="Recipe categories">${categories.map(category => `<a class="recipe-taxonomy-chip" href="${prefix}categories/${slugify(category)}/">${esc(category)}</a>`).join('')}</div><div class="recipe-actions"><a class="btn btn-primary" href="#recipe-card">↓ Jump to recipe</a><button class="btn btn-outline" type="button" data-save-recipe="${esc(recipe.id)}">♡ Save recipe</button><button class="btn btn-outline" type="button" onclick="window.print()">Print</button></div></div><img class="detail-image" src="${esc(assetUrl(recipe.image, prefix))}" alt="${esc(recipe.title)}" width="900" height="675"></section>${video}<article id="recipe-card" class="recipe-layout"><div><h2>Ingredients</h2><ul class="ingredients">${recipe.ingredients.map(item => `<li>${esc(item)}</li>`).join('')}</ul><h2>Instructions</h2><p class="instruction-intro">Follow each step in order. The directions below are written so a beginner can understand what to do, what to look for, and when to move on to the next step.</p><ol class="instructions">${recipe.instructions.map((item, index) => `<li><strong>Step ${index + 1}.</strong><span>${esc(item)}</span></li>`).join('')}</ol></div><aside class="recipe-box"><p class="eyebrow">RECIPE CARD</p><h2>${esc(recipe.title)}</h2><div class="stats"><span><b>Prep</b>${recipe.prep} min</span><span><b>Cook</b>${recipe.cook} min</span><span><b>Total</b>${recipe.total} min</span><span><b>Servings</b>${esc(recipe.servings)}</span></div><h3>Nutrition</h3><p>${esc(recipe.calories)} calories · Nutrition values are estimates and may vary by ingredients and portions.</p><p class="recipe-author">Author: Thejan Mahakumbura</p><button class="btn btn-dark" type="button" onclick="window.print()">Print recipe</button></aside></article>${editorialBlock(recipe)}<section class="section related"><div class="section-head"><h2>You might also like</h2></div><div class="recipe-grid">${related.map(item => recipeCard(item, prefix)).join('')}</div></section>`;
+  const body = `<section class="recipe-hero"><div><p class="eyebrow">${esc(recipe.category)} · ${esc(recipe.difficulty || 'Easy')}</p><h1>${esc(recipe.title)}</h1><p class="lead">${esc(recipe.description)}</p><p class="recipe-published-date">Published <time datetime="${esc(recipe.datePublished)}">${esc(recipe.datePublished)}</time></p><div class="recipe-meta"><span>⏱ ${recipe.total} min</span><span>🍽 ${esc(recipe.servings)} servings</span><span>🔥 ${esc(recipe.calories)} cal</span></div><div class="recipe-taxonomy-chips" aria-label="Recipe categories">${categories.map(category => `<a class="recipe-taxonomy-chip" href="${prefix}categories/${slugify(category)}/">${esc(category)}</a>`).join('')}</div><div class="recipe-actions"><a class="btn btn-primary" href="#recipe-card">↓ Jump to recipe</a><button class="btn btn-outline" type="button" data-save-recipe="${esc(recipe.id)}">♡ Save recipe</button><button class="btn btn-outline" type="button" onclick="window.print()">Print</button></div></div><img class="detail-image" src="${esc(assetUrl(recipe.image, prefix))}" alt="${esc(recipe.title)}" width="900" height="675"></section>${video}<article id="recipe-card" class="recipe-layout"><div><h2>Ingredients</h2><ul class="ingredients">${recipe.ingredients.map(item => `<li>${esc(item)}</li>`).join('')}</ul><h2>Instructions</h2><p class="instruction-intro">Follow each step in order. The directions below are written so a beginner can understand what to do, what to look for, and when to move on to the next step.</p><ol class="instructions">${recipe.instructions.map((item, index) => `<li id="step-${index + 1}"><strong>Step ${index + 1}.</strong><span>${esc(item)}</span></li>`).join('')}</ol></div><aside class="recipe-box"><p class="eyebrow">RECIPE CARD</p><h2>${esc(recipe.title)}</h2><div class="stats"><span><b>Prep</b>${recipe.prep} min</span><span><b>Cook</b>${recipe.cook} min</span><span><b>Total</b>${recipe.total} min</span><span><b>Servings</b>${esc(recipe.servings)}</span></div><h3>Nutrition</h3><p>${esc(recipe.calories)} calories · Nutrition values are estimates and may vary by ingredients and portions.</p><p class="recipe-author">Author: Thejan Mahakumbura</p><button class="btn btn-dark" type="button" onclick="window.print()">Print recipe</button></aside></article>${editorialBlock(recipe)}<section class="section related"><div class="section-head"><h2>You might also like</h2></div><div class="recipe-grid">${related.map(item => recipeCard(item, prefix)).join('')}</div></section>`;
   return documentShell({ title: `${recipe.title} Recipe | BiteSparks`, description: recipe.description, canonical, prefix, schema: recipeSchema(recipe, canonical), body });
 }
 function categoryPage(category, definition, recipes) {
