@@ -12,7 +12,7 @@
       "Brunch"
     ],
     "country": "USA",
-    "image": "https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&fm=webp&w=1200&q=78",
+    "image": "assets/images/recipes/french-toast-generated-v2.webp",
     "description": "Classic American French toast with crisp buttery edges and a soft vanilla-custard center, ready for maple syrup and fresh fruit.",
     "prepTime": "PT10M",
     "cookTime": "PT15M",
@@ -164,7 +164,7 @@
       "Eggs"
     ],
     "country": "USA",
-    "image": "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&fm=webp&w=1200&q=78",
+    "image": "assets/images/recipes/breakfast-burritos-generated-v2.webp",
     "description": "Crisp breakfast burritos packed with fluffy eggs, savory ham, cheese, and fresh tomato for a filling make-ahead breakfast.",
     "prepTime": "PT20M",
     "cookTime": "PT15M",
@@ -389,7 +389,7 @@
       "Eggs"
     ],
     "country": "USA",
-    "image": "https://images.unsplash.com/photo-1608039829572-78524f79c4c7?auto=format&fit=crop&fm=webp&w=1200&q=78",
+    "image": "assets/images/recipes/eggs-benedict-generated-v2.webp",
     "description": "Classic Eggs Benedict with toasted English muffins, Canadian bacon, poached eggs, and silky lemon hollandaise.",
     "prepTime": "PT15M",
     "cookTime": "PT20M",
@@ -539,7 +539,7 @@
       "Potato"
     ],
     "country": "USA",
-    "image": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&fm=webp&w=1200&q=78",
+    "image": "assets/images/recipes/home-fries-generated-v2.webp",
     "description": "Diner-style home fries with crisp-edged potatoes, sweet onion, bell pepper, and savory breakfast seasoning.",
     "prepTime": "PT15M",
     "cookTime": "PT25M",
@@ -617,7 +617,7 @@
       "Tacos"
     ],
     "country": "USA",
-    "image": "https://images.unsplash.com/photo-1632370339733-759652742546?auto=format&fit=crop&fm=webp&w=1200&q=78",
+    "image": "assets/images/recipes/breakfast-tacos-generated-v2.webp",
     "description": "Easy breakfast tacos filled with fluffy scrambled eggs, chorizo, cheese, avocado, and fresh salsa.",
     "prepTime": "PT10M",
     "cookTime": "PT15M",
