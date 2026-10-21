@@ -46,7 +46,7 @@ urls = {e.text for e in sitemap.iter() if e.tag.endswith("}loc") and e.text}
 for rid in runtime_ids:
     assert base + "recipes/" + rid + "/" in urls, f"Runtime published static recipe missing from sitemap: {rid}"
 assert base + "categories.html" in urls, "Categories landing page missing from sitemap"
-for category in ("Breakfast", "Lunch", "Dinner", "Beef", "Pork", "Seafood", "Soup", "Dessert", "Healthy", "Chicken", "Vegetarian", "Quick%20%26%20Easy", "USA", "UK", "Canada", "Christmas", "New%20Year"):
+for category in ("Breakfast", "Lunch", "Dinner", "Beef", "Pork", "Seafood", "Soup", "Dessert", "Healthy", "Chicken", "Vegetarian", "Quick%20%26%20Easy", "USA", "UK", "Canada", "Australia", "Christmas", "New%20Year"):
     slug = category.lower().replace("%20%26%20", "-and-").replace("%20", "-")
     assert base + "categories/" + slug + "/" in urls, f"Static category missing from sitemap: {category}"
 assert base + "categories/vegan/" not in urls, "Stale Vegan collection URL should not be in sitemap"
