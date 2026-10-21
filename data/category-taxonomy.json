@@ -43,7 +43,8 @@
       "categories": [
         "USA",
         "UK",
-        "Canada"
+        "Canada",
+        "Australia"
       ]
     },
     {
@@ -156,6 +157,12 @@
       "label": "🇨🇦 Canada — Maple Classics",
       "description": "Canadian comfort food and maple-inspired favorites, from glazed roasts to cozy family meals.",
       "icon": "🇨🇦",
+      "showOnLanding": true
+    },
+    "Australia": {
+      "label": "🇦🇺 Australia — Aussie Classics",
+      "description": "Australian pub favorites, savoury pies, roasts, and easy coastal seafood recipes for everyday home cooking.",
+      "icon": "🇦🇺",
       "showOnLanding": true
     },
     "UK": {

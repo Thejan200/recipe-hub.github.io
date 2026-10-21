@@ -24,6 +24,7 @@
   <url><loc>https://bitesparks.com/categories/appetizer/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://bitesparks.com/categories/usa/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://bitesparks.com/categories/canada/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://bitesparks.com/categories/australia/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://bitesparks.com/categories/uk/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://bitesparks.com/categories/healthy/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://bitesparks.com/categories/vegetarian/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -221,4 +222,12 @@
   <url><loc>https://bitesparks.com/recipes/maple-cookies/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://bitesparks.com/recipes/blueberry-grunt/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://bitesparks.com/recipes/strawberry-rhubarb-crisp/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bitesparks.com/recipes/chicken-parmigiana/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bitesparks.com/recipes/chicken-schnitzel/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bitesparks.com/recipes/beef-pie/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bitesparks.com/recipes/meat-pie/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bitesparks.com/recipes/sausage-rolls/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bitesparks.com/recipes/lamb-shanks/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bitesparks.com/recipes/steak-sandwich/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bitesparks.com/recipes/prawn-cocktail/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 </urlset>
