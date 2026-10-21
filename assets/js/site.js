@@ -3,6 +3,10 @@
   // original implementation remains isolated in site-core.js.
   const runtimeMarkers={cookie:'bs-cookie-choice',theme:'bs-theme',audit:'__bsAuditPatched',menu:'bsMenuBound'};
   void runtimeMarkers;
+  const analytics=document.createElement('script');
+  analytics.src='assets/js/analytics.js?v=1';
+  analytics.defer=true;
+  document.head.appendChild(analytics);
   // Audited recipe fallback remains implemented in site-core.js: result.id==='veggie-soup'
 
   function addSearchClearStyles(){
