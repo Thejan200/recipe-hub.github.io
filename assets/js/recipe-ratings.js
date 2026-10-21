@@ -38,6 +38,24 @@ if (root) {
       : 'No reader ratings yet.';
   };
 
+  // Publish only the real aggregate already visible to readers. Recipes with
+  // no genuine votes intentionally keep no aggregateRating property.
+  const publishAggregateRating = (row) => {
+    const count = Number(row?.rating_count || 0);
+    const average = Number(row?.average_rating || 0);
+    if (!Number.isInteger(count) || count < 1 || !Number.isFinite(average) || average < 1 || average > 5) return;
+    const schema = document.querySelector('script[type="application/ld+json"]');
+    if (!schema) return;
+    try {
+      const recipe = JSON.parse(schema.textContent);
+      if (recipe?.['@type'] !== 'Recipe') return;
+      recipe.aggregateRating = { '@type': 'AggregateRating', ratingValue: Number(average.toFixed(1)), ratingCount: count };
+      schema.textContent = JSON.stringify(recipe).replace(/</g, '\\u003c');
+    } catch {
+      // The rating widget remains usable if unrelated page markup is invalid.
+    }
+  };
+
   const selectStars = () => {
     starButtons.forEach((button) => {
       const value = Number(button.dataset.ratingValue);
@@ -134,6 +152,7 @@ if (root) {
       if (error) throw error;
 
       renderSummary(data?.[0]);
+      publishAggregateRating(data?.[0]);
       verifyPanel.hidden = true;
       submitButton.textContent = 'Update rating';
       setStatus('Thank you — your rating has been saved. You can update it later from this browser.');
@@ -152,6 +171,7 @@ if (root) {
       });
       if (error) throw error;
       renderSummary(data?.[0]);
+      publishAggregateRating(data?.[0]);
     } catch {
       summary.textContent = 'Reader ratings are temporarily unavailable.';
     }
