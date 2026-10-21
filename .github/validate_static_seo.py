@@ -84,6 +84,7 @@ for recipe in runtime_recipes:
     assert f'data-recipe-rating="{recipe["id"]}"' in page_text, f"Missing reader-rating component for {recipe['id']}"
     assert "assets/js/recipe-ratings.js" in page_text and "assets/css/recipe-ratings.css" in page_text, f"Missing rating assets for {recipe['id']}"
     assert "assets/js/recipe-card-ratings.js" in page_text and "assets/css/recipe-card-ratings.css" in page_text, f"Missing card-rating assets for {recipe['id']}"
+    assert "assets/js/analytics.js" in page_text, f"Missing consent-based analytics loader for {recipe['id']}"
     for index, step in enumerate(schema["recipeInstructions"], start=1):
         assert step.get("@type") == "HowToStep" and step.get("text") and step.get("name"), f"Incomplete instruction step for {recipe['id']}"
         assert step.get("url") == f"{expected_url}#step-{index}", f"Wrong instruction URL for {recipe['id']}"
@@ -103,6 +104,7 @@ for page in [root / "recipes" / "index.html", *root.joinpath("categories").rglob
     assert 'data-collection-search' in text, f"Missing collection search in {page.relative_to(root)}"
     assert 'data-recipe-search=' in text, f"Missing recipe search data in {page.relative_to(root)}"
     assert "assets/js/collection-search.js" in text and "assets/css/collection-search.css" in text, f"Missing collection-search assets in {page.relative_to(root)}"
+    assert "assets/js/analytics.js" in text, f"Missing consent-based analytics loader in {page.relative_to(root)}"
 
 sitemap = ET.parse(root / "sitemap.xml").getroot()
 urls = {element.text for element in sitemap.iter() if element.tag.endswith("}loc")}
