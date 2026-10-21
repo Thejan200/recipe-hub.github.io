@@ -15,7 +15,8 @@
     const summary = document.createElement('span');
     summary.className = 'recipe-card-rating';
     summary.setAttribute('aria-label', `${average.toFixed(1)} out of 5 from ${formatCount(count)}`);
-    summary.innerHTML = '<span class="recipe-card-rating__star" aria-hidden="true">★</span><span class="recipe-card-rating__value"></span><span class="recipe-card-rating__count"></span>';
+    summary.innerHTML = '<span class="recipe-card-rating__stars" aria-hidden="true">★★★★★</span><span class="recipe-card-rating__value"></span><span class="recipe-card-rating__count"></span>';
+    summary.querySelector('.recipe-card-rating__stars').style.setProperty('--rating-fill', `${Math.max(0, Math.min(5, average)) / 5 * 100}%`);
     summary.querySelector('.recipe-card-rating__value').textContent = average.toFixed(1);
     summary.querySelector('.recipe-card-rating__count').textContent = `(${count})`;
     const category = card.querySelector('.eyebrow');
