@@ -135,6 +135,7 @@ if (root) {
 
       renderSummary(data?.[0]);
       verifyPanel.hidden = true;
+      submitButton.textContent = 'Update rating';
       setStatus('Thank you — your rating has been saved. You can update it later from this browser.');
     } catch (error) {
       const message = error?.message || 'Your rating could not be saved. Please try again.';
@@ -156,6 +157,30 @@ if (root) {
     }
   };
 
+  const loadOwnRating = async () => {
+    try {
+      const { data: { session } } = await client.auth.getSession();
+      if (!session) return;
+
+      const { data, error } = await client.rpc('my_recipe_rating', {
+        p_recipe_slug: recipeSlug
+      });
+      if (error) throw error;
+
+      const savedRating = Number(data?.[0]?.rating || 0);
+      if (!Number.isInteger(savedRating) || savedRating < 1 || savedRating > 5) return;
+
+      selectedRating = savedRating;
+      selectStars();
+      verifyPanel.hidden = true;
+      submitButton.disabled = false;
+      submitButton.textContent = 'Update rating';
+      setStatus(`Your saved rating is ${savedRating} out of 5. You can update it anytime from this browser.`);
+    } catch {
+      // Aggregate ratings still work if a saved browser rating cannot be restored.
+    }
+  };
+
   starButtons.forEach((button) => {
     button.addEventListener('click', async () => {
       selectedRating = Number(button.dataset.ratingValue);
@@ -170,4 +195,5 @@ if (root) {
 
   submitButton.addEventListener('click', submitRating);
   loadSummary();
+  loadOwnRating();
 }
