@@ -97,6 +97,14 @@
     const button=input.parentElement&&input.parentElement.querySelector('.bs-search-clear');
     if(button)button.hidden=!String(input.value||'').length;
   });
+  const ratingStyle=document.createElement('link');
+  ratingStyle.rel='stylesheet';
+  ratingStyle.href='assets/css/recipe-card-ratings.css?v=1';
+  document.head.appendChild(ratingStyle);
+  const cardRatings=document.createElement('script');
+  cardRatings.src='assets/js/recipe-card-ratings.js?v=1';
+  cardRatings.defer=true;
+  document.head.appendChild(cardRatings);
   const core=document.createElement('script');
   core.src='assets/js/site-core.js?v=14';
   core.onload=function(){
