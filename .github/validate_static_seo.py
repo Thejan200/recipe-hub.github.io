@@ -100,6 +100,9 @@ for category in taxonomy["categories"]:
 for page in [root / "recipes" / "index.html", *root.joinpath("categories").rglob("index.html")]:
     text = page.read_text(encoding="utf-8")
     assert 'data-recipe-card=' in text, f"Missing card-rating hook in {page.relative_to(root)}"
+    assert 'data-collection-search' in text, f"Missing collection search in {page.relative_to(root)}"
+    assert 'data-recipe-search=' in text, f"Missing recipe search data in {page.relative_to(root)}"
+    assert "assets/js/collection-search.js" in text and "assets/css/collection-search.css" in text, f"Missing collection-search assets in {page.relative_to(root)}"
 
 sitemap = ET.parse(root / "sitemap.xml").getroot()
 urls = {element.text for element in sitemap.iter() if element.tag.endswith("}loc")}
