@@ -25,3 +25,22 @@ $$;
 
 revoke all on function public.recipe_rating_summaries(text[]) from public;
 grant execute on function public.recipe_rating_summaries(text[]) to anon, authenticated;
+
+-- Returns only the current anonymous visitor's own saved rating for one recipe.
+-- This deliberately has no anon grant and cannot reveal another visitor's vote.
+create or replace function public.my_recipe_rating(p_recipe_slug text)
+returns table (rating smallint)
+language sql
+stable
+security definer
+set search_path = public
+as $$
+  select rr.rating
+  from public.recipe_ratings as rr
+  where rr.recipe_slug = p_recipe_slug
+    and rr.voter_id = auth.uid()
+  limit 1;
+$$;
+
+revoke all on function public.my_recipe_rating(text) from public, anon;
+grant execute on function public.my_recipe_rating(text) to authenticated;
