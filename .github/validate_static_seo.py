@@ -83,6 +83,7 @@ for recipe in runtime_recipes:
     page_text = page.read_text(encoding="utf-8")
     assert f'data-recipe-rating="{recipe["id"]}"' in page_text, f"Missing reader-rating component for {recipe['id']}"
     assert "assets/js/recipe-ratings.js" in page_text and "assets/css/recipe-ratings.css" in page_text, f"Missing rating assets for {recipe['id']}"
+    assert "assets/js/recipe-card-ratings.js" in page_text and "assets/css/recipe-card-ratings.css" in page_text, f"Missing card-rating assets for {recipe['id']}"
     for index, step in enumerate(schema["recipeInstructions"], start=1):
         assert step.get("@type") == "HowToStep" and step.get("text") and step.get("name"), f"Incomplete instruction step for {recipe['id']}"
         assert step.get("url") == f"{expected_url}#step-{index}", f"Wrong instruction URL for {recipe['id']}"
@@ -95,6 +96,10 @@ taxonomy = json.loads((root / "data/category-taxonomy.json").read_text(encoding=
 for category in taxonomy["categories"]:
     slug = re.sub(r"^-|-?$", "", re.sub(r"[^a-z0-9]+", "-", category.lower().replace("&", " and ")))
     assert (root / "categories" / slug / "index.html").is_file(), f"Missing static category page: {category}"
+
+for page in [root / "recipes" / "index.html", *root.joinpath("categories").rglob("index.html")]:
+    text = page.read_text(encoding="utf-8")
+    assert 'data-recipe-card=' in text, f"Missing card-rating hook in {page.relative_to(root)}"
 
 sitemap = ET.parse(root / "sitemap.xml").getroot()
 urls = {element.text for element in sitemap.iter() if element.tag.endswith("}loc")}
