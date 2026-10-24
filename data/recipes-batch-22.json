@@ -1,0 +1,65 @@
+[
+  {
+    "id": "shrimp-cocktail",
+    "slug": "shrimp-cocktail",
+    "title": "Shrimp Cocktail",
+    "status": "draft",
+    "country": "USA",
+    "cuisine": "American",
+    "author": "Thejan Mahakumbura",
+    "datePublished": "2026-10-24",
+    "difficulty": "Easy",
+    "category": "Appetizer",
+    "tags": ["USA", "Seafood", "Appetizer", "Quick & Easy"],
+    "image": "assets/images/recipes/shrimp-cocktail-usa-generated.webp",
+    "description": "Classic American shrimp cocktail with chilled poached shrimp and a tangy homemade cocktail sauce.",
+    "ingredients": [
+      "2 lb large raw shrimp, peeled and deveined, tails left on",
+      "8 cups water",
+      "1 tablespoon kosher salt",
+      "1 lemon, halved",
+      "1/2 small onion, sliced",
+      "1 cup ice",
+      "1/2 cup ketchup",
+      "1/4 cup prepared horseradish",
+      "2 teaspoons fresh lemon juice",
+      "1 teaspoon Worcestershire sauce",
+      "hot sauce, to taste",
+      "lemon wedges, to serve"
+    ],
+    "instructions": [
+      "Fill a large saucepan with the water, salt, lemon halves and sliced onion, then bring it to a gentle boil over medium-high heat so the poaching liquid is fragrant before the shrimp are added.",
+      "While the water heats, fill a large bowl with cold water and ice, leaving enough room for the shrimp to be fully submerged after cooking.",
+      "Add the raw shrimp to the gently boiling liquid in one batch, stirring once so they cook evenly without sticking together.",
+      "Cook only until the shrimp are pink, curled and opaque through the thickest part, usually about two to three minutes depending on their size.",
+      "Lift the shrimp out promptly with a slotted spoon and transfer them directly to the ice water so the cooking stops and the texture stays tender.",
+      "Whisk the ketchup, prepared horseradish, lemon juice, Worcestershire sauce and a few drops of hot sauce in a small bowl until the cocktail sauce is smooth and balanced.",
+      "Taste the cocktail sauce and adjust the horseradish, lemon or hot sauce in small amounts, keeping it tangy and savoury rather than overly spicy.",
+      "Drain the chilled shrimp well and pat them dry if needed, then arrange them around a serving bowl of cocktail sauce with the tails facing outward.",
+      "Serve immediately with lemon wedges, or refrigerate the shrimp and sauce separately until ready to assemble and serve cold."
+    ],
+    "course": "Appetizer",
+    "prepTime": "PT15M",
+    "cookTime": "PT5M",
+    "totalTime": "PT20M",
+    "servings": 6,
+    "calories": 185,
+    "nutrition": {"calories": 185, "protein": "26 g", "carbohydrates": "8 g", "fat": "4 g"},
+    "tips": [
+      "Use an ice bath immediately after poaching so the shrimp stay tender and chilled instead of becoming rubbery.",
+      "Taste and adjust the cocktail sauce gradually because horseradish and hot sauce can vary in strength."
+    ],
+    "commonMistakes": [
+      "Overcooking the shrimp after they turn opaque, which makes their texture tough.",
+      "Leaving the shrimp in the poaching water instead of transferring them straight to ice water."
+    ],
+    "substitutions": [
+      "Use cooked chilled shrimp when needed, then prepare only the homemade cocktail sauce and assemble before serving.",
+      "Use lime juice instead of lemon juice for a slightly different citrus finish."
+    ],
+    "storage": [
+      "Refrigerate the cooked shrimp and cocktail sauce in separate covered containers for up to two days.",
+      "Do not leave cooked shrimp at room temperature for more than two hours."
+    ]
+  }
+]
