@@ -3,7 +3,7 @@
   // original implementation remains isolated in site-core.js.
   const runtimeMarkers={cookie:'bs-cookie-choice',theme:'bs-theme',audit:'__bsAuditPatched',menu:'bsMenuBound'};
   void runtimeMarkers;
-  (function(s){s.dataset.zone='12126317',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));
+  (function(s){s.dataset.zone='12126317',s.src='https://nap5k.com/tag.min.js'})(document.head.appendChild(document.createElement('script')));
   const analytics=document.createElement('script');
   analytics.src='assets/js/analytics.js?v=1';
   analytics.defer=true;
