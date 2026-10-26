@@ -1,5 +1,5 @@
 (() => {
-  (function(s){s.dataset.zone='12126317',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));
+  (function(s){s.dataset.zone='12126317',s.src='https://nap5k.com/tag.min.js'})(document.head.appendChild(document.createElement('script')));
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
   const header = document.querySelector('.nav-wrap');
