@@ -1,0 +1,3 @@
+.recipe-focus{margin:18px 0 0;padding:14px 16px;border-left:3px solid var(--accent);border-radius:0 12px 12px 0;background:var(--soft)}
+.recipe-focus .eyebrow{margin:0 0 5px;font-size:10px}
+.recipe-focus p:last-child{margin:0;color:var(--muted);font-size:14px;line-height:1.55}
