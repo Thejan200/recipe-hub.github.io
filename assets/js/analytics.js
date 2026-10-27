@@ -1,14 +1,19 @@
 (() => {
+  const CHOICE_KEY = 'bs-privacy-choice-v2';
+  const LEGACY_KEY = 'bs-privacy-choice-v1';
   const MEASUREMENT_ID = 'G-70TT6L9N4G';
-  const CONSENT_KEY = 'bs-privacy-choice-v1';
   let loaded = false;
 
-  const storedChoice = () => {
-    try { return localStorage.getItem(CONSENT_KEY) || ''; } catch { return ''; }
+  const analyticsAllowed = () => {
+    try {
+      const current = localStorage.getItem(CHOICE_KEY);
+      if (current) return Boolean(JSON.parse(current)?.analytics);
+      return localStorage.getItem(LEGACY_KEY) === 'accepted';
+    } catch { return false; }
   };
 
   const loadAnalytics = () => {
-    if (loaded || storedChoice() !== 'accepted') return;
+    if (loaded || !analyticsAllowed()) return;
     loaded = true;
     window.dataLayer = window.dataLayer || [];
     window.gtag = window.gtag || function gtag(){ window.dataLayer.push(arguments); };
@@ -22,7 +27,7 @@
   };
 
   window.addEventListener('bs:privacy-choice', event => {
-    if (event.detail?.choice === 'accepted') loadAnalytics();
+    if (event.detail?.preferences?.analytics) loadAnalytics();
   });
 
   loadAnalytics();
