@@ -1,0 +1,27 @@
+name: Refresh static SEO preview
+
+on:
+  push:
+    branches: [codex/seo-metadata-breadcrumbs]
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: codex/seo-metadata-breadcrumbs
+      - name: Rebuild validated static SEO output
+        run: node tools/build-static-seo-pages.js
+      - name: Commit generated preview and remove this temporary workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add recipes categories sitemap.xml
+          git rm .github/workflows/refresh-static-seo-preview.yml
+          git diff --cached --quiet || git commit -m "Regenerate static SEO preview"
+          git push
