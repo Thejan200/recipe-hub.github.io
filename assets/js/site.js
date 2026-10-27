@@ -3,7 +3,10 @@
   // original implementation remains isolated in site-core.js.
   const runtimeMarkers={cookie:'bs-cookie-choice',theme:'bs-theme',audit:'__bsAuditPatched',menu:'bsMenuBound'};
   void runtimeMarkers;
-  if(!document.querySelector('script[data-zone="12126317"]'))(function(s){s.dataset.zone='12126317',s.src='https://nap5k.com/tag.min.js'})(document.head.appendChild(document.createElement('script')));
+  const privacyConsent=document.createElement('script');
+  privacyConsent.src='assets/js/privacy-consent.js?v=1';
+  privacyConsent.defer=true;
+  document.head.appendChild(privacyConsent);
   const analytics=document.createElement('script');
   analytics.src='assets/js/analytics.js?v=1';
   analytics.defer=true;
