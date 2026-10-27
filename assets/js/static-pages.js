@@ -1,6 +1,6 @@
 (() => {
   const privacyConsent=document.createElement('script');
-  privacyConsent.src='assets/js/privacy-consent.js?v=1';
+  privacyConsent.src='assets/js/privacy-consent.js?v=2';
   privacyConsent.defer=true;
   document.head.appendChild(privacyConsent);
   const year = document.getElementById('year');
