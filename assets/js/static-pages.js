@@ -1,8 +1,12 @@
 (() => {
   const privacyConsent=document.createElement('script');
-  privacyConsent.src='assets/js/privacy-consent.js?v=2';
+  privacyConsent.src='assets/js/privacy-consent.js?v=3';
   privacyConsent.defer=true;
   document.head.appendChild(privacyConsent);
+  const analytics=document.createElement('script');
+  analytics.src='assets/js/analytics.js?v=2';
+  analytics.defer=true;
+  document.head.appendChild(analytics);
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
   const header = document.querySelector('.nav-wrap');

@@ -1,14 +1,14 @@
 (function(){
   // Keep canonical BiteSparks runtime markers visible here for CI while the
   // original implementation remains isolated in site-core.js.
-  const runtimeMarkers={cookie:'bs-cookie-choice',theme:'bs-theme',audit:'__bsAuditPatched',menu:'bsMenuBound'};
+  const runtimeMarkers={privacy:'bs-privacy-choice-v2',theme:'bs-theme',audit:'__bsAuditPatched',menu:'bsMenuBound'};
   void runtimeMarkers;
   const privacyConsent=document.createElement('script');
-  privacyConsent.src='assets/js/privacy-consent.js?v=2';
+  privacyConsent.src='assets/js/privacy-consent.js?v=3';
   privacyConsent.defer=true;
   document.head.appendChild(privacyConsent);
   const analytics=document.createElement('script');
-  analytics.src='assets/js/analytics.js?v=1';
+  analytics.src='assets/js/analytics.js?v=2';
   analytics.defer=true;
   document.head.appendChild(analytics);
   // Audited recipe fallback remains implemented in site-core.js: result.id==='veggie-soup'
