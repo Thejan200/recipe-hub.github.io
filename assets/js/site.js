@@ -1,7 +1,7 @@
 (function(){
   // Keep canonical BiteSparks runtime markers visible here for CI while the
   // original implementation remains isolated in site-core.js.
-  const runtimeMarkers={cookie:'bs-cookie-choice',theme:'bs-theme',audit:'__bsAuditPatched',menu:'bsMenuBound'};
+  const runtimeMarkers={privacy:'bs-privacy-choice-v2',theme:'bs-theme',audit:'__bsAuditPatched',menu:'bsMenuBound'};
   void runtimeMarkers;
   const privacyConsent=document.createElement('script');
   privacyConsent.src='assets/js/privacy-consent.js?v=3';
