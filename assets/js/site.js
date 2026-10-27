@@ -4,7 +4,7 @@
   const runtimeMarkers={privacy:'bs-privacy-choice-v2',theme:'bs-theme',audit:'__bsAuditPatched',menu:'bsMenuBound'};
   void runtimeMarkers;
   const privacyConsent=document.createElement('script');
-  privacyConsent.src='assets/js/privacy-consent.js?v=3';
+  privacyConsent.src='assets/js/privacy-consent.js?v=4';
   privacyConsent.defer=true;
   document.head.appendChild(privacyConsent);
   const analytics=document.createElement('script');
