@@ -12,10 +12,17 @@
   };
   const loadAdvertising = () => {
     if (storedChoice() !== 'accepted' || document.querySelector(`script[data-zone="${ZONE}"]`)) return;
+
+    // Preserve Monetag's supplied loader behavior: the zoned external tag is
+    // appended after <head> (normally to <body>), with a safe root fallback.
     const tag = document.createElement('script');
     tag.dataset.zone = ZONE;
     tag.src = TAG_URL;
-    document.head.appendChild(tag);
+    tag.addEventListener('error', () => {
+      window.dispatchEvent(new CustomEvent('bs:advertising-load-error', { detail: { zone: ZONE } }));
+    }, { once: true });
+    const target = [document.documentElement, document.body].filter(Boolean).pop();
+    target?.appendChild(tag);
   };
   const removeBanner = () => document.getElementById('cookie-banner')?.remove();
 
