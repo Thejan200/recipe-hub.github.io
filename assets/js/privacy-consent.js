@@ -43,7 +43,7 @@
 
   const showBanner = () => {
     if (document.getElementById('cookie-banner')) return;
-    const preferences = storedPreferences() || { analytics: false, advertising: false };
+    const preferences = storedPreferences() || { analytics: true, advertising: true };
     const banner = document.createElement('section');
     banner.id = 'cookie-banner';
     banner.setAttribute('role', 'dialog');
@@ -57,9 +57,9 @@
       <div class="privacy-choice-actions">
         <button class="btn btn-outline" data-privacy-choice="declined" type="button">Reject optional</button>
         <button class="btn btn-dark" data-privacy-choice="accepted" type="button">Accept optional</button>
-        <button class="privacy-manage-link" data-manage-choices type="button">Manage choices</button>
+        <button class="privacy-manage-link" data-manage-choices type="button" aria-expanded="false">Manage choices</button>
       </div>
-      <div data-manage-panel hidden>
+      <div data-manage-panel style="display:none;flex-basis:100%;align-items:center;gap:14px;flex-wrap:wrap">
         <label><input type="checkbox" data-choice-analytics ${preferences.analytics ? 'checked' : ''}> Google Analytics</label>
         <label><input type="checkbox" data-choice-advertising ${preferences.advertising ? 'checked' : ''}> Third-party advertising</label>
         <button class="btn btn-dark" data-save-choices type="button">Save choices</button>
@@ -73,8 +73,11 @@
     };
     banner.querySelector('[data-privacy-choice="accepted"]').addEventListener('click', () => apply({ analytics: true, advertising: true }));
     banner.querySelector('[data-privacy-choice="declined"]').addEventListener('click', () => apply({ analytics: false, advertising: false }));
-    banner.querySelector('[data-manage-choices]').addEventListener('click', () => {
-      managePanel.hidden = !managePanel.hidden;
+    const manageButton = banner.querySelector('[data-manage-choices]');
+    manageButton.addEventListener('click', () => {
+      const opening = managePanel.style.display === 'none';
+      managePanel.style.display = opening ? 'flex' : 'none';
+      manageButton.setAttribute('aria-expanded', String(opening));
     });
     banner.querySelector('[data-save-choices]').addEventListener('click', () => apply({
       analytics: banner.querySelector('[data-choice-analytics]').checked,
