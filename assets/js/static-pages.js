@@ -1,5 +1,8 @@
 (() => {
-  if(!document.querySelector('script[data-zone="12126317"]'))(function(s){s.dataset.zone='12126317',s.src='https://nap5k.com/tag.min.js'})(document.head.appendChild(document.createElement('script')));
+  const privacyConsent=document.createElement('script');
+  privacyConsent.src='assets/js/privacy-consent.js?v=1';
+  privacyConsent.defer=true;
+  document.head.appendChild(privacyConsent);
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
   const header = document.querySelector('.nav-wrap');
