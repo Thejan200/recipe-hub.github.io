@@ -1,6 +1,6 @@
 (() => {
   const privacyConsent=document.createElement('script');
-  privacyConsent.src='assets/js/privacy-consent.js?v=4';
+privacyConsent.src='assets/js/privacy-consent.js?v=5';
   privacyConsent.defer=true;
   document.head.appendChild(privacyConsent);
   const analytics=document.createElement('script');
