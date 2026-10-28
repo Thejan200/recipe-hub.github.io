@@ -97,7 +97,7 @@
     ],
     "country": "UK",
     "image": "assets/images/recipes/sausage-casserole-generated.webp?v=individual-1",
-    "description": "An oven-baked British sausage casserole with tomato, stock, vegetables, herbs, and a rich, thick gravy.",
+    "description": "A British-style baked sausage casserole with vegetables, tomato, stock, and a slow-reduced savoury gravy.",
     "prepTime": "PT15M",
     "cookTime": "PT1H45M",
     "totalTime": "PT2H",
@@ -126,32 +126,32 @@
       "2 tbsp fresh parsley, chopped"
     ],
     "instructions": [
-      "Heat the oven to 200°C fan. Put the sausages in a casserole dish and cook for 20–25 minutes, turning once halfway through, until browned.",
-      "Add the sliced onion, garlic, carrot, celery, steel-cut oats, chopped tomatoes, tomato purée, beef stock, Worcestershire sauce, brown sugar, thyme, smoked paprika, black pepper, salt, and parsley to the dish.",
-      "Stir everything together well, cover the dish, and reduce the oven to 170°C fan (190°C conventional).",
-      "Bake covered for 1 hour, stirring once halfway through so the sauce thickens evenly and the vegetables cook through.",
-      "Remove the lid and bake for a further 20–25 minutes, until the gravy is thick and the sausages are glossy and cooked through.",
-      "Taste for salt, spoon into warm bowls, and serve immediately."
+      "Heat the oven to 200°C fan. Brown the sausages in a casserole dish, turning once so both sides gain colour.",
+      "Add onion, garlic, carrot, celery, steel-cut oats, tomatoes, tomato purée, stock, Worcestershire sauce, brown sugar, thyme, smoked paprika, pepper, salt, and parsley.",
+      "Stir well, cover, and lower the oven to 170°C fan (190°C conventional).",
+      "Bake until the vegetables are tender and the sauce has started to thicken, stirring once midway so the oats and tomato are evenly distributed.",
+      "Remove the lid and bake until the gravy looks concentrated and the sausages are completely cooked.",
+      "Taste before serving and add salt only if needed."
     ],
     "tips": [
-      "Use steel-cut oats, not rolled oats, to help the sauce thicken during baking.",
-      "Turn the sausages halfway through the first bake so they brown evenly.",
-      "Bake uncovered at the end to concentrate the tomato gravy."
+      "Steel-cut oats thicken the gravy differently from rolled oats.",
+      "Turn the sausages once during browning for even colour.",
+      "The uncovered finish is what gives the tomato gravy a concentrated texture."
     ],
     "commonMistakes": [
-      "Skipping the initial browning leaves the sausages pale and less flavorful.",
-      "Using rolled oats instead of steel-cut oats changes the casserole texture.",
-      "Leaving the lid on for the final bake prevents the sauce from thickening."
+      "Skipping the brown stage reduces flavour in both sausage and sauce.",
+      "Rolled oats create a different casserole texture.",
+      "Leaving the lid on to the end prevents excess liquid from reducing."
     ],
     "substitutions": [
-      "Use good-quality pork sausages as shown in the tutorial.",
-      "Use beef stock for the intended rich gravy.",
+      "Choose good-quality pork sausages with a flavour you enjoy.",
+      "Beef stock gives the sauce a deeper savoury profile.",
       "Use fresh parsley as the final herb."
     ],
     "storage": [
-      "Refrigerate for up to 3 days.",
-      "Freeze in airtight portions for up to 2 months.",
-      "Reheat until the sausages are hot through."
+      "Refrigerate cooled leftovers for up to three days.",
+      "Freeze sealed portions for up to two months.",
+      "Reheat until the sausage centres are hot through."
     ],
     "nutrition": {
       "calories": 981,
@@ -256,7 +256,7 @@
     ],
     "country": "UK",
     "image": "assets/images/recipes/welsh-rarebit-generated.webp?v=individual-1",
-    "description": "Buttered toast topped with a smooth cheddar, ale, butter, and mustard cheese sauce, served hot.",
+    "description": "A hot Welsh Rarebit topping of mature cheddar, mustard, butter, and ale or milk spooned over crisp buttered toast.",
     "prepTime": "PT10M",
     "cookTime": "PT10M",
     "totalTime": "PT20M",
@@ -274,32 +274,32 @@
       "Optional salt, cayenne pepper, garlic, or horseradish, to taste"
     ],
     "instructions": [
-      "Slice six pieces of bread, toast them in a toaster or under a broiler, and butter each slice lightly while hot.",
-      "Chop the cheddar into small pieces or grate it so that it melts evenly.",
-      "Melt the measured butter in a saucepan over medium heat. Add the cheese and stir constantly as it melts.",
-      "Gradually stir in the milk or ale, keeping the heat gentle so the cheese does not bubble, burn, or split.",
-      "Stir in the mustard and any optional seasonings to taste.",
-      "Spoon the hot cheese sauce over the buttered toast and serve immediately for the best texture."
+      "Toast the bread until crisp and butter it while it is hot.",
+      "Grate or finely chop the cheddar so it can melt evenly.",
+      "Melt the butter in a small pan over gentle heat, then add the cheese and stir continuously.",
+      "Pour in milk or ale gradually, keeping the mixture below a hard boil so the cheese remains smooth.",
+      "Stir in mustard and any optional seasoning, tasting as you go.",
+      "Spoon the topping over the toast and serve straight away."
     ],
     "tips": [
-      "Toast bread first so it supports the sauce.",
-      "Use mature cheddar for a full flavor.",
-      "Grill until bubbling, not merely melted."
+      "Crisp toast gives the rich topping a firm base.",
+      "Mature cheddar gives the sauce its strongest flavour.",
+      "If using a grill finish, stop when the topping bubbles rather than browns heavily."
     ],
     "commonMistakes": [
-      "Untoasted bread becomes soggy.",
-      "High heat can split cheese sauce.",
-      "Too much ale makes the topping runny."
+      "Soft bread quickly turns soggy under the sauce.",
+      "High heat can split the cheese mixture.",
+      "Too much ale leaves the topping thin."
     ],
     "substitutions": [
-      "Use milk instead of ale.",
-      "Use Dijon mustard for a milder result.",
-      "Omit cayenne for less heat."
+      "Milk can replace ale.",
+      "Dijon produces a milder mustard character.",
+      "Omit cayenne for a less spicy topping."
     ],
     "storage": [
-      "Best served immediately.",
-      "Refrigerate extra cheese sauce for 2 days.",
-      "Reheat under the grill rather than microwaving."
+      "Serve assembled rarebit immediately.",
+      "Refrigerate unused cheese topping for up to two days.",
+      "Reheat gently under a grill rather than in a microwave."
     ],
     "nutrition": {
       "calories": 430,
