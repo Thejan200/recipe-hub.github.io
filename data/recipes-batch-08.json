@@ -390,7 +390,7 @@
     ],
     "country": "USA",
     "image": "assets/images/recipes/eggs-benedict-generated-v2.webp",
-    "description": "Classic Eggs Benedict with toasted English muffins, Canadian bacon, poached eggs, and silky lemon hollandaise.",
+    "description": "Eggs Benedict assembled from toasted English muffins, warmed Canadian bacon, softly poached eggs, and a lemony butter hollandaise.",
     "prepTime": "PT15M",
     "cookTime": "PT20M",
     "totalTime": "PT35M",
@@ -412,36 +412,36 @@
       "Chopped chives, for garnish"
     ],
     "instructions": [
-      "Toast the English muffin halves until golden and keep them warm while preparing the remaining components.",
-      "Warm the Canadian bacon in a skillet until lightly browned on both sides, then place one slice on each muffin half.",
-      "Bring a wide saucepan of water to a bare simmer and add the vinegar; avoid a rolling boil.",
-      "Crack each egg into a small cup, slide it gently into the water, and poach until the white is set but the yolk remains soft.",
-      "Meanwhile, place egg yolks and lemon juice in a blender and blend briefly until smooth.",
-      "With the blender running on low, drizzle in the warm melted butter very slowly until a thick glossy hollandaise forms.",
-      "Season the hollandaise with salt and cayenne, thinning with a teaspoon of warm water if necessary.",
-      "Lift the poached eggs with a slotted spoon and blot the bottoms briefly on a clean towel.",
-      "Set one poached egg over each Canadian-bacon-topped muffin half and spoon warm hollandaise generously over the top.",
-      "Garnish with chives and cayenne and serve immediately while the eggs and sauce are warm."
+      "Toast the muffin halves until golden and keep them warm while the other parts are prepared.",
+      "Warm the Canadian bacon in a skillet until lightly browned, then put a slice on each muffin half.",
+      "Bring a wide pan of water to a quiet simmer and add vinegar; a hard boil can break up the whites.",
+      "Crack each egg into a small cup, ease it into the water, and poach until the white is set around a soft yolk.",
+      "Blend egg yolks and lemon juice until smooth.",
+      "With the blender on low, stream in the warm melted butter slowly until the sauce becomes thick and glossy.",
+      "Season with salt and cayenne, loosening with a little warm water only if the sauce is too thick.",
+      "Lift the eggs with a slotted spoon and blot the underside briefly.",
+      "Place one egg over each bacon-topped muffin and spoon the warm hollandaise over it.",
+      "Finish with chives and serve without delay."
     ],
     "tips": [
-      "Keep poaching water at a gentle simmer.",
-      "Drizzle butter slowly to keep hollandaise emulsified.",
-      "Prepare all components before poaching the eggs."
+      "Keep poaching water at a quiet simmer.",
+      "Add butter slowly so the hollandaise stays emulsified.",
+      "Have the muffins and bacon ready before poaching eggs."
     ],
     "commonMistakes": [
-      "Boiling water tears delicate egg whites.",
-      "Adding butter too quickly can split hollandaise.",
-      "Letting assembled Benedict sit too long cools the sauce."
+      "Rapidly boiling water can tear delicate whites.",
+      "Butter added too quickly can split hollandaise.",
+      "A finished Benedict cools quickly if it sits before serving."
     ],
     "substitutions": [
-      "Use ham or crisp bacon instead of Canadian bacon.",
-      "Use toasted sourdough rounds instead of English muffins.",
-      "Add spinach for an Eggs Florentine-style variation."
+      "Ham or crisp bacon can replace Canadian bacon.",
+      "Toasted sourdough rounds can replace English muffins.",
+      "Add spinach for a Florentine-style variation."
     ],
     "storage": [
-      "Poached eggs are best served immediately.",
-      "Refrigerate leftover cooked components separately for up to 2 days.",
-      "Hollandaise should be made fresh for best texture."
+      "Poached eggs are at their best immediately.",
+      "Refrigerate leftover cooked components separately for up to two days.",
+      "Make hollandaise fresh for the most reliable texture."
     ],
     "nutrition": {
       "calories": 520,
