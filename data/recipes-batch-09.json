@@ -15,7 +15,7 @@
     ],
     "country": "USA",
     "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Finished%20tomato%20soup.jpg",
-    "description": "A bright, classic tomato soup made with pantry tomatoes, aromatic vegetables, and basil for an easy American comfort-food lunch.",
+    "description": "A smooth tomato and basil soup built from canned whole tomatoes, gently softened vegetables, and vegetable broth for a comforting lunch or light supper.",
     "prepTime": "PT15M",
     "cookTime": "PT35M",
     "totalTime": "PT50M",
@@ -40,34 +40,35 @@
       "1 tsp sugar, optional"
     ],
     "instructions": [
-      "Heat the olive oil in a heavy pot over medium heat, add the onion, carrots, and celery, and cook for 8 minutes until the vegetables soften without taking on dark color.",
-      "Stir in the garlic and tomato paste, then cook for about 1 minute while stirring constantly so the paste darkens slightly and the garlic smells fragrant but does not burn.",
-      "Add the whole tomatoes with their juices, crushing each tomato carefully against the side of the pot with a wooden spoon to create evenly sized pieces before simmering.",
-      "Pour in the vegetable broth, oregano, salt, and pepper, scrape the bottom of the pot to release any flavorful browned bits, and bring the mixture to a gentle boil.",
-      "Lower the heat, partially cover the pot, and simmer for 25 minutes until the carrots are completely tender and the tomato flavor tastes rounded rather than raw or sharply acidic.",
-      "Remove the pot from the heat, add the basil, and blend with an immersion blender until the soup is smooth, keeping the blade fully submerged to prevent hot splashes.",
-      "Return the soup to low heat, taste carefully, and add the optional sugar only if the tomatoes remain unusually acidic; adjust salt and pepper in small amounts.",
-      "Ladle the hot soup into warmed bowls and serve with grilled cheese, crackers, or crusty bread while the soup is smooth, fragrant, and steaming."
+      "Warm the olive oil in a soup pot over medium heat, then add the onion, carrots, and celery with a small pinch of salt.",
+      "Cook, stirring now and then, until the vegetables are softened and the onion looks translucent, about 8 minutes.",
+      "Add the garlic and tomato paste. Stir for about a minute so the paste cooks onto the vegetables without letting the garlic colour too darkly.",
+      "Pour in the tomatoes and all their juices, breaking the tomatoes apart with a spoon as they go into the pot.",
+      "Add the vegetable broth, oregano, salt, and pepper, and bring the pot to a calm simmer while scraping any flavourful bits from the base.",
+      "Partly cover and cook gently for roughly 25 minutes, until the carrots are very tender and the tomato flavour no longer tastes raw.",
+      "Take the pot off the heat, add the basil, and purée with an immersion blender, keeping the blade below the surface throughout.",
+      "Taste the soup after blending; use the optional sugar only if the tomatoes taste overly sharp, then adjust salt and pepper.",
+      "Warm briefly if needed and serve with toast, crackers, or a grilled cheese sandwich."
     ],
     "tips": [
-      "Use good-quality whole canned tomatoes for consistent flavor.",
-      "Blend in batches with a countertop blender only after cooling slightly.",
-      "Add sugar only after tasting the finished soup."
+      "Whole canned tomatoes give the soup a dependable base when fresh tomatoes are out of season.",
+      "If using a countertop blender, let the soup cool slightly and blend small batches with the lid vented safely.",
+      "Season after puréeing, because blending distributes the salt and herbs more evenly."
     ],
     "commonMistakes": [
-      "Browning the garlic makes the soup bitter.",
-      "A vigorous boil can reduce the soup too quickly.",
-      "Overfilling a blender with hot soup is unsafe."
+      "Letting garlic scorch can add an unpleasant bitter note to an otherwise mild soup.",
+      "A hard boil can cook off too much liquid before the vegetables are fully soft.",
+      "Sealing hot soup in a full blender can build pressure and cause splashes."
     ],
     "substitutions": [
-      "Use chicken broth instead of vegetable broth.",
-      "Replace fresh basil with 1 teaspoon dried basil.",
-      "Use fire-roasted tomatoes for a smokier flavor."
+      "Chicken broth may be used in place of vegetable broth when a vegetarian soup is not required.",
+      "Use 1 teaspoon dried basil if fresh basil is unavailable, adding it with the oregano.",
+      "Fire-roasted canned tomatoes give the finished soup a subtle charred flavour."
     ],
     "storage": [
-      "Refrigerate cooled soup in a covered container for up to 4 days.",
-      "Reheat gently on the stovetop until steaming.",
-      "Freeze portions for up to 3 months and thaw overnight in the refrigerator."
+      "Cool the soup promptly and refrigerate it in a covered container for up to 4 days.",
+      "Reheat over low to medium heat, stirring occasionally until hot throughout.",
+      "Freeze in individual portions for up to 3 months and defrost in the refrigerator overnight."
     ],
     "nutrition": {
       "calories": 190,
