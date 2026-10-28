@@ -506,7 +506,7 @@
     ],
     "country": "USA",
     "image": "assets/images/recipes/taco-soup-generated.webp",
-    "description": "A fast one-pot taco soup loaded with seasoned ground beef, beans, corn, tomatoes, and familiar Tex-Mex toppings.",
+    "description": "A hearty one-pot taco soup with browned beef, two kinds of beans, corn, tomatoes, and build-your-own Tex-Mex toppings.",
     "prepTime": "PT15M",
     "cookTime": "PT30M",
     "totalTime": "PT45M",
@@ -531,34 +531,34 @@
       "Shredded cheese, sour cream, avocado, and tortilla chips, for serving"
     ],
     "instructions": [
-      "Heat the oil in a large pot over medium-high heat, add the ground beef and onion, and cook for 7 to 8 minutes while breaking the meat into small crumbles.",
-      "Drain excess grease carefully if necessary, then add the garlic and taco seasoning and stir for 30 seconds until the spices become fragrant.",
-      "Pour in both cans of tomatoes and the beef broth, scraping the bottom of the pot with a wooden spoon to release all browned seasoning and meat bits.",
-      "Add the black beans, pinto beans, corn, and salt, stir thoroughly, and bring the soup to a gentle boil over medium-high heat.",
-      "Reduce the heat to medium-low and simmer uncovered for 20 minutes, stirring occasionally, until the broth thickens slightly and the flavors blend.",
-      "Check that the beef is fully cooked and the beans are hot, then taste the broth before adding more salt because taco seasoning and canned tomatoes vary.",
-      "Let the soup rest off the heat for 5 minutes so the broth settles and thickens enough to hold the meat, beans, and corn in each spoonful.",
-      "Serve hot and let each person add cheese, sour cream, avocado, and crushed tortilla chips so the toppings stay fresh and crisp."
+      "Warm the oil in a large soup pot over medium-high heat, then cook the ground beef and onion together, breaking the beef into small pieces as it browns.",
+      "If there is a large amount of rendered fat, drain it carefully. Stir in garlic and taco seasoning until the mixture smells fragrant.",
+      "Add diced tomatoes, tomatoes with green chiles, and beef broth, scraping the bottom of the pot to lift the browned flavour into the soup.",
+      "Mix in black beans, pinto beans, corn, and salt, then bring the pot to a light boil.",
+      "Lower to a steady simmer and cook uncovered for about 20 minutes, stirring occasionally as the broth becomes slightly more substantial.",
+      "Confirm the beef is cooked and the beans are hot, then taste before adding any more salt because seasoning levels vary between canned ingredients.",
+      "Let the pot stand off the heat for 5 minutes to settle before serving.",
+      "Serve with cheese, sour cream, avocado, and tortilla chips on the side so each bowl can be finished to taste."
     ],
     "tips": [
-      "Rinse canned beans to control sodium and keep the broth clear.",
-      "Brown the beef well before adding liquid.",
-      "Offer toppings separately for easy customization."
+      "Rinsing canned beans helps keep the soup cleaner-tasting and reduces some surface sodium.",
+      "Give the beef time to brown before adding broth for a more savoury base.",
+      "A topping bar keeps chips crunchy and makes the soup easy to adapt for different diners."
     ],
     "commonMistakes": [
-      "Leaving excess beef grease makes the soup heavy.",
-      "Adding extra salt before tasting can over-season it.",
-      "Cooking toppings in the soup removes their fresh texture."
+      "Too much beef fat left in the pot can make the broth feel greasy.",
+      "Adding salt before tasting can oversalt a soup already seasoned by taco mix and canned tomatoes.",
+      "Adding avocado, dairy, or chips while the soup cooks removes the contrast those toppings provide."
     ],
     "substitutions": [
-      "Use ground turkey instead of beef.",
-      "Use kidney beans in place of pinto beans.",
-      "Add chopped jalapeño for more heat."
+      "Ground turkey is a leaner swap for ground beef.",
+      "Kidney beans can replace pinto beans without changing the method.",
+      "Add finely chopped jalapeño with the onion for additional heat."
     ],
     "storage": [
-      "Refrigerate the cooled soup for up to 4 days.",
-      "Store fresh toppings separately.",
-      "Freeze the soup without dairy toppings for up to 3 months."
+      "Cool and refrigerate the plain soup in a covered container for up to 4 days.",
+      "Keep avocado, dairy toppings, and tortilla chips separate until serving.",
+      "Freeze the soup base without toppings for up to 3 months."
     ],
     "nutrition": {
       "calories": 470,
