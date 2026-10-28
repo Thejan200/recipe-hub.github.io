@@ -720,7 +720,7 @@
     ],
     "country": "UK",
     "image": "assets/images/recipes/ploughmans-lunch-generated.webp?v=individual-1",
-    "description": "A flexible British Ploughman's Lunch built around good bread, cheese, and pickled onions, with quality local produce chosen to taste.",
+    "description": "A British cold lunch board centred on bread, cheese, and pickled onions, with optional ham and seasonal accompaniments.",
     "prepTime": "PT20M",
     "cookTime": "PT0M",
     "totalTime": "PT20M",
@@ -737,30 +737,30 @@
       "Optional locally sourced pickles or seasonal produce"
     ],
     "instructions": [
-      "Choose good bread, a selection of local cheeses, and pickled onions as the essential elements of the plate.",
-      "Add optional baked ham and other locally sourced pickles or seasonal produce that you would like to serve.",
-      "Arrange the components on a platter so each person can combine the bread, cheese, and pickled elements to taste.",
-      "Serve immediately as a cold lunch."
+      "Choose bread, one or more cheeses, and pickled onions as the base of the board.",
+      "Add baked ham only if wanted, together with any seasonal fruit, salad items, or additional pickles you enjoy.",
+      "Place moist items in separate small dishes or at the edge of the platter so the bread stays dry.",
+      "Serve at once as a cold, build-your-own lunch."
     ],
     "tips": [
-      "Use the best local produce available; the tutorial presents the plate as a flexible combination rather than a fixed formula.",
-      "Keep bread, cheese, and pickled onions as the foundation of the plate.",
-      "Arrange wet pickles away from the bread until serving."
+      "This is a flexible board, so choose components that suit the people being served.",
+      "Keep bread, cheese, and pickled onions present for the core contrast of the plate.",
+      "Keep wet pickles away from bread until the moment of eating."
     ],
     "commonMistakes": [
-      "Leaving out the pickled element removes the contrast central to the platter.",
-      "Treating optional additions as mandatory makes a flexible lunch needlessly rigid.",
-      "Putting wet pickles directly on the bread too early makes it soggy."
+      "Without something pickled, the board can lack the sharp contrast that balances rich cheese.",
+      "Trying to make every optional addition mandatory defeats the flexible format.",
+      "Placing wet pickles on bread too early makes it soggy."
     ],
     "substitutions": [
-      "Choose cheeses and optional produce from trusted local producers.",
-      "Use baked ham only if you want a meat component.",
-      "Choose pickled onions as the required pickled element."
+      "Use any cheese combination that offers different textures or strengths.",
+      "Leave out ham for a meat-free board.",
+      "Other sharp pickles can accompany or replace pickled onions if needed."
     ],
     "storage": [
-      "Assemble just before serving.",
-      "Refrigerate components separately for 2 days.",
-      "Do not store sliced apple without lemon."
+      "Assemble the board immediately before serving.",
+      "Refrigerate perishable components separately for up to two days.",
+      "If serving cut apple, coat it with lemon juice to slow browning."
     ],
     "nutrition": {
       "calories": 690,
