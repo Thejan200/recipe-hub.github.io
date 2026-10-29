@@ -46,7 +46,7 @@ urls = {e.text for e in sitemap.iter() if e.tag.endswith("}loc") and e.text}
 for rid in runtime_ids:
     assert base + "recipes/" + rid + "/" in urls, f"Runtime published static recipe missing from sitemap: {rid}"
 assert base + "categories.html" in urls, "Categories landing page missing from sitemap"
-for category in ("Breakfast", "Lunch", "Dinner", "Beef", "Pork", "Seafood", "Soup", "Dessert", "Healthy", "Chicken", "Vegetarian", "Quick%20%26%20Easy", "USA", "UK", "Canada", "Australia", "Christmas", "New%20Year"):
+for category in ("Breakfast", "Lunch", "Dinner", "Beef", "Pork", "Seafood", "Soup", "Dessert", "Healthy", "Chicken", "Vegetarian", "Quick%20%26%20Easy", "USA", "UK", "Canada", "Australia", "Christmas", "New%20Year", "Scary%20Halloween%20Recipes"):
     slug = category.lower().replace("%20%26%20", "-and-").replace("%20", "-")
     assert base + "categories/" + slug + "/" in urls, f"Static category missing from sitemap: {category}"
 assert base + "categories/vegan/" not in urls, "Stale Vegan collection URL should not be in sitemap"
@@ -123,8 +123,8 @@ seasonal_mapping = json.loads(seasonal_block.group(1))
 for seasonal_name, expected_ids in seasonal_expected.items():
     actual_ids = {rid for rid, categories in seasonal_mapping.items() if seasonal_name in categories}
     assert actual_ids == expected_ids, f"{seasonal_name} mapping does not match its approved recipe set"
-assert "Christmas" in taxonomy["categories"] and "New Year" in taxonomy["categories"]
-assert set(next(g["categories"] for g in taxonomy["groups"] if g["id"] == "occasion")) == {"Christmas", "New Year"}
+assert "Christmas" in taxonomy["categories"] and "New Year" in taxonomy["categories"] and "Scary Halloween Recipes" in taxonomy["categories"]
+assert set(next(g["categories"] for g in taxonomy["groups"] if g["id"] == "occasion")) == {"Christmas", "New Year", "Scary Halloween Recipes"}
 for seasonal_name in seasonal_expected:
     image_path = root / json.loads((root / "data/category-images.json").read_text(encoding="utf-8"))[seasonal_name]
     assert image_path.is_file(), f"Missing category image for {seasonal_name}"
