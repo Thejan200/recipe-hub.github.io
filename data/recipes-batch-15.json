@@ -328,7 +328,7 @@
     ],
     "country": "UK",
     "image": "assets/images/recipes/scotch-eggs-generated.webp?v=individual-1",
-    "description": "Soft-cooked eggs wrapped in Italian sausage, breaded, and fried until crisp and golden.",
+    "description": "Crisp Scotch eggs with soft-centred boiled eggs enclosed in seasoned sausage and a golden crumb coating.",
     "prepTime": "PT30M",
     "cookTime": "PT15M",
     "totalTime": "PT1H",
@@ -346,33 +346,33 @@
       "Neutral oil, for frying"
     ],
     "instructions": [
-      "Place the six cold eggs in water, bring to a boil, and cook only until the yolks reach the soft-cooked texture you want after frying.",
-      "Cool and peel the eggs carefully, then keep them chilled while preparing the sausage and breading.",
-      "Divide the Italian sausage meat into six equal portions of about 3.5 oz each, then seal one portion evenly around each peeled egg.",
-      "Set up a breading station with white flour, the two beaten eggs, and panko breadcrumbs.",
-      "Coat each sausage-wrapped egg in flour, beaten egg, then panko, pressing the crumbs on gently.",
-      "Fry in neutral oil until the sausage is cooked through and the panko coating is deeply crisp and golden.",
-      "Drain briefly, rest just long enough to handle safely, then cut and serve while warm."
+      "Lower the eggs into simmering water and cook them only to the yolk texture you want after the later frying stage, then cool and peel them carefully.",
+      "Keep the peeled eggs chilled while dividing the sausage meat into six equal portions.",
+      "Flatten one sausage portion in your hand and mould it around an egg, closing any joins so the egg is fully sealed.",
+      "Arrange flour, beaten egg, and panko in separate shallow dishes.",
+      "Roll each sausage-coated egg through flour, then egg, then panko, pressing the crumbs on without crushing the coating.",
+      "Fry in neutral oil until the sausage is cooked through and the outside is a deep, even gold.",
+      "Drain briefly, rest until safe to handle, then halve and serve warm or cool fully for later."
     ],
     "tips": [
-      "Use eggs straight from the refrigerator, as shown in the tutorial.",
-      "Keep each sausage portion close to 3.5 oz for an even coating.",
-      "Choose the yolk texture before frying because the final fry continues the cooking."
+      "Chilled peeled eggs are easier to wrap without damaging the surface.",
+      "Equal sausage portions help all six eggs finish at the same rate.",
+      "The frying stage continues cooking the yolk, so account for that in the initial boil."
     ],
     "commonMistakes": [
-      "Overcooking the eggs removes the soft center.",
-      "Thin or unsealed sausage spots can split during frying.",
-      "Skipping flour, egg, or panko leaves the coating unable to crisp properly."
+      "A long initial boil removes the soft yolk centre.",
+      "Gaps in the sausage layer can split open in the oil.",
+      "Skipping a breading layer leads to a fragile, less crisp coating."
     ],
     "substitutions": [
-      "Use mild or hot Italian sausage meat according to your preferred heat level.",
-      "Use a deep, neutral frying oil suitable for frying.",
-      "Serve the finished Scotch eggs warm or cold."
+      "Use mild or hot sausage meat depending on the heat you want.",
+      "Choose a neutral oil intended for deep frying.",
+      "Serve the cooked eggs warm or chilled."
     ],
     "storage": [
-      "Refrigerate for up to 3 days.",
+      "Refrigerate for up to three days.",
       "Serve cold or rewarm gently.",
-      "Do not freeze after frying for best texture."
+      "Freezing after frying is not recommended for the best texture."
     ],
     "nutrition": {
       "calories": 480,
@@ -401,7 +401,7 @@
     ],
     "country": "UK",
     "image": "assets/images/recipes/full-english-breakfast-generated.webp?v=individual-1",
-    "description": "A Full Monty fry-up with sausages, bacon, eggs, tomatoes, mushrooms, baked beans, black pudding, fried bread, toast, jam, and tea.",
+    "description": "A traditional full English breakfast plate with sausages, bacon, eggs, beans, vegetables, black pudding, fried bread, toast, and tea.",
     "prepTime": "PT10M",
     "cookTime": "PT25M",
     "totalTime": "PT35M",
@@ -423,31 +423,31 @@
       "Tea, to serve"
     ],
     "instructions": [
-      "Prepare the breakfast components before cooking so the fry-up can be served together while hot.",
-      "Cook the sausages first, then cook the bacon and black pudding until heated through and browned to your preference.",
-      "Cook the mushrooms and tomatoes until tender, and warm the baked beans gently.",
-      "Fry the eggs and fried bread near the end so they are hot at serving time.",
-      "Serve the sausages, bacon, eggs, tomatoes, mushrooms, beans, black pudding, and fried bread with toast, jam, and tea."
+      "Set out the components and plan the pan space before starting so the hot items can reach the plate together.",
+      "Begin with sausages, which take the longest, then cook bacon and black pudding until heated through and browned as you prefer.",
+      "Cook mushrooms and tomatoes until tender while warming the beans gently in a separate pan.",
+      "Fry the eggs and fried bread last so their texture is at its best at serving time.",
+      "Arrange sausages, bacon, eggs, tomatoes, mushrooms, beans, black pudding, and fried bread on warm plates with toast, jam, and tea."
     ],
     "tips": [
-      "Cook the components in an order that lets everything reach the plate hot.",
-      "Warm the baked beans gently while the fried items finish.",
-      "Cook the eggs near the end for the yolk texture you prefer."
+      "Staggering the components is the easiest way to serve a hot breakfast together.",
+      "Keep baked beans at a low heat while the pan items finish.",
+      "Leave eggs until last so the yolk has the texture you want."
     ],
     "commonMistakes": [
-      "Starting the eggs too early leaves them cold by serving time.",
-      "High heat can burn the bacon before it is ready.",
-      "Crowding the pan can steam rather than brown the mushrooms."
+      "Starting eggs too soon leaves them cold by the time the plate is ready.",
+      "Very high heat can burn bacon before the fat has rendered.",
+      "Overcrowded mushrooms steam instead of browning."
     ],
     "substitutions": [
-      "Use fried bread as part of the Full Monty plate.",
-      "Serve toast and jam alongside the cooked breakfast.",
-      "Serve a mug of tea with the breakfast."
+      "Fried bread can be included as part of the full plate.",
+      "Toast and jam make a simple side option.",
+      "Tea is the traditional hot drink accompaniment."
     ],
     "storage": [
-      "Best eaten immediately.",
-      "Store cooked components separately for 1 day.",
-      "Reheat sausages and bacon until piping hot."
+      "This breakfast is best eaten immediately.",
+      "Keep cooked components separately for up to one day.",
+      "Reheat sausages and bacon until hot through."
     ],
     "nutrition": {
       "calories": 820,
@@ -636,7 +636,7 @@
     ],
     "country": "UK",
     "image": "assets/images/recipes/coronation-chicken-generated.webp?v=individual-1",
-    "description": "Chicken in a mild curried mayonnaise and crème fraîche sauce with apricots and sultanas.",
+    "description": "Chilled chicken folded through a mild curry dressing of mayonnaise and crème fraîche, finished with apricots and sultanas.",
     "prepTime": "PT20M",
     "cookTime": "PT20M",
     "totalTime": "PT40M",
@@ -665,32 +665,32 @@
       "Salt and pepper, to taste"
     ],
     "instructions": [
-      "Poach the chicken breasts in the chicken stock with the diced onion and bay leaves until cooked through, then cool the chicken and reserve the stock for another use.",
-      "Fry the onion in the butter or oil until softened, then stir in the curry powder, turmeric, brown sugar, and tomato purée.",
-      "Add the red wine and water, simmer the curry base briefly, then let it cool completely.",
-      "Mix the cooled curry base with the mayonnaise, crème fraîche, and lemon juice.",
-      "Fold in the cooled chicken, chopped dried apricots, and sultanas.",
-      "Season with salt and pepper to taste, then chill before serving."
+      "Poach the chicken in stock with onion and bay leaves until cooked through, then cool it completely and reserve the stock for another meal if desired.",
+      "Soften the onion in butter or oil, then stir in curry powder, turmeric, brown sugar, and tomato purée.",
+      "Add the wine and water, simmer briefly to bring the flavours together, and cool the curry base fully.",
+      "Stir the cold curry base into mayonnaise, crème fraîche, and lemon juice.",
+      "Fold through the cooled chicken, chopped apricots, and sultanas without breaking up the meat.",
+      "Taste, season lightly if needed, and chill before serving."
     ],
     "tips": [
-      "Cool the curry base completely before adding the mayonnaise and crème fraîche.",
-      "Cool the poached chicken before folding it into the sauce.",
-      "Fold in the apricots and sultanas gently at the end."
+      "Cool both chicken and curry base before they meet the mayonnaise dressing.",
+      "A fully cold curry base keeps the sauce stable and creamy.",
+      "Add the fruit last so it remains distinct in the finished salad."
     ],
     "commonMistakes": [
-      "Warm curry base can loosen the mayonnaise and crème fraîche sauce.",
-      "Adding the dairy sauce before the curry base cools can affect its texture.",
-      "Skipping the lemon juice can leave the finished sauce tasting flat."
+      "Warm curry base can make the dressing loose.",
+      "Adding mayonnaise before the spiced base is cold affects the sauce texture.",
+      "Without lemon, the rich dressing may taste flat."
     ],
     "substitutions": [
-      "Use oil instead of butter for frying the onion.",
-      "Adjust the salt and pepper only after the sauce is fully mixed.",
-      "Use one or two bay leaves, as preferred."
+      "Oil can replace butter for softening the onion.",
+      "Adjust salt and pepper only after the dressing is mixed.",
+      "Use one or two bay leaves according to their size."
     ],
     "storage": [
-      "Refrigerate for up to 2 days.",
-      "Keep covered and chilled.",
-      "Do not freeze mayonnaise-based salad."
+      "Keep covered in the refrigerator for up to two days.",
+      "Serve chilled.",
+      "Do not freeze this mayonnaise-based dish."
     ],
     "nutrition": {
       "calories": 430,
@@ -720,7 +720,7 @@
     ],
     "country": "UK",
     "image": "assets/images/recipes/ploughmans-lunch-generated.webp?v=individual-1",
-    "description": "A flexible British Ploughman's Lunch built around good bread, cheese, and pickled onions, with quality local produce chosen to taste.",
+    "description": "A British cold lunch board centred on bread, cheese, and pickled onions, with optional ham and seasonal accompaniments.",
     "prepTime": "PT20M",
     "cookTime": "PT0M",
     "totalTime": "PT20M",
@@ -737,30 +737,30 @@
       "Optional locally sourced pickles or seasonal produce"
     ],
     "instructions": [
-      "Choose good bread, a selection of local cheeses, and pickled onions as the essential elements of the plate.",
-      "Add optional baked ham and other locally sourced pickles or seasonal produce that you would like to serve.",
-      "Arrange the components on a platter so each person can combine the bread, cheese, and pickled elements to taste.",
-      "Serve immediately as a cold lunch."
+      "Choose bread, one or more cheeses, and pickled onions as the base of the board.",
+      "Add baked ham only if wanted, together with any seasonal fruit, salad items, or additional pickles you enjoy.",
+      "Place moist items in separate small dishes or at the edge of the platter so the bread stays dry.",
+      "Serve at once as a cold, build-your-own lunch."
     ],
     "tips": [
-      "Use the best local produce available; the tutorial presents the plate as a flexible combination rather than a fixed formula.",
-      "Keep bread, cheese, and pickled onions as the foundation of the plate.",
-      "Arrange wet pickles away from the bread until serving."
+      "This is a flexible board, so choose components that suit the people being served.",
+      "Keep bread, cheese, and pickled onions present for the core contrast of the plate.",
+      "Keep wet pickles away from bread until the moment of eating."
     ],
     "commonMistakes": [
-      "Leaving out the pickled element removes the contrast central to the platter.",
-      "Treating optional additions as mandatory makes a flexible lunch needlessly rigid.",
-      "Putting wet pickles directly on the bread too early makes it soggy."
+      "Without something pickled, the board can lack the sharp contrast that balances rich cheese.",
+      "Trying to make every optional addition mandatory defeats the flexible format.",
+      "Placing wet pickles on bread too early makes it soggy."
     ],
     "substitutions": [
-      "Choose cheeses and optional produce from trusted local producers.",
-      "Use baked ham only if you want a meat component.",
-      "Choose pickled onions as the required pickled element."
+      "Use any cheese combination that offers different textures or strengths.",
+      "Leave out ham for a meat-free board.",
+      "Other sharp pickles can accompany or replace pickled onions if needed."
     ],
     "storage": [
-      "Assemble just before serving.",
-      "Refrigerate components separately for 2 days.",
-      "Do not store sliced apple without lemon."
+      "Assemble the board immediately before serving.",
+      "Refrigerate perishable components separately for up to two days.",
+      "If serving cut apple, coat it with lemon juice to slow browning."
     ],
     "nutrition": {
       "calories": 690,
