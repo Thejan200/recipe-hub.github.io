@@ -10,7 +10,11 @@ const vm = require('vm');
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://bitesparks.com/';
 const marker = '.bitesparks-static-output';
-const staticCategoryNames = new Set(['Breakfast', 'Lunch', 'Dinner', 'Chicken', 'Beef', 'Pork', 'Seafood', 'Soup', 'Dessert', 'Pasta', 'Salad', 'Appetizer', 'USA', 'Canada', 'Australia', 'UK', 'Healthy', 'Vegetarian', 'Quick & Easy', 'Christmas', 'New Year']);
+const staticCategoryNames = new Set(['Breakfast', 'Lunch', 'Dinner', 'Chicken', 'Beef', 'Pork', 'Seafood', 'Soup', 'Dessert', 'Pasta', 'Salad', 'Appetizer', 'USA', 'Canada', 'Australia', 'UK', 'Healthy', 'Vegetarian', 'Quick & Easy', 'Christmas', 'New Year', 'Scary Halloween Recipes']);
+// Explicit, category-scoped editorial exception: these seasonal novelty recipes
+// may publish without a matching embeddable tutorial. All other recipes retain
+// the existing mandatory-video gate.
+const videoOptional = recipe => Array.isArray(recipe.tags) && recipe.tags.includes('Scary Halloween Recipes');
 
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({
   '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
@@ -255,7 +259,7 @@ function sitemap(urls) {
   const ids = new Set(recipes.map(recipe => recipe.id));
   if (ids.size !== recipes.length || !recipes.length) throw new Error('Published recipe IDs must be unique and non-empty.');
   for (const recipe of recipes) {
-    if (!recipe.title || !recipe.description || !recipe.ingredients.length || !recipe.instructions.length || !recipe.video?.youtubeId) throw new Error(`Recipe ${recipe.id} is incomplete for static publishing.`);
+    if (!recipe.title || !recipe.description || !recipe.ingredients.length || !recipe.instructions.length || (!videoOptional(recipe) && !recipe.video?.youtubeId)) throw new Error(`Recipe ${recipe.id} is incomplete for static publishing.`);
   }
   const taxonomy = readJson('data/category-taxonomy.json');
   prepareOutput('recipes');

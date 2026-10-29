@@ -91,7 +91,8 @@ for recipe in runtime_recipes:
         assert step.get("image"), f"Missing instruction image for {recipe['id']}"
         assert f'id="step-{index}"' in page_text, f"Missing instruction anchor for {recipe['id']}"
     assert "aggregateRating" not in schema, f"Unexpected aggregate rating for {recipe['id']}"
-    assert schema.get("video", {}).get("embedUrl", "").startswith("https://www.youtube.com/embed/"), f"Missing VideoObject for {recipe['id']}"
+    if "Scary Halloween Recipes" not in (recipe.get("tags") or []):
+        assert schema.get("video", {}).get("embedUrl", "").startswith("https://www.youtube.com/embed/"), f"Missing VideoObject for {recipe['id']}"
 
 taxonomy = json.loads((root / "data/category-taxonomy.json").read_text(encoding="utf-8"))
 for category in taxonomy["categories"]:
