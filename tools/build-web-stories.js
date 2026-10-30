@@ -19,7 +19,7 @@ const storyPage = (story, recipe) => {
   const canonical = storyUrl(story.id);
   const poster = new URL(story.poster, base).href;
   const logo = new URL(stories.publisherLogo, base).href;
-  const schema = JSON.stringify({ '@context':'https://schema.org', '@type':'WebPage', name:story.title, description:story.description, url:canonical, isPartOf:{'@type':'WebSite', name:stories.publisher, url:base}, about:{'@type':'Recipe', name:recipe.title, url:recipeUrl(recipe.id)} }).replace(/</g, '\\u003c');
+  const schema = JSON.stringify({ '@context':'https://schema.org', '@type':'WebPage', name:story.title, description:story.description, url:canonical, isPartOf:{'@type':'WebSite', name:stories.publisher, url:base}, about:{'@type':'Thing', name:recipe.title, url:recipeUrl(recipe.id)} }).replace(/</g, '\\u003c');
   const pages = story.slides.map((slide, index) => {
     const tag = index === 0 ? 'h1' : 'h2';
     const action = slide.cta ? `<a class="story-card__cta" href="${esc(recipeUrl(recipe.id))}" title="${esc(slide.cta)}">${esc(slide.cta)}</a>` : '';
