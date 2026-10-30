@@ -9,12 +9,37 @@
       "recipeId": "monster-face-pie",
       "poster": "assets/images/stories/monster-face-pie-story.webp",
       "slides": [
-        { "eyebrow": "SCARY HALLOWEEN RECIPES", "headline": "A golden pie with a playful monster face", "body": "A warm beef-and-vegetable pie becomes a Halloween centrepiece with a few simple pastry decorations." },
-        { "eyebrow": "THE FILLING", "headline": "Keep the filling thick, not wet", "body": "Cook onion and carrot until soft, brown the beef, then simmer with tomato paste, thyme and stock until the mixture holds on a spoon." },
-        { "eyebrow": "THE CRUST", "headline": "Cool first for a crisp base", "body": "Let the filling lose its steam before it meets the pastry. This helps the lower crust bake rather than turn soft." },
-        { "eyebrow": "THE FACE", "headline": "Seal, vent and decorate", "body": "Crimp the pastry edge firmly. Add olive, cheese and pepper pieces for the face, leaving a few small vents clear." },
-        { "eyebrow": "THE BAKE", "headline": "Bake until deeply golden", "body": "Bake at 200°C until the pastry is crisp and richly coloured. Rest the pie for ten minutes so the slices hold together." },
-        { "eyebrow": "READY TO SERVE", "headline": "Dinner with a Halloween twist", "body": "The full recipe includes exact ingredient amounts, timing and storage guidance.", "cta": "Get the full Monster Face Pie recipe" }
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "A golden pie with a playful monster face",
+          "body": "A warm beef-and-vegetable pie becomes a Halloween centrepiece with a few simple pastry decorations."
+        },
+        {
+          "eyebrow": "THE FILLING",
+          "headline": "Keep the filling thick, not wet",
+          "body": "Cook onion and carrot until soft, brown the beef, then simmer with tomato paste, thyme and stock until the mixture holds on a spoon."
+        },
+        {
+          "eyebrow": "THE CRUST",
+          "headline": "Cool first for a crisp base",
+          "body": "Let the filling lose its steam before it meets the pastry. This helps the lower crust bake rather than turn soft."
+        },
+        {
+          "eyebrow": "THE FACE",
+          "headline": "Seal, vent and decorate",
+          "body": "Crimp the pastry edge firmly. Add olive, cheese and pepper pieces for the face, leaving a few small vents clear."
+        },
+        {
+          "eyebrow": "THE BAKE",
+          "headline": "Bake until deeply golden",
+          "body": "Bake at 200°C until the pastry is crisp and richly coloured. Rest the pie for ten minutes so the slices hold together."
+        },
+        {
+          "eyebrow": "READY TO SERVE",
+          "headline": "Dinner with a Halloween twist",
+          "body": "The full recipe includes exact ingredient amounts, timing and storage guidance.",
+          "cta": "Get the full Monster Face Pie recipe"
+        }
       ]
     },
     {
@@ -24,12 +49,37 @@
       "recipeId": "pizza-skulls",
       "poster": "assets/images/stories/pizza-skulls-story.webp",
       "slides": [
-        { "eyebrow": "SCARY HALLOWEEN RECIPES", "headline": "Crisp pizza pockets in a skull shape", "body": "Pizza dough, sauce, cheese and a mould are all you need for a shareable spooky snack." },
-        { "eyebrow": "PREP THE PAN", "headline": "Grease every small detail", "body": "Coat the eye sockets and edges of the skull mould well so the hot pockets release cleanly after baking." },
-        { "eyebrow": "BUILD THE BASE", "headline": "Press dough into each cavity", "body": "Use dough slightly larger than the mould. Ease it into the contours without stretching it thin at the edges." },
-        { "eyebrow": "FILL LIGHTLY", "headline": "A little filling gives a better shape", "body": "Add sauce, mozzarella, sausage and pepper below the rim. Overfilling is the main reason pockets split." },
-        { "eyebrow": "SEAL AND BAKE", "headline": "Close the skulls before the oven", "body": "Top with dough, press the edges closed and bake at 190°C until firm and browned around the details." },
-        { "eyebrow": "SERVE SAFELY", "headline": "Let the cheese cool briefly", "body": "Turn the skulls out carefully and serve with warm pizza sauce. The full recipe has the exact portions.", "cta": "Get the full Pizza Skulls recipe" }
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "Crisp pizza pockets in a skull shape",
+          "body": "Pizza dough, sauce, cheese and a mould are all you need for a shareable spooky snack."
+        },
+        {
+          "eyebrow": "PREP THE PAN",
+          "headline": "Grease every small detail",
+          "body": "Coat the eye sockets and edges of the skull mould well so the hot pockets release cleanly after baking."
+        },
+        {
+          "eyebrow": "BUILD THE BASE",
+          "headline": "Press dough into each cavity",
+          "body": "Use dough slightly larger than the mould. Ease it into the contours without stretching it thin at the edges."
+        },
+        {
+          "eyebrow": "FILL LIGHTLY",
+          "headline": "A little filling gives a better shape",
+          "body": "Add sauce, mozzarella, sausage and pepper below the rim. Overfilling is the main reason pockets split."
+        },
+        {
+          "eyebrow": "SEAL AND BAKE",
+          "headline": "Close the skulls before the oven",
+          "body": "Top with dough, press the edges closed and bake at 190°C until firm and browned around the details."
+        },
+        {
+          "eyebrow": "SERVE SAFELY",
+          "headline": "Let the cheese cool briefly",
+          "body": "Turn the skulls out carefully and serve with warm pizza sauce. The full recipe has the exact portions.",
+          "cta": "Get the full Pizza Skulls recipe"
+        }
       ]
     },
     {
@@ -39,12 +89,72 @@
       "recipeId": "mummy-pizza",
       "poster": "assets/images/stories/mummy-pizza-story.webp",
       "slides": [
-        { "eyebrow": "SCARY HALLOWEEN RECIPES", "headline": "A fast pizza dressed as a mummy", "body": "This easy personal pizza uses pita, tomato sauce, mozzarella strips and olive eyes for a fun dinner." },
-        { "eyebrow": "START CRISP", "headline": "Heat the oven to 220°C", "body": "Place the pitas on a baking sheet so their bases can crisp while the cheese melts." },
-        { "eyebrow": "ADD A THIN LAYER", "headline": "Keep the sauce light", "body": "Spread sauce over each pita, leaving a narrow border. A thin coating keeps the base from becoming soft." },
-        { "eyebrow": "MAKE THE BANDAGES", "headline": "Leave gaps between cheese strips", "body": "Lay mozzarella in uneven bands so the red sauce remains visible. Save a small open space for olive eyes." },
-        { "eyebrow": "BAKE UNTIL BUBBLY", "headline": "Look for crisp edges", "body": "Bake until the pita is firm and the mozzarella has melted and lightly browned at the edges." },
-        { "eyebrow": "HALLOWEEN DINNER", "headline": "Slice after a short rest", "body": "Let the pizza cool just enough to set the cheese. The full recipe includes exact amounts and substitutions.", "cta": "Get the full Mummy Pizza recipe" }
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "A fast pizza dressed as a mummy",
+          "body": "This easy personal pizza uses pita, tomato sauce, mozzarella strips and olive eyes for a fun dinner."
+        },
+        {
+          "eyebrow": "START CRISP",
+          "headline": "Heat the oven to 220°C",
+          "body": "Place the pitas on a baking sheet so their bases can crisp while the cheese melts."
+        },
+        {
+          "eyebrow": "ADD A THIN LAYER",
+          "headline": "Keep the sauce light",
+          "body": "Spread sauce over each pita, leaving a narrow border. A thin coating keeps the base from becoming soft."
+        },
+        {
+          "eyebrow": "MAKE THE BANDAGES",
+          "headline": "Leave gaps between cheese strips",
+          "body": "Lay mozzarella in uneven bands so the red sauce remains visible. Save a small open space for olive eyes."
+        },
+        {
+          "eyebrow": "BAKE UNTIL BUBBLY",
+          "headline": "Look for crisp edges",
+          "body": "Bake until the pita is firm and the mozzarella has melted and lightly browned at the edges."
+        },
+        {
+          "eyebrow": "HALLOWEEN DINNER",
+          "headline": "Slice after a short rest",
+          "body": "Let the pizza cool just enough to set the cheese. The full recipe includes exact amounts and substitutions.",
+          "cta": "Get the full Mummy Pizza recipe"
+        }
+      ]
+    },
+    {
+      "id": "finger-cheese-sticks",
+      "title": "Finger-Shaped Cheese Sticks: A Halloween Snack Story",
+      "description": "A practical guide to crisp cheese pastry sticks with almond nails and a warm marinara dip.",
+      "recipeId": "finger-cheese-sticks",
+      "poster": "assets/images/recipes/finger-cheese-sticks-generated.webp",
+      "slides": [
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "A crisp snack with a spooky silhouette",
+          "body": "Golden pastry and melted cheese turn simple sticks into a playful Halloween platter."
+        },
+        {
+          "eyebrow": "SHAPE",
+          "headline": "Make even fingers",
+          "body": "Cut pastry into similar-width strips so they bake at the same pace and are easy to arrange."
+        },
+        {
+          "eyebrow": "FILL",
+          "headline": "Keep cheese away from the edge",
+          "body": "Leave a narrow border before sealing; this helps the cheese stay inside instead of escaping."
+        },
+        {
+          "eyebrow": "DETAIL",
+          "headline": "Add the nail before baking",
+          "body": "Press one blanched almond into each tip gently, then score small knuckle lines with a knife."
+        },
+        {
+          "eyebrow": "SERVE",
+          "headline": "Bake until crisp and deeply golden",
+          "body": "Cool briefly before moving the sticks. The full recipe has exact amounts and dipping ideas.",
+          "cta": "Get the full Finger-Shaped Cheese Sticks recipe"
+        }
       ]
     }
   ]
