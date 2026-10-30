@@ -254,6 +254,13 @@ function sitemap(urls) {
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(url => `  <url><loc>${esc(url)}</loc><changefreq>weekly</changefreq><priority>${url.includes('/recipes/') ? '0.8' : '0.7'}</priority></url>`).join('\n')}\n</urlset>\n`;
 }
 
+function storyUrls() {
+  const source = path.join(root, 'data', 'web-stories.json');
+  if (!fs.existsSync(source)) return [];
+  const stories = readJson('data/web-stories.json').stories || [];
+  return ['stories/', ...stories.map(story => `stories/${encodeURIComponent(story.id)}/`)];
+}
+
 (async () => {
   const recipes = await catalogFromRuntimeLoader();
   const ids = new Set(recipes.map(recipe => recipe.id));
@@ -278,6 +285,6 @@ function sitemap(urls) {
   const staticPages = ['','recipes/','categories.html','about.html','contact.html','privacy.html','terms.html','disclaimer.html','cookie-policy.html','editorial-standards.html'];
   const categoryUrls = Object.keys(taxonomy.categories).map(category => `categories/${slugify(category)}/`);
   const recipeUrls = recipes.map(recipe => `recipes/${recipe.id}/`);
-  fs.writeFileSync(path.join(root, 'sitemap.xml'), sitemap([...staticPages, ...categoryUrls, ...recipeUrls].map(value => new URL(value, siteUrl).href)));
+  fs.writeFileSync(path.join(root, 'sitemap.xml'), sitemap([...staticPages, ...storyUrls(), ...categoryUrls, ...recipeUrls].map(value => new URL(value, siteUrl).href)));
   console.log(`STATIC SEO OK: generated ${recipes.length} recipe pages and ${categoryUrls.length} category pages.`);
 })().catch(error => { console.error(`Static SEO build failed: ${error.message}`); process.exitCode = 1; });
