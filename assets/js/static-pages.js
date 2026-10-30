@@ -12,6 +12,25 @@ privacyConsent.src='assets/js/privacy-consent.js?v=5';
   const header = document.querySelector('.nav-wrap');
   const menu = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.main-nav');
+  if (nav && !nav.querySelector('a[data-stories-link]')) {
+    const stories = document.createElement('a');
+    stories.href = '/stories/';
+    stories.textContent = 'Stories';
+    stories.dataset.storiesLink = 'true';
+    const categories = Array.from(nav.querySelectorAll('a')).find(link => /Categories/.test(link.textContent));
+    if (categories) categories.insertAdjacentElement('beforebegin', stories); else nav.appendChild(stories);
+  }
+  document.querySelectorAll('.footer-grid').forEach(grid => {
+    const heading = Array.from(grid.querySelectorAll('h3')).find(item => item.textContent.trim() === 'Explore');
+    const column = heading?.parentElement;
+    if (!column || column.querySelector('a[data-stories-link]')) return;
+    const stories = document.createElement('a');
+    stories.href = '/stories/';
+    stories.textContent = 'Stories';
+    stories.dataset.storiesLink = 'true';
+    const categories = Array.from(column.querySelectorAll('a')).find(link => /Categories/.test(link.textContent));
+    if (categories) categories.insertAdjacentElement('beforebegin', stories); else column.appendChild(stories);
+  });
   if (menu && nav) menu.addEventListener('click', () => {
     const open = nav.classList.toggle('menu-open');
     menu.setAttribute('aria-expanded', String(open));
