@@ -3,8 +3,13 @@
   // original implementation remains isolated in site-core.js.
   const runtimeMarkers={privacy:'bs-privacy-choice-v2',theme:'bs-theme',audit:'__bsAuditPatched',menu:'bsMenuBound'};
   void runtimeMarkers;
+  const primaryNav=document.querySelector('.main-nav');
+  if(primaryNav&&!primaryNav.querySelector('.nav-dropdown')){
+    primaryNav.setAttribute('aria-label','Primary navigation');
+    primaryNav.innerHTML='<a href="index.html">Home</a><a href="stories/">Stories</a><a href="recipes.html">All Recipes</a><a href="categories.html" data-nav-categories>Categories</a><a href="category.html?category=Quick%20%26%20Easy">Quick &amp; Easy</a><details class="nav-dropdown"><summary>Legal &amp; Privacy <span aria-hidden="true">⌄</span></summary><div class="nav-dropdown-menu"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a href="disclaimer.html">Disclaimer</a><a href="cookie-policy.html">Cookie Policy</a><a href="editorial-standards.html">Editorial Standards</a></div></details>';
+  }
   const privacyConsent=document.createElement('script');
-privacyConsent.src='assets/js/privacy-consent.js?v=5';
+privacyConsent.src='assets/js/privacy-consent.js?v=6';
   privacyConsent.defer=true;
   document.head.appendChild(privacyConsent);
   const analytics=document.createElement('script');

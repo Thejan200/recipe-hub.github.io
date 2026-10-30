@@ -28,16 +28,11 @@
     banner.setAttribute('aria-label', 'Cookies and analytics choices');
     banner.innerHTML = `
       <div><strong>Cookies &amp; analytics</strong><p>Essential site storage always works. With your permission, BiteSparks may load Google Analytics.</p><p><a href="privacy.html">Privacy Policy</a> · <a href="cookie-policy.html">Cookie Policy</a></p></div>
-      <div class="privacy-choice-actions"><button class="btn btn-outline" data-privacy-choice="declined" type="button">Reject analytics</button><button class="btn btn-dark" data-privacy-choice="accepted" type="button">Accept analytics</button><button class="privacy-manage-link" data-manage-choices type="button" aria-expanded="false">Manage choices</button></div>
-      <div data-manage-panel style="display:none;flex-basis:100%;align-items:center;gap:14px;flex-wrap:wrap"><label><input type="checkbox" data-choice-analytics ${preferences.analytics ? 'checked' : ''}> Google Analytics</label><button class="btn btn-dark" data-save-choices type="button">Save choices</button></div>`;
+      <div class="privacy-choice-actions"><button class="btn btn-outline" data-privacy-choice="declined" type="button">Reject analytics</button><button class="btn btn-dark" data-privacy-choice="accepted" type="button">Accept analytics</button></div>`;
     banner.style.cssText = 'position:fixed;bottom:16px;left:16px;right:16px;z-index:1000;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:0 18px 50px rgba(35,30,22,.16);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 18px;font-size:12px';
-    const managePanel = banner.querySelector('[data-manage-panel]');
     const apply = next => { savePreferences(next); removeBanner(); };
     banner.querySelector('[data-privacy-choice="accepted"]').addEventListener('click', () => apply({ analytics: true }));
     banner.querySelector('[data-privacy-choice="declined"]').addEventListener('click', () => apply({ analytics: false }));
-    const manageButton = banner.querySelector('[data-manage-choices]');
-    manageButton.addEventListener('click', () => { const opening = managePanel.style.display === 'none'; managePanel.style.display = opening ? 'flex' : 'none'; manageButton.setAttribute('aria-expanded', String(opening)); });
-    banner.querySelector('[data-save-choices]').addEventListener('click', () => apply({ analytics: banner.querySelector('[data-choice-analytics]').checked }));
     document.body.appendChild(banner);
   };
   const addPrivacyControl = () => {
