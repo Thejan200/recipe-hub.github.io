@@ -19,6 +19,10 @@ jobs:
         run: python .github/validate_extended.py
       - name: Validate static SEO pages and crawlable metadata
         run: python .github/validate_static_seo.py
+      - name: Build and validate Web Stories
+        run: |
+          node tools/build-web-stories.js
+          node tools/validate-web-stories.js
       - name: Validate BiteSparks internal naming
         run: python .github/validate_brand.py
       - name: Validate favicon and app icons
