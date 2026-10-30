@@ -114,7 +114,7 @@ privacyConsent.src='assets/js/privacy-consent.js?v=5';
   cardRatings.defer=true;
   document.head.appendChild(cardRatings);
   const core=document.createElement('script');
-  core.src='assets/js/site-core.js?v=14';
+  core.src='assets/js/site-core.js?v=15';
   core.onload=function(){
     setupSearchClearButtons();
     addRecipePublishedDate();

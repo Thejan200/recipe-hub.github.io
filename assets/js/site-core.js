@@ -10,10 +10,8 @@
       if(existingCategories){existingCategories.setAttribute('data-nav-categories','')}
       else{const categories=document.createElement('a');categories.href='categories.html';categories.textContent='Categories';categories.setAttribute('data-nav-categories','');recipesLink.insertAdjacentElement('afterend',categories)}
     }
-    if(!Array.from(nav.querySelectorAll('a')).some(link=>link.getAttribute('href')==='stories/'||link.textContent.trim()==='Stories')){
-      const stories=document.createElement('a');stories.href='stories/';stories.textContent='Stories';
-      const categories=Array.from(nav.querySelectorAll('a')).find(link=>link.getAttribute('href')==='categories.html');
-      if(categories)categories.insertAdjacentElement('beforebegin',stories);else nav.appendChild(stories);
+    if(!nav.querySelector('.nav-dropdown')){
+      nav.innerHTML='<a href="index.html">Home</a><a href="stories/">Stories</a><a href="recipes.html">All Recipes</a><a href="categories.html" data-nav-categories>Categories</a><a href="category.html?category=Quick%20%26%20Easy">Quick &amp; Easy</a><details class="nav-dropdown"><summary>Legal &amp; Privacy <span aria-hidden="true">⌄</span></summary><div class="nav-dropdown-menu"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a href="disclaimer.html">Disclaimer</a><a href="cookie-policy.html">Cookie Policy</a><a href="editorial-standards.html">Editorial Standards</a></div></details>';
     }
     const links=Array.from(nav.querySelectorAll('a'));
     links.forEach(link=>{link.classList.remove('active');link.removeAttribute('aria-current')});
