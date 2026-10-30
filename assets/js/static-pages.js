@@ -12,14 +12,7 @@ privacyConsent.src='assets/js/privacy-consent.js?v=5';
   const header = document.querySelector('.nav-wrap');
   const menu = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.main-nav');
-  if (nav && !nav.querySelector('a[data-stories-link]')) {
-    const stories = document.createElement('a');
-    stories.href = '/stories/';
-    stories.textContent = 'Stories';
-    stories.dataset.storiesLink = 'true';
-    const categories = Array.from(nav.querySelectorAll('a')).find(link => /Categories/.test(link.textContent));
-    if (categories) categories.insertAdjacentElement('beforebegin', stories); else nav.appendChild(stories);
-  }
+  if (nav && !nav.querySelector('.nav-dropdown')) nav.innerHTML = '<a href="/">Home</a><a href="/stories/">Stories</a><a href="/recipes/">All Recipes</a><a href="/categories.html">Categories</a><a href="/categories/quick-and-easy/">Quick &amp; Easy</a><details class="nav-dropdown"><summary>Legal &amp; Privacy <span aria-hidden="true">⌄</span></summary><div class="nav-dropdown-menu"><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms &amp; Conditions</a><a href="/disclaimer.html">Disclaimer</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/editorial-standards.html">Editorial Standards</a></div></details>';
   document.querySelectorAll('.footer-grid').forEach(grid => {
     const heading = Array.from(grid.querySelectorAll('h3')).find(item => item.textContent.trim() === 'Explore');
     const column = heading?.parentElement;
