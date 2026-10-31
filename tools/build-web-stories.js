@@ -11,7 +11,9 @@ const readAllRecipes = () => {
   const files = fs.readdirSync(path.join(root, 'data')).filter(name => /^recipes(?:-batch-\d+)?\.json$/.test(name));
   return files.flatMap(name => JSON.parse(fs.readFileSync(path.join(root, 'data', name), 'utf8')));
 };
-const publishedIds = new Set(['monster-face-pie', 'pizza-skulls', 'mummy-pizza']);
+// A Story is an explicit publication decision. Its recipe may still be marked
+// draft while the wider recipe-catalogue workflow is in progress.
+const publishedIds = new Set(stories.stories.map(story => story.recipeId));
 const recipes = new Map(readAllRecipes().filter(recipe => recipe.status !== 'draft' || publishedIds.has(recipe.id)).map(recipe => [recipe.id, recipe]));
 const storyUrl = id => `${base}stories/${id}/`;
 const recipeUrl = id => `${base}recipes/${id}/`;

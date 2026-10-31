@@ -9,12 +9,37 @@
       "recipeId": "monster-face-pie",
       "poster": "assets/images/stories/monster-face-pie-story.webp",
       "slides": [
-        { "eyebrow": "SCARY HALLOWEEN RECIPES", "headline": "A golden pie with a playful monster face", "body": "A warm beef-and-vegetable pie becomes a Halloween centrepiece with a few simple pastry decorations." },
-        { "eyebrow": "THE FILLING", "headline": "Keep the filling thick, not wet", "body": "Cook onion and carrot until soft, brown the beef, then simmer with tomato paste, thyme and stock until the mixture holds on a spoon." },
-        { "eyebrow": "THE CRUST", "headline": "Cool first for a crisp base", "body": "Let the filling lose its steam before it meets the pastry. This helps the lower crust bake rather than turn soft." },
-        { "eyebrow": "THE FACE", "headline": "Seal, vent and decorate", "body": "Crimp the pastry edge firmly. Add olive, cheese and pepper pieces for the face, leaving a few small vents clear." },
-        { "eyebrow": "THE BAKE", "headline": "Bake until deeply golden", "body": "Bake at 200°C until the pastry is crisp and richly coloured. Rest the pie for ten minutes so the slices hold together." },
-        { "eyebrow": "READY TO SERVE", "headline": "Dinner with a Halloween twist", "body": "The full recipe includes exact ingredient amounts, timing and storage guidance.", "cta": "Get the full Monster Face Pie recipe" }
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "A golden pie with a playful monster face",
+          "body": "A warm beef-and-vegetable pie becomes a Halloween centrepiece with a few simple pastry decorations."
+        },
+        {
+          "eyebrow": "THE FILLING",
+          "headline": "Keep the filling thick, not wet",
+          "body": "Cook onion and carrot until soft, brown the beef, then simmer with tomato paste, thyme and stock until the mixture holds on a spoon."
+        },
+        {
+          "eyebrow": "THE CRUST",
+          "headline": "Cool first for a crisp base",
+          "body": "Let the filling lose its steam before it meets the pastry. This helps the lower crust bake rather than turn soft."
+        },
+        {
+          "eyebrow": "THE FACE",
+          "headline": "Seal, vent and decorate",
+          "body": "Crimp the pastry edge firmly. Add olive, cheese and pepper pieces for the face, leaving a few small vents clear."
+        },
+        {
+          "eyebrow": "THE BAKE",
+          "headline": "Bake until deeply golden",
+          "body": "Bake at 200°C until the pastry is crisp and richly coloured. Rest the pie for ten minutes so the slices hold together."
+        },
+        {
+          "eyebrow": "READY TO SERVE",
+          "headline": "Dinner with a Halloween twist",
+          "body": "The full recipe includes exact ingredient amounts, timing and storage guidance.",
+          "cta": "Get the full Monster Face Pie recipe"
+        }
       ]
     },
     {
@@ -24,12 +49,37 @@
       "recipeId": "pizza-skulls",
       "poster": "assets/images/stories/pizza-skulls-story.webp",
       "slides": [
-        { "eyebrow": "SCARY HALLOWEEN RECIPES", "headline": "Crisp pizza pockets in a skull shape", "body": "Pizza dough, sauce, cheese and a mould are all you need for a shareable spooky snack." },
-        { "eyebrow": "PREP THE PAN", "headline": "Grease every small detail", "body": "Coat the eye sockets and edges of the skull mould well so the hot pockets release cleanly after baking." },
-        { "eyebrow": "BUILD THE BASE", "headline": "Press dough into each cavity", "body": "Use dough slightly larger than the mould. Ease it into the contours without stretching it thin at the edges." },
-        { "eyebrow": "FILL LIGHTLY", "headline": "A little filling gives a better shape", "body": "Add sauce, mozzarella, sausage and pepper below the rim. Overfilling is the main reason pockets split." },
-        { "eyebrow": "SEAL AND BAKE", "headline": "Close the skulls before the oven", "body": "Top with dough, press the edges closed and bake at 190°C until firm and browned around the details." },
-        { "eyebrow": "SERVE SAFELY", "headline": "Let the cheese cool briefly", "body": "Turn the skulls out carefully and serve with warm pizza sauce. The full recipe has the exact portions.", "cta": "Get the full Pizza Skulls recipe" }
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "Crisp pizza pockets in a skull shape",
+          "body": "Pizza dough, sauce, cheese and a mould are all you need for a shareable spooky snack."
+        },
+        {
+          "eyebrow": "PREP THE PAN",
+          "headline": "Grease every small detail",
+          "body": "Coat the eye sockets and edges of the skull mould well so the hot pockets release cleanly after baking."
+        },
+        {
+          "eyebrow": "BUILD THE BASE",
+          "headline": "Press dough into each cavity",
+          "body": "Use dough slightly larger than the mould. Ease it into the contours without stretching it thin at the edges."
+        },
+        {
+          "eyebrow": "FILL LIGHTLY",
+          "headline": "A little filling gives a better shape",
+          "body": "Add sauce, mozzarella, sausage and pepper below the rim. Overfilling is the main reason pockets split."
+        },
+        {
+          "eyebrow": "SEAL AND BAKE",
+          "headline": "Close the skulls before the oven",
+          "body": "Top with dough, press the edges closed and bake at 190°C until firm and browned around the details."
+        },
+        {
+          "eyebrow": "SERVE SAFELY",
+          "headline": "Let the cheese cool briefly",
+          "body": "Turn the skulls out carefully and serve with warm pizza sauce. The full recipe has the exact portions.",
+          "cta": "Get the full Pizza Skulls recipe"
+        }
       ]
     },
     {
@@ -39,12 +89,982 @@
       "recipeId": "mummy-pizza",
       "poster": "assets/images/stories/mummy-pizza-story.webp",
       "slides": [
-        { "eyebrow": "SCARY HALLOWEEN RECIPES", "headline": "A fast pizza dressed as a mummy", "body": "This easy personal pizza uses pita, tomato sauce, mozzarella strips and olive eyes for a fun dinner." },
-        { "eyebrow": "START CRISP", "headline": "Heat the oven to 220°C", "body": "Place the pitas on a baking sheet so their bases can crisp while the cheese melts." },
-        { "eyebrow": "ADD A THIN LAYER", "headline": "Keep the sauce light", "body": "Spread sauce over each pita, leaving a narrow border. A thin coating keeps the base from becoming soft." },
-        { "eyebrow": "MAKE THE BANDAGES", "headline": "Leave gaps between cheese strips", "body": "Lay mozzarella in uneven bands so the red sauce remains visible. Save a small open space for olive eyes." },
-        { "eyebrow": "BAKE UNTIL BUBBLY", "headline": "Look for crisp edges", "body": "Bake until the pita is firm and the mozzarella has melted and lightly browned at the edges." },
-        { "eyebrow": "HALLOWEEN DINNER", "headline": "Slice after a short rest", "body": "Let the pizza cool just enough to set the cheese. The full recipe includes exact amounts and substitutions.", "cta": "Get the full Mummy Pizza recipe" }
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "A fast pizza dressed as a mummy",
+          "body": "This easy personal pizza uses pita, tomato sauce, mozzarella strips and olive eyes for a fun dinner."
+        },
+        {
+          "eyebrow": "START CRISP",
+          "headline": "Heat the oven to 220°C",
+          "body": "Place the pitas on a baking sheet so their bases can crisp while the cheese melts."
+        },
+        {
+          "eyebrow": "ADD A THIN LAYER",
+          "headline": "Keep the sauce light",
+          "body": "Spread sauce over each pita, leaving a narrow border. A thin coating keeps the base from becoming soft."
+        },
+        {
+          "eyebrow": "MAKE THE BANDAGES",
+          "headline": "Leave gaps between cheese strips",
+          "body": "Lay mozzarella in uneven bands so the red sauce remains visible. Save a small open space for olive eyes."
+        },
+        {
+          "eyebrow": "BAKE UNTIL BUBBLY",
+          "headline": "Look for crisp edges",
+          "body": "Bake until the pita is firm and the mozzarella has melted and lightly browned at the edges."
+        },
+        {
+          "eyebrow": "HALLOWEEN DINNER",
+          "headline": "Slice after a short rest",
+          "body": "Let the pizza cool just enough to set the cheese. The full recipe includes exact amounts and substitutions.",
+          "cta": "Get the full Mummy Pizza recipe"
+        }
+      ]
+    },
+    {
+      "id": "finger-cheese-sticks",
+      "title": "Finger-Shaped Cheese Sticks: A Halloween Snack Story",
+      "description": "A practical guide to crisp cheese pastry sticks with almond nails and a warm marinara dip.",
+      "recipeId": "finger-cheese-sticks",
+      "poster": "assets/images/recipes/finger-cheese-sticks-generated.webp",
+      "slides": [
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "A crisp snack with a spooky silhouette",
+          "body": "Golden pastry and melted cheese turn simple sticks into a playful Halloween platter."
+        },
+        {
+          "eyebrow": "SHAPE",
+          "headline": "Make even fingers",
+          "body": "Cut pastry into similar-width strips so they bake at the same pace and are easy to arrange."
+        },
+        {
+          "eyebrow": "FILL",
+          "headline": "Keep cheese away from the edge",
+          "body": "Leave a narrow border before sealing; this helps the cheese stay inside instead of escaping."
+        },
+        {
+          "eyebrow": "DETAIL",
+          "headline": "Add the nail before baking",
+          "body": "Press one blanched almond into each tip gently, then score small knuckle lines with a knife."
+        },
+        {
+          "eyebrow": "SERVE",
+          "headline": "Bake until crisp and deeply golden",
+          "body": "Cool briefly before moving the sticks. The full recipe has exact amounts and dipping ideas.",
+          "cta": "Get the full Finger-Shaped Cheese Sticks recipe"
+        }
+      ]
+    },
+    {
+      "id": "zombie-meatloaf",
+      "title": "Zombie Meatloaf: A Halloween Recipe Story",
+      "description": "A short, practical visual guide to a tender glazed meatloaf with olive eyes and pepper hair, designed as a cheerful halloween centrepiece rather than a scary dish.",
+      "recipeId": "zombie-meatloaf",
+      "poster": "assets/images/recipes/zombie-meatloaf-generated.webp",
+      "slides": [
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "Zombie Meatloaf",
+          "body": "A tender glazed meatloaf with olive eyes and pepper hair, designed as a cheerful Halloween centrepiece rather than a scary dish."
+        },
+        {
+          "eyebrow": "GET READY",
+          "headline": "Start with the key components",
+          "body": "Gather g lean ground beef, small onion, grated, cup soft breadcrumbs and set up your workspace before you begin."
+        },
+        {
+          "eyebrow": "PREP",
+          "headline": "Build the Halloween detail with care",
+          "body": "Heat the oven to 180°C and line a loaf pan or small roasting dish so the cooked meatloaf can be lifted out without breaking its shape."
+        },
+        {
+          "eyebrow": "COOK",
+          "headline": "Let texture lead the timing",
+          "body": "Return it to the oven until the centre reaches a safe cooked temperature, then let it rest so its juices redistribute before decorating."
+        },
+        {
+          "eyebrow": "SERVE",
+          "headline": "Finish, cool, and share",
+          "body": "Slice with a sharp knife and serve with roasted vegetables, keeping the decorated end intact for a fun first presentation.",
+          "cta": "Get the full Zombie Meatloaf recipe"
+        }
+      ]
+    },
+    {
+      "id": "monster-hand-ham-cheese-board",
+      "title": "Monster Hand Ham and Cheese Board: A Halloween Recipe Story",
+      "description": "A short, practical visual guide to an easy halloween grazing board that turns ham, cheese, crackers and fresh produce into a friendly monster-hand display.",
+      "recipeId": "monster-hand-ham-cheese-board",
+      "poster": "assets/images/recipes/monster-hand-ham-cheese-board-generated.webp",
+      "slides": [
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "Monster Hand Ham and Cheese Board",
+          "body": "An easy Halloween grazing board that turns ham, cheese, crackers and fresh produce into a friendly monster-hand display."
+        },
+        {
+          "eyebrow": "GET READY",
+          "headline": "Start with the key components",
+          "body": "Gather g sliced ham, g mixed cheese cubes, cups assorted crackers and set up your workspace before you begin."
+        },
+        {
+          "eyebrow": "PREP",
+          "headline": "Build the Halloween detail with care",
+          "body": "Choose a large clean board and place a small bowl of olives or mustard near one corner so the board has an anchor before the hand shape is built."
+        },
+        {
+          "eyebrow": "COOK",
+          "headline": "Let texture lead the timing",
+          "body": "Fill the centre of the palm with cheese cubes, then frame it with cucumber, carrots and grapes so the hand silhouette remains clear from above."
+        },
+        {
+          "eyebrow": "SERVE",
+          "headline": "Finish, cool, and share",
+          "body": "Keep chilled until serving time and refresh any cut vegetables with a paper towel if moisture begins to collect on the board.",
+          "cta": "Get the full Monster Hand Ham and Cheese Board recipe"
+        }
+      ]
+    },
+    {
+      "id": "sausage-monster-board",
+      "title": "Sausage Monster Charcuterie Board: A Halloween Recipe Story",
+      "description": "A short, practical visual guide to a playful halloween charcuterie board with a sausage-and-cheese monster face, crisp crackers and fresh produce for contrast.",
+      "recipeId": "sausage-monster-board",
+      "poster": "assets/images/recipes/sausage-monster-board-generated.webp",
+      "slides": [
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "Sausage Monster Charcuterie Board",
+          "body": "A playful Halloween charcuterie board with a sausage-and-cheese monster face, crisp crackers and fresh produce for contrast."
+        },
+        {
+          "eyebrow": "GET READY",
+          "headline": "Start with the key components",
+          "body": "Gather g cooked cocktail sausages, sliced, g cheddar cubes, g mozzarella pearls and set up your workspace before you begin."
+        },
+        {
+          "eyebrow": "PREP",
+          "headline": "Build the Halloween detail with care",
+          "body": "Set a wide board on a stable surface and gather all the components first, separating crisp crackers from ingredients that can release moisture."
+        },
+        {
+          "eyebrow": "COOK",
+          "headline": "Let texture lead the timing",
+          "body": "Create colourful hair around the top with red pepper strips, then use cucumber rounds and cherry tomatoes to widen the board without hiding the face."
+        },
+        {
+          "eyebrow": "SERVE",
+          "headline": "Finish, cool, and share",
+          "body": "Serve immediately or cover loosely and chill for a short time, bringing the board out before crackers lose their crunch.",
+          "cta": "Get the full Sausage Monster Charcuterie Board recipe"
+        }
+      ]
+    },
+    {
+      "id": "wrapped-cheese-ball",
+      "title": "Wrapped Halloween Cheese Ball: A Halloween Recipe Story",
+      "description": "A short, practical visual guide to a creamy herb cheese ball wrapped in cucumber ribbons for a fresh, playful halloween party centrepiece.",
+      "recipeId": "wrapped-cheese-ball",
+      "poster": "assets/images/recipes/wrapped-cheese-ball-generated.webp",
+      "slides": [
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "Wrapped Halloween Cheese Ball",
+          "body": "A creamy herb cheese ball wrapped in cucumber ribbons for a fresh, playful Halloween party centrepiece."
+        },
+        {
+          "eyebrow": "GET READY",
+          "headline": "Start with the key components",
+          "body": "Gather g cream cheese, softened, cup shredded cheddar, tablespoons chopped chives and set up your workspace before you begin."
+        },
+        {
+          "eyebrow": "PREP",
+          "headline": "Build the Halloween detail with care",
+          "body": "Beat the softened cream cheese, cheddar, chives, lemon juice and garlic powder until the mixture is evenly seasoned and can hold a rounded shape."
+        },
+        {
+          "eyebrow": "COOK",
+          "headline": "Let texture lead the timing",
+          "body": "Lay the ribbons across the chilled ball in criss-crossing bands, leaving narrow gaps so the pale cheese still reads as a mummy-style wrap."
+        },
+        {
+          "eyebrow": "SERVE",
+          "headline": "Finish, cool, and share",
+          "body": "Use a small spreading knife for the cheese ball and replace it with a clean utensil if it touches crackers or other shared food.",
+          "cta": "Get the full Wrapped Halloween Cheese Ball recipe"
+        }
+      ]
+    },
+    {
+      "id": "edible-red-party-sauce",
+      "title": "Edible Red Party Sauce: A Halloween Recipe Story",
+      "description": "A short, practical visual guide to a bright berry dipping sauce with a glossy finish for fruit, cookies and halloween dessert boards.",
+      "recipeId": "edible-red-party-sauce",
+      "poster": "assets/images/recipes/edible-red-party-sauce-generated.webp",
+      "slides": [
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "Edible Red Party Sauce",
+          "body": "A bright berry dipping sauce with a glossy finish for fruit, cookies and Halloween dessert boards."
+        },
+        {
+          "eyebrow": "GET READY",
+          "headline": "Start with the key components",
+          "body": "Gather cups mixed berries, cup sugar, tablespoon lemon juice and set up your workspace before you begin."
+        },
+        {
+          "eyebrow": "PREP",
+          "headline": "Build the Halloween detail with care",
+          "body": "Combine the berries, sugar, lemon juice and salt in a small saucepan and warm over medium heat until the fruit starts to release its juices."
+        },
+        {
+          "eyebrow": "COOK",
+          "headline": "Let texture lead the timing",
+          "body": "Remove the pan from the heat and cool the sauce for ten minutes, because it will thicken further as the natural fruit pectin sets."
+        },
+        {
+          "eyebrow": "SERVE",
+          "headline": "Finish, cool, and share",
+          "body": "Refrigerate leftovers promptly and rewarm gently if a softer dipping consistency is wanted the next day.",
+          "cta": "Get the full Edible Red Party Sauce recipe"
+        }
+      ]
+    },
+    {
+      "id": "deviled-egg-eyeballs",
+      "title": "Creepy Deviled Egg Eyeballs: A Halloween Recipe Story",
+      "description": "A short, practical visual guide to classic deviled eggs dressed with olive pupils and fine pepper details for an easy halloween platter.",
+      "recipeId": "deviled-egg-eyeballs",
+      "poster": "assets/images/recipes/deviled-egg-eyeballs-generated.webp",
+      "slides": [
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "Creepy Deviled Egg Eyeballs",
+          "body": "Classic deviled eggs dressed with olive pupils and fine pepper details for an easy Halloween platter."
+        },
+        {
+          "eyebrow": "GET READY",
+          "headline": "Start with the key components",
+          "body": "Gather large eggs, tablespoons mayonnaise, teaspoon Dijon mustard and set up your workspace before you begin."
+        },
+        {
+          "eyebrow": "PREP",
+          "headline": "Build the Halloween detail with care",
+          "body": "Place the eggs in a saucepan, cover with cold water, bring just to a boil, then cover and remove from the heat for a gentle, even cook."
+        },
+        {
+          "eyebrow": "COOK",
+          "headline": "Let texture lead the timing",
+          "body": "Pipe or spoon the filling into each white half, building a small rounded mound that gives the olive eye decoration a stable base."
+        },
+        {
+          "eyebrow": "SERVE",
+          "headline": "Finish, cool, and share",
+          "body": "Serve cold and return the platter to refrigeration if it sits out for more than two hours.",
+          "cta": "Get the full Creepy Deviled Egg Eyeballs recipe"
+        }
+      ]
+    },
+    {
+      "id": "spooky-baked-brie",
+      "title": "Spooky Baked Brie: A Halloween Recipe Story",
+      "description": "A short, practical visual guide to warm baked brie topped with a pastry spiderweb and olive spider for a simple halloween starter.",
+      "recipeId": "spooky-baked-brie",
+      "poster": "assets/images/recipes/spooky-baked-brie-generated.webp",
+      "slides": [
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "Spooky Baked Brie",
+          "body": "Warm baked brie topped with a pastry spiderweb and olive spider for a simple Halloween starter."
+        },
+        {
+          "eyebrow": "GET READY",
+          "headline": "Start with the key components",
+          "body": "Gather small wheel Brie, sheet puff pastry, tablespoons fig jam and set up your workspace before you begin."
+        },
+        {
+          "eyebrow": "PREP",
+          "headline": "Build the Halloween detail with care",
+          "body": "Heat the oven to 190°C and line a small baking sheet with parchment, giving the brie enough flat space so melted cheese stays contained."
+        },
+        {
+          "eyebrow": "COOK",
+          "headline": "Let texture lead the timing",
+          "body": "Shape a small olive spider from one olive half and thin slivers, placing it near the centre after the pastry has been brushed with egg."
+        },
+        {
+          "eyebrow": "SERVE",
+          "headline": "Finish, cool, and share",
+          "body": "Rest five minutes, then serve with crackers and pear slices while the centre is creamy but not dangerously hot.",
+          "cta": "Get the full Spooky Baked Brie recipe"
+        }
+      ]
+    },
+    {
+      "id": "ratloaf-meatloaf",
+      "title": "Ratloaf Meatloaf: A Halloween Recipe Story",
+      "description": "A short, practical visual guide to a savory mouse-shaped meatloaf with herb potatoes and roasted vegetables for a playful halloween supper.",
+      "recipeId": "ratloaf-meatloaf",
+      "poster": "assets/images/recipes/ratloaf-meatloaf-generated.webp",
+      "slides": [
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "Ratloaf Meatloaf",
+          "body": "A savory mouse-shaped meatloaf with herb potatoes and roasted vegetables for a playful Halloween supper."
+        },
+        {
+          "eyebrow": "GET READY",
+          "headline": "Start with the key components",
+          "body": "Gather g ground beef, egg, cup breadcrumbs and set up your workspace before you begin."
+        },
+        {
+          "eyebrow": "PREP",
+          "headline": "Build the Halloween detail with care",
+          "body": "Heat the oven to 190°C and line a rimmed pan so any rendered fat stays contained."
+        },
+        {
+          "eyebrow": "COOK",
+          "headline": "Let texture lead the timing",
+          "body": "Shape the mixture into a long teardrop with a rounded nose and a narrower tail end, then place it on the lined pan."
+        },
+        {
+          "eyebrow": "SERVE",
+          "headline": "Finish, cool, and share",
+          "body": "Slice with a sharp knife and serve with roasted vegetables or mashed potatoes while the decorative details stay in place.",
+          "cta": "Get the full Ratloaf Meatloaf recipe"
+        }
+      ]
+    },
+    {
+      "id": "chocolate-mice",
+      "title": "Chocolate Mice: A Halloween Recipe Story",
+      "description": "A short, practical visual guide to small chocolate truffle mice with almond ears and licorice tails for a gentle halloween dessert tray.",
+      "recipeId": "chocolate-mice",
+      "poster": "assets/images/recipes/chocolate-mice-generated.webp",
+      "slides": [
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "Chocolate Mice",
+          "body": "Small chocolate truffle mice with almond ears and licorice tails for a gentle Halloween dessert tray."
+        },
+        {
+          "eyebrow": "GET READY",
+          "headline": "Start with the key components",
+          "body": "Gather g dark chocolate, cup heavy cream, tablespoon butter and set up your workspace before you begin."
+        },
+        {
+          "eyebrow": "PREP",
+          "headline": "Build the Halloween detail with care",
+          "body": "Chop the chocolate finely so the warm cream can melt it evenly without scorching."
+        },
+        {
+          "eyebrow": "COOK",
+          "headline": "Let texture lead the timing",
+          "body": "Chill the ganache until it is firm enough to scoop, then roll tablespoon portions into slightly pointed ovals."
+        },
+        {
+          "eyebrow": "SERVE",
+          "headline": "Finish, cool, and share",
+          "body": "Add candy eyes just before serving and keep the mice chilled until the tray is needed.",
+          "cta": "Get the full Chocolate Mice recipe"
+        }
+      ]
+    },
+    {
+      "id": "black-bat-chicken-wings",
+      "title": "Black Bat Chicken Wings: A Halloween Recipe Story",
+      "description": "A short, practical visual guide to crisp oven wings glazed with a dark balsamic barbecue sauce and served with a bat-themed garnish.",
+      "recipeId": "black-bat-chicken-wings",
+      "poster": "assets/images/recipes/black-bat-chicken-wings-generated.webp",
+      "slides": [
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "Black Bat Chicken Wings",
+          "body": "Crisp oven wings glazed with a dark balsamic barbecue sauce and served with a bat-themed garnish."
+        },
+        {
+          "eyebrow": "GET READY",
+          "headline": "Start with the key components",
+          "body": "Gather kg chicken wings, tablespoon baking powder, teaspoon smoked paprika and set up your workspace before you begin."
+        },
+        {
+          "eyebrow": "PREP",
+          "headline": "Build the Halloween detail with care",
+          "body": "Pat the wings very dry, then toss with baking powder, paprika, salt and pepper for a crisper oven finish."
+        },
+        {
+          "eyebrow": "COOK",
+          "headline": "Let texture lead the timing",
+          "body": "Simmer barbecue sauce, balsamic and molasses briefly until the glaze is shiny and deep brown."
+        },
+        {
+          "eyebrow": "SERVE",
+          "headline": "Finish, cool, and share",
+          "body": "Serve immediately with a separate bowl of sauce and vegetable sticks.",
+          "cta": "Get the full Black Bat Chicken Wings recipe"
+        }
+      ]
+    },
+    {
+      "id": "mini-monster-meatloaf-bites",
+      "title": "Mini Monster Meatloaf Bites: A Halloween Recipe Story",
+      "description": "A short, practical visual guide to individual glazed meatloaf bites with vegetable faces, sized for a halloween buffet or family dinner.",
+      "recipeId": "mini-monster-meatloaf-bites",
+      "poster": "assets/images/recipes/mini-monster-meatloaf-bites-generated.webp",
+      "slides": [
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "Mini Monster Meatloaf Bites",
+          "body": "Individual glazed meatloaf bites with vegetable faces, sized for a Halloween buffet or family dinner."
+        },
+        {
+          "eyebrow": "GET READY",
+          "headline": "Start with the key components",
+          "body": "Gather g ground beef, egg, cup oats and set up your workspace before you begin."
+        },
+        {
+          "eyebrow": "PREP",
+          "headline": "Build the Halloween detail with care",
+          "body": "Heat the oven to 190°C and grease twelve muffin cups."
+        },
+        {
+          "eyebrow": "COOK",
+          "headline": "Let texture lead the timing",
+          "body": "Divide into the cups and smooth the tops, leaving room for the glaze to set around the edges."
+        },
+        {
+          "eyebrow": "SERVE",
+          "headline": "Finish, cool, and share",
+          "body": "Rest five minutes, then add olive and pepper faces before serving.",
+          "cta": "Get the full Mini Monster Meatloaf Bites recipe"
+        }
+      ]
+    },
+    {
+      "id": "monster-cheese-ball",
+      "title": "Monster Cheese Ball: A Halloween Recipe Story",
+      "description": "A short, practical visual guide to a bright herb-and-cheddar cheese ball decorated with vegetable eyes for a cheerful halloween snack table.",
+      "recipeId": "monster-cheese-ball",
+      "poster": "assets/images/recipes/monster-cheese-ball-generated.webp",
+      "slides": [
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "Monster Cheese Ball",
+          "body": "A bright herb-and-cheddar cheese ball decorated with vegetable eyes for a cheerful Halloween snack table."
+        },
+        {
+          "eyebrow": "GET READY",
+          "headline": "Start with the key components",
+          "body": "Gather g cream cheese, cup cheddar, tablespoons parsley and set up your workspace before you begin."
+        },
+        {
+          "eyebrow": "PREP",
+          "headline": "Build the Halloween detail with care",
+          "body": "Beat cream cheese, cheddar, parsley and onion powder until no streaks remain."
+        },
+        {
+          "eyebrow": "COOK",
+          "headline": "Let texture lead the timing",
+          "body": "Roll the chilled ball through pistachios, pressing them lightly into the surface."
+        },
+        {
+          "eyebrow": "SERVE",
+          "headline": "Finish, cool, and share",
+          "body": "Serve cold with crackers, celery and apple slices.",
+          "cta": "Get the full Monster Cheese Ball recipe"
+        }
+      ]
+    },
+    {
+      "id": "jack-o-lantern-stuffed-peppers",
+      "title": "Jack-O-Lantern Stuffed Peppers: A Halloween Recipe Story",
+      "description": "A short, practical visual guide to orange bell peppers carved with friendly faces and filled with seasoned rice, beans and cheese.",
+      "recipeId": "jack-o-lantern-stuffed-peppers",
+      "poster": "assets/images/recipes/jack-o-lantern-stuffed-peppers-generated.webp",
+      "slides": [
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "Jack-O-Lantern Stuffed Peppers",
+          "body": "Orange bell peppers carved with friendly faces and filled with seasoned rice, beans and cheese."
+        },
+        {
+          "eyebrow": "GET READY",
+          "headline": "Start with the key components",
+          "body": "Gather orange bell peppers, cups cooked rice, can black beans, drained and set up your workspace before you begin."
+        },
+        {
+          "eyebrow": "PREP",
+          "headline": "Build the Halloween detail with care",
+          "body": "Heat the oven to 190°C and cut lids from the peppers, removing seeds and membranes."
+        },
+        {
+          "eyebrow": "COOK",
+          "headline": "Let texture lead the timing",
+          "body": "Mix rice, beans, corn, salsa, cumin and half the cheese in a bowl."
+        },
+        {
+          "eyebrow": "SERVE",
+          "headline": "Finish, cool, and share",
+          "body": "Bake until peppers are tender and filling is hot throughout, then serve upright.",
+          "cta": "Get the full Jack-O-Lantern Stuffed Peppers recipe"
+        }
+      ]
+    },
+    {
+      "id": "witch-hat-dippers",
+      "title": "Witch Hat Dippers: A Halloween Recipe Story",
+      "description": "A short, practical visual guide to crisp tortilla cones with seasoned cream-cheese filling, shaped as savory witch hats for dipping.",
+      "recipeId": "witch-hat-dippers",
+      "poster": "assets/images/recipes/witch-hat-dippers-generated.webp",
+      "slides": [
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "Witch Hat Dippers",
+          "body": "Crisp tortilla cones with seasoned cream-cheese filling, shaped as savory witch hats for dipping."
+        },
+        {
+          "eyebrow": "GET READY",
+          "headline": "Start with the key components",
+          "body": "Gather small flour tortillas, tablespoon olive oil, g cream cheese and set up your workspace before you begin."
+        },
+        {
+          "eyebrow": "PREP",
+          "headline": "Build the Halloween detail with care",
+          "body": "Heat the oven to 190°C and brush both sides of tortilla wedges lightly with oil."
+        },
+        {
+          "eyebrow": "COOK",
+          "headline": "Let texture lead the timing",
+          "body": "Mix cream cheese, cheddar, scallions and taco seasoning until spreadable."
+        },
+        {
+          "eyebrow": "SERVE",
+          "headline": "Finish, cool, and share",
+          "body": "Serve with salsa alongside so guests can dip without softening the hats in advance.",
+          "cta": "Get the full Witch Hat Dippers recipe"
+        }
+      ]
+    },
+    {
+      "id": "jack-o-lantern-beef-hand-pies",
+      "title": "Jack-O-Lantern Beef Hand Pies: A Halloween Recipe Story",
+      "description": "A short, practical visual guide to flaky individual beef pies with carved pumpkin-style pastry tops for a portable halloween meal.",
+      "recipeId": "jack-o-lantern-beef-hand-pies",
+      "poster": "assets/images/recipes/jack-o-lantern-beef-hand-pies-generated.webp",
+      "slides": [
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "Jack-O-Lantern Beef Hand Pies",
+          "body": "Flaky individual beef pies with carved pumpkin-style pastry tops for a portable Halloween meal."
+        },
+        {
+          "eyebrow": "GET READY",
+          "headline": "Start with the key components",
+          "body": "Gather g ground beef, onion, diced, tablespoon tomato paste and set up your workspace before you begin."
+        },
+        {
+          "eyebrow": "PREP",
+          "headline": "Build the Halloween detail with care",
+          "body": "Cook onion and beef until browned, then stir in tomato paste, thyme and stock and reduce until thick."
+        },
+        {
+          "eyebrow": "COOK",
+          "headline": "Let texture lead the timing",
+          "body": "Cut pastry rounds, spoon filling onto half, and cut simple jack-o-lantern faces into the matching top rounds."
+        },
+        {
+          "eyebrow": "SERVE",
+          "headline": "Finish, cool, and share",
+          "body": "Bake at 200°C until golden and rest five minutes before serving.",
+          "cta": "Get the full Jack-O-Lantern Beef Hand Pies recipe"
+        }
+      ]
+    },
+    {
+      "id": "spooky-calzone-snake",
+      "title": "Spooky Calzone Snake: A Halloween Recipe Story",
+      "description": "A short, practical visual guide to a long mozzarella-and-pepperoni calzone coiled into a friendly snake for a halloween pizza night.",
+      "recipeId": "spooky-calzone-snake",
+      "poster": "assets/images/recipes/spooky-calzone-snake-generated.webp",
+      "slides": [
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "Spooky Calzone Snake",
+          "body": "A long mozzarella-and-pepperoni calzone coiled into a friendly snake for a Halloween pizza night."
+        },
+        {
+          "eyebrow": "GET READY",
+          "headline": "Start with the key components",
+          "body": "Gather lb pizza dough, cup mozzarella, cup chopped pepperoni and set up your workspace before you begin."
+        },
+        {
+          "eyebrow": "PREP",
+          "headline": "Build the Halloween detail with care",
+          "body": "Heat the oven to 200°C and line a wide tray with baking paper."
+        },
+        {
+          "eyebrow": "COOK",
+          "headline": "Let texture lead the timing",
+          "body": "Add mozzarella and pepperoni, fold over the dough and pinch the seam closed."
+        },
+        {
+          "eyebrow": "SERVE",
+          "headline": "Finish, cool, and share",
+          "body": "Brush with egg, add olive eyes and a pepper tongue, then bake until golden and hot in the centre.",
+          "cta": "Get the full Spooky Calzone Snake recipe"
+        }
+      ]
+    },
+    {
+      "id": "octodogs",
+      "title": "Octodogs: A Halloween Recipe Story",
+      "description": "A short, practical visual guide to hot dog octopuses with crisp curled legs, served with a simple mustard and ketchup dip.",
+      "recipeId": "octodogs",
+      "poster": "assets/images/recipes/octodogs-generated.webp",
+      "slides": [
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "Octodogs",
+          "body": "Hot dog octopuses with crisp curled legs, served with a simple mustard and ketchup dip."
+        },
+        {
+          "eyebrow": "GET READY",
+          "headline": "Start with the key components",
+          "body": "Gather hot dogs, tablespoon oil, mustard and set up your workspace before you begin."
+        },
+        {
+          "eyebrow": "PREP",
+          "headline": "Build the Halloween detail with care",
+          "body": "Cut each hot dog in half, leaving the rounded end intact for the head."
+        },
+        {
+          "eyebrow": "COOK",
+          "headline": "Let texture lead the timing",
+          "body": "Pan-sear in a little oil, turning gently as the legs curl and the cut edges brown."
+        },
+        {
+          "eyebrow": "SERVE",
+          "headline": "Finish, cool, and share",
+          "body": "Serve hot with ketchup and mustard for dipping.",
+          "cta": "Get the full Octodogs recipe"
+        }
+      ]
+    },
+    {
+      "id": "hot-dog-mummies",
+      "title": "Hot Dog Mummies: A Halloween Recipe Story",
+      "description": "A short, practical visual guide to tender hot dogs wrapped in golden pastry strips with tiny mustard eyes for a quick halloween tray.",
+      "recipeId": "hot-dog-mummies",
+      "poster": "assets/images/recipes/hot-dog-mummies-generated.webp",
+      "slides": [
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "Hot Dog Mummies",
+          "body": "Tender hot dogs wrapped in golden pastry strips with tiny mustard eyes for a quick Halloween tray."
+        },
+        {
+          "eyebrow": "GET READY",
+          "headline": "Start with the key components",
+          "body": "Gather hot dogs, sheet crescent dough, egg and set up your workspace before you begin."
+        },
+        {
+          "eyebrow": "PREP",
+          "headline": "Build the Halloween detail with care",
+          "body": "Heat the oven to 190°C and line a baking tray."
+        },
+        {
+          "eyebrow": "COOK",
+          "headline": "Let texture lead the timing",
+          "body": "Wind strips around each hot dog, leaving a small open space near one end for the face."
+        },
+        {
+          "eyebrow": "SERVE",
+          "headline": "Finish, cool, and share",
+          "body": "Add two mustard dots after baking and serve warm with ketchup.",
+          "cta": "Get the full Hot Dog Mummies recipe"
+        }
+      ]
+    },
+    {
+      "id": "spider-hot-dogs",
+      "title": "Spider Hot Dogs: A Halloween Recipe Story",
+      "description": "A short, practical visual guide to mini hot dog spiders with pretzel-stick legs, made for a quick kid-friendly halloween platter.",
+      "recipeId": "spider-hot-dogs",
+      "poster": "assets/images/recipes/spider-hot-dogs-generated.webp",
+      "slides": [
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "Spider Hot Dogs",
+          "body": "Mini hot dog spiders with pretzel-stick legs, made for a quick kid-friendly Halloween platter."
+        },
+        {
+          "eyebrow": "GET READY",
+          "headline": "Start with the key components",
+          "body": "Gather hot dogs, pretzel sticks, tablespoon oil and set up your workspace before you begin."
+        },
+        {
+          "eyebrow": "PREP",
+          "headline": "Build the Halloween detail with care",
+          "body": "Cut each hot dog into two short pieces and make four shallow holes along each side."
+        },
+        {
+          "eyebrow": "COOK",
+          "headline": "Let texture lead the timing",
+          "body": "Warm in a skillet with a small amount of oil until the hot dogs are heated through."
+        },
+        {
+          "eyebrow": "SERVE",
+          "headline": "Finish, cool, and share",
+          "body": "Serve at once with ketchup, replacing pretzels if any soften on the platter.",
+          "cta": "Get the full Spider Hot Dogs recipe"
+        }
+      ]
+    },
+    {
+      "id": "mini-meatloaf-ghosts",
+      "title": "Mini Meatloaf Ghosts: A Halloween Recipe Story",
+      "description": "A short, practical visual guide to tender individual meatloaves topped with piped potato ghosts for a warm halloween dinner.",
+      "recipeId": "mini-meatloaf-ghosts",
+      "poster": "assets/images/recipes/mini-meatloaf-ghosts-generated.webp",
+      "slides": [
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "Mini Meatloaf Ghosts",
+          "body": "Tender individual meatloaves topped with piped potato ghosts for a warm Halloween dinner."
+        },
+        {
+          "eyebrow": "GET READY",
+          "headline": "Start with the key components",
+          "body": "Gather g ground beef, egg, cup breadcrumbs and set up your workspace before you begin."
+        },
+        {
+          "eyebrow": "PREP",
+          "headline": "Build the Halloween detail with care",
+          "body": "Heat the oven to 190°C and divide the seasoned meatloaf mixture into greased muffin cups."
+        },
+        {
+          "eyebrow": "COOK",
+          "headline": "Let texture lead the timing",
+          "body": "Pipe the potatoes in tall swirls over each meatloaf to create a ghost shape."
+        },
+        {
+          "eyebrow": "SERVE",
+          "headline": "Finish, cool, and share",
+          "body": "Return to the oven for a few minutes only to warm the topping, then serve.",
+          "cta": "Get the full Mini Meatloaf Ghosts recipe"
+        }
+      ]
+    },
+    {
+      "id": "mummy-jalapeno-poppers",
+      "title": "Baked Mummy Jalapeño Poppers: A Halloween Recipe Story",
+      "description": "A short, practical visual guide to cream-cheese jalapeño poppers wrapped in light pastry strips and baked until crisp.",
+      "recipeId": "mummy-jalapeno-poppers",
+      "poster": "assets/images/recipes/mummy-jalapeno-poppers-generated.webp",
+      "slides": [
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "Baked Mummy Jalapeño Poppers",
+          "body": "Cream-cheese jalapeño poppers wrapped in light pastry strips and baked until crisp."
+        },
+        {
+          "eyebrow": "GET READY",
+          "headline": "Start with the key components",
+          "body": "Gather jalapeños, g cream cheese, cup cheddar and set up your workspace before you begin."
+        },
+        {
+          "eyebrow": "PREP",
+          "headline": "Build the Halloween detail with care",
+          "body": "Heat the oven to 190°C, halve the jalapeños and scrape out seeds and membranes with gloves if sensitive to chile oil."
+        },
+        {
+          "eyebrow": "COOK",
+          "headline": "Let texture lead the timing",
+          "body": "Cut dough into thin strips and wind them over the filling, leaving a small face gap."
+        },
+        {
+          "eyebrow": "SERVE",
+          "headline": "Finish, cool, and share",
+          "body": "Add olive eyes after baking and cool five minutes before serving because the filling stays very hot.",
+          "cta": "Get the full Baked Mummy Jalapeño Poppers recipe"
+        }
+      ]
+    },
+    {
+      "id": "shrimp-cocktail-brain-dip",
+      "title": "Shrimp Cocktail Brain Dip: A Halloween Recipe Story",
+      "description": "A short, practical visual guide to a chilled shrimp cocktail dip piped into a playful brain-like swirl for a halloween seafood starter.",
+      "recipeId": "shrimp-cocktail-brain-dip",
+      "poster": "assets/images/recipes/shrimp-cocktail-brain-dip-generated.webp",
+      "slides": [
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "Shrimp Cocktail Brain Dip",
+          "body": "A chilled shrimp cocktail dip piped into a playful brain-like swirl for a Halloween seafood starter."
+        },
+        {
+          "eyebrow": "GET READY",
+          "headline": "Start with the key components",
+          "body": "Gather g cream cheese, cup cocktail sauce, tablespoon horseradish and set up your workspace before you begin."
+        },
+        {
+          "eyebrow": "PREP",
+          "headline": "Build the Halloween detail with care",
+          "body": "Blend cream cheese, half the cocktail sauce and horseradish until smooth enough to pipe."
+        },
+        {
+          "eyebrow": "COOK",
+          "headline": "Let texture lead the timing",
+          "body": "Spoon the mixture into a piping bag with a round tip and pipe two winding brain-like lobes onto a chilled plate."
+        },
+        {
+          "eyebrow": "SERVE",
+          "headline": "Finish, cool, and share",
+          "body": "Serve cold with crackers and keep refrigerated between servings.",
+          "cta": "Get the full Shrimp Cocktail Brain Dip recipe"
+        }
+      ]
+    },
+    {
+      "id": "mummified-meatballs-potato-coffins",
+      "title": "Mummified Meatballs in Potato Skin Coffins: A Halloween Recipe Story",
+      "description": "A short, practical visual guide to crisp potato-skin coffins holding saucy meatballs with cheese-strip mummy wraps.",
+      "recipeId": "mummified-meatballs-potato-coffins",
+      "poster": "assets/images/recipes/mummified-meatballs-potato-coffins-generated.webp",
+      "slides": [
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "Mummified Meatballs in Potato Skin Coffins",
+          "body": "Crisp potato-skin coffins holding saucy meatballs with cheese-strip mummy wraps."
+        },
+        {
+          "eyebrow": "GET READY",
+          "headline": "Start with the key components",
+          "body": "Gather small baked potatoes, cooked meatballs, cup marinara and set up your workspace before you begin."
+        },
+        {
+          "eyebrow": "PREP",
+          "headline": "Build the Halloween detail with care",
+          "body": "Halve baked potatoes and scoop out most of the flesh, leaving a sturdy potato-skin shell."
+        },
+        {
+          "eyebrow": "COOK",
+          "headline": "Let texture lead the timing",
+          "body": "Warm meatballs in marinara until hot throughout, then place one or two in each potato coffin."
+        },
+        {
+          "eyebrow": "SERVE",
+          "headline": "Finish, cool, and share",
+          "body": "Broil briefly until cheese melts and finish with olive eyes before serving.",
+          "cta": "Get the full Mummified Meatballs in Potato Skin Coffins recipe"
+        }
+      ]
+    },
+    {
+      "id": "crescent-mummy-hot-dogs",
+      "title": "Crescent Mummy Hot Dogs: A Halloween Recipe Story",
+      "description": "A short, practical visual guide to bite-size crescent-wrapped hot dogs with a crisp flaky finish for halloween party snacking.",
+      "recipeId": "crescent-mummy-hot-dogs",
+      "poster": "assets/images/recipes/crescent-mummy-hot-dogs-generated.webp",
+      "slides": [
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "Crescent Mummy Hot Dogs",
+          "body": "Bite-size crescent-wrapped hot dogs with a crisp flaky finish for Halloween party snacking."
+        },
+        {
+          "eyebrow": "GET READY",
+          "headline": "Start with the key components",
+          "body": "Gather package cocktail sausages, tube crescent dough, egg and set up your workspace before you begin."
+        },
+        {
+          "eyebrow": "PREP",
+          "headline": "Build the Halloween detail with care",
+          "body": "Heat the oven to 190°C and line a tray with parchment."
+        },
+        {
+          "eyebrow": "COOK",
+          "headline": "Let texture lead the timing",
+          "body": "Leave a small open face area and brush pastry with egg for even browning."
+        },
+        {
+          "eyebrow": "SERVE",
+          "headline": "Finish, cool, and share",
+          "body": "Add mustard eyes after baking and serve warm.",
+          "cta": "Get the full Crescent Mummy Hot Dogs recipe"
+        }
+      ]
+    },
+    {
+      "id": "pumpkin-sloppy-joes",
+      "title": "Pumpkin Sloppy Joes: A Halloween Recipe Story",
+      "description": "A short, practical visual guide to savory ground-beef sandwiches enriched with pumpkin purée, tomato and warm spices for autumn.",
+      "recipeId": "pumpkin-sloppy-joes",
+      "poster": "assets/images/recipes/pumpkin-sloppy-joes-generated.webp",
+      "slides": [
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "Pumpkin Sloppy Joes",
+          "body": "Savory ground-beef sandwiches enriched with pumpkin purée, tomato and warm spices for autumn."
+        },
+        {
+          "eyebrow": "GET READY",
+          "headline": "Start with the key components",
+          "body": "Gather g ground beef, onion, diced, cup pumpkin purée and set up your workspace before you begin."
+        },
+        {
+          "eyebrow": "PREP",
+          "headline": "Build the Halloween detail with care",
+          "body": "Brown the beef and onion in a skillet, breaking the meat into small pieces and draining excess fat if needed."
+        },
+        {
+          "eyebrow": "COOK",
+          "headline": "Let texture lead the timing",
+          "body": "Simmer gently until thick enough to spoon onto buns without running off."
+        },
+        {
+          "eyebrow": "SERVE",
+          "headline": "Finish, cool, and share",
+          "body": "Fill buns just before serving and offer pickles or slaw alongside.",
+          "cta": "Get the full Pumpkin Sloppy Joes recipe"
+        }
+      ]
+    },
+    {
+      "id": "spider-deviled-eggs",
+      "title": "Spider Deviled Eggs: A Halloween Recipe Story",
+      "description": "A short, practical visual guide to creamy deviled eggs topped with olive spiders for a classic, protein-rich halloween appetizer.",
+      "recipeId": "spider-deviled-eggs",
+      "poster": "assets/images/recipes/spider-deviled-eggs-generated.webp",
+      "slides": [
+        {
+          "eyebrow": "SCARY HALLOWEEN RECIPES",
+          "headline": "Spider Deviled Eggs",
+          "body": "Creamy deviled eggs topped with olive spiders for a classic, protein-rich Halloween appetizer."
+        },
+        {
+          "eyebrow": "GET READY",
+          "headline": "Start with the key components",
+          "body": "Gather large eggs, tablespoons mayonnaise, teaspoon Dijon mustard and set up your workspace before you begin."
+        },
+        {
+          "eyebrow": "PREP",
+          "headline": "Build the Halloween detail with care",
+          "body": "Hard-cook the eggs, cool in ice water and peel them carefully."
+        },
+        {
+          "eyebrow": "COOK",
+          "headline": "Let texture lead the timing",
+          "body": "Spoon or pipe the filling into the egg whites."
+        },
+        {
+          "eyebrow": "SERVE",
+          "headline": "Finish, cool, and share",
+          "body": "Keep chilled until serving and refrigerate promptly after the buffet.",
+          "cta": "Get the full Spider Deviled Eggs recipe"
+        }
       ]
     }
   ]
