@@ -50,10 +50,9 @@
     }
   };
 
-  try { if (localStorage.getItem('bs-story-navigation-help-dismissed') === '1') hint.hidden = true; } catch {}
+  // The hint lasts only for this viewer visit. Leaving this page starts a fresh visit.
   hint?.querySelector('.story-viewer__hint-close')?.addEventListener('click', () => {
     hint.hidden = true;
-    try { localStorage.setItem('bs-story-navigation-help-dismissed', '1'); } catch {}
   });
 
   const init = async () => {
