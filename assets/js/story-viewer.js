@@ -1,7 +1,8 @@
 (() => {
   const stage = document.getElementById('story-viewer-stage');
+  const hint = document.getElementById('story-viewer-hint');
   const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&lt;','<':'&gt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
-  let stories = [], storyIndex = 0, slideIndex = 0, pointer = null, wheelLocked = false;
+  let stories = [], storyIndex = 0, slideIndex = 0, pointer = null, wheelLocked = false, ignoreTapUntil = 0;
   const requestedId = () => new URLSearchParams(location.search).get('story');
   const updateUrl = () => history.replaceState({}, '', '?story=' + encodeURIComponent(stories[storyIndex].id));
 
@@ -12,8 +13,8 @@
     const motion = storyDirection ? ' story-viewer-card--story-' + storyDirection : (slideDirection ? ' story-viewer-card--slide-' + slideDirection : '');
     stage.setAttribute('aria-busy', 'true');
     stage.innerHTML = '<article class="story-viewer-card' + motion + '" style="--story-poster:url(../../' + esc(story.poster) + ')"><div class="story-viewer__progress" aria-hidden="true">' + progress + '</div><div class="story-viewer__top"><span class="story-viewer__brand">BiteSparks</span><span class="story-viewer__count">Story ' + (storyIndex + 1) + ' of ' + stories.length + '</span></div><div class="story-viewer__story-name">' + esc(story.title) + '</div><div class="story-viewer__content"><p class="story-viewer__eyebrow">' + esc(slide.eyebrow) + '</p><h1>' + esc(slide.headline) + '</h1><p>' + esc(slide.body) + '</p>' + recipe + '</div><button class="story-viewer__tap story-viewer__tap--previous" type="button" aria-label="Previous slide"></button><button class="story-viewer__tap story-viewer__tap--next" type="button" aria-label="Next slide"></button></article>';
-    stage.querySelector('.story-viewer__tap--previous').addEventListener('click', () => changeSlide(-1));
-    stage.querySelector('.story-viewer__tap--next').addEventListener('click', () => changeSlide(1));
+    stage.querySelector('.story-viewer__tap--previous').addEventListener('click', () => { if (performance.now() >= ignoreTapUntil) changeSlide(-1); });
+    stage.querySelector('.story-viewer__tap--next').addEventListener('click', () => { if (performance.now() >= ignoreTapUntil) changeSlide(1); });
     requestAnimationFrame(() => stage.removeAttribute('aria-busy'));
   };
 
@@ -35,7 +36,7 @@
   };
 
   const onPointerDown = event => {
-    if (event.target.closest('a, button')) return;
+    if (event.target.closest('a, .story-viewer__hint-dialog')) return;
     pointer = {x: event.clientX, y: event.clientY};
   };
 
@@ -43,8 +44,16 @@
     if (!pointer) return;
     const dx = event.clientX - pointer.x, dy = event.clientY - pointer.y;
     pointer = null;
-    if (Math.abs(dy) > 44 && Math.abs(dy) > Math.abs(dx)) changeStory(dy < 0 ? 1 : -1);
+    if (Math.abs(dy) > 44 && Math.abs(dy) > Math.abs(dx)) {
+      ignoreTapUntil = performance.now() + 350;
+      changeStory(dy < 0 ? 1 : -1);
+    }
   };
+
+  // The hint lasts only for this viewer visit. Leaving this page starts a fresh visit.
+  hint?.querySelector('.story-viewer__hint-close')?.addEventListener('click', () => {
+    hint.hidden = true;
+  });
 
   const init = async () => {
     try {
@@ -56,9 +65,9 @@
       const found = stories.findIndex(story => story.id === requestedId());
       storyIndex = found >= 0 ? found : 0;
       render();
-      stage.addEventListener('pointerdown', onPointerDown);
-      stage.addEventListener('pointerup', onPointerUp);
-      stage.addEventListener('pointercancel', () => { pointer = null; });
+      document.addEventListener('pointerdown', onPointerDown);
+      document.addEventListener('pointerup', onPointerUp);
+      document.addEventListener('pointercancel', () => { pointer = null; });
       document.addEventListener('wheel', event => {
         if (wheelLocked || Math.abs(event.deltaY) < 24) return;
         event.preventDefault();
