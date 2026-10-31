@@ -33,4 +33,37 @@
   document.addEventListener('keydown', event => { if (event.key === 'Escape') { closeLegal(); closeMenu(); } });
   nav?.addEventListener('click', event => { if (event.target.closest('a') && matchMedia('(max-width:850px)').matches) closeMenu(); });
   document.getElementById('year').textContent = new Date().getFullYear();
+  const cards = [...document.querySelectorAll('[data-story-card], .stories-grid > a')];
+  let pagination = document.querySelector('[data-stories-pagination]');
+  if (!pagination && cards.length) {
+    pagination = document.createElement('nav');
+    pagination.className = 'stories-pagination';
+    pagination.setAttribute('data-stories-pagination', '');
+    pagination.setAttribute('aria-label', 'Story pages');
+    document.querySelector('.stories-grid')?.after(pagination);
+  }
+  const perPage = 10;
+  if (cards.length && pagination) {
+    const pages = Math.ceil(cards.length / perPage);
+    const requested = Number(new URLSearchParams(location.search).get('page'));
+    let current = Number.isInteger(requested) && requested >= 1 && requested <= pages ? requested : 1;
+    const renderPage = page => {
+      current = page;
+      cards.forEach((card, index) => { card.hidden = Math.floor(index / perPage) + 1 !== current; });
+      pagination.innerHTML = '';
+      for (let number = 1; number <= pages; number++) {
+        const button = document.createElement('button');
+        button.type = 'button'; button.textContent = String(number);
+        button.setAttribute('aria-label', 'Show Story page ' + number);
+        if (number === current) { button.className = 'is-active'; button.setAttribute('aria-current', 'page'); }
+        button.addEventListener('click', () => {
+          const url = new URL(location.href); url.searchParams.set('page', number);
+          history.replaceState({}, '', url); renderPage(number);
+          document.querySelector('.stories-grid')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+        pagination.appendChild(button);
+      }
+    };
+    renderPage(current);
+  }
 })();
