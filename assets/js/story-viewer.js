@@ -50,13 +50,21 @@
     }
   };
 
-  // Keep the hint dismissed while this browser tab remains open on BiteSparks.
-  // A new browser session begins with the help visible again.
-  try { if (sessionStorage.getItem('bs-story-navigation-help-dismissed') === '1') hint.hidden = true; } catch {}
-  hint?.querySelector('.story-viewer__hint-close')?.addEventListener('click', () => {
+  // Keep the hint dismissed for this tab's BiteSparks session. sessionStorage is
+  // the primary store; window.name is a same-tab fallback when storage is unavailable.
+  const hintSessionKey = 'bs-story-navigation-help-dismissed';
+  const hintWindowMarker = '__bs_story_help_dismissed__';
+  const hintWasDismissed = () => {
+    try { if (sessionStorage.getItem(hintSessionKey) === '1') return true; } catch {}
+    try { return window.name.includes(hintWindowMarker); } catch { return false; }
+  };
+  const dismissHint = () => {
     hint.hidden = true;
-    try { sessionStorage.setItem('bs-story-navigation-help-dismissed', '1'); } catch {}
-  });
+    try { sessionStorage.setItem(hintSessionKey, '1'); } catch {}
+    try { if (!window.name.includes(hintWindowMarker)) window.name += hintWindowMarker; } catch {}
+  };
+  if (hintWasDismissed()) hint.hidden = true;
+  hint?.querySelector('.story-viewer__hint-close')?.addEventListener('click', dismissHint);
 
   const init = async () => {
     try {
