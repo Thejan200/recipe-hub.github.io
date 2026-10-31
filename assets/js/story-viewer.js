@@ -50,9 +50,12 @@
     }
   };
 
-  // The hint lasts only for this viewer visit. Leaving this page starts a fresh visit.
+  // Keep the hint dismissed while this browser tab remains open on BiteSparks.
+  // A new browser session begins with the help visible again.
+  try { if (sessionStorage.getItem('bs-story-navigation-help-dismissed') === '1') hint.hidden = true; } catch {}
   hint?.querySelector('.story-viewer__hint-close')?.addEventListener('click', () => {
     hint.hidden = true;
+    try { sessionStorage.setItem('bs-story-navigation-help-dismissed', '1'); } catch {}
   });
 
   const init = async () => {
