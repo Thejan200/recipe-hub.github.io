@@ -44,7 +44,8 @@
         "USA",
         "UK",
         "Canada",
-        "Australia"
+        "Australia",
+        "Germany"
       ]
     },
     {
@@ -164,6 +165,12 @@
       "label": "🇦🇺 Australia — Aussie Classics",
       "description": "Australian pub favorites, savoury pies, roasts, and easy coastal seafood recipes for everyday home cooking.",
       "icon": "🇦🇺",
+      "showOnLanding": true
+    },
+    "Germany": {
+      "label": "🇩🇪 Germany — German Classics",
+      "description": "German comfort-food classics, from crisp schnitzel and sausages to slow braises, potato sides, and hearty soups.",
+      "icon": "🇩🇪",
       "showOnLanding": true
     },
     "UK": {

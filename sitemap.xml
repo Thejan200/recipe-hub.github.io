@@ -56,6 +56,7 @@
   <url><loc>https://bitesparks.com/categories/usa/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://bitesparks.com/categories/canada/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://bitesparks.com/categories/australia/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://bitesparks.com/categories/germany/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://bitesparks.com/categories/uk/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://bitesparks.com/categories/healthy/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://bitesparks.com/categories/vegetarian/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -306,4 +307,19 @@
   <url><loc>https://bitesparks.com/recipes/crescent-mummy-hot-dogs/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://bitesparks.com/recipes/pumpkin-sloppy-joes/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://bitesparks.com/recipes/spider-deviled-eggs/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bitesparks.com/recipes/german-chicken-schnitzel/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bitesparks.com/recipes/wiener-schnitzel/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bitesparks.com/recipes/jagerschnitzel/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bitesparks.com/recipes/currywurst/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bitesparks.com/recipes/bratwurst-with-sauerkraut/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bitesparks.com/recipes/sauerbraten/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bitesparks.com/recipes/german-beef-rouladen/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bitesparks.com/recipes/schweinebraten/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bitesparks.com/recipes/schweinshaxe/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bitesparks.com/recipes/kartoffelpuffer/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bitesparks.com/recipes/bratkartoffeln/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bitesparks.com/recipes/german-potato-salad/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bitesparks.com/recipes/braised-german-sauerkraut/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bitesparks.com/recipes/german-potato-soup/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bitesparks.com/recipes/erbsensuppe/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 </urlset>

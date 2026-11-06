@@ -10,7 +10,7 @@ const vm = require('vm');
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://bitesparks.com/';
 const marker = '.bitesparks-static-output';
-const staticCategoryNames = new Set(['Breakfast', 'Lunch', 'Dinner', 'Chicken', 'Beef', 'Pork', 'Seafood', 'Soup', 'Dessert', 'Pasta', 'Salad', 'Appetizer', 'USA', 'Canada', 'Australia', 'UK', 'Healthy', 'Vegetarian', 'Quick & Easy', 'Christmas', 'New Year', 'Scary Halloween Recipes']);
+const staticCategoryNames = new Set(['Breakfast', 'Lunch', 'Dinner', 'Chicken', 'Beef', 'Pork', 'Seafood', 'Soup', 'Dessert', 'Pasta', 'Salad', 'Appetizer', 'USA', 'Canada', 'Australia', 'UK', 'Germany', 'Healthy', 'Vegetarian', 'Quick & Easy', 'Christmas', 'New Year', 'Scary Halloween Recipes']);
 // Explicit, category-scoped editorial exception: these seasonal novelty recipes
 // may publish without a matching embeddable tutorial. All other recipes retain
 // the existing mandatory-video gate.
