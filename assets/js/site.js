@@ -24,7 +24,7 @@ privacyConsent.src='assets/js/privacy-consent.js?v=6';
     if(!document.querySelector('link[data-christmas-season-style]')){
       const style=document.createElement('link');
       style.rel='stylesheet';
-      style.href='assets/css/christmas-season.css?v=2';
+      style.href='assets/css/christmas-season.css?v=3';
       style.dataset.christmasSeasonStyle='true';
       document.head.appendChild(style);
     }
@@ -56,7 +56,7 @@ privacyConsent.src='assets/js/privacy-consent.js?v=6';
     const markSeen=()=>{try{localStorage.setItem(seenKey,'2026-season');if(special)localStorage.setItem(specialDateKey,today);}catch{}};
     const stylesheet=document.createElement('link');
     stylesheet.rel='stylesheet';
-    stylesheet.href='assets/css/christmas-popup.css?v=3';
+    stylesheet.href='assets/css/christmas-popup.css?v=4';
     document.head.appendChild(stylesheet);
     const show=()=>{
       const popup=document.createElement('aside');
