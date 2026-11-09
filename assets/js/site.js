@@ -24,12 +24,25 @@ privacyConsent.src='assets/js/privacy-consent.js?v=6';
     document.body.classList.add('christmas-season-active');
     const style=document.createElement('link');
     style.rel='stylesheet';
-    style.href='assets/css/christmas-sitewide.css?v=1';
+    style.href='assets/css/christmas-sitewide.css?v=2';
     style.dataset.christmasSitewideStyle='true';
     document.head.appendChild(style);
   }
 
   applyChristmasSitewideTheme();
+
+  function addChristmasSitewideBanner(){
+    if(!document.body.classList.contains('christmas-season-active')||document.querySelector('.christmas-season-banner'))return;
+    const header=document.querySelector('.site-header');
+    if(!header)return;
+    const banner=document.createElement('aside');
+    banner.className='christmas-season-banner';
+    banner.setAttribute('aria-label','Christmas recipes at BiteSparks');
+    banner.innerHTML='<div class="container christmas-season-banner-inner"><span class="christmas-banner-mark" aria-hidden="true">✦</span><p><strong>Christmas at BiteSparks</strong><span>Festive recipes for your table, your people, and your season.</span></p><a href="/categories/christmas/">Explore the collection <span aria-hidden="true">→</span></a></div>';
+    header.insertAdjacentElement('afterend',banner);
+  }
+
+  addChristmasSitewideBanner();
 
   function addChristmasSeasonFeature(){
     const isHome=location.pathname==='/'||location.pathname.endsWith('/index.html');
