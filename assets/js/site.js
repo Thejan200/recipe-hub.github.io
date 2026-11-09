@@ -16,6 +16,24 @@ privacyConsent.src='assets/js/privacy-consent.js?v=6';
   analytics.src='assets/js/analytics.js?v=2';
   analytics.defer=true;
   document.head.appendChild(analytics);
+
+  function addChristmasSeasonFeature(){
+    const isHome=location.pathname==='/'||location.pathname.endsWith('/index.html');
+    const hero=document.querySelector('main>.hero');
+    if(!isHome||!hero||document.querySelector('.christmas-season-feature'))return;
+    if(!document.querySelector('link[data-christmas-season-style]')){
+      const style=document.createElement('link');
+      style.rel='stylesheet';
+      style.href='assets/css/christmas-season.css?v=1';
+      style.dataset.christmasSeasonStyle='true';
+      document.head.appendChild(style);
+    }
+    const feature=document.createElement('section');
+    feature.className='christmas-season-feature';
+    feature.setAttribute('aria-label','Christmas recipes');
+    feature.innerHTML='<div class="container"><div class="christmas-season-card"><div class="christmas-season-copy"><p class="eyebrow">CHRISTMAS MENU IDEAS</p><h2>Make the holiday table feel easy.</h2><p>Explore festive mains, comforting bakes, and sweet recipes for Christmas gatherings, gifting, and slower mornings at home.</p><a class="btn btn-primary" href="categories/christmas/">Explore Christmas recipes</a></div><a class="christmas-season-image" href="categories/christmas/" aria-label="Explore Christmas recipes"><img src="assets/images/categories/christmas-turkey-feast-generated.webp" alt="Festive Christmas meal on a holiday table" width="1600" height="900" loading="lazy" decoding="async"></a></div></div>';
+    hero.insertAdjacentElement('afterend',feature);
+  }
   // Audited recipe fallback remains implemented in site-core.js: result.id==='veggie-soup'
 
   function addSearchClearStyles(){
@@ -93,6 +111,7 @@ privacyConsent.src='assets/js/privacy-consent.js?v=6';
     if(lead)lead.insertAdjacentElement('afterend',line);else heroCopy.appendChild(line);
   }
 
+  addChristmasSeasonFeature();
   setupSearchClearButtons();
   addRecipePublishedDate();
   const searchObserver=new MutationObserver(()=>{
