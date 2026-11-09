@@ -24,14 +24,14 @@ privacyConsent.src='assets/js/privacy-consent.js?v=6';
     if(!document.querySelector('link[data-christmas-season-style]')){
       const style=document.createElement('link');
       style.rel='stylesheet';
-      style.href='assets/css/christmas-season.css?v=1';
+      style.href='assets/css/christmas-season.css?v=2';
       style.dataset.christmasSeasonStyle='true';
       document.head.appendChild(style);
     }
     const feature=document.createElement('section');
     feature.className='christmas-season-feature';
     feature.setAttribute('aria-label','Christmas recipes');
-    feature.innerHTML='<div class="container"><div class="christmas-season-card"><div class="christmas-season-copy"><p class="eyebrow">CHRISTMAS MENU IDEAS</p><h2>Make the holiday table feel easy.</h2><p>Explore festive mains, comforting bakes, and sweet recipes for Christmas gatherings, gifting, and slower mornings at home.</p><a class="btn btn-primary" href="categories/christmas/">Explore Christmas recipes</a></div><a class="christmas-season-image" href="categories/christmas/" aria-label="Explore Christmas recipes"><img src="assets/images/categories/christmas-turkey-feast-generated.webp" alt="Festive Christmas meal on a holiday table" width="1600" height="900" loading="lazy" decoding="async"></a></div></div>';
+    feature.innerHTML='<div class="container"><div class="christmas-season-card"><div class="christmas-season-copy"><p class="eyebrow">CHRISTMAS MENU IDEAS</p><h2>Christmas starts around the table.</h2><p>Explore festive mains, comforting bakes, and sweet recipes thoughtfully collected for gatherings, gifting, and slow holiday mornings.</p><a class="btn btn-primary" href="categories/christmas/">Explore Christmas recipes</a></div><a class="christmas-season-image" href="categories/christmas/" aria-label="Explore Christmas recipes"><img src="assets/images/categories/christmas-turkey-feast-generated.webp" alt="Festive Christmas meal on a holiday table" width="1600" height="900" loading="lazy" decoding="async"></a></div></div>';
     hero.insertAdjacentElement('afterend',feature);
   }
 
@@ -56,7 +56,7 @@ privacyConsent.src='assets/js/privacy-consent.js?v=6';
     const markSeen=()=>{try{localStorage.setItem(seenKey,'2026-season');if(special)localStorage.setItem(specialDateKey,today);}catch{}};
     const stylesheet=document.createElement('link');
     stylesheet.rel='stylesheet';
-    stylesheet.href='assets/css/christmas-popup.css?v=2';
+    stylesheet.href='assets/css/christmas-popup.css?v=3';
     document.head.appendChild(stylesheet);
     const show=()=>{
       const popup=document.createElement('aside');
