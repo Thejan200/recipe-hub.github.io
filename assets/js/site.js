@@ -37,16 +37,26 @@ privacyConsent.src='assets/js/privacy-consent.js?v=6';
 
   function addChristmasPromotionPopup(){
     const isHome=location.pathname==='/'||location.pathname.endsWith('/index.html');
-    const dismissKey='bs-christmas-popup-dismissed-until';
-    const dismissForSevenDays=()=>{
-      try{localStorage.setItem(dismissKey,String(Date.now()+7*24*60*60*1000));}catch{}
+    const campaignEnd='2026-12-25';
+    const specialMessages={
+      '2026-12-01':{title:'Start planning your Christmas menu.',body:'Festive mains, cozy bakes, and sweet recipes are ready for your December table.'},
+      '2026-12-10':{title:'Bake, share, and celebrate.',body:'Find Christmas cookies, comforting bakes, and dishes made for sharing.'},
+      '2026-12-20':{title:'Last-minute Christmas ideas.',body:'Find easy holiday recipes for the days leading up to your celebration.'},
+      '2026-12-25':{title:'Merry Christmas from BiteSparks.',body:'Make something special with festive mains, cozy bakes, and holiday sweets.'}
     };
-    let dismissedUntil=0;
-    try{dismissedUntil=Number(localStorage.getItem(dismissKey)||0);}catch{}
-    if(!isHome||dismissedUntil>Date.now()||document.getElementById('christmas-promotion-popup'))return;
+    const date=new Date();
+    const today=`${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`;
+    const special=specialMessages[today];
+    const seenKey='bs-christmas-popup-v2-seen';
+    const specialDateKey='bs-christmas-popup-v2-special-date';
+    let seen='';let specialDate='';
+    try{seen=localStorage.getItem(seenKey)||'';specialDate=localStorage.getItem(specialDateKey)||'';}catch{}
+    if(!isHome||today>campaignEnd||(!special&&seen==='2026-season')||(special&&specialDate===today)||document.getElementById('christmas-promotion-popup'))return;
+    const copy=special||{title:'Make something festive.',body:'Find cozy bakes, holiday desserts, and recipes for your Christmas table.'};
+    const markSeen=()=>{try{localStorage.setItem(seenKey,'2026-season');if(special)localStorage.setItem(specialDateKey,today);}catch{}};
     const stylesheet=document.createElement('link');
     stylesheet.rel='stylesheet';
-    stylesheet.href='assets/css/christmas-popup.css?v=1';
+    stylesheet.href='assets/css/christmas-popup.css?v=2';
     document.head.appendChild(stylesheet);
     const show=()=>{
       const popup=document.createElement('aside');
@@ -54,10 +64,10 @@ privacyConsent.src='assets/js/privacy-consent.js?v=6';
       popup.className='christmas-promotion-popup';
       popup.setAttribute('role','dialog');
       popup.setAttribute('aria-label','Christmas recipes');
-      popup.innerHTML='<button class="christmas-popup-close" type="button" aria-label="Close Christmas recipes message">×</button><img src="assets/images/seasonal/christmas-popup-illustration-optimized.png" alt="" aria-hidden="true" width="420" height="420"><div class="christmas-popup-copy"><p class="eyebrow">CHRISTMAS AT BITESPARKS</p><h2>Make something festive.</h2><p>Find cozy bakes, holiday desserts, and recipes for your Christmas table.</p><a class="btn btn-primary" href="categories/christmas/">Explore Christmas Recipes</a></div>';
-      const close=()=>{dismissForSevenDays();popup.remove();};
+      popup.innerHTML=`<button class="christmas-popup-close" type="button" aria-label="Close Christmas recipes message">×</button><img src="assets/images/seasonal/christmas-popup-illustration-optimized.png" alt="" aria-hidden="true" width="420" height="420"><div class="christmas-popup-copy"><p class="eyebrow">CHRISTMAS AT BITESPARKS</p><h2>${copy.title}</h2><p>${copy.body}</p><a class="btn btn-primary" href="categories/christmas/">Explore Christmas Recipes</a></div>`;
+      const close=()=>{markSeen();popup.remove();};
       popup.querySelector('.christmas-popup-close').addEventListener('click',close);
-      popup.querySelector('a').addEventListener('click',dismissForSevenDays);
+      popup.querySelector('a').addEventListener('click',markSeen);
       document.addEventListener('keydown',event=>{if(event.key==='Escape'&&document.body.contains(popup))close();},{once:true});
       document.body.appendChild(popup);
     };
