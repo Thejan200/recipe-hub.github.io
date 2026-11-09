@@ -34,6 +34,35 @@ privacyConsent.src='assets/js/privacy-consent.js?v=6';
     feature.innerHTML='<div class="container"><div class="christmas-season-card"><div class="christmas-season-copy"><p class="eyebrow">CHRISTMAS MENU IDEAS</p><h2>Make the holiday table feel easy.</h2><p>Explore festive mains, comforting bakes, and sweet recipes for Christmas gatherings, gifting, and slower mornings at home.</p><a class="btn btn-primary" href="categories/christmas/">Explore Christmas recipes</a></div><a class="christmas-season-image" href="categories/christmas/" aria-label="Explore Christmas recipes"><img src="assets/images/categories/christmas-turkey-feast-generated.webp" alt="Festive Christmas meal on a holiday table" width="1600" height="900" loading="lazy" decoding="async"></a></div></div>';
     hero.insertAdjacentElement('afterend',feature);
   }
+
+  function addChristmasPromotionPopup(){
+    const isHome=location.pathname==='/'||location.pathname.endsWith('/index.html');
+    const dismissKey='bs-christmas-popup-dismissed-until';
+    const dismissForSevenDays=()=>{
+      try{localStorage.setItem(dismissKey,String(Date.now()+7*24*60*60*1000));}catch{}
+    };
+    let dismissedUntil=0;
+    try{dismissedUntil=Number(localStorage.getItem(dismissKey)||0);}catch{}
+    if(!isHome||dismissedUntil>Date.now()||document.getElementById('christmas-promotion-popup'))return;
+    const stylesheet=document.createElement('link');
+    stylesheet.rel='stylesheet';
+    stylesheet.href='assets/css/christmas-popup.css?v=1';
+    document.head.appendChild(stylesheet);
+    const show=()=>{
+      const popup=document.createElement('aside');
+      popup.id='christmas-promotion-popup';
+      popup.className='christmas-promotion-popup';
+      popup.setAttribute('role','dialog');
+      popup.setAttribute('aria-label','Christmas recipes');
+      popup.innerHTML='<button class="christmas-popup-close" type="button" aria-label="Close Christmas recipes message">×</button><img src="assets/images/seasonal/christmas-popup-illustration-optimized.png" alt="" aria-hidden="true" width="420" height="420"><div class="christmas-popup-copy"><p class="eyebrow">CHRISTMAS AT BITESPARKS</p><h2>Make something festive.</h2><p>Find cozy bakes, holiday desserts, and recipes for your Christmas table.</p><a class="btn btn-primary" href="categories/christmas/">Explore Christmas Recipes</a></div>';
+      const close=()=>{dismissForSevenDays();popup.remove();};
+      popup.querySelector('.christmas-popup-close').addEventListener('click',close);
+      popup.querySelector('a').addEventListener('click',dismissForSevenDays);
+      document.addEventListener('keydown',event=>{if(event.key==='Escape'&&document.body.contains(popup))close();},{once:true});
+      document.body.appendChild(popup);
+    };
+    setTimeout(show,650);
+  }
   // Audited recipe fallback remains implemented in site-core.js: result.id==='veggie-soup'
 
   function addSearchClearStyles(){
@@ -112,6 +141,7 @@ privacyConsent.src='assets/js/privacy-consent.js?v=6';
   }
 
   addChristmasSeasonFeature();
+  addChristmasPromotionPopup();
   setupSearchClearButtons();
   addRecipePublishedDate();
   const searchObserver=new MutationObserver(()=>{
