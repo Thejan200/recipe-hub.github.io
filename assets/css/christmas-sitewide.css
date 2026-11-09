@@ -1,0 +1,12 @@
+/* Temporary seasonal decoration only. It preserves the user's chosen light/dark mode. */
+body.christmas-season-active .site-header{border-bottom-color:rgba(181,40,54,.36);box-shadow:0 3px 0 #0d3a2f,0 5px 0 #b72838}
+body.christmas-season-active .site-header .brand>span:last-child:after{content:'✦';display:inline-block;margin-left:7px;color:#d9a637;font-size:13px;line-height:1;vertical-align:top;transform:translateY(1px)}
+body.christmas-season-active .main-nav a:hover,body.christmas-season-active .main-nav .active,body.christmas-season-active .nav-dropdown summary:hover{color:#a91f31}
+body.christmas-season-active main:before{content:'';display:block;height:5px;background:linear-gradient(90deg,#0d3a2f 0 34%,#d5a63e 34% 40%,#b72838 40% 70%,#d5a63e 70% 76%,#0d3a2f 76%)}
+body.christmas-season-active .section-head .eyebrow,body.christmas-season-active .page-head .eyebrow{color:#a91f31}
+body.christmas-season-active .site-footer{border-top:3px solid #b72838;box-shadow:inset 0 3px 0 #d5a63e}
+html[data-theme="dark"] body.christmas-season-active .site-header{border-bottom-color:rgba(239,198,105,.34);box-shadow:0 3px 0 #164b3d,0 5px 0 #8f1e2d}
+html[data-theme="dark"] body.christmas-season-active .main-nav a:hover,html[data-theme="dark"] body.christmas-season-active .main-nav .active,html[data-theme="dark"] body.christmas-season-active .nav-dropdown summary:hover{color:#f0c86c}
+html[data-theme="dark"] body.christmas-season-active .section-head .eyebrow,html[data-theme="dark"] body.christmas-season-active .page-head .eyebrow{color:#f0c86c}
+@media(max-width:850px){body.christmas-season-active .main-nav.menu-open{border-top:3px solid #b72838}html[data-theme="dark"] body.christmas-season-active .main-nav.menu-open{border-top-color:#f0c86c}}
+@media(max-width:520px){body.christmas-season-active .site-header .brand>span:last-child:after{margin-left:5px;font-size:11px}body.christmas-season-active main:before{height:4px}}

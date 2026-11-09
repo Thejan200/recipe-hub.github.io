@@ -17,6 +17,20 @@ privacyConsent.src='assets/js/privacy-consent.js?v=6';
   analytics.defer=true;
   document.head.appendChild(analytics);
 
+  function applyChristmasSitewideTheme(){
+    const now=new Date();
+    const today=`${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;
+    if(today<'2026-11-09'||today>'2026-12-31')return;
+    document.body.classList.add('christmas-season-active');
+    const style=document.createElement('link');
+    style.rel='stylesheet';
+    style.href='assets/css/christmas-sitewide.css?v=1';
+    style.dataset.christmasSitewideStyle='true';
+    document.head.appendChild(style);
+  }
+
+  applyChristmasSitewideTheme();
+
   function addChristmasSeasonFeature(){
     const isHome=location.pathname==='/'||location.pathname.endsWith('/index.html');
     const hero=document.querySelector('main>.hero');
