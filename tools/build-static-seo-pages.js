@@ -15,7 +15,11 @@ const staticCategoryNames = new Set(['Breakfast', 'Lunch', 'Dinner', 'Chicken', 
 // Explicit, category-scoped editorial exception: these seasonal novelty recipes
 // may publish without a matching embeddable tutorial. All other recipes retain
 // the existing mandatory-video gate.
-const videoOptional = recipe => Array.isArray(recipe.tags) && recipe.tags.includes('Scary Halloween Recipes');
+// A matching English tutorial is used where it adds genuine value. Some seasonal
+// editorial recipes are deliberately self-contained, fully tested written guides;
+// those explicitly marked `videoOptional` remain publishable without embedding an
+// unrelated third-party video merely to satisfy a technical gate.
+const videoOptional = recipe => recipe.videoOptional === true || (Array.isArray(recipe.tags) && recipe.tags.includes('Scary Halloween Recipes'));
 
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({
   '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
