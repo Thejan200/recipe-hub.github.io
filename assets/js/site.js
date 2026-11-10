@@ -31,6 +31,11 @@ privacyConsent.src='assets/js/privacy-consent.js?v=6';
 
   applyChristmasSitewideTheme();
 
+  const christmasEffects=document.createElement('script');
+  christmasEffects.src='assets/js/christmas-effects.js?v=1';
+  christmasEffects.defer=true;
+  document.head.appendChild(christmasEffects);
+
   function addChristmasSitewideBanner(){
     if(!document.body.classList.contains('christmas-season-active')||document.querySelector('.christmas-season-banner'))return;
     const header=document.querySelector('.site-header');
