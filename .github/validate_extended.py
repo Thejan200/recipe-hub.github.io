@@ -30,7 +30,7 @@ published_batch_ids = set(re.findall(r"['\"]([a-z0-9-]+)['\"]\s*:", block.group(
 runtime_published = [r for r in recipes if r.get("status") != "draft" or r.get("id") in published_batch_ids]
 runtime_ids = {r.get("id") for r in runtime_published}
 assert len(runtime_ids) == len(runtime_published), "Runtime published recipe IDs must be unique"
-video_optional = lambda recipe: "Scary Halloween Recipes" in (recipe.get("tags") or [])
+video_optional = lambda recipe: recipe.get("videoOptional") is True or "Scary Halloween Recipes" in (recipe.get("tags") or [])
 
 for recipe in runtime_published:
     if video_optional(recipe):
