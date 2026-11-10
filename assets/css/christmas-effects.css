@@ -1,0 +1,10 @@
+/* Temporary festive motion: active only through 31 December 2026. */
+.christmas-effects-scene{position:fixed;inset:0;z-index:80;overflow:hidden;pointer-events:none;visibility:hidden}
+.christmas-effects-enabled .christmas-effects-scene{visibility:visible}
+.christmas-fall-item{position:absolute;top:-12vh;left:var(--left);font-size:var(--size);line-height:1;opacity:0;filter:drop-shadow(0 2px 2px rgba(24,38,31,.18));animation:christmas-fall var(--duration) linear var(--delay) infinite;will-change:transform,opacity}
+@keyframes christmas-fall{0%{transform:translate3d(0,-10vh,0) rotate(0deg);opacity:0}8%{opacity:var(--opacity)}88%{opacity:var(--opacity)}100%{transform:translate3d(var(--drift),112vh,0) rotate(300deg);opacity:0}}
+.christmas-effects-control{position:fixed;right:18px;bottom:18px;z-index:90;display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:9px 13px;border:1px solid rgba(239,202,111,.84);border-radius:999px;background:linear-gradient(135deg,#123e31,#631b2b);box-shadow:0 10px 30px rgba(23,29,25,.25),inset 0 1px 0 rgba(255,249,225,.38);color:#fff8e8;font:800 12px/1 system-ui,sans-serif;letter-spacing:.01em;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.christmas-effects-control:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(23,29,25,.3),inset 0 1px 0 rgba(255,249,225,.46)}
+.christmas-effects-control:focus-visible{outline:3px solid #f2cd76;outline-offset:3px}.christmas-effects-control-icon{color:#f5cf75;font-size:16px}.christmas-effects-control.is-off{border-color:rgba(218,218,211,.76);background:#26332d;color:#f4f1e8}.christmas-effects-control.is-off .christmas-effects-control-icon{color:#d8ddd2}
+@media(max-width:640px){.christmas-effects-control{right:12px;bottom:12px;min-height:39px;padding:8px 11px;font-size:11px}.christmas-fall-item{filter:drop-shadow(0 1px 1px rgba(24,38,31,.14))}}
+@media(prefers-reduced-motion:reduce){.christmas-fall-item{animation:none;opacity:.25;transform:translate3d(0,12vh,0)}.christmas-fall-item:nth-child(2n){display:none}.christmas-effects-control{transition:none}}
