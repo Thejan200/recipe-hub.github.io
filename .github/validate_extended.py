@@ -137,7 +137,7 @@ for seasonal_name in seasonal_expected:
 # canonical replacements are checked by validate_static_seo.py.
 for name in ("index.html", "recipes.html", "categories.html", "favorites.html"):
     text = (root / name).read_text(encoding="utf-8")
-    assert 'assets/js/site.js?v=19' in text, f"Stale site.js cache version on {name}"
+    assert 'assets/js/site.js?v=18' in text, f"Stale site.js cache version on {name}"
     assert 'assets/js/app.js?v=16' in text, f"Stale app.js cache version on {name}"
 
 # BiteSparks is the public brand. The legacy repository URL remains valid until a separate URL migration.

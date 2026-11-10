@@ -1,8 +1,4 @@
 (() => {
-  const christmasEffects = document.createElement('script');
-  christmasEffects.src = new URL('christmas-effects.js?v=1', document.currentScript.src).href;
-  christmasEffects.defer = true;
-  document.head.appendChild(christmasEffects);
   const root = document.documentElement;
   const themeButton = document.querySelector('.theme-toggle');
   const syncTheme = () => {

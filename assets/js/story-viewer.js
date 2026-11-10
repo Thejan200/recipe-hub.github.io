@@ -1,8 +1,4 @@
 (() => {
-  const christmasEffects = document.createElement('script');
-  christmasEffects.src = new URL('christmas-effects.js?v=1', document.currentScript.src).href;
-  christmasEffects.defer = true;
-  document.head.appendChild(christmasEffects);
   const stage = document.getElementById('story-viewer-stage');
   const hint = document.getElementById('story-viewer-hint');
   const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&lt;','<':'&gt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
