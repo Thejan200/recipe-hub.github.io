@@ -1,5 +1,14 @@
 import 'https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.2.1/dist/cookieconsent.umd.js';
 
+const loadMonetagInPagePush = () => {
+  if (!CookieConsent.acceptedCategory('ads') || document.getElementById('monetag-in-page-push')) return;
+
+  const monetagTag = document.createElement('script');
+  monetagTag.id = 'monetag-in-page-push';
+  monetagTag.text = `(function(s){s.dataset.zone='12126317',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))`;
+  document.head.append(monetagTag);
+};
+
 const addPrivacyControl = () => {
   if (document.getElementById('cookie-settings-control')) return;
 
@@ -53,7 +62,7 @@ const addPrivacyControlStyles = () => {
 
 CookieConsent.run({
   mode: 'opt-in',
-  revision: 1,
+  revision: 2,
   manageScriptTags: true,
   autoClearCookies: true,
   respectGpc: true,
@@ -98,6 +107,12 @@ CookieConsent.run({
           ]
         }
       }
+    }
+  },
+  onConsent: loadMonetagInPagePush,
+  onChange: ({ changedCategories }) => {
+    if (changedCategories.includes('ads') && CookieConsent.acceptedCategory('ads')) {
+      loadMonetagInPagePush();
     }
   },
   onModalReady: () => {
