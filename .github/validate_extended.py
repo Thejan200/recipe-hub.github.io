@@ -158,8 +158,9 @@ site = (root / "assets/js/site.js").read_text(encoding="utf-8")
 app = (root / "assets/js/app.js").read_text(encoding="utf-8")
 assert "Recipe Hub" not in site and "Recipe Hub" not in app, "Legacy runtime brand text remains in JavaScript"
 assert "bs-saved" in app, "BiteSparks saved-recipe storage key is missing"
-privacy_consent = (root / "assets/js/privacy-consent.js").read_text(encoding="utf-8")
-assert "bs-privacy-choice-v2" in privacy_consent, "Unified BiteSparks privacy choice key is missing"
+cookie_consent = (root / "assets/js/cookieconsent-config.js").read_text(encoding="utf-8")
+assert "CookieConsent.run" in cookie_consent, "CookieConsent configuration is missing"
+assert "CookieConsent.showPreferences()" in cookie_consent, "Cookie settings control must reopen preferences"
 assert "bs-cookie-choice" not in app and "bs-cookie-choice" not in site, "Obsolete duplicate cookie-choice runtime must not return"
 assert "bs-theme" in app and "bs-theme" in site, "BiteSparks theme storage key is missing"
 assert "__bsAuditPatched" in site and "bsMenuBound" in site, "BiteSparks runtime marker names are missing"
