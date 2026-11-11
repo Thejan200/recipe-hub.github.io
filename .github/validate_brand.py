@@ -20,10 +20,10 @@ for path in js_files:
 
 app = (root / "assets/js/app.js").read_text(encoding="utf-8")
 site = (root / "assets/js/site.js").read_text(encoding="utf-8")
-privacy_consent = (root / "assets/js/privacy-consent.js").read_text(encoding="utf-8")
+cookie_consent = (root / "assets/js/cookieconsent-config.js").read_text(encoding="utf-8")
 for key in ("bs-saved", "bs-theme"):
     assert key in app or key in site, f"Expected BiteSparks browser-storage key {key!r} is missing"
-assert "bs-privacy-choice-v2" in privacy_consent, "Unified BiteSparks privacy choice key is missing"
+assert "CookieConsent.run" in cookie_consent, "CookieConsent configuration is missing"
 
 site_data = (root / "assets/js/site-data.js").read_text(encoding="utf-8")
 seo = (root / "assets/js/seo.js").read_text(encoding="utf-8")
