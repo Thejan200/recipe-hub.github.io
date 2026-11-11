@@ -1,13 +1,54 @@
 import 'https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.2.1/dist/cookieconsent.umd.js';
 
 const addPrivacyControl = () => {
-  if (document.querySelector('[data-cc="show-preferencesModal"]')) return;
+  if (document.getElementById('cookie-settings-control')) return;
+
   const button = document.createElement('button');
+  button.id = 'cookie-settings-control';
   button.type = 'button';
   button.className = 'cookie-settings-button';
-  button.dataset.cc = 'show-preferencesModal';
   button.textContent = 'Cookie settings';
+  button.setAttribute('aria-label', 'Manage cookie preferences');
+  button.addEventListener('click', () => CookieConsent.showPreferences());
+
+  const footer = document.querySelector('.site-footer .footer-bottom, footer .footer-bottom');
+  if (footer) {
+    footer.append(' · ', button);
+    return;
+  }
+
   document.body.append(button);
+};
+
+const addPrivacyControlStyles = () => {
+  if (document.getElementById('cookie-settings-control-styles')) return;
+
+  const style = document.createElement('style');
+  style.id = 'cookie-settings-control-styles';
+  style.textContent = `
+    .cookie-settings-button {
+      appearance: none;
+      background: transparent;
+      border: 0;
+      color: inherit;
+      cursor: pointer;
+      font: inherit;
+      padding: 0;
+      text-decoration: underline;
+      text-underline-offset: 0.16em;
+    }
+
+    .cookie-settings-button:hover {
+      color: #f4d15d;
+    }
+
+    .cookie-settings-button:focus-visible {
+      border-radius: 2px;
+      outline: 2px solid currentColor;
+      outline-offset: 3px;
+    }
+  `;
+  document.head.append(style);
 };
 
 CookieConsent.run({
@@ -59,5 +100,8 @@ CookieConsent.run({
       }
     }
   },
-  onModalReady: addPrivacyControl
+  onModalReady: () => {
+    addPrivacyControlStyles();
+    addPrivacyControl();
+  }
 });
