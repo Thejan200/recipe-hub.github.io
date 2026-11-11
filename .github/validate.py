@@ -126,13 +126,13 @@ class RefParser(HTMLParser):
         for key in ("href", "src"):
             if attrs.get(key): self.refs.append(attrs[key])
 
-# AdSense is not used by BiteSparks. Reject accidental reintroduction of its
-# account marker in any published HTML output.
-adsense_tag = '<meta name="google-adsense-account"'
-html_pages = sorted(root.rglob("*.html"))
-for html in html_pages:
-    page = html.read_text(encoding="utf-8")
-    assert adsense_tag not in page, f"Unexpected AdSense account meta tag in {html.relative_to(root)}"
+# AdSense is not used by BiteSparks. Reject accidental reintroduction of any
+# AdSense loader or account marker in published pages and build sources.
+adsense_markers = ("google-adsense-account", "pagead2.googlesyndication.com", "adsbygoogle", "ca-pub-")
+for candidate in list(root.rglob("*.html")) + list((root / "tools").glob("*.js")):
+    page = candidate.read_text(encoding="utf-8")
+    for marker in adsense_markers:
+        assert marker not in page, f"Unexpected AdSense marker in {candidate.relative_to(root)}: {marker}"
 
 html_files = list(root.glob("*.html")) + list((root / "admin").glob("*.html"))
 for html in html_files:
