@@ -43,6 +43,42 @@ const removeAdsterraSocialBar = () => {
   document.getElementById('adsterra-social-bar-script')?.remove();
 };
 
+const adsterraDisplayBannerId = 'adsterra-300x250-placement';
+
+const loadAdsterraDisplayBanner = () => {
+  if (!CookieConsent.acceptedCategory('ads') || document.getElementById(adsterraDisplayBannerId)) return;
+  if (!/^\/recipes\/[^/]+\/?$/.test(window.location.pathname)) return;
+
+  const recipeLayout = document.querySelector('article.recipe-layout');
+  if (!recipeLayout) return;
+
+  const placement = document.createElement('section');
+  placement.id = adsterraDisplayBannerId;
+  placement.className = 'section adsterra-display-banner';
+  placement.setAttribute('aria-label', 'Sponsored advertisement');
+  placement.innerHTML = '<p class="eyebrow">SPONSORED</p>';
+  recipeLayout.after(placement);
+
+  window.atOptions = {
+    key: '3c1d3488183269fd969b29cf99f596b6',
+    format: 'iframe',
+    height: 250,
+    width: 300,
+    params: {}
+  };
+
+  const bannerTag = document.createElement('script');
+  bannerTag.id = 'adsterra-300x250-script';
+  bannerTag.src = 'https://bauval.org/22/3c1d3488183269fd969b29cf99f596b6';
+  bannerTag.async = false;
+  placement.append(bannerTag);
+};
+
+const removeAdsterraDisplayBanner = () => {
+  document.getElementById(adsterraDisplayBannerId)?.remove();
+  document.getElementById('adsterra-300x250-script')?.remove();
+};
+
 const addPrivacyControl = () => {
   if (document.getElementById('cookie-settings-control')) return;
 
@@ -96,7 +132,7 @@ const addPrivacyControlStyles = () => {
 
 CookieConsent.run({
   mode: 'opt-in',
-  revision: 4,
+  revision: 5,
   manageScriptTags: true,
   autoClearCookies: true,
   respectGpc: true,
@@ -146,15 +182,18 @@ CookieConsent.run({
   onConsent: () => {
     loadAdsterraNativeBanner();
     loadAdsterraSocialBar();
+    loadAdsterraDisplayBanner();
   },
   onChange: ({ changedCategories }) => {
     if (!changedCategories.includes('ads')) return;
     if (CookieConsent.acceptedCategory('ads')) {
       loadAdsterraNativeBanner();
       loadAdsterraSocialBar();
+      loadAdsterraDisplayBanner();
     } else {
       removeAdsterraNativeBanner();
       removeAdsterraSocialBar();
+      removeAdsterraDisplayBanner();
       window.location.reload();
     }
   },
