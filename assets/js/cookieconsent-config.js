@@ -2,8 +2,15 @@ import 'https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.2.1/dist/cookiecon
 
 const adsterraSlotId = 'container-efbe94065ccd9bff712d56fa411179af';
 
+const consentHealth = window.BiteSparksConsentHealth || {
+  state: 'checking',
+  markReady() { if (this.state === 'checking') this.state = 'ready'; },
+  disable() { this.state = 'blocked'; }
+};
+window.BiteSparksConsentHealth = consentHealth;
+
 const adsConsentGranted = () => (
-  window.BiteSparksConsentHealth?.state === 'ready' &&
+  consentHealth.state === 'ready' &&
   CookieConsent.acceptedCategory('ads')
 );
 
@@ -261,26 +268,30 @@ CookieConsent.run({
       }
     }
   },
-  onConsent: async () => {
-    loadAdsterraNativeBanner();
-    loadAdsterraSocialBar();
-    await loadAdsterraDisplayBanner();
-    await loadAdsterraLeaderboard();
-  },
-  onChange: async ({ changedCategories }) => {
-    if (!changedCategories.includes('ads')) return;
-    if (adsConsentGranted()) {
+  onConsent: () => {
+    queueMicrotask(async () => {
       loadAdsterraNativeBanner();
       loadAdsterraSocialBar();
       await loadAdsterraDisplayBanner();
       await loadAdsterraLeaderboard();
-    } else {
-      removeAdsterraNativeBanner();
-      removeAdsterraSocialBar();
-      removeAdsterraDisplayBanner();
-      removeAdsterraLeaderboard();
-      window.location.reload();
-    }
+    });
+  },
+  onChange: ({ changedCategories }) => {
+    if (!changedCategories.includes('ads')) return;
+    queueMicrotask(async () => {
+      if (adsConsentGranted()) {
+        loadAdsterraNativeBanner();
+        loadAdsterraSocialBar();
+        await loadAdsterraDisplayBanner();
+        await loadAdsterraLeaderboard();
+      } else {
+        removeAdsterraNativeBanner();
+        removeAdsterraSocialBar();
+        removeAdsterraDisplayBanner();
+        removeAdsterraLeaderboard();
+        window.location.reload();
+      }
+    });
   },
   onModalReady: () => {
     addPrivacyControlStyles();
