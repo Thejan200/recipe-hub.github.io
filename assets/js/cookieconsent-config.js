@@ -79,6 +79,45 @@ const removeAdsterraDisplayBanner = () => {
   document.getElementById('adsterra-300x250-script')?.remove();
 };
 
+const adsterraLeaderboardId = 'adsterra-728x90-placement';
+
+const loadAdsterraLeaderboard = async () => {
+  if (!CookieConsent.acceptedCategory('ads') || document.getElementById(adsterraLeaderboardId)) return;
+  if (!window.matchMedia('(min-width: 1024px)').matches) return;
+  if (!/^\/recipes\/[^/]+\/?$/.test(window.location.pathname)) return;
+
+  await loadAdsterraDisplayBanner();
+
+  const recipeHero = document.querySelector('section.recipe-hero');
+  if (!recipeHero) return;
+
+  const placement = document.createElement('section');
+  placement.id = adsterraLeaderboardId;
+  placement.className = 'section adsterra-leaderboard';
+  placement.setAttribute('aria-label', 'Sponsored advertisement');
+  placement.innerHTML = '<p class="eyebrow">SPONSORED</p>';
+  recipeHero.after(placement);
+
+  window.atOptions = {
+    key: 'bac05364c58cdb5e1741a23ef2a8ba83',
+    format: 'iframe',
+    height: 90,
+    width: 728,
+    params: {}
+  };
+
+  const bannerTag = document.createElement('script');
+  bannerTag.id = 'adsterra-728x90-script';
+  bannerTag.src = 'https://bauval.org/22/bac05364c58cdb5e1741a23ef2a8ba83';
+  bannerTag.async = false;
+  placement.append(bannerTag);
+};
+
+const removeAdsterraLeaderboard = () => {
+  document.getElementById(adsterraLeaderboardId)?.remove();
+  document.getElementById('adsterra-728x90-script')?.remove();
+};
+
 const addPrivacyControl = () => {
   if (document.getElementById('cookie-settings-control')) return;
 
@@ -105,6 +144,12 @@ const addPrivacyControlStyles = () => {
   const style = document.createElement('style');
   style.id = 'cookie-settings-control-styles';
   style.textContent = `
+    .adsterra-leaderboard {
+      display: grid;
+      justify-items: center;
+      margin: 2rem auto;
+    }
+
     .cookie-settings-button {
       appearance: none;
       background: transparent;
@@ -132,7 +177,7 @@ const addPrivacyControlStyles = () => {
 
 CookieConsent.run({
   mode: 'opt-in',
-  revision: 5,
+  revision: 6,
   manageScriptTags: true,
   autoClearCookies: true,
   respectGpc: true,
@@ -183,6 +228,7 @@ CookieConsent.run({
     loadAdsterraNativeBanner();
     loadAdsterraSocialBar();
     loadAdsterraDisplayBanner();
+    loadAdsterraLeaderboard();
   },
   onChange: ({ changedCategories }) => {
     if (!changedCategories.includes('ads')) return;
@@ -190,10 +236,12 @@ CookieConsent.run({
       loadAdsterraNativeBanner();
       loadAdsterraSocialBar();
       loadAdsterraDisplayBanner();
+      loadAdsterraLeaderboard();
     } else {
       removeAdsterraNativeBanner();
       removeAdsterraSocialBar();
       removeAdsterraDisplayBanner();
+      removeAdsterraLeaderboard();
       window.location.reload();
     }
   },
