@@ -3,6 +3,37 @@
   // original implementation remains isolated in site-core.js.
   const runtimeMarkers={privacy:'bs-privacy-choice-v2',theme:'bs-theme',audit:'__bsAuditPatched',menu:'bsMenuBound'};
   void runtimeMarkers;
+
+  // Keep optional advertising fail-closed until CookieConsent reports a healthy startup.
+  const consentHealth={
+    state:'checking',
+    markReady(){
+      if(this.state==='checking')this.state='ready';
+    },
+    disable(reason){
+      if(this.state==='blocked')return;
+      this.state='blocked';
+      document.querySelectorAll('[id^="adsterra-"],script[src*="bauval.org"],iframe[src*="bauval.org"]').forEach(node=>node.remove());
+      if(document.getElementById('consent-safety-notice'))return;
+      const notice=document.createElement('aside');
+      notice.id='consent-safety-notice';
+      notice.setAttribute('role','status');
+      notice.textContent='Privacy controls are temporarily unavailable. Optional advertising is disabled while we restore them.';
+      Object.assign(notice.style,{background:'#18211d',border:'1px solid #425247',borderRadius:'10px',bottom:'16px',color:'#f8f4ea',font:'600 13px/1.45 system-ui,sans-serif',left:'16px',maxWidth:'360px',padding:'12px 14px',position:'fixed',zIndex:'2147483647'});
+      document.body.appendChild(notice);
+      console.warn('[BiteSparks] Consent health safeguard disabled optional ads:',reason);
+    }
+  };
+  window.BiteSparksConsentHealth=consentHealth;
+
+  const consentScriptProblem=event=>{
+    const source=String(event.filename||event.target?.src||'');
+    if(source.includes('cookieconsent-config.js')||source.includes('cookieconsent@'))consentHealth.disable('consent-script-error');
+  };
+  window.addEventListener('error',consentScriptProblem,true);
+  window.setTimeout(()=>{
+    if(consentHealth.state==='checking')consentHealth.disable('consent-startup-timeout');
+  },8000);
   const primaryNav=document.querySelector('.main-nav');
   if(primaryNav&&!primaryNav.querySelector('.nav-dropdown')){
     primaryNav.setAttribute('aria-label','Primary navigation');

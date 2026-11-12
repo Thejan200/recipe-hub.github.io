@@ -2,8 +2,20 @@ import 'https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.2.1/dist/cookiecon
 
 const adsterraSlotId = 'container-efbe94065ccd9bff712d56fa411179af';
 
+const consentHealth = window.BiteSparksConsentHealth || {
+  state: 'checking',
+  markReady() { if (this.state === 'checking') this.state = 'ready'; },
+  disable() { this.state = 'blocked'; }
+};
+window.BiteSparksConsentHealth = consentHealth;
+
+const adsConsentGranted = () => (
+  consentHealth.state === 'ready' &&
+  CookieConsent.acceptedCategory('ads')
+);
+
 const loadAdsterraNativeBanner = () => {
-  if (!CookieConsent.acceptedCategory('ads') || document.getElementById(adsterraSlotId)) return;
+  if (!adsConsentGranted() || document.getElementById(adsterraSlotId)) return;
   if (!/^\/recipes\/[^/]+\/?$/.test(window.location.pathname)) return;
 
   const relatedRecipes = document.querySelector('section.related');
@@ -30,7 +42,7 @@ const removeAdsterraNativeBanner = () => {
 };
 
 const loadAdsterraSocialBar = () => {
-  if (!CookieConsent.acceptedCategory('ads') || document.getElementById('adsterra-social-bar-script')) return;
+  if (!adsConsentGranted() || document.getElementById('adsterra-social-bar-script')) return;
 
   const socialBarTag = document.createElement('script');
   socialBarTag.id = 'adsterra-social-bar-script';
@@ -46,7 +58,7 @@ const removeAdsterraSocialBar = () => {
 const adsterraDisplayBannerId = 'adsterra-300x250-placement';
 
 const loadAdsterraDisplayBanner = () => new Promise(resolve => {
-  if (!CookieConsent.acceptedCategory('ads') || document.getElementById(adsterraDisplayBannerId)) {
+  if (!adsConsentGranted() || document.getElementById(adsterraDisplayBannerId)) {
     resolve();
     return;
   }
@@ -93,7 +105,7 @@ const removeAdsterraDisplayBanner = () => {
 const adsterraLeaderboardId = 'adsterra-728x90-placement';
 
 const loadAdsterraLeaderboard = async () => {
-  if (!CookieConsent.acceptedCategory('ads') || document.getElementById(adsterraLeaderboardId)) return;
+  if (!adsConsentGranted() || document.getElementById(adsterraLeaderboardId)) return;
   if (!window.matchMedia('(min-width: 1024px)').matches) return;
   if (!/^\/recipes\/[^/]+\/?$/.test(window.location.pathname)) return;
 
@@ -256,29 +268,34 @@ CookieConsent.run({
       }
     }
   },
-  onConsent: async () => {
-    loadAdsterraNativeBanner();
-    loadAdsterraSocialBar();
-    await loadAdsterraDisplayBanner();
-    await loadAdsterraLeaderboard();
-  },
-  onChange: async ({ changedCategories }) => {
-    if (!changedCategories.includes('ads')) return;
-    if (CookieConsent.acceptedCategory('ads')) {
+  onConsent: () => {
+    queueMicrotask(async () => {
       loadAdsterraNativeBanner();
       loadAdsterraSocialBar();
       await loadAdsterraDisplayBanner();
       await loadAdsterraLeaderboard();
-    } else {
-      removeAdsterraNativeBanner();
-      removeAdsterraSocialBar();
-      removeAdsterraDisplayBanner();
-      removeAdsterraLeaderboard();
-      window.location.reload();
-    }
+    });
+  },
+  onChange: ({ changedCategories }) => {
+    if (!changedCategories.includes('ads')) return;
+    queueMicrotask(async () => {
+      if (adsConsentGranted()) {
+        loadAdsterraNativeBanner();
+        loadAdsterraSocialBar();
+        await loadAdsterraDisplayBanner();
+        await loadAdsterraLeaderboard();
+      } else {
+        removeAdsterraNativeBanner();
+        removeAdsterraSocialBar();
+        removeAdsterraDisplayBanner();
+        removeAdsterraLeaderboard();
+        window.location.reload();
+      }
+    });
   },
   onModalReady: () => {
     addPrivacyControlStyles();
     addPrivacyControl();
   }
 });
+window.BiteSparksConsentHealth?.markReady();

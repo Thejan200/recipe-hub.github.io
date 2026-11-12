@@ -13,6 +13,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+      - name: Parse browser JavaScript
+        shell: bash
+        run: |
+          for file in assets/js/*.js; do
+            module="/tmp/$(basename "$file").mjs"
+            cp "$file" "$module"
+            node --check "$module"
+          done
       - name: Validate site structure and recipe data
         run: python .github/validate.py
       - name: Run extended runtime and inline audit
