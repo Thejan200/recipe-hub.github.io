@@ -204,7 +204,10 @@ const addPrivacyControlStyles = () => {
   document.head.append(style);
 };
 
-// Ad placement styles must load for every visitor, including those with saved consent.\naddPrivacyControlStyles();\n\nCookieConsent.run({
+// Ad placement styles must load for every visitor, including those with saved consent.
+addPrivacyControlStyles();
+
+CookieConsent.run({
   mode: 'opt-in',
   revision: 6,
   manageScriptTags: true,
