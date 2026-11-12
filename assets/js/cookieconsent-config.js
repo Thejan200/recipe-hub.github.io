@@ -235,19 +235,19 @@ CookieConsent.run({
       }
     }
   },
-  onConsent: () => {
+  onConsent: async () => {
     loadAdsterraNativeBanner();
     loadAdsterraSocialBar();
-    loadAdsterraDisplayBanner();
-    loadAdsterraLeaderboard();
+    await loadAdsterraDisplayBanner();
+    await loadAdsterraLeaderboard();
   },
-  onChange: ({ changedCategories }) => {
+  onChange: async ({ changedCategories }) => {
     if (!changedCategories.includes('ads')) return;
     if (CookieConsent.acceptedCategory('ads')) {
       loadAdsterraNativeBanner();
       loadAdsterraSocialBar();
-      loadAdsterraDisplayBanner();
-      loadAdsterraLeaderboard();
+      await loadAdsterraDisplayBanner();
+      await loadAdsterraLeaderboard();
     } else {
       removeAdsterraNativeBanner();
       removeAdsterraSocialBar();
