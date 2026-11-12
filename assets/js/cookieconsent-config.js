@@ -155,10 +155,28 @@ const addPrivacyControlStyles = () => {
   const style = document.createElement('style');
   style.id = 'cookie-settings-control-styles';
   style.textContent = `
+    .adsterra-display-banner,
     .adsterra-leaderboard {
-      display: grid;
-      justify-items: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
       margin: 2rem auto;
+      text-align: center;
+      width: 100%;
+    }
+
+    .adsterra-display-banner > iframe,
+    .adsterra-display-banner iframe,
+    .adsterra-leaderboard > iframe,
+    .adsterra-leaderboard iframe {
+      display: block;
+      margin-inline: auto !important;
+      max-width: 100%;
+    }
+
+    .adsterra-display-banner > div,
+    .adsterra-leaderboard > div {
+      margin-inline: auto !important;
     }
 
     .cookie-settings-button {
