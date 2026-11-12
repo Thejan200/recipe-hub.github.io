@@ -45,12 +45,21 @@ const removeAdsterraSocialBar = () => {
 
 const adsterraDisplayBannerId = 'adsterra-300x250-placement';
 
-const loadAdsterraDisplayBanner = () => {
-  if (!CookieConsent.acceptedCategory('ads') || document.getElementById(adsterraDisplayBannerId)) return;
-  if (!/^\/recipes\/[^/]+\/?$/.test(window.location.pathname)) return;
+const loadAdsterraDisplayBanner = () => new Promise(resolve => {
+  if (!CookieConsent.acceptedCategory('ads') || document.getElementById(adsterraDisplayBannerId)) {
+    resolve();
+    return;
+  }
+  if (!/^\/recipes\/[^/]+\/?$/.test(window.location.pathname)) {
+    resolve();
+    return;
+  }
 
   const recipeLayout = document.querySelector('article.recipe-layout');
-  if (!recipeLayout) return;
+  if (!recipeLayout) {
+    resolve();
+    return;
+  }
 
   const placement = document.createElement('section');
   placement.id = adsterraDisplayBannerId;
@@ -71,8 +80,10 @@ const loadAdsterraDisplayBanner = () => {
   bannerTag.id = 'adsterra-300x250-script';
   bannerTag.src = 'https://bauval.org/22/3c1d3488183269fd969b29cf99f596b6';
   bannerTag.async = false;
+  bannerTag.addEventListener('load', resolve, { once: true });
+  bannerTag.addEventListener('error', resolve, { once: true });
   placement.append(bannerTag);
-};
+});
 
 const removeAdsterraDisplayBanner = () => {
   document.getElementById(adsterraDisplayBannerId)?.remove();
