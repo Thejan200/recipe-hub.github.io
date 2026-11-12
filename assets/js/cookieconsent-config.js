@@ -1,12 +1,32 @@
 import 'https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.2.1/dist/cookieconsent.umd.js';
 
-const loadMonetagInPagePush = () => {
-  if (!CookieConsent.acceptedCategory('ads') || document.getElementById('monetag-in-page-push')) return;
+const adsterraSlotId = 'container-efbe94065ccd9bff712d56fa411179af';
 
-  const monetagTag = document.createElement('script');
-  monetagTag.id = 'monetag-in-page-push';
-  monetagTag.text = `(function(s){s.dataset.zone='12126317',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))`;
-  document.head.append(monetagTag);
+const loadAdsterraNativeBanner = () => {
+  if (!CookieConsent.acceptedCategory('ads') || document.getElementById(adsterraSlotId)) return;
+  if (!/^\/recipes\/[^/]+\/?$/.test(window.location.pathname)) return;
+
+  const relatedRecipes = document.querySelector('section.related');
+  if (!relatedRecipes) return;
+
+  const placement = document.createElement('section');
+  placement.id = 'adsterra-native-placement';
+  placement.className = 'section adsterra-native-placement';
+  placement.setAttribute('aria-label', 'Sponsored recommendations');
+  placement.innerHTML = '<p class="eyebrow">SPONSORED</p><div id="' + adsterraSlotId + '"></div>';
+  relatedRecipes.before(placement);
+
+  const adsterraTag = document.createElement('script');
+  adsterraTag.id = 'adsterra-native-script';
+  adsterraTag.async = true;
+  adsterraTag.dataset.cfasync = 'false';
+  adsterraTag.src = 'https://bauval.org/21/efbe94065ccd9bff712d56fa411179af';
+  document.head.append(adsterraTag);
+};
+
+const removeAdsterraNativeBanner = () => {
+  document.getElementById('adsterra-native-script')?.remove();
+  document.getElementById('adsterra-native-placement')?.remove();
 };
 
 const addPrivacyControl = () => {
@@ -62,7 +82,7 @@ const addPrivacyControlStyles = () => {
 
 CookieConsent.run({
   mode: 'opt-in',
-  revision: 2,
+  revision: 3,
   manageScriptTags: true,
   autoClearCookies: true,
   respectGpc: true,
@@ -109,10 +129,13 @@ CookieConsent.run({
       }
     }
   },
-  onConsent: loadMonetagInPagePush,
+  onConsent: loadAdsterraNativeBanner,
   onChange: ({ changedCategories }) => {
-    if (changedCategories.includes('ads') && CookieConsent.acceptedCategory('ads')) {
-      loadMonetagInPagePush();
+    if (!changedCategories.includes('ads')) return;
+    if (CookieConsent.acceptedCategory('ads')) {
+      loadAdsterraNativeBanner();
+    } else {
+      removeAdsterraNativeBanner();
     }
   },
   onModalReady: () => {
