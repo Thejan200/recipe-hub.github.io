@@ -29,6 +29,20 @@ const removeAdsterraNativeBanner = () => {
   document.getElementById('adsterra-native-placement')?.remove();
 };
 
+const loadAdsterraSocialBar = () => {
+  if (!CookieConsent.acceptedCategory('ads') || document.getElementById('adsterra-social-bar-script')) return;
+
+  const socialBarTag = document.createElement('script');
+  socialBarTag.id = 'adsterra-social-bar-script';
+  socialBarTag.dataset.cfasync = 'false';
+  socialBarTag.src = 'https://bauval.org/14/d3619c39d8561616811b85987812d5ae';
+  document.body.append(socialBarTag);
+};
+
+const removeAdsterraSocialBar = () => {
+  document.getElementById('adsterra-social-bar-script')?.remove();
+};
+
 const addPrivacyControl = () => {
   if (document.getElementById('cookie-settings-control')) return;
 
@@ -82,7 +96,7 @@ const addPrivacyControlStyles = () => {
 
 CookieConsent.run({
   mode: 'opt-in',
-  revision: 3,
+  revision: 4,
   manageScriptTags: true,
   autoClearCookies: true,
   respectGpc: true,
@@ -129,13 +143,19 @@ CookieConsent.run({
       }
     }
   },
-  onConsent: loadAdsterraNativeBanner,
+  onConsent: () => {
+    loadAdsterraNativeBanner();
+    loadAdsterraSocialBar();
+  },
   onChange: ({ changedCategories }) => {
     if (!changedCategories.includes('ads')) return;
     if (CookieConsent.acceptedCategory('ads')) {
       loadAdsterraNativeBanner();
+      loadAdsterraSocialBar();
     } else {
       removeAdsterraNativeBanner();
+      removeAdsterraSocialBar();
+      window.location.reload();
     }
   },
   onModalReady: () => {
