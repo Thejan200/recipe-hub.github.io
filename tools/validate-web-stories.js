@@ -13,6 +13,8 @@ for (const story of config.stories) {
   const text = fs.readFileSync(page, 'utf8');
   const canonical = `${base}stories/${story.id}/`;
   if (!text.includes('<html amp')) fail(`${story.id}: missing AMP HTML marker`);
+  if (text.includes('!important')) fail(`${story.id}: AMP custom CSS must not use !important`);
+  if (text.includes('<link rel="icon"')) fail(`${story.id}: unsupported favicon tag in AMP story`);
   if (!text.includes('custom-element="amp-story"')) fail(`${story.id}: missing amp-story extension`);
   if (!text.includes(`<link rel="canonical" href="${canonical}">`)) fail(`${story.id}: wrong self-canonical`);
   if (!text.includes('publisher-logo-src=') || !text.includes('poster-portrait-src=')) fail(`${story.id}: missing required story metadata`);
