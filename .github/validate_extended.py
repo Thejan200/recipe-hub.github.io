@@ -30,7 +30,7 @@ published_batch_ids = set(re.findall(r"['\"]([a-z0-9-]+)['\"]\s*:", block.group(
 runtime_published = [r for r in recipes if r.get("status") != "draft" or r.get("id") in published_batch_ids]
 runtime_ids = {r.get("id") for r in runtime_published}
 assert len(runtime_ids) == len(runtime_published), "Runtime published recipe IDs must be unique"
-video_optional = lambda recipe: "Scary Halloween Recipes" in (recipe.get("tags") or [])
+video_optional = lambda recipe: recipe.get("videoOptional") is True or "Scary Halloween Recipes" in (recipe.get("tags") or [])
 
 for recipe in runtime_published:
     if video_optional(recipe):
@@ -114,7 +114,7 @@ taxonomy = json.loads((root / "data/category-taxonomy.json").read_text(encoding=
 
 # Seasonal collections are curated overlays and keep every recipe's primary category intact.
 seasonal_expected = {
-    "Christmas": {'awesome-slow-cooker-pot-roast', 'chicken-and-leek-pie', 'treacle-tart', 'cinnamon-rolls', 'beef-roast-dinner', 'chocolate-fudge', 'baked-mac-and-cheese', 'apple-crumble', 'apple-pie', 'pumpkin-pie', 'chocolate-cake', 'bread-and-butter-pudding', 'beef-wellington', 'shepherds-pie', 'easy-sugar-cookies', 'classic-chocolate-chip-cookies', 'carrot-cake', 'steak-and-kidney-pie', 'pork-loin-roast', 'pork-tenderloin', 'christmas-pudding', 'mince-pies', 'yorkshire-pudding', 'cheesecake', 'maple-glazed-ham', 'breakfast-casserole', 'sausage-casserole', 'sticky-toffee-pudding', 'sunday-roast-chicken', 'sausage-breakfast-casserole', 'cottage-pie', 'classic-chicken-pot-pie', 'pecan-pie', 'red-velvet-cake'},
+    "Christmas": {'awesome-slow-cooker-pot-roast', 'chicken-and-leek-pie', 'treacle-tart', 'cinnamon-rolls', 'beef-roast-dinner', 'chocolate-fudge', 'baked-mac-and-cheese', 'apple-crumble', 'apple-pie', 'pumpkin-pie', 'chocolate-cake', 'bread-and-butter-pudding', 'beef-wellington', 'shepherds-pie', 'easy-sugar-cookies', 'classic-chocolate-chip-cookies', 'carrot-cake', 'steak-and-kidney-pie', 'pork-loin-roast', 'pork-tenderloin', 'christmas-pudding', 'mince-pies', 'yorkshire-pudding', 'cheesecake', 'maple-glazed-ham', 'breakfast-casserole', 'sausage-casserole', 'sticky-toffee-pudding', 'sunday-roast-chicken', 'sausage-breakfast-casserole', 'cottage-pie', 'classic-chicken-pot-pie', 'pecan-pie', 'red-velvet-cake', 'peanut-butter-blossom-cookies', 'chocolate-peanut-butter-balls', 'christmas-spritz-cookies', 'homemade-eggnog', 'soft-gingerbread-cookies', 'christmas-sugar-cookies-royal-icing', 'glazed-christmas-ham', 'make-ahead-green-bean-casserole'},
     "New Year": {'bbq-ribs', 'chicken-fajitas', 'chicken-marsala', 'french-toast', 'new-york-cheesecake', 'chocolate-fudge', 'sausage-and-peppers', 'honey-glazed-chicken-breast', 'air-fryer-mozzarella-sticks', 'chocolate-cake', 'beef-wellington', 'eggs-benedict', 'marry-me-chicken', 'brownies', 'steak-bites', 'air-fryer-chicken-wings', 'chicken-parmesan', 'scotch-eggs', 'coronation-chicken', 'garlic-butter-steak', 'cheesecake', 'maple-glazed-ham', 'breakfast-casserole', 'home-fries', 'sticky-toffee-pudding', 'ham-and-cheese-casserole', 'buffalo-chicken-dip', 'baby-back-ribs', 'sausage-breakfast-casserole', 'hash-browns', 'eton-mess', 'victoria-sponge', 'pecan-pie', 'red-velvet-cake', 'beef-nachos'}
 }
 for seasonal_name, expected_ids in seasonal_expected.items():
