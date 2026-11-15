@@ -14,19 +14,40 @@ const adsConsentGranted = () => (
   CookieConsent.acceptedCategory('ads')
 );
 
+const isRecipeDetailPage = () => /^\/recipes\/[^/]+\/?$/.test(window.location.pathname);
+const isRecipeCollectionPage = () => (
+  window.location.pathname === '/' ||
+  window.location.pathname === '/recipes/' ||
+  /^\/categories\/[^/]+\/?$/.test(window.location.pathname)
+);
+
+const collectionAdAnchor = () => {
+  if (window.location.pathname === '/') {
+    return document.querySelector('#featured')?.closest('section') || null;
+  }
+
+  return document.querySelector('main .recipe-grid')?.closest('section') || null;
+};
+
 const loadAdsterraNativeBanner = () => {
   if (!adsConsentGranted() || document.getElementById(adsterraSlotId)) return;
-  if (!/^\/recipes\/[^/]+\/?$/.test(window.location.pathname)) return;
-
   const relatedRecipes = document.querySelector('section.related');
-  if (!relatedRecipes) return;
+  const collectionAnchor = isRecipeCollectionPage() ? collectionAdAnchor() : null;
+  if (!isRecipeDetailPage() && !collectionAnchor) return;
 
   const placement = document.createElement('section');
   placement.id = 'adsterra-native-placement';
-  placement.className = 'section adsterra-native-placement';
+  placement.className = isRecipeDetailPage()
+    ? 'section adsterra-native-placement'
+    : 'adsterra-native-placement adsterra-native-placement--collection';
   placement.setAttribute('aria-label', 'Sponsored recommendations');
   placement.innerHTML = '<p class="eyebrow">SPONSORED</p><div id="' + adsterraSlotId + '"></div>';
-  relatedRecipes.before(placement);
+  if (isRecipeDetailPage()) {
+    if (!relatedRecipes) return;
+    relatedRecipes.before(placement);
+  } else {
+    collectionAnchor.after(placement);
+  }
 
   const adsterraTag = document.createElement('script');
   adsterraTag.id = 'adsterra-native-script';
@@ -62,7 +83,7 @@ const loadAdsterraDisplayBanner = () => new Promise(resolve => {
     resolve();
     return;
   }
-  if (!/^\/recipes\/[^/]+\/?$/.test(window.location.pathname)) {
+  if (!isRecipeDetailPage()) {
     resolve();
     return;
   }
@@ -107,7 +128,7 @@ const adsterraLeaderboardId = 'adsterra-728x90-placement';
 const loadAdsterraLeaderboard = async () => {
   if (!adsConsentGranted() || document.getElementById(adsterraLeaderboardId)) return;
   if (!window.matchMedia('(min-width: 1024px)').matches) return;
-  if (!/^\/recipes\/[^/]+\/?$/.test(window.location.pathname)) return;
+  if (!isRecipeDetailPage()) return;
 
   await loadAdsterraDisplayBanner();
 
@@ -189,6 +210,24 @@ const addPrivacyControlStyles = () => {
     .adsterra-display-banner > div,
     .adsterra-leaderboard > div {
       margin-inline: auto !important;
+    }
+
+    .adsterra-native-placement--collection {
+      width: min(1160px, calc(100% - 40px));
+      margin: 38px auto 54px;
+      padding: 22px 0 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .adsterra-native-placement--collection .eyebrow {
+      margin-bottom: 14px;
+    }
+
+    @media (max-width: 520px) {
+      .adsterra-native-placement--collection {
+        width: min(100% - 28px, 1160px);
+        margin: 28px auto 42px;
+      }
     }
 
     .cookie-settings-button {
