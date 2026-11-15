@@ -256,6 +256,9 @@ const addPrivacyControlStyles = () => {
 
 // Ad placement styles must load for every visitor, including those with saved consent.
 addPrivacyControlStyles();
+// The footer is already in the document when this module runs, so the privacy
+// control must not depend on a CookieConsent modal lifecycle callback.
+addPrivacyControl();
 
 // CookieConsent invokes onConsent while it initializes. Mark the local consent
 // bridge ready first so a visitor's saved Advertising choice can load ads on the
