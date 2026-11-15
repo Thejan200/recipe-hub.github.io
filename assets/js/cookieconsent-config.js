@@ -16,8 +16,7 @@ const adsConsentGranted = () => (
 
 const isRecipeDetailPage = () => /^\/recipes\/[^/]+\/?$/.test(window.location.pathname);
 const isRecipeCollectionPage = () => (
-  window.location.pathname === '/' ||
-  window.location.pathname === '/recipes/' ||
+  ['/', '/index.html', '/recipes/', '/recipes.html', '/category.html'].includes(window.location.pathname) ||
   /^\/categories\/[^/]+\/?$/.test(window.location.pathname)
 );
 
@@ -258,6 +257,11 @@ const addPrivacyControlStyles = () => {
 // Ad placement styles must load for every visitor, including those with saved consent.
 addPrivacyControlStyles();
 
+// CookieConsent invokes onConsent while it initializes. Mark the local consent
+// bridge ready first so a visitor's saved Advertising choice can load ads on the
+// initial page view instead of requiring a manual preference change.
+window.BiteSparksConsentHealth?.markReady();
+
 CookieConsent.run({
   mode: 'opt-in',
   revision: 6,
@@ -337,4 +341,3 @@ CookieConsent.run({
     addPrivacyControl();
   }
 });
-window.BiteSparksConsentHealth?.markReady();
